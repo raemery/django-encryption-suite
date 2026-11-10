@@ -1,0 +1,2371 @@
+# Punjabi translations for django-encryption-suite.
+# Copyright (C) 2026 J. Randall Emery
+# This file is distributed under the same license as the django-encryption-suite
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-encryption-suite 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-06 23:13-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: django-encryption-suite contributors\n"
+"Language-Team: pa\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: .\admin.py:53
+msgid "Rotation age"
+msgstr "ਘੁਮਾਉਣ ਦੀ ਮਿਆਦ"
+
+#: .\admin.py:67 .\models.py:337 .\models.py:711
+msgid "KEK resource name"
+msgstr "KEK ਸਰੋਤ ਨਾਮ"
+
+#: .\admin.py:72 .\lifecycle.py:48 .\models.py:165 .\models.py:411
+#: .\models.py:670
+msgid "Key encryption key"
+msgstr "ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ"
+
+#: .\admin.py:85
+msgid "Silo name"
+msgstr "Silo ਨਾਂ"
+
+#: .\admin.py:106 .\admin.py:114
+msgid "— (unavailable)"
+msgstr "— (ਉਪਲਬਧ ਨਹੀਂ)"
+
+#: .\admin.py:113
+msgid "— (silo no longer exists)"
+msgstr "— (Silo ਹੁਣ ਮੌਜੂਦ ਨਹੀਂ)"
+
+#: .\admin.py:116 .\models.py:141
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:91
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:125
+#: .\templates\admin\encryption_suite\inventory.html:108
+#: .\templates\admin\encryption_suite\inventory.html:145
+#: .\templates\admin\encryption_suite\reconcile_keys.html:180
+#: .\templates\admin\encryption_suite\reconcile_keys.html:280
+#: .\templates\admin\encryption_suite\reconcile_keys.html:315
+msgid "Purpose"
+msgstr "ਮਕਸਦ"
+
+#: .\admin.py:120
+msgid "Scheduled deletion by"
+msgstr "ਮਿਟਾਉਣਾ ਤਹਿ ਕਰਨ ਵਾਲਾ"
+
+#: .\admin.py:140 .\models.py:155
+msgid "Encrypted DEK"
+msgstr "ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ DEK"
+
+#: .\admin.py:152
+msgid "— (cleared)"
+msgstr "— (ਸਾਫ਼ ਕੀਤੀ)"
+
+#: .\admin.py:153
+#, python-format
+msgid "DEK encrypted by %(provider)s KEK"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ %(provider)s ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨਾਲ ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਗਈ"
+
+#: .\admin.py:240
+msgid "Schedule deletion of selected data encryption key(s)"
+msgstr "ਚੁਣੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦਾ ਮਿਟਾਉਣਾ ਤੈਅ ਕਰੋ"
+
+#: .\admin.py:306
+#, python-format
+msgid ""
+"Scheduled %(n)d data encryption key(s) for deletion. Restore within the "
+"window."
+msgstr "%(n)d ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦਾ ਮਿਟਾਉਣਾ ਤੈਅ ਕੀਤਾ ਗਿਆ। ਮਿਆਦ ਦੇ ਅੰਦਰ ਬਹਾਲ ਕਰੋ।"
+
+#: .\admin.py:318
+#, python-format
+msgid "%(uids)s and %(n)d more"
+msgstr "%(uids)s ਅਤੇ %(n)d ਹੋਰ"
+
+#: .\admin.py:322
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s) (%(reasons)s). Destroying one makes its silo's "
+"data permanently unreadable, and deleting would refuse it for the same "
+"reason. Delete the silo first, or set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION. %(uids)s"
+msgstr ""
+"%(n)d ਕੁੰਜੀ(ਆਂ) ਨੂੰ ਸਮਾਂ-ਬੱਧ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ (%(reasons)s)। ਕਿਸੇ ਇੱਕ ਨੂੰ ਨਸ਼ਟ ਕਰਨ ਨਾਲ "
+"ਉਸ ਦੇ silo ਦਾ ਡਾਟਾ ਹਮੇਸ਼ਾ ਲਈ ਅਪੜ੍ਹਨਯੋਗ ਹੋ ਜਾਂਦਾ ਹੈ, ਅਤੇ ਮਿਟਾਉਣਾ ਵੀ ਇਸੇ ਕਾਰਨ ਇਨਕਾਰ "
+"ਕਰੇਗਾ। ਪਹਿਲਾਂ silo ਮਿਟਾਓ, ਜਾਂ ENCRYPTION ਵਿੱਚ "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE ਨੂੰ True ਸੈੱਟ ਕਰੋ। %(uids)s"
+
+#: .\admin.py:337
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled or deleted."
+msgstr "%(n)d ਕੁੰਜੀਆਂ ਛੱਡੀਆਂ ਗਈਆਂ ਜੋ ਸਰਗਰਮ ਨਹੀਂ ਹਨ — ਪਹਿਲਾਂ ਹੀ ਤਹਿ ਜਾਂ ਮਿਟਾਈਆਂ ਗਈਆਂ।"
+
+#: .\admin.py:343
+#, python-format
+msgid "Skipped %(n)d test console key(s), which have their own deletion path."
+msgstr "ਟੈਸਟ ਕੰਸੋਲ ਦੀਆਂ %(n)d ਕੁੰਜੀ(ਆਂ) ਛੱਡੀਆਂ ਗਈਆਂ; ਉਹਨਾਂ ਦਾ ਆਪਣਾ ਮਿਟਾਉਣ ਦਾ ਰਾਹ ਹੈ।"
+
+#: .\admin.py:365 .\admin_lifecycle.py:677
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:9
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:9
+msgid "Schedule deletion"
+msgstr "ਮਿਟਾਉਣਾ ਤੈਅ ਕਰੋ"
+
+#: .\admin.py:382
+msgid "Restore selected scheduled data encryption key(s)"
+msgstr "ਚੁਣੀਆਂ ਤੈਅ ਕੀਤੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਬਹਾਲ ਕਰੋ"
+
+#: .\admin.py:398
+#, python-format
+msgid "Restored %(n)d data encryption key(s)."
+msgstr "%(n)d ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਬਹਾਲ ਕੀਤੀਆਂ ਗਈਆਂ।"
+
+#: .\admin.py:402
+msgid "Delete selected expired data encryption key(s)"
+msgstr "ਚੁਣੀਆਂ ਮਿਆਦ ਪੁੱਗੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਮਿਟਾਓ"
+
+#: .\admin.py:435
+#, python-format
+msgid ""
+"Deletion complete: %(destroyed)d of %(picked)d selected data encryption "
+"key(s) destroyed."
+msgstr ""
+"ਮਿਟਾਉਣਾ ਪੂਰਾ: %(picked)d ਚੁਣੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਵਿੱਚੋਂ %(destroyed)d ਨਸ਼ਟ ਕੀਤੀਆਂ "
+"ਗਈਆਂ।"
+
+#: .\admin.py:448
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works. Set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION to delete "
+"them regardless, making that data permanently unreadable."
+msgstr ""
+"%(n)d ਕੁੰਜੀ(ਆਂ) ਰੱਖੀਆਂ ਗਈਆਂ: %(reasons)s। ਕੁਝ ਨਹੀਂ ਬਦਲਿਆ — ਉਹ ਸਮਾਂ-ਬੱਧ ਹੀ ਰਹਿੰਦੀਆਂ ਹਨ, "
+"ਇਸ ਲਈ ਕਾਰਨ ਹੱਲ ਕਰਕੇ ਦੁਬਾਰਾ ਮਿਟਾਉਣਾ ਕੰਮ ਕਰਦਾ ਹੈ। ਇਹਨਾਂ ਨੂੰ ਫਿਰ ਵੀ ਮਿਟਾਉਣ ਲਈ "
+"ENCRYPTION ਵਿੱਚ KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE ਨੂੰ True ਸੈੱਟ ਕਰੋ, ਜਿਸ "
+"ਨਾਲ ਉਹ ਡਾਟਾ ਹਮੇਸ਼ਾ ਲਈ ਅਪੜ੍ਹਨਯੋਗ ਹੋ ਜਾਵੇਗਾ।"
+
+#: .\admin.py:464
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works."
+msgstr ""
+"%(n)d ਕੁੰਜੀ(ਆਂ) ਰੱਖੀਆਂ ਗਈਆਂ: %(reasons)s। ਕੁਝ ਨਹੀਂ ਬਦਲਿਆ — ਉਹ ਸਮਾਂ-ਬੱਧ ਹੀ ਰਹਿੰਦੀਆਂ ਹਨ, "
+"ਇਸ ਲਈ ਕਾਰਨ ਹੱਲ ਕਰਕੇ ਦੁਬਾਰਾ ਮਿਟਾਉਣਾ ਕੰਮ ਕਰਦਾ ਹੈ।"
+
+#: .\admin.py:474 .\admin_lifecycle.py:899
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not scheduled for deletion. Schedule them "
+"first — deleting only acts on scheduled work whose restore window has closed."
+msgstr ""
+"%(n)d ਕੁੰਜੀ(ਆਂ) ਛੱਡੀਆਂ ਗਈਆਂ ਜੋ ਮਿਟਾਉਣ ਲਈ ਸਮਾਂ-ਬੱਧ ਨਹੀਂ ਹਨ। ਪਹਿਲਾਂ ਇਹਨਾਂ ਨੂੰ ਸਮਾਂ-ਬੱਧ ਕਰੋ — "
+"ਮਿਟਾਉਣਾ ਸਿਰਫ਼ ਉਸ ਸਮਾਂ-ਬੱਧ ਕੰਮ ਉੱਤੇ ਅਸਰ ਕਰਦਾ ਹੈ ਜਿਸ ਦੀ ਬਹਾਲੀ ਵਿੰਡੋ ਬੰਦ ਹੋ ਚੁੱਕੀ ਹੈ।"
+
+#: .\admin.py:483 .\admin_lifecycle.py:908
+#, python-format
+msgid "Skipped %(n)d key(s) still inside their restore window."
+msgstr "%(n)d ਕੁੰਜੀ(ਆਂ) ਛੱਡੀਆਂ ਗਈਆਂ ਕਿਉਂਕਿ ਉਹ ਹਾਲੇ ਵੀ ਆਪਣੀ ਬਹਾਲੀ ਵਿੰਡੋ ਦੇ ਅੰਦਰ ਹਨ।"
+
+#: .\admin.py:525
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:9
+msgid "Delete data encryption keys"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਮਿਟਾਓ"
+
+#: .\admin_inventory.py:72
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\inventory.html:13
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:29
+msgid "Cryptographic inventory"
+msgstr "ਕ੍ਰਿਪਟੋਗ੍ਰਾਫਿਕ ਇਨਵੈਂਟਰੀ"
+
+#: .\admin_lifecycle.py:45 .\models.py:238 .\models.py:400
+#: .\templates\admin\encryption_suite\reconcile_keys.html:239
+msgid "Orphaned"
+msgstr "ਅਨਾਥ"
+
+#: .\admin_lifecycle.py:57
+msgid "key kind"
+msgstr "ਕੁੰਜੀ ਕਿਸਮ"
+
+#: .\admin_lifecycle.py:89 .\models.py:785
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:44
+msgid "Reason"
+msgstr "ਕਾਰਨ"
+
+#: .\admin_lifecycle.py:105 .\models.py:661
+msgid "Event"
+msgstr "ਘਟਨਾ"
+
+#: .\admin_lifecycle.py:109 .\models.py:774
+msgid "Trigger"
+msgstr "ਟਰਿੱਗਰ"
+
+#: .\admin_lifecycle.py:126 .\contrib\simpleteams\models.py:43 .\models.py:809
+msgid "User"
+msgstr "ਵਰਤੋਂਕਾਰ"
+
+#: .\admin_lifecycle.py:230
+msgid "Key kind"
+msgstr "ਕੁੰਜੀ ਕਿਸਮ"
+
+#: .\admin_lifecycle.py:525
+msgid "Schedule deletion of selected key encryption key(s)"
+msgstr "ਚੁਣੀਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦਾ ਮਿਟਾਉਣਾ ਸਮਾਂ-ਬੱਧ ਕਰੋ"
+
+#: .\admin_lifecycle.py:608
+#, python-format
+msgid ""
+"Scheduled %(n)d key encryption key(s) for deletion. Restore within the "
+"window, or run the deletion."
+msgstr ""
+"%(n)d ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਮਿਟਾਉਣ ਲਈ ਤਹਿ ਕੀਤੀਆਂ ਗਈਆਂ। ਮਿਆਦ ਦੇ ਅੰਦਰ ਬਹਾਲ ਕਰੋ, ਜਾਂ "
+"ਮਿਟਾਉਣਾ ਚਲਾਓ।"
+
+#: .\admin_lifecycle.py:638
+#, python-format
+msgid "%(names)s and %(n)d more"
+msgstr "%(names)s ਅਤੇ %(n)d ਹੋਰ"
+
+#: .\admin_lifecycle.py:642
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s): live data still depends on them, and "
+"destroying them would make it permanently unreadable. Delete the silos using "
+"them first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in "
+"ENCRYPTION. %(names)s"
+msgstr ""
+"%(n)d ਕੁੰਜੀ(ਆਂ) ਨੂੰ ਸਮਾਂ-ਬੱਧ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ: ਸਰਗਰਮ ਡਾਟਾ ਅਜੇ ਵੀ ਇਹਨਾਂ ’ਤੇ ਨਿਰਭਰ ਹੈ, ਅਤੇ "
+"ਇਹਨਾਂ ਨੂੰ ਨਸ਼ਟ ਕਰਨ ਨਾਲ ਉਹ ਡਾਟਾ ਹਮੇਸ਼ਾ ਲਈ ਅਪੜ੍ਹਨਯੋਗ ਹੋ ਜਾਵੇਗਾ। ਪਹਿਲਾਂ ਉਹ ਸਾਈਲੋ ਮਿਟਾਓ ਜੋ "
+"ਇਹਨਾਂ ਨੂੰ ਵਰਤਦੇ ਹਨ, ਜਾਂ ENCRYPTION ਵਿੱਚ KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE "
+"ਨੂੰ True ਕਰੋ। %(names)s"
+
+#: .\admin_lifecycle.py:653
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled, retained, or "
+"deleted."
+msgstr ""
+"%(n)d ਕੁੰਜੀ(ਆਂ) ਛੱਡੀਆਂ ਗਈਆਂ ਕਿਉਂਕਿ ਉਹ ਸਰਗਰਮ ਨਹੀਂ ਹਨ — ਪਹਿਲਾਂ ਹੀ ਸਮਾਂ-ਬੱਧ, ਰੱਖੀਆਂ ਜਾਂ "
+"ਮਿਟਾਈਆਂ ਜਾ ਚੁੱਕੀਆਂ।"
+
+#: .\admin_lifecycle.py:691
+msgid "Restore selected scheduled or retained key encryption key(s)"
+msgstr "ਚੁਣੀਆਂ ਤੈਅ ਕੀਤੀਆਂ ਜਾਂ ਰੱਖੀਆਂ ਗਈਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਬਹਾਲ ਕਰੋ"
+
+#: .\admin_lifecycle.py:712
+#, python-format
+msgid "Restored %(n)d key encryption key(s) to active."
+msgstr "%(n)d ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਨੂੰ ਸਰਗਰਮ ਹਾਲਤ ਵਿੱਚ ਬਹਾਲ ਕੀਤਾ ਗਿਆ।"
+
+#: .\admin_lifecycle.py:716
+msgid "Record selected as deleted in the key store"
+msgstr "ਚੁਣੀਆਂ ਨੂੰ ਕੁੰਜੀ ਸਟੋਰ ਵਿੱਚ ਮਿਟਾਈਆਂ ਵਜੋਂ ਦਰਜ ਕਰੋ"
+
+#: .\admin_lifecycle.py:720
+msgid "Record selected as deletion requested in the key store"
+msgstr "ਚੁਣੀਆਂ ਨੂੰ ਕੁੰਜੀ ਸਟੋਰ ਵਿੱਚ ਮਿਟਾਉਣ ਦੀ ਬੇਨਤੀ ਵਜੋਂ ਦਰਜ ਕਰੋ"
+
+#: .\admin_lifecycle.py:724
+msgid "Record selected as deletion canceled in the key store"
+msgstr "ਚੁਣੀਆਂ ਨੂੰ ਕੁੰਜੀ ਸਟੋਰ ਵਿੱਚ ਰੱਦ ਕੀਤੇ ਮਿਟਾਉਣ ਵਜੋਂ ਦਰਜ ਕਰੋ"
+
+#: .\admin_lifecycle.py:776 .\admin_lifecycle.py:891
+#, python-format
+msgid "Retained %(n)d key(s): %(reasons)s."
+msgstr "%(n)d ਕੁੰਜੀ(ਆਂ) ਰੱਖੀਆਂ ਗਈਆਂ: %(reasons)s।"
+
+#: .\admin_lifecycle.py:783
+#, python-format
+msgid "Recorded %(n)d key encryption key(s) as '%(verb)s' in the key store."
+msgstr "%(n)d ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਨੂੰ ਕੁੰਜੀ ਸਟੋਰ ਵਿੱਚ ‘%(verb)s’ ਵਜੋਂ ਦਰਜ ਕੀਤਾ ਗਿਆ।"
+
+#: .\admin_lifecycle.py:789
+#, python-format
+msgid "Skipped %(n)d key encryption key(s) already recorded as '%(verb)s'."
+msgstr "%(n)d ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਛੱਡੀਆਂ ਗਈਆਂ, ਜੋ ਪਹਿਲਾਂ ਹੀ ‘%(verb)s’ ਵਜੋਂ ਦਰਜ ਹਨ।"
+
+#: .\admin_lifecycle.py:793
+msgid "Delete selected expired key encryption key(s)"
+msgstr "ਚੁਣੀਆਂ ਮਿਆਦ ਪੁੱਗੀਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਮਿਟਾਓ"
+
+#: .\admin_lifecycle.py:813
+msgid ""
+"Select the key encryption keys to delete individually. Deleting a key at the "
+"provider cannot be undone from here, so this action does not act on every "
+"matching record at once."
+msgstr ""
+"ਮਿਟਾਉਣ ਲਈ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਇੱਕ-ਇੱਕ ਕਰਕੇ ਚੁਣੋ। ਪ੍ਰਦਾਤਾ ਕੋਲ ਕੁੰਜੀ ਮਿਟਾਉਣਾ ਇੱਥੋਂ ਵਾਪਸ ਨਹੀਂ "
+"ਲਿਆ ਜਾ ਸਕਦਾ, ਇਸ ਲਈ ਇਹ ਕਾਰਵਾਈ ਸਾਰੇ ਮੇਲ ਖਾਂਦੇ ਰਿਕਾਰਡਾਂ ਉੱਤੇ ਇੱਕੋ ਵਾਰ ਅਸਰ ਨਹੀਂ ਕਰਦੀ।"
+
+#: .\admin_lifecycle.py:857
+#, python-format
+msgid ""
+"Deletion complete on %(picked)d selected key encryption key(s): %(del)d "
+"deleted, %(req)d requested at the provider, %(retain)d retained, %(fail)d "
+"failed, %(skip)d skipped."
+msgstr ""
+"%(picked)d ਚੁਣੀਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਉੱਤੇ ਮਿਟਾਉਣਾ ਪੂਰਾ: %(del)d ਮਿਟਾਈਆਂ, %(req)d "
+"ਪ੍ਰਦਾਤਾ ਕੋਲ ਬੇਨਤੀ ਕੀਤੀਆਂ, %(retain)d ਰੱਖੀਆਂ, %(fail)d ਅਸਫਲ, %(skip)d ਛੱਡੀਆਂ।"
+
+#: .\admin_lifecycle.py:949
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:9
+msgid "Delete key encryption keys"
+msgstr "ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਮਿਟਾਓ"
+
+#: .\admin_reconcile.py:152
+msgid ""
+"The configured silo adapter cannot enumerate silos, so per-silo status and "
+"orphan detection are unavailable. Override iter_silos() on the adapter to "
+"enable them."
+msgstr ""
+"ਸੰਰਚਿਤ silo ਅਡੈਪਟਰ silo ਦੀ ਗਿਣਤੀ ਨਹੀਂ ਕਰ ਸਕਦਾ, ਇਸ ਲਈ ਪ੍ਰਤੀ-silo ਸਥਿਤੀ ਅਤੇ ਅਨਾਥ "
+"ਪਛਾਣ ਉਪਲਬਧ ਨਹੀਂ ਹਨ। ਇਹਨਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰਨ ਲਈ ਅਡੈਪਟਰ ਉੱਤੇ iter_silos() ਨੂੰ ਓਵਰਰਾਈਡ ਕਰੋ।"
+
+#: .\admin_reconcile.py:222
+msgid "field"
+msgstr "ਫੀਲਡ"
+
+#: .\admin_reconcile.py:223
+msgid "file"
+msgstr "ਫਾਈਲ"
+
+#: .\admin_reconcile.py:224
+msgid "index"
+msgstr "ਇੰਡੈਕਸ"
+
+#: .\admin_reconcile.py:496
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:15
+#: .\templates\admin\encryption_suite\reconcile_keys.html:13
+msgid "Reconcile Keys"
+msgstr "ਕੁੰਜੀਆਂ ਦਾ ਮਿਲਾਨ ਕਰੋ"
+
+#: .\admin_settings.py:34
+msgid "General"
+msgstr "ਆਮ"
+
+#: .\admin_settings.py:35
+msgid "Recording and identity"
+msgstr "ਦਰਜ ਕਰਨਾ ਅਤੇ ਪਛਾਣ"
+
+#: .\admin_settings.py:36 .\admin_test_console.py:417 .\models.py:183
+#: .\models.py:754 .\templates\admin\encryption_suite\inventory.html:109
+#: .\templates\admin\encryption_suite\inventory.html:146
+msgid "Cryptographic engine"
+msgstr "ਕ੍ਰਿਪਟੋਗ੍ਰਾਫਿਕ ਇੰਜਣ"
+
+#: .\admin_settings.py:37
+msgid "Silo"
+msgstr "Silo"
+
+#: .\admin_settings.py:38
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:44
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:121
+#: .\templates\admin\encryption_suite\test_console.html:63
+msgid "KMS"
+msgstr "KMS"
+
+#: .\admin_settings.py:39
+msgid "Keys and rotation"
+msgstr "ਕੁੰਜੀਆਂ ਅਤੇ ਰੋਟੇਸ਼ਨ"
+
+#: .\admin_settings.py:40 .\admin_test_console.py:538
+#: .\templates\admin\encryption_suite\test_console.html:64
+msgid "Storage"
+msgstr "ਸਟੋਰੇਜ"
+
+#: .\admin_settings.py:41
+msgid "Other"
+msgstr "ਹੋਰ"
+
+#: .\admin_settings.py:44
+msgid "(hidden)"
+msgstr "(ਲੁਕਿਆ)"
+
+#: .\admin_settings.py:72 .\admin_settings.py:73 .\admin_settings.py:77
+#: .\admin_settings.py:121
+msgid "(empty)"
+msgstr "(ਖਾਲੀ)"
+
+#: .\admin_settings.py:79
+msgid "(not set)"
+msgstr "(ਸੈੱਟ ਨਹੀਂ)"
+
+#: .\admin_settings.py:109
+msgid "named by STORAGE_ALIAS"
+msgstr "STORAGE_ALIAS ਵੱਲੋਂ ਨਾਮਿਤ"
+
+#: .\admin_settings.py:111
+msgid "fallback — no STORAGES entry is named by STORAGE_ALIAS"
+msgstr "ਬਦਲਵਾਂ — STORAGE_ALIAS ਕਿਸੇ STORAGES ਐਂਟਰੀ ਦਾ ਨਾਮ ਨਹੀਂ ਲੈਂਦਾ"
+
+#: .\admin_settings.py:120 .\admin_settings.py:121
+msgid "resolved"
+msgstr "ਨਿਰਧਾਰਤ"
+
+#: .\admin_settings.py:126
+msgid "none — the package's own file storage"
+msgstr "ਕੋਈ ਨਹੀਂ — ਪੈਕੇਜ ਦੀ ਆਪਣੀ ਫਾਈਲ ਸਟੋਰੇਜ"
+
+#: .\admin_settings.py:127
+msgid "fallback — no STORAGES entry resolved"
+msgstr "ਬਦਲਵਾਂ — ਕੋਈ STORAGES ਐਂਟਰੀ ਨਿਰਧਾਰਤ ਨਹੀਂ ਹੋਈ"
+
+#: .\admin_settings.py:187
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:22
+#: .\templates\admin\encryption_suite\settings.html:13
+msgid "Encryption settings"
+msgstr "ਇਨਕ੍ਰਿਪਸ਼ਨ ਸੈਟਿੰਗਾਂ"
+
+#: .\admin_site.py:37
+msgid "Data encryption keys (per silo)"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ (ਪ੍ਰਤੀ silo)"
+
+#: .\admin_site.py:38
+msgid "Key encryption keys (on key store)"
+msgstr "ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ (ਕੁੰਜੀ ਸਟੋਰ ਉੱਤੇ)"
+
+#: .\admin_test_console.py:43
+msgid "Field (in memory)"
+msgstr "ਫੀਲਡ (ਮੈਮੋਰੀ ਵਿੱਚ)"
+
+#: .\admin_test_console.py:44
+msgid "File (in memory)"
+msgstr "ਫਾਈਲ (ਮੈਮੋਰੀ ਵਿੱਚ)"
+
+#: .\admin_test_console.py:45
+msgid "Field (via KMS)"
+msgstr "ਫੀਲਡ (KMS ਰਾਹੀਂ)"
+
+#: .\admin_test_console.py:46
+msgid "File (via KMS)"
+msgstr "ਫਾਈਲ (KMS ਰਾਹੀਂ)"
+
+#: .\admin_test_console.py:47
+msgid "File storage reachable (read-only)"
+msgstr "ਫਾਈਲ ਸਟੋਰੇਜ ਪਹੁੰਚਯੋਗ (ਸਿਰਫ਼-ਪੜ੍ਹਨ)"
+
+#: .\admin_test_console.py:66
+msgid "Cipher"
+msgstr "ਸਾਈਫਰ"
+
+#: .\admin_test_console.py:67
+msgid "File segment size (bytes)"
+msgstr "ਫਾਈਲ ਸੈਗਮੈਂਟ ਆਕਾਰ (ਬਾਈਟ)"
+
+#: .\admin_test_console.py:68
+msgid "Field AEAD"
+msgstr "ਫੀਲਡ AEAD"
+
+#: .\admin_test_console.py:69
+msgid "File streaming AEAD"
+msgstr "ਫਾਈਲ ਸਟ੍ਰੀਮਿੰਗ AEAD"
+
+#: .\admin_test_console.py:129
+msgid "There was a problem. Check the server logs for details."
+msgstr "ਇੱਕ ਸਮੱਸਿਆ ਆਈ। ਵੇਰਵਿਆਂ ਲਈ ਸਰਵਰ ਲੌਗ ਵੇਖੋ।"
+
+#: .\admin_test_console.py:318
+msgid "Test Console"
+msgstr "ਟੈਸਟ ਕੰਸੋਲ"
+
+#: .\admin_test_console.py:403 .\admin_test_console.py:409
+#: .\admin_test_console.py:525 .\admin_test_console.py:534
+msgid "Backend"
+msgstr "ਬੈਕਐਂਡ"
+
+#: .\admin_test_console.py:438
+msgid "One shared KEK"
+msgstr "ਇੱਕ ਸਾਂਝਾ KEK"
+
+#: .\admin_test_console.py:441
+msgid "One KEK per silo"
+msgstr "ਹਰ silo ਲਈ ਇੱਕ KEK"
+
+#: .\admin_test_console.py:452 .\admin_test_console.py:502 .\models.py:332
+#: .\models.py:734 .\templates\admin\encryption_suite\inventory.html:27
+#: .\templates\admin\encryption_suite\inventory.html:59
+#: .\templates\admin\encryption_suite\inventory.html:84
+#: .\templates\admin\encryption_suite\inventory.html:111
+#: .\templates\admin\encryption_suite\reconcile_keys.html:22
+msgid "Key store"
+msgstr "ਕੁੰਜੀ ਸਟੋਰ"
+
+#: .\admin_test_console.py:453 .\admin_test_console.py:503
+msgid "Adapter"
+msgstr "ਅਡੈਪਟਰ"
+
+#: .\admin_test_console.py:457
+msgid "KMS instance"
+msgstr "KMS ਇੰਸਟੈਂਸ"
+
+#: .\admin_test_console.py:458 .\admin_test_console.py:504
+msgid "Key distribution"
+msgstr "ਕੁੰਜੀ ਵੰਡ"
+
+#: .\admin_test_console.py:460 .\admin_test_console.py:507
+#: .\admin_test_console.py:509 .\admin_test_console.py:511
+msgid "Key"
+msgstr "ਕੁੰਜੀ"
+
+#: .\admin_test_console.py:469 .\admin_test_console.py:512
+msgid "Ownership"
+msgstr "ਮਾਲਕੀ"
+
+#: .\admin_test_console.py:471
+#, python-format
+msgid "Name prefix: %(prefix)s"
+msgstr "ਨਾਮ ਅਗੇਤਰ: %(prefix)s"
+
+#: .\admin_test_console.py:473
+msgid "Not provable — key deletion is refused"
+msgstr "ਸਾਬਤ ਨਹੀਂ ਹੋ ਸਕਦੀ — ਕੁੰਜੀ ਮਿਟਾਉਣ ਤੋਂ ਇਨਕਾਰ"
+
+#: .\admin_test_console.py:483
+msgid "Tags"
+msgstr "ਟੈਗ"
+
+#: .\admin_test_console.py:489
+#, python-format
+msgid "%(count)s configured — not written by this provisioner"
+msgstr "%(count)s ਸੰਰਚਿਤ — ਇਹ ਪ੍ਰੋਵਿਜ਼ਨਰ ਇਹਨਾਂ ਨੂੰ ਨਹੀਂ ਲਿਖਦਾ"
+
+#: .\admin_test_console.py:516
+#: .\templates\admin\encryption_suite\inventory.html:23
+msgid "Key management system (KMS)"
+msgstr "ਕੁੰਜੀ ਪ੍ਰਬੰਧਨ ਸਿਸਟਮ (KMS)"
+
+#: .\admin_test_console.py:527
+msgid "Location"
+msgstr "ਟਿਕਾਣਾ"
+
+#: .\admin_test_console.py:559
+msgid "Test results cleared."
+msgstr "ਟੈਸਟ ਨਤੀਜੇ ਸਾਫ਼ ਕਰ ਦਿੱਤੇ ਗਏ।"
+
+#: .\admin_test_console.py:575
+msgid "Rate limit exceeded."
+msgstr "ਰੇਟ ਸੀਮਾ ਪਾਰ ਹੋ ਗਈ।"
+
+#: .\admin_test_console.py:594
+msgid "All tests passed."
+msgstr "ਸਾਰੇ ਟੈਸਟ ਪਾਸ ਹੋ ਗਏ।"
+
+#: .\admin_test_console.py:598
+#, python-format
+msgid "Stopped at '%(label)s': %(detail)s"
+msgstr "'%(label)s' ਉੱਤੇ ਰੁਕਿਆ: %(detail)s"
+
+#: .\admin_test_console.py:605
+msgid "Unknown test."
+msgstr "ਅਣਜਾਣ ਟੈਸਟ।"
+
+#: .\admin_test_console.py:612
+#, python-format
+msgid "%(label)s: passed. %(detail)s"
+msgstr "%(label)s: ਪਾਸ। %(detail)s"
+
+#: .\admin_test_console.py:614
+#, python-format
+msgid "%(label)s: failed. %(detail)s"
+msgstr "%(label)s: ਫੇਲ੍ਹ। %(detail)s"
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt matched."
+msgstr "ਇਨਕ੍ਰਿਪਟ/ਡਿਕ੍ਰਿਪਟ ਮਿਲਦੇ ਹਨ।"
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt mismatch."
+msgstr "ਇਨਕ੍ਰਿਪਟ/ਡਿਕ੍ਰਿਪਟ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ।"
+
+#: .\admin_test_console.py:704
+msgid "Backend reachable."
+msgstr "ਬੈਕਐਂਡ ਪਹੁੰਚਯੋਗ।"
+
+#: .\admin_test_console.py:733
+#, python-format
+msgid "Deleted %(n)d test DEK(s)."
+msgstr "%(n)d ਟੈਸਟ DEK ਮਿਟਾਏ।"
+
+#: .\admin_test_console.py:735
+msgid "No test key rows to delete."
+msgstr "ਮਿਟਾਉਣ ਲਈ ਕੋਈ ਟੈਸਟ ਕੁੰਜੀ ਕਤਾਰ ਨਹੀਂ।"
+
+#: .\admin_test_console.py:737
+#, python-format
+msgid "Deleted %(n)d test KEK(s)."
+msgstr "%(n)d ਟੈਸਟ KEK ਮਿਟਾਏ।"
+
+#: .\admin_test_console.py:747
+#, python-format
+msgid "%(n)d test KEK(s) could not be deleted — see the log."
+msgstr "%(n)d ਟੈਸਟ KEK ਮਿਟਾਏ ਨਹੀਂ ਜਾ ਸਕੇ — ਲੌਗ ਵੇਖੋ।"
+
+#: .\admin_test_console.py:754
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s)."
+msgstr "%(n)d ਟੈਸਟ KEK ਰੱਖੇ ਗਏ, ਮਿਟਾਏ ਨਹੀਂ ਗਏ (%(reasons)s)।"
+
+#: .\admin_test_console.py:759
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s); deleted their records."
+msgstr "%(n)d ਟੈਸਟ KEK ਰੱਖੇ ਗਏ, ਮਿਟਾਏ ਨਹੀਂ ਗਏ (%(reasons)s); ਉਹਨਾਂ ਦੇ ਰਿਕਾਰਡ ਮਿਟਾਏ ਗਏ।"
+
+#: .\apps.py:25
+msgid "Encryption"
+msgstr "ਇਨਕ੍ਰਿਪਸ਼ਨ"
+
+#: .\contrib\simpleteams\apps.py:9 .\contrib\simpleteams\models.py:30
+msgid "Simple teams"
+msgstr "ਸਧਾਰਨ ਟੀਮਾਂ"
+
+#: .\contrib\simpleteams\models.py:20
+msgid "Name"
+msgstr "ਨਾਮ"
+
+#: .\contrib\simpleteams\models.py:29
+msgid "Simple team"
+msgstr "ਸਧਾਰਨ ਟੀਮ"
+
+#: .\contrib\simpleteams\models.py:45
+msgid "Team"
+msgstr "ਟੀਮ"
+
+#: .\contrib\simpleteams\models.py:48
+msgid "Simple team membership"
+msgstr "ਸਧਾਰਨ ਟੀਮ ਦੀ ਮੈਂਬਰਸ਼ਿਪ"
+
+#: .\contrib\simpleteams\models.py:49
+msgid "Simple team memberships"
+msgstr "ਸਧਾਰਨ ਟੀਮਾਂ ਦੀਆਂ ਮੈਂਬਰਸ਼ਿਪਾਂ"
+
+#: .\exceptions.py:53
+msgid "Encryption and decryption are unavailable for this data."
+msgstr "ਇਸ ਡਾਟੇ ਲਈ ਇਨਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਡਿਕ੍ਰਿਪਸ਼ਨ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।"
+
+#: .\exceptions.py:59
+msgid "Encryption failed."
+msgstr "ਇਨਕ੍ਰਿਪਸ਼ਨ ਅਸਫਲ ਰਹੀ।"
+
+#: .\exceptions.py:60
+msgid "Decryption failed."
+msgstr "ਡਿਕ੍ਰਿਪਸ਼ਨ ਅਸਫਲ।"
+
+#: .\fields.py:122
+msgid "Unable to decrypt."
+msgstr "ਡਿਕ੍ਰਿਪਟ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ।"
+
+#: .\file_download_view_helper.py:88 .\file_download_view_helper.py:165
+#: .\file_download_view_helper.py:166 .\safe_queries.py:72
+msgid "Unable to decrypt file."
+msgstr "ਫਾਈਲ ਡਿਕ੍ਰਿਪਟ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ।"
+
+#: .\lifecycle.py:49 .\models.py:270 .\models.py:681
+msgid "Data encryption key"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ"
+
+#: .\lifecycle.py:58 .\models.py:724
+msgid "KEK"
+msgstr "KEK"
+
+#: .\lifecycle.py:59
+msgid "DEK"
+msgstr "DEK"
+
+#: .\lifecycle.py:86
+msgid "Active"
+msgstr "ਕਿਰਿਆਸ਼ੀਲ"
+
+#: .\lifecycle.py:87
+msgid "Re-encrypting"
+msgstr "ਮੁੜ-ਇਨਕ੍ਰਿਪਟ ਹੋ ਰਹੀ ਹੈ"
+
+#: .\lifecycle.py:88
+msgid "Deletion scheduled (app window)"
+msgstr "ਮਿਟਾਉਣਾ ਤਹਿ ਕੀਤਾ (ਐਪ ਵਿੰਡੋ)"
+
+#: .\lifecycle.py:89
+msgid "Deletion requested (provider window)"
+msgstr "ਮਿਟਾਉਣ ਦੀ ਬੇਨਤੀ ਕੀਤੀ (ਪ੍ਰਦਾਤਾ ਵਿੰਡੋ)"
+
+#: .\lifecycle.py:90
+msgid "Retained (deletion not allowed)"
+msgstr "ਰੱਖੀ ਗਈ (ਮਿਟਾਉਣ ਦੀ ਆਗਿਆ ਨਹੀਂ)"
+
+#: .\lifecycle.py:91 .\lifecycle.py:176
+msgid "Deletion failed"
+msgstr "ਮਿਟਾਉਣਾ ਅਸਫਲ"
+
+#: .\lifecycle.py:92 .\lifecycle.py:177
+msgid "Deleted"
+msgstr "ਮਿਟਾਇਆ ਗਿਆ"
+
+#: .\lifecycle.py:167
+msgid "Created"
+msgstr "ਬਣਾਇਆ ਗਿਆ"
+
+#: .\lifecycle.py:168
+msgid "Discovered"
+msgstr "ਲੱਭੀ ਗਈ"
+
+#: .\lifecycle.py:169
+msgid "Reencrypted"
+msgstr "ਮੁੜ-ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਗਈ"
+
+#: .\lifecycle.py:170
+msgid "Rotated"
+msgstr "ਘੁਮਾਈ ਗਈ"
+
+#: .\lifecycle.py:171
+msgid "Rotation started"
+msgstr "ਘੁਮਾਉਣਾ ਸ਼ੁਰੂ ਹੋਇਆ"
+
+#: .\lifecycle.py:172
+msgid "Rotation abandoned"
+msgstr "ਘੁਮਾਉਣਾ ਛੱਡ ਦਿੱਤਾ ਗਿਆ"
+
+#: .\lifecycle.py:173
+msgid "Deletion scheduling failed"
+msgstr "ਮਿਟਾਉਣ ਦੀ ਸਮਾਂ-ਸੂਚੀ ਅਸਫਲ"
+
+#: .\lifecycle.py:174
+msgid "Deletion scheduled"
+msgstr "ਮਿਟਾਉਣਾ ਤਹਿ ਕੀਤਾ"
+
+#: .\lifecycle.py:175
+msgid "Deletion requested"
+msgstr "ਮਿਟਾਉਣ ਦੀ ਬੇਨਤੀ ਕੀਤੀ"
+
+#: .\lifecycle.py:178
+msgid "Restored"
+msgstr "ਮੁੜ-ਬਹਾਲ ਕੀਤੀ"
+
+#: .\lifecycle.py:179
+msgid "Silo found"
+msgstr "silo ਮਿਲਿਆ"
+
+#: .\lifecycle.py:180
+msgid "Silo not found"
+msgstr "silo ਨਹੀਂ ਮਿਲਿਆ"
+
+#: .\lifecycle.py:204
+msgid "Asked for directly"
+msgstr "ਸਿੱਧਾ ਮੰਗਿਆ ਗਿਆ"
+
+#: .\lifecycle.py:205
+msgid "Followed from another act"
+msgstr "ਕਿਸੇ ਹੋਰ ਕਾਰਵਾਈ ਤੋਂ ਬਾਅਦ ਹੋਇਆ"
+
+#: .\lifecycle.py:206
+msgid "Script or schedule"
+msgstr "ਸਕ੍ਰਿਪਟ ਜਾਂ ਸਮਾਂ-ਸੂਚੀ"
+
+#: .\lifecycle.py:254
+msgid "Recorded by an operator"
+msgstr "ਇੱਕ ਸੰਚਾਲਕ ਵੱਲੋਂ ਦਰਜ ਕੀਤਾ ਗਿਆ"
+
+#: .\lifecycle.py:255
+msgid "Observed at the provider"
+msgstr "ਪ੍ਰਦਾਤਾ ਕੋਲ ਵੇਖਿਆ ਗਿਆ"
+
+#: .\lifecycle.py:256
+msgid "Confirmed by reconcile"
+msgstr "ਮਿਲਾਨ ਵੱਲੋਂ ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ"
+
+#: .\lifecycle.py:257
+msgid "Determined by reconcile"
+msgstr "ਮਿਲਾਨ ਵੱਲੋਂ ਨਿਰਧਾਰਤ"
+
+#: .\lifecycle.py:258
+msgid "The silo was created"
+msgstr "silo ਬਣਾਇਆ ਗਿਆ"
+
+#: .\lifecycle.py:259
+msgid "The silo was deleted"
+msgstr "silo ਮਿਟਾਇਆ ਗਿਆ"
+
+#: .\lifecycle.py:260
+msgid "First encryption for the silo"
+msgstr "ਇਸ silo ਲਈ ਪਹਿਲੀ ਇਨਕ੍ਰਿਪਸ਼ਨ"
+
+#: .\lifecycle.py:261
+msgid "A live silo turned up again"
+msgstr "ਇੱਕ ਸਰਗਰਮ silo ਮੁੜ ਲੱਭ ਪਿਆ"
+
+#: .\lifecycle.py:262
+msgid "The provider call failed"
+msgstr "ਪ੍ਰਦਾਤਾ ਨੂੰ ਕੀਤੀ ਕਾਲ ਅਸਫ਼ਲ ਰਹੀ"
+
+#: .\lifecycle.py:263
+msgid "The data encryption key was deleted"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਮਿਟਾਈ ਗਈ"
+
+#: .\lifecycle.py:264
+msgid "Rows could not be converted"
+msgstr "ਕੁਝ ਕਤਾਰਾਂ ਬਦਲੀਆਂ ਨਹੀਂ ਜਾ ਸਕੀਆਂ"
+
+#: .\lifecycle.py:287
+msgid "shared or operator-supplied key"
+msgstr "ਸਾਂਝੀ ਜਾਂ ਆਪਰੇਟਰ ਵੱਲੋਂ ਦਿੱਤੀ ਕੁੰਜੀ"
+
+#: .\lifecycle.py:292
+msgid "key deletion is not enabled for this provisioner"
+msgstr "ਇਸ ਪ੍ਰੋਵਿਜ਼ਨਰ ਲਈ ਕੁੰਜੀ ਮਿਟਾਉਣਾ ਸਮਰੱਥ ਨਹੀਂ ਹੈ"
+
+#: .\lifecycle.py:293
+msgid "not provisioned by this deployment"
+msgstr "ਇਸ ਡਿਪਲਾਇਮੈਂਟ ਵੱਲੋਂ ਪ੍ਰੋਵਿਜ਼ਨ ਨਹੀਂ ਕੀਤੀ ਗਈ"
+
+#: .\lifecycle.py:294
+msgid "still referenced by another key record"
+msgstr "ਹਾਲੇ ਵੀ ਕਿਸੇ ਹੋਰ ਕੁੰਜੀ ਰਿਕਾਰਡ ਦੁਆਰਾ ਹਵਾਲਾ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ"
+
+#: .\lifecycle.py:295
+msgid "no KEK provisioner configured"
+msgstr "ਕੋਈ KEK ਪ੍ਰੋਵਿਜ਼ਨਰ ਸੰਰਚਿਤ ਨਹੀਂ"
+
+#: .\lifecycle.py:296
+msgid "the silo still exists"
+msgstr "ਸਾਈਲੋ ਅਜੇ ਵੀ ਮੌਜੂਦ ਹੈ"
+
+#: .\lifecycle.py:297
+msgid "the silo adapter cannot report whether the silo still exists"
+msgstr "ਸਾਈਲੋ ਅਡੈਪਟਰ ਦੱਸ ਨਹੀਂ ਸਕਦਾ ਕਿ ਸਾਈਲੋ ਅਜੇ ਵੀ ਮੌਜੂਦ ਹੈ ਜਾਂ ਨਹੀਂ"
+
+#: .\lifecycle.py:298
+msgid "checking whether the silo still exists failed"
+msgstr "ਸਾਈਲੋ ਦੇ ਮੌਜੂਦ ਹੋਣ ਦੀ ਜਾਂਚ ਅਸਫਲ ਰਹੀ"
+
+#: .\models.py:114
+msgid "Field encryption (AEAD)"
+msgstr "ਫੀਲਡ ਇਨਕ੍ਰਿਪਸ਼ਨ (AEAD)"
+
+#: .\models.py:115
+msgid "File encryption (Streaming AEAD)"
+msgstr "ਫਾਈਲ ਇਨਕ੍ਰਿਪਸ਼ਨ (Streaming AEAD)"
+
+#: .\models.py:116
+msgid "Blind index (keyed hash)"
+msgstr "ਬਲਾਈਂਡ ਇੰਡੈਕਸ (ਕੁੰਜੀ ਵਾਲਾ ਹੈਸ਼)"
+
+#: .\models.py:117
+msgid "Admin test console (isolated)"
+msgstr "ਐਡਮਿਨ ਟੈਸਟ ਕੰਸੋਲ (ਅਲੱਗ)"
+
+#: .\models.py:125 .\models.py:690
+#: .\templates\admin\encryption_suite\inventory.html:83
+#: .\templates\admin\encryption_suite\inventory.html:107
+#: .\templates\admin\encryption_suite\reconcile_keys.html:75
+#: .\templates\admin\encryption_suite\reconcile_keys.html:142
+#: .\templates\admin\encryption_suite\reconcile_keys.html:179
+#: .\templates\admin\encryption_suite\reconcile_keys.html:279
+#: .\templates\admin\encryption_suite\reconcile_keys.html:314
+#: .\templates\admin\encryption_suite\test_console.html:48
+msgid "Key set"
+msgstr "ਕੁੰਜੀ ਸੈੱਟ"
+
+#: .\models.py:127
+msgid ""
+"A key set is one silo adapter and one key store. Fields that name the same "
+"set share its keys, and the settings choose the adapter and the key store."
+msgstr ""
+"ਕੁੰਜੀ ਸੈੱਟ ਇੱਕ silo ਅਡੈਪਟਰ ਅਤੇ ਇੱਕ ਕੁੰਜੀ ਸਟੋਰ ਹੁੰਦਾ ਹੈ। ਇੱਕੋ ਸੈੱਟ ਦਾ ਨਾਮ ਲੈਣ ਵਾਲੇ ਖੇਤਰ ਇਸ ਦੀਆਂ "
+"ਕੁੰਜੀਆਂ ਸਾਂਝੀਆਂ ਕਰਦੇ ਹਨ, ਅਤੇ ਸੈਟਿੰਗਾਂ ਅਡੈਪਟਰ ਅਤੇ ਕੁੰਜੀ ਸਟੋਰ ਤੈਅ ਕਰਦੀਆਂ ਹਨ।"
+
+#: .\models.py:134 .\models.py:701
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:90
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:42
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:124
+#: .\templates\admin\encryption_suite\reconcile_keys.html:73
+#: .\templates\admin\encryption_suite\reconcile_keys.html:141
+#: .\templates\admin\encryption_suite\reconcile_keys.html:177
+#: .\templates\admin\encryption_suite\reconcile_keys.html:278
+#: .\templates\admin\encryption_suite\reconcile_keys.html:313
+msgid "Silo UID"
+msgstr "Silo UID"
+
+#: .\models.py:135
+msgid ""
+"The silo adapter sets this identifier, and no two silos of one key set share "
+"one."
+msgstr ""
+"silo ਅਡੈਪਟਰ ਇਹ ਪਛਾਣਕਰਤਾ ਸੈੱਟ ਕਰਦਾ ਹੈ, ਅਤੇ ਇੱਕੋ ਕੁੰਜੀ ਸੈੱਟ ਦੇ ਦੋ silo ਇੱਕ ਪਛਾਣਕਰਤਾ ਸਾਂਝਾ ਨਹੀਂ "
+"ਕਰਦੇ।"
+
+#: .\models.py:143
+msgid ""
+"This says what the key does: it encrypts model fields, encrypts stored "
+"files, or computes a blind index. The admin test console uses keys of its "
+"own."
+msgstr ""
+"ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕੁੰਜੀ ਕੀ ਕਰਦੀ ਹੈ: ਮਾਡਲ ਫੀਲਡਾਂ ਨੂੰ ਇਨਕ੍ਰਿਪਟ ਕਰਦੀ ਹੈ, ਸਟੋਰ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਨੂੰ "
+"ਇਨਕ੍ਰਿਪਟ ਕਰਦੀ ਹੈ, ਜਾਂ ਬਲਾਈਂਡ ਇੰਡੈਕਸ ਦੀ ਗਣਨਾ ਕਰਦੀ ਹੈ। ਐਡਮਿਨ ਟੈਸਟ ਕੰਸੋਲ ਆਪਣੀਆਂ ਵੱਖਰੀਆਂ ਕੁੰਜੀਆਂ "
+"ਵਰਤਦਾ ਹੈ।"
+
+#: .\models.py:149
+msgid "Silo label"
+msgstr "silo ਲੇਬਲ"
+
+#: .\models.py:150
+msgid "The silo adapter names its silos with this label."
+msgstr "silo ਅਡੈਪਟਰ ਆਪਣੇ silo ਨੂੰ ਇਸ ਲੇਬਲ ਨਾਲ ਨਾਮ ਦਿੰਦਾ ਹੈ।"
+
+#: .\models.py:157
+msgid ""
+"The key encryption key encrypts this data encryption key, and only the "
+"encrypted form is stored. Deleting the key clears it."
+msgstr ""
+"ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਇਸ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਇਨਕ੍ਰਿਪਟ ਕਰਦੀ ਹੈ, ਅਤੇ ਸਿਰਫ਼ ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ "
+"ਰੂਪ ਹੀ ਸਟੋਰ ਹੁੰਦਾ ਹੈ। ਕੁੰਜੀ ਮਿਟਾਉਣ ਨਾਲ ਇਹ ਸਾਫ਼ ਹੋ ਜਾਂਦਾ ਹੈ।"
+
+#: .\models.py:166
+msgid "This key encryption key encrypts the data encryption key."
+msgstr "ਇਹ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਇਨਕ੍ਰਿਪਟ ਕਰਦੀ ਹੈ।"
+
+#: .\models.py:172 .\models.py:395 .\models.py:744
+msgid "KEK key version"
+msgstr "KEK ਕੁੰਜੀ ਵਰਜਨ"
+
+#: .\models.py:174
+msgid ""
+"The KMS reported this version of the key encryption key when it encrypted "
+"the data encryption key. Some providers need it to decrypt, and the rest "
+"keep it for reference. It is empty where the provider reports no version."
+msgstr ""
+"KMS ਨੇ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਇਨਕ੍ਰਿਪਟ ਕਰਨ ਵੇਲੇ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦਾ ਇਹ ਵਰਜਨ ਦੱਸਿਆ "
+"ਸੀ। ਕੁਝ ਪ੍ਰਦਾਤਾਵਾਂ ਨੂੰ ਡਿਕ੍ਰਿਪਟ ਕਰਨ ਲਈ ਇਸ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ, ਬਾਕੀ ਇਸ ਨੂੰ ਸਿਰਫ਼ ਹਵਾਲੇ ਲਈ ਰੱਖਦੇ "
+"ਹਨ। ਜਿੱਥੇ ਪ੍ਰਦਾਤਾ ਕੋਈ ਵਰਜਨ ਨਹੀਂ ਦੱਸਦਾ, ਉੱਥੇ ਇਹ ਖਾਲੀ ਹੁੰਦਾ ਹੈ।"
+
+#: .\models.py:185
+msgid ""
+"This crypto backend, such as 'tink' or 'cryptography', generated the data "
+"encryption key. The application checks it when it loads the key, so a "
+"different backend never loads it. It is empty for a blind index key."
+msgstr ""
+"ਇਸ ਕ੍ਰਿਪਟੋ ਬੈਕਐਂਡ ਨੇ, ਜਿਵੇਂ 'tink' ਜਾਂ 'cryptography', ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਬਣਾਈ। "
+"ਐਪਲੀਕੇਸ਼ਨ ਕੁੰਜੀ ਲੋਡ ਕਰਨ ਵੇਲੇ ਇਸ ਦੀ ਜਾਂਚ ਕਰਦੀ ਹੈ, ਤਾਂ ਜੋ ਕੋਈ ਹੋਰ ਬੈਕਐਂਡ ਇਸ ਨੂੰ ਲੋਡ ਨਾ ਕਰੇ। ਬਲਾਈਂਡ "
+"ਇੰਡੈਕਸ ਕੁੰਜੀ ਲਈ ਇਹ ਖਾਲੀ ਹੁੰਦਾ ਹੈ।"
+
+#: .\models.py:194 .\models.py:764
+#: .\templates\admin\encryption_suite\inventory.html:110
+#: .\templates\admin\encryption_suite\inventory.html:147
+msgid "Algorithm"
+msgstr "ਐਲਗੋਰਿਦਮ"
+
+#: .\models.py:196
+msgid ""
+"The crypto backend generated the data encryption key for this algorithm, "
+"such as 'AES256_GCM', and names it in its own terms."
+msgstr ""
+"ਕ੍ਰਿਪਟੋ ਬੈਕਐਂਡ ਨੇ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਇਸ ਐਲਗੋਰਿਦਮ ਲਈ ਬਣਾਈ, ਜਿਵੇਂ 'AES256_GCM', ਅਤੇ ਉਹ "
+"ਇਸ ਦਾ ਨਾਂ ਆਪਣੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਦਿੰਦਾ ਹੈ।"
+
+#: .\models.py:202
+msgid "Encrypted key writes"
+msgstr "ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਕੁੰਜੀ ਲਿਖਣ ਦੀ ਗਿਣਤੀ"
+
+#: .\models.py:204
+msgid ""
+"The application adds one each time it writes new encrypted key material to "
+"this row: when a key encryption key re-encrypts the same key, or when a "
+"rotation replaces it."
+msgstr ""
+"ਐਪਲੀਕੇਸ਼ਨ ਹਰ ਵਾਰ ਇਸ ਵਿੱਚ ਇੱਕ ਜੋੜਦੀ ਹੈ ਜਦੋਂ ਉਹ ਇਸ ਕਤਾਰ ਵਿੱਚ ਨਵੀਂ ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਕੁੰਜੀ ਸਮੱਗਰੀ "
+"ਲਿਖਦੀ ਹੈ: ਜਦੋਂ ਕੋਈ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਉਸੇ ਕੁੰਜੀ ਨੂੰ ਮੁੜ-ਇਨਕ੍ਰਿਪਟ ਕਰਦੀ ਹੈ, ਜਾਂ ਜਦੋਂ ਰੋਟੇਸ਼ਨ ਉਸ ਨੂੰ "
+"ਬਦਲ ਦਿੰਦੀ ਹੈ।"
+
+#: .\models.py:210
+msgid "DEK key version"
+msgstr "DEK ਕੁੰਜੀ ਵਰਜਨ"
+
+#: .\models.py:212
+msgid ""
+"The application counts the generations of this key's material: 1 for the "
+"first key, then one more for each rotation. Unlike the key encryption key "
+"version, it is not a provider identifier. Unlike the count of encrypted key "
+"writes, it does not change when another key encryption key re-encrypts the "
+"same material."
+msgstr ""
+"ਐਪਲੀਕੇਸ਼ਨ ਇਸ ਕੁੰਜੀ ਦੀ ਸਮੱਗਰੀ ਦੀਆਂ ਪੀੜ੍ਹੀਆਂ ਗਿਣਦੀ ਹੈ: ਪਹਿਲੀ ਕੁੰਜੀ ਲਈ 1, ਫਿਰ ਹਰ ਰੋਟੇਸ਼ਨ ਨਾਲ "
+"ਇੱਕ ਹੋਰ। ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਵਰਜਨ ਦੇ ਉਲਟ, ਇਹ ਪ੍ਰਦਾਤਾ ਦੀ ਪਛਾਣ ਨਹੀਂ ਹੈ। ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ "
+"ਕੁੰਜੀ ਲਿਖਣ ਦੀ ਗਿਣਤੀ ਦੇ ਉਲਟ, ਜਦੋਂ ਕੋਈ ਹੋਰ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਉਹੀ ਸਮੱਗਰੀ ਮੁੜ-ਇਨਕ੍ਰਿਪਟ ਕਰਦੀ "
+"ਹੈ ਤਾਂ ਇਹ ਨਹੀਂ ਬਦਲਦੀ।"
+
+#: .\models.py:223 .\models.py:345
+#: .\templates\admin\encryption_suite\inventory.html:60
+#: .\templates\admin\encryption_suite\reconcile_keys.html:84
+#: .\templates\admin\encryption_suite\reconcile_keys.html:182
+#: .\templates\admin\encryption_suite\reconcile_keys.html:232
+msgid "Status"
+msgstr "ਸਥਿਤੀ"
+
+#: .\models.py:224 .\models.py:346
+msgid ""
+"The application derives the key's current status from its key lifecycle "
+"events."
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਕੁੰਜੀ ਦੀ ਮੌਜੂਦਾ ਸਥਿਤੀ ਇਸ ਦੀਆਂ ਕੁੰਜੀ ਜੀਵਨ-ਚੱਕਰ ਘਟਨਾਵਾਂ ਤੋਂ ਕੱਢਦੀ ਹੈ।"
+
+#: .\models.py:229 .\models.py:351
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:94
+#: .\templates\admin\encryption_suite\reconcile_keys.html:184
+msgid "Undeletable until"
+msgstr "ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਮਿਟਾਉਣਯੋਗ ਨਹੀਂ"
+
+#: .\models.py:231 .\models.py:353
+msgid ""
+"The application's deletion window ends at this time. Nothing can destroy the "
+"key before then; after it, deleting the key may destroy it. The key can be "
+"restored until it is actually deleted."
+msgstr ""
+"ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਮਿਟਾਉਣ ਵਿੰਡੋ ਇਸ ਸਮੇਂ ਖ਼ਤਮ ਹੁੰਦੀ ਹੈ। ਉਸ ਤੋਂ ਪਹਿਲਾਂ ਕੁੰਜੀ ਨੂੰ ਕੋਈ ਨਸ਼ਟ ਨਹੀਂ ਕਰ ਸਕਦਾ; "
+"ਉਸ ਤੋਂ ਬਾਅਦ ਕੁੰਜੀ ਮਿਟਾਉਣ ਨਾਲ ਇਹ ਨਸ਼ਟ ਹੋ ਸਕਦੀ ਹੈ। ਕੁੰਜੀ ਅਸਲ ਵਿੱਚ ਮਿਟਾਏ ਜਾਣ ਤੱਕ ਬਹਾਲ ਕੀਤੀ "
+"ਜਾ ਸਕਦੀ ਹੈ।"
+
+#: .\models.py:240
+msgid ""
+"Reconcile sets this when no live silo matches the key's silo UID. It is for "
+"display only: every action that destroys a key checks again before it acts."
+msgstr ""
+"ਮਿਲਾਨ ਇਸ ਨੂੰ ਉਦੋਂ ਸੈੱਟ ਕਰਦਾ ਹੈ ਜਦੋਂ ਕੋਈ ਵੀ ਸਰਗਰਮ silo ਕੁੰਜੀ ਦੇ silo UID ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ। "
+"ਇਹ ਸਿਰਫ਼ ਵਿਖਾਵੇ ਲਈ ਹੈ: ਕੁੰਜੀ ਨਸ਼ਟ ਕਰਨ ਵਾਲੀ ਹਰ ਕਾਰਵਾਈ ਅਮਲ ਤੋਂ ਪਹਿਲਾਂ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰਦੀ ਹੈ।"
+
+#: .\models.py:247
+msgid "Key material last generated at"
+msgstr "ਕੁੰਜੀ ਸਮੱਗਰੀ ਆਖਰੀ ਵਾਰ ਬਣਾਈ ਗਈ"
+
+#: .\models.py:249
+msgid ""
+"The key material now in use was generated at this time. A data encryption "
+"key's cryptoperiod counts from here, not from the row's creation date, which "
+"a revived key keeps from its first life. Re-encrypting the key onto another "
+"key encryption key does not change it, because the material stays the same."
+msgstr ""
+"ਹੁਣ ਵਰਤੋਂ ਵਿੱਚ ਆ ਰਹੀ ਕੁੰਜੀ ਸਮੱਗਰੀ ਇਸ ਸਮੇਂ ਬਣਾਈ ਗਈ ਸੀ। ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦੀ ਕ੍ਰਿਪਟੋ-ਮਿਆਦ "
+"ਇੱਥੋਂ ਗਿਣੀ ਜਾਂਦੀ ਹੈ, ਕਤਾਰ ਦੀ ਬਣਾਉਣ ਦੀ ਮਿਤੀ ਤੋਂ ਨਹੀਂ, ਜੋ ਮੁੜ-ਜੀਵਿਤ ਕੁੰਜੀ ਆਪਣੇ ਪਹਿਲੇ ਜੀਵਨ ਤੋਂ "
+"ਰੱਖਦੀ ਹੈ। ਕੁੰਜੀ ਨੂੰ ਕਿਸੇ ਹੋਰ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਉੱਤੇ ਮੁੜ-ਇਨਕ੍ਰਿਪਟ ਕਰਨ ਨਾਲ ਇਹ ਨਹੀਂ ਬਦਲਦੀ, "
+"ਕਿਉਂਕਿ ਸਮੱਗਰੀ ਉਹੀ ਰਹਿੰਦੀ ਹੈ।"
+
+#: .\models.py:258
+msgid "Last re-encrypted at"
+msgstr "ਆਖਰੀ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ"
+
+#: .\models.py:260
+msgid ""
+"Its key encryption key last re-encrypted this data encryption key at this "
+"time. Rotating a key encryption key protects nothing already stored until "
+"this re-encryption runs, so a key encryption key's cryptoperiod counts "
+"against this time, not against the rotation."
+msgstr ""
+"ਇਸ ਦੀ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੇ ਇਸ ਸਮੇਂ ਇਸ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਆਖਰੀ ਵਾਰ ਮੁੜ-ਇਨਕ੍ਰਿਪਟ "
+"ਕੀਤਾ ਸੀ। ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਰੋਟੇਟ ਕਰਨ ਨਾਲ ਪਹਿਲਾਂ ਤੋਂ ਸਟੋਰ ਕੀਤੇ ਡਾਟੇ ਦੀ ਉਦੋਂ ਤੱਕ ਕੋਈ "
+"ਸੁਰੱਖਿਆ ਨਹੀਂ ਹੁੰਦੀ ਜਦੋਂ ਤੱਕ ਇਹ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ ਨਾ ਚੱਲੇ, ਇਸ ਲਈ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦੀ ਕ੍ਰਿਪਟੋ-"
+"ਮਿਆਦ ਇਸ ਸਮੇਂ ਤੋਂ ਗਿਣੀ ਜਾਂਦੀ ਹੈ, ਰੋਟੇਸ਼ਨ ਤੋਂ ਨਹੀਂ।"
+
+#: .\models.py:265 .\models.py:406
+msgid "Created at"
+msgstr "ਬਣਾਇਆ ਗਿਆ"
+
+#: .\models.py:266 .\models.py:407
+msgid "Updated at"
+msgstr "ਅੱਪਡੇਟ ਕੀਤਾ"
+
+#: .\models.py:271 .\templates\admin\encryption_suite\inventory.html:31
+#: .\templates\admin\encryption_suite\inventory.html:103
+msgid "Data encryption keys"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ"
+
+#: .\models.py:324
+msgid "Silo-exclusive — eligible for deleting"
+msgstr "Silo-ਵਿਸ਼ੇਸ਼ — ਮਿਟਾਉਣ ਲਈ ਯੋਗ"
+
+#: .\models.py:325
+msgid "Shared/opaque — never auto-deleted"
+msgstr "ਸਾਂਝੀ/ਅਪਾਰਦਰਸ਼ੀ — ਕਦੇ ਆਪਣੇ-ਆਪ ਮਿਟਾਈ ਨਹੀਂ ਜਾਂਦੀ"
+
+#: .\models.py:333
+msgid ""
+"This key store holds the key encryption key. The name is a block in the "
+"KMS_KEY_STORES setting."
+msgstr ""
+"ਇਹ ਕੁੰਜੀ ਸਟੋਰ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਸੰਭਾਲਦਾ ਹੈ। ਇਹ ਨਾਂ KMS_KEY_STORES ਸੈਟਿੰਗ ਵਿੱਚ ਇੱਕ "
+"ਬਲਾਕ ਹੈ।"
+
+#: .\models.py:338
+msgid "The KMS knows this key encryption key by this full resource name."
+msgstr "KMS ਇਸ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਇਸ ਪੂਰੇ ਸਰੋਤ ਨਾਂ ਨਾਲ ਜਾਣਦਾ ਹੈ।"
+
+#: .\models.py:361
+msgid "KMS deletion at"
+msgstr "KMS ਮਿਟਾਉਣ ਦੀ ਮਿਤੀ"
+
+#: .\models.py:363
+msgid ""
+"The provider destroys the key at this time. The application sets it when it "
+"asks the provider to delete the key, or when it finds a deletion already "
+"under way. Only the provider can cancel the deletion; this application "
+"cannot."
+msgstr ""
+"ਪ੍ਰਦਾਤਾ ਇਸ ਸਮੇਂ ਕੁੰਜੀ ਨੂੰ ਨਸ਼ਟ ਕਰਦਾ ਹੈ। ਐਪਲੀਕੇਸ਼ਨ ਇਸ ਨੂੰ ਉਦੋਂ ਸੈੱਟ ਕਰਦੀ ਹੈ ਜਦੋਂ ਉਹ ਪ੍ਰਦਾਤਾ ਨੂੰ ਕੁੰਜੀ "
+"ਮਿਟਾਉਣ ਲਈ ਕਹਿੰਦੀ ਹੈ, ਜਾਂ ਜਦੋਂ ਉਸ ਨੂੰ ਪਤਾ ਲੱਗਦਾ ਹੈ ਕਿ ਮਿਟਾਉਣਾ ਪਹਿਲਾਂ ਹੀ ਚੱਲ ਰਿਹਾ ਹੈ। "
+"ਮਿਟਾਉਣਾ ਸਿਰਫ਼ ਪ੍ਰਦਾਤਾ ਹੀ ਰੱਦ ਕਰ ਸਕਦਾ ਹੈ; ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਨਹੀਂ ਕਰ ਸਕਦੀ।"
+
+#: .\models.py:373
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:122
+msgid "Disposition"
+msgstr "ਨਿਪਟਾਰਾ"
+
+#: .\models.py:375
+msgid ""
+"This says whether the key encryption key could be deleted when it was "
+"scheduled for deletion. Wherever a data encryption key still names the key, "
+"the deletion works this out again from the running configuration and uses "
+"that answer instead."
+msgstr ""
+"ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਜਦੋਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਮਿਟਾਉਣ ਲਈ ਤੈਅ ਕੀਤਾ ਗਿਆ ਸੀ ਤਾਂ ਕੀ ਉਸ ਨੂੰ "
+"ਮਿਟਾਇਆ ਜਾ ਸਕਦਾ ਸੀ। ਜਿੱਥੇ ਵੀ ਕੋਈ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਹਾਲੇ ਵੀ ਇਸ ਕੁੰਜੀ ਦਾ ਨਾਂ ਲੈਂਦੀ ਹੈ, "
+"ਮਿਟਾਉਣਾ ਚੱਲ ਰਹੀ ਸੰਰਚਨਾ ਤੋਂ ਇਸ ਨੂੰ ਦੁਬਾਰਾ ਕੱਢਦਾ ਹੈ ਅਤੇ ਉਸੇ ਜਵਾਬ ਨੂੰ ਵਰਤਦਾ ਹੈ।"
+
+#: .\models.py:384
+msgid "Owner prefix"
+msgstr "ਮਾਲਕ ਅਗੇਤਰ"
+
+#: .\models.py:386
+msgid ""
+"This prefix marked the key as this application's when it was scheduled for "
+"deletion. It stays empty until then, and the application refuses to delete "
+"the key if the current prefix no longer matches."
+msgstr ""
+"ਇਸ ਅਗੇਤਰ ਨੇ ਕੁੰਜੀ ਨੂੰ ਮਿਟਾਉਣ ਲਈ ਤੈਅ ਕਰਨ ਵੇਲੇ ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਵਜੋਂ ਨਿਸ਼ਾਨਦੇਹ ਕੀਤਾ ਸੀ। ਉਸ ਤੋਂ "
+"ਪਹਿਲਾਂ ਇਹ ਖਾਲੀ ਰਹਿੰਦਾ ਹੈ, ਅਤੇ ਜੇ ਮੌਜੂਦਾ ਅਗੇਤਰ ਮੇਲ ਨਾ ਖਾਵੇ ਤਾਂ ਐਪਲੀਕੇਸ਼ਨ ਕੁੰਜੀ ਮਿਟਾਉਣ ਤੋਂ "
+"ਇਨਕਾਰ ਕਰਦੀ ਹੈ।"
+
+#: .\models.py:396
+msgid ""
+"The KMS last reported this version of the key encryption key as current."
+msgstr "KMS ਨੇ ਆਖਰੀ ਵਾਰ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦਾ ਇਹ ਵਰਜਨ ਮੌਜੂਦਾ ਵਜੋਂ ਦੱਸਿਆ।"
+
+#: .\models.py:402
+msgid ""
+"Reconcile sets this when no live silo uses the key. It is for display only: "
+"every action that destroys a key checks again before it acts."
+msgstr ""
+"ਮਿਲਾਨ ਇਸ ਨੂੰ ਉਦੋਂ ਸੈੱਟ ਕਰਦਾ ਹੈ ਜਦੋਂ ਕੋਈ ਵੀ ਸਰਗਰਮ silo ਕੁੰਜੀ ਨੂੰ ਨਹੀਂ ਵਰਤਦਾ। ਇਹ ਸਿਰਫ਼ ਵਿਖਾਵੇ "
+"ਲਈ ਹੈ: ਕੁੰਜੀ ਨਸ਼ਟ ਕਰਨ ਵਾਲੀ ਹਰ ਕਾਰਵਾਈ ਅਮਲ ਤੋਂ ਪਹਿਲਾਂ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰਦੀ ਹੈ।"
+
+#: .\models.py:412 .\templates\admin\encryption_suite\inventory.html:30
+#: .\templates\admin\encryption_suite\inventory.html:55
+msgid "Key encryption keys"
+msgstr "ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ"
+
+#: .\models.py:505
+msgid "Recorded IP address"
+msgstr "ਦਰਜ IP ਪਤਾ"
+
+#: .\models.py:506
+msgid "Recorded IP addresses"
+msgstr "ਦਰਜ IP ਪਤੇ"
+
+#: .\models.py:545
+msgid "Recorded OS user"
+msgstr "ਦਰਜ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਵਰਤੋਂਕਾਰ"
+
+#: .\models.py:546
+msgid "Recorded OS users"
+msgstr "ਦਰਜ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਵਰਤੋਂਕਾਰ"
+
+#: .\models.py:662
+msgid "This names what happened to the key."
+msgstr "ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕੁੰਜੀ ਨਾਲ ਕੀ ਹੋਇਆ।"
+
+#: .\models.py:672
+msgid ""
+"The event is about this key encryption key. It is empty when the event is "
+"about a data encryption key."
+msgstr ""
+"ਘਟਨਾ ਇਸ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਬਾਰੇ ਹੈ। ਜਦੋਂ ਘਟਨਾ ਕਿਸੇ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਬਾਰੇ ਹੋਵੇ ਤਾਂ ਇਹ "
+"ਖਾਲੀ ਰਹਿੰਦੀ ਹੈ।"
+
+#: .\models.py:683
+msgid ""
+"The event is about this data encryption key. It is empty when the event is "
+"about a key encryption key."
+msgstr ""
+"ਘਟਨਾ ਇਸ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਬਾਰੇ ਹੈ। ਜਦੋਂ ਘਟਨਾ ਕਿਸੇ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਬਾਰੇ ਹੋਵੇ ਤਾਂ ਇਹ "
+"ਖਾਲੀ ਰਹਿੰਦੀ ਹੈ।"
+
+#: .\models.py:692
+msgid ""
+"At the time of this event, the key belonged to this key set. It is empty for "
+"a key encryption key that is shared or belongs to no silo."
+msgstr ""
+"ਇਸ ਘਟਨਾ ਵੇਲੇ ਕੁੰਜੀ ਇਸ ਕੁੰਜੀ ਸੈੱਟ ਦੀ ਸੀ। ਜੋ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਸਾਂਝੀ ਹੈ ਜਾਂ ਕਿਸੇ silo ਦੀ "
+"ਨਹੀਂ, ਉਸ ਲਈ ਇਹ ਖਾਲੀ ਹੁੰਦੀ ਹੈ।"
+
+#: .\models.py:703
+msgid ""
+"At the time of this event, the key belonged to this silo. It is empty for a "
+"key encryption key that is shared or belongs to no silo."
+msgstr ""
+"ਇਸ ਘਟਨਾ ਵੇਲੇ ਕੁੰਜੀ ਇਸ silo ਦੀ ਸੀ। ਜੋ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਸਾਂਝੀ ਹੈ ਜਾਂ ਕਿਸੇ silo ਦੀ ਨਹੀਂ, "
+"ਉਸ ਲਈ ਇਹ ਖਾਲੀ ਹੁੰਦੀ ਹੈ।"
+
+#: .\models.py:712
+msgid ""
+"At the time of this event, the key encryption key involved had this resource "
+"name."
+msgstr "ਇਸ ਘਟਨਾ ਵੇਲੇ ਸ਼ਾਮਲ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦਾ ਇਹ ਸਰੋਤ ਨਾਂ ਸੀ।"
+
+#: .\models.py:726
+msgid ""
+"At the time of this event, this key encryption key encrypted the data "
+"encryption key. It is empty on a key encryption key's own events."
+msgstr ""
+"ਇਸ ਘਟਨਾ ਵੇਲੇ ਇਸ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੇ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ ਸੀ। ਕੁੰਜੀ "
+"ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦੀਆਂ ਆਪਣੀਆਂ ਘਟਨਾਵਾਂ ਉੱਤੇ ਇਹ ਖਾਲੀ ਹੁੰਦੀ ਹੈ।"
+
+#: .\models.py:736
+msgid ""
+"At the time of this event, this key store held the key encryption key. It is "
+"empty on a key encryption key's own events."
+msgstr ""
+"ਇਸ ਘਟਨਾ ਵੇਲੇ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਇਸ ਕੁੰਜੀ ਸਟੋਰ ਕੋਲ ਸੀ। ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦੀਆਂ ਆਪਣੀਆਂ "
+"ਘਟਨਾਵਾਂ ਉੱਤੇ ਇਹ ਖਾਲੀ ਹੁੰਦਾ ਹੈ।"
+
+#: .\models.py:746
+msgid ""
+"At the time of this event, the KMS reported this version of the key "
+"encryption key. It is empty where the provider reports no version."
+msgstr ""
+"ਇਸ ਘਟਨਾ ਵੇਲੇ KMS ਨੇ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦਾ ਇਹ ਵਰਜਨ ਦੱਸਿਆ। ਜਿੱਥੇ ਪ੍ਰਦਾਤਾ ਕੋਈ ਵਰਜਨ ਨਹੀਂ "
+"ਦੱਸਦਾ, ਉੱਥੇ ਇਹ ਖਾਲੀ ਹੁੰਦਾ ਹੈ।"
+
+#: .\models.py:756
+msgid ""
+"At the time of this event, the data encryption key came from this crypto "
+"backend. It is empty for a blind index key and on a key encryption key's own "
+"events."
+msgstr ""
+"ਇਸ ਘਟਨਾ ਵੇਲੇ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਇਸ ਕ੍ਰਿਪਟੋ ਬੈਕਐਂਡ ਤੋਂ ਆਈ ਸੀ। ਬਲਾਈਂਡ ਇੰਡੈਕਸ ਕੁੰਜੀ ਲਈ ਅਤੇ ਕੁੰਜੀ "
+"ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦੀਆਂ ਆਪਣੀਆਂ ਘਟਨਾਵਾਂ ਉੱਤੇ ਇਹ ਖਾਲੀ ਹੁੰਦਾ ਹੈ।"
+
+#: .\models.py:766
+msgid ""
+"At the time of this event, the data encryption key was generated for this "
+"algorithm. It is empty on a key encryption key's own events."
+msgstr ""
+"ਇਸ ਘਟਨਾ ਵੇਲੇ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਇਸ ਐਲਗੋਰਿਦਮ ਲਈ ਬਣਾਈ ਗਈ ਸੀ। ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦੀਆਂ "
+"ਆਪਣੀਆਂ ਘਟਨਾਵਾਂ ਉੱਤੇ ਇਹ ਖਾਲੀ ਹੁੰਦਾ ਹੈ।"
+
+#: .\models.py:776
+msgid ""
+"This says how the event came about: someone asked for it, it followed from "
+"another act, or a script or schedule ran it."
+msgstr ""
+"ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਘਟਨਾ ਕਿਵੇਂ ਵਾਪਰੀ: ਕਿਸੇ ਨੇ ਮੰਗੀ, ਇਹ ਕਿਸੇ ਹੋਰ ਕਾਰਵਾਈ ਤੋਂ ਬਾਅਦ ਹੋਈ, ਜਾਂ ਕਿਸੇ "
+"ਸਕ੍ਰਿਪਟ ਜਾਂ ਸਮਾਂ-ਸੂਚੀ ਨੇ ਚਲਾਈ।"
+
+#: .\models.py:786
+msgid "This says why the event happened, where the event alone does not."
+msgstr "ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਘਟਨਾ ਕਿਉਂ ਵਾਪਰੀ, ਜਿੱਥੇ ਇਕੱਲੀ ਘਟਨਾ ਇਹ ਨਹੀਂ ਦੱਸਦੀ।"
+
+#: .\models.py:791
+msgid "Effective at"
+msgstr "ਲਾਗੂ ਮਿਤੀ"
+
+#: .\models.py:793
+msgid ""
+"The event set this deletion date, where it set one: the end of the "
+"application's window for a scheduling event, or the provider's date for a "
+"requested deletion."
+msgstr ""
+"ਘਟਨਾ ਨੇ ਇਹ ਮਿਟਾਉਣ ਦੀ ਮਿਤੀ ਤੈਅ ਕੀਤੀ, ਜਿੱਥੇ ਉਸ ਨੇ ਕੋਈ ਤੈਅ ਕੀਤੀ: ਸਮਾਂ-ਸੂਚੀ ਘਟਨਾ ਲਈ "
+"ਐਪਲੀਕੇਸ਼ਨ ਦੀ ਵਿੰਡੋ ਦਾ ਅੰਤ, ਜਾਂ ਬੇਨਤੀ ਕੀਤੇ ਮਿਟਾਉਣ ਲਈ ਪ੍ਰਦਾਤਾ ਦੀ ਮਿਤੀ।"
+
+#: .\models.py:811
+msgid ""
+"This user acted, where the configuration records one. The reference stays "
+"after the user is deleted."
+msgstr ""
+"ਇਸ ਵਰਤੋਂਕਾਰ ਨੇ ਕਾਰਵਾਈ ਕੀਤੀ, ਜਿੱਥੇ ਸੰਰਚਨਾ ਕੋਈ ਦਰਜ ਕਰਦੀ ਹੈ। ਵਰਤੋਂਕਾਰ ਦੇ ਮਿਟਾਏ ਜਾਣ ਤੋਂ ਬਾਅਦ "
+"ਵੀ ਹਵਾਲਾ ਰਹਿੰਦਾ ਹੈ।"
+
+#: .\models.py:822
+msgid "OS login account"
+msgstr "ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਲਾਗਇਨ ਖਾਤਾ"
+
+#: .\models.py:824
+msgid ""
+"A command-line act ran under this operating-system account, shown with its "
+"uid, where the configuration records one."
+msgstr ""
+"ਕਮਾਂਡ-ਲਾਈਨ ਕਾਰਵਾਈ ਇਸ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਖਾਤੇ ਹੇਠ ਚੱਲੀ, ਜੋ ਉਸ ਦੇ uid ਸਮੇਤ ਦਿਖਾਇਆ ਜਾਂਦਾ ਹੈ, "
+"ਜਿੱਥੇ ਸੰਰਚਨਾ ਕੋਈ ਦਰਜ ਕਰਦੀ ਹੈ।"
+
+#: .\models.py:834
+msgid "User IP address"
+msgstr "ਵਰਤੋਂਕਾਰ ਦਾ IP ਪਤਾ"
+
+#: .\models.py:835
+msgid "The act came from this address, where the configuration records one."
+msgstr "ਕਾਰਵਾਈ ਇਸ ਪਤੇ ਤੋਂ ਆਈ, ਜਿੱਥੇ ਸੰਰਚਨਾ ਕੋਈ ਦਰਜ ਕਰਦੀ ਹੈ।"
+
+#: .\models.py:837
+msgid "Recorded at"
+msgstr "ਦਰਜ ਕੀਤਾ"
+
+#: .\models.py:841
+msgid "Key lifecycle event"
+msgstr "ਕੁੰਜੀ ਜੀਵਨ-ਚੱਕਰ ਘਟਨਾ"
+
+#: .\models.py:842
+msgid "Key lifecycle events"
+msgstr "ਕੁੰਜੀ ਜੀਵਨ-ਚੱਕਰ ਘਟਨਾਵਾਂ"
+
+#: .\models.py:1131
+msgid "Data encryption key rotation"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦਾ ਘੁਮਾਉਣਾ"
+
+#: .\models.py:1132
+msgid "Data encryption key rotations"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦੇ ਘੁਮਾਉਣੇ"
+
+#: .\models.py:1171
+msgid "Data encryption key rotation work item"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਘੁਮਾਉਣ ਦੀ ਕਾਰਜ ਆਈਟਮ"
+
+#: .\models.py:1172
+msgid "Data encryption key rotation work items"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਘੁਮਾਉਣ ਦੀਆਂ ਕਾਰਜ ਆਈਟਮਾਂ"
+
+#: .\models.py:1225
+msgid "Blind index entry"
+msgstr "ਬਲਾਈਂਡ ਇੰਡੈਕਸ ਐਂਟਰੀ"
+
+#: .\models.py:1226
+msgid "Blind index entries"
+msgstr "ਬਲਾਈਂਡ ਇੰਡੈਕਸ ਐਂਟਰੀਆਂ"
+
+#: .\models.py:1271 .\models.py:1272
+msgid "Encryption tools"
+msgstr "ਇਨਕ੍ਰਿਪਸ਼ਨ ਟੂਲ"
+
+#: .\reconcile.py:63
+msgid ""
+"the silo adapter cannot enumerate silos, so deleted-silo (DB-side) orphans "
+"cannot be detected"
+msgstr ""
+"silo ਅਡੈਪਟਰ silo ਦੀ ਗਿਣਤੀ ਨਹੀਂ ਕਰ ਸਕਦਾ, ਇਸ ਲਈ ਮਿਟਾਏ-silo (DB-ਪਾਸੇ) ਅਨਾਥਾਂ ਨੂੰ "
+"ਪਛਾਣਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
+
+#: .\reconcile.py:66
+msgid ""
+"enumerating the silos failed, so deleted-silo (DB-side) orphans could not be "
+"detected on this pass"
+msgstr ""
+"silo ਦੀ ਗਿਣਤੀ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ, ਇਸ ਲਈ ਇਸ ਵਾਰੀ ਮਿਟਾਏ ਗਏ silo ਤੋਂ ਬਣੀਆਂ ਅਨਾਥ ਕੁੰਜੀਆਂ "
+"(ਡਾਟਾਬੇਸ ਵਾਲੇ ਪਾਸੇ) ਦਾ ਪਤਾ ਨਹੀਂ ਲੱਗ ਸਕਿਆ"
+
+#: .\reconcile.py:69
+msgid ""
+"the provisioner cannot list key encryption keys, so orphaned keys cannot be "
+"detected"
+msgstr ""
+"ਪ੍ਰੋਵਿਜ਼ਨਰ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦੀ ਸੂਚੀ ਨਹੀਂ ਬਣਾ ਸਕਦਾ, ਇਸ ਲਈ ਅਨਾਥ ਕੁੰਜੀਆਂ ਨੂੰ ਪਛਾਣਿਆ ਨਹੀਂ "
+"ਜਾ ਸਕਦਾ"
+
+#: .\reconcile.py:72
+msgid ""
+"listing the key encryption keys failed, so orphaned keys could not be "
+"detected on this pass"
+msgstr ""
+"ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਉਣਾ ਅਸਫਲ ਰਿਹਾ, ਇਸ ਲਈ ਇਸ ਵਾਰੀ ਅਨਾਥ ਕੁੰਜੀਆਂ ਦਾ ਪਤਾ "
+"ਨਹੀਂ ਲੱਗ ਸਕਿਆ"
+
+#: .\reconcile.py:75
+msgid ""
+"no owner prefix (shared or KEK_MAP key naming), so key encryption keys "
+"cannot be attributed to this deployment"
+msgstr ""
+"ਕੋਈ ਮਾਲਕ ਅਗੇਤਰ ਨਹੀਂ (ਸਾਂਝੀ ਜਾਂ KEK_MAP ਕੁੰਜੀ ਨਾਮਕਰਨ), ਇਸ ਲਈ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਨੂੰ ਇਸ "
+"ਡਿਪਲਾਇਮੈਂਟ ਨਾਲ ਨਹੀਂ ਜੋੜਿਆ ਜਾ ਸਕਦਾ"
+
+#: .\reconcile.py:296 .\reconcile.py:313
+msgid "the KMS provider"
+msgstr "KMS ਪ੍ਰਦਾਤਾ"
+
+#: .\reconcile.py:304
+#, python-format
+msgid ""
+"Delete key encryption key '%(name)s' on %(provider)s in the KMS — the "
+"configured provisioner cannot delete it. The silo it backed no longer exists."
+msgstr ""
+"%(provider)s ਉੱਤੇ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ‘%(name)s’ ਨੂੰ KMS ਵਿੱਚ ਮਿਟਾਓ — ਸੰਰਚਿਤ ਪ੍ਰੋਵਿਜ਼ਨਰ "
+"ਇਸ ਨੂੰ ਮਿਟਾ ਨਹੀਂ ਸਕਦਾ। ਜਿਸ ਸਿਲੋ ਨੂੰ ਇਹ ਸੰਭਾਲਦੀ ਸੀ ਉਹ ਹੁਣ ਮੌਜੂਦ ਨਹੀਂ।"
+
+#: .\reconcile.py:317
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List key encryption keys "
+"whose name starts with '%(prefix)s' on %(provider)s and audit them against "
+"your live silos by hand; delete any that back no silo."
+msgstr ""
+"KMS-ਪਾਸੇ ਦਾ ਮਿਲਾਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ (%(reasons)s)। %(provider)s ਉੱਤੇ ਉਹ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ "
+"ਕੁੰਜੀਆਂ ਸੂਚੀਬੱਧ ਕਰੋ ਜਿਨ੍ਹਾਂ ਦਾ ਨਾਮ '%(prefix)s' ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ ਅਤੇ ਆਪਣੇ ਕਿਰਿਆਸ਼ੀਲ silo ਦੇ "
+"ਮੁਕਾਬਲੇ ਉਹਨਾਂ ਦੀ ਹੱਥੀਂ ਜਾਂਚ ਕਰੋ; ਕਿਸੇ ਵੀ ਅਜਿਹੀ ਨੂੰ ਮਿਟਾਓ ਜੋ ਕਿਸੇ silo ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀ।"
+
+#: .\reconcile.py:323
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List the key encryption "
+"keys this deployment uses on %(provider)s and audit them against your live "
+"silos by hand; delete any that back no silo."
+msgstr ""
+"KMS-ਪਾਸੇ ਦਾ ਮਿਲਾਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ (%(reasons)s)। %(provider)s ਉੱਤੇ ਇਹ ਡਿਪਲਾਇਮੈਂਟ "
+"ਜਿਹੜੀਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਵਰਤਦੀ ਹੈ ਉਹ ਸੂਚੀਬੱਧ ਕਰੋ ਅਤੇ ਆਪਣੇ ਕਿਰਿਆਸ਼ੀਲ silo ਦੇ ਮੁਕਾਬਲੇ "
+"ਉਹਨਾਂ ਦੀ ਹੱਥੀਂ ਜਾਂਚ ਕਰੋ; ਕਿਸੇ ਵੀ ਅਜਿਹੀ ਨੂੰ ਮਿਟਾਓ ਜੋ ਕਿਸੇ silo ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀ।"
+
+#: .\reconcile.py:369
+msgid ""
+"no data key rotation period is declared (DEK_ROTATION_PERIOD_DAYS), so "
+"nothing can be called overdue"
+msgstr ""
+"ਡਾਟਾ ਕੁੰਜੀਆਂ ਲਈ ਕੋਈ ਰੋਟੇਸ਼ਨ ਮਿਆਦ ਐਲਾਨੀ ਨਹੀਂ ਗਈ (DEK_ROTATION_PERIOD_DAYS), ਇਸ ਲਈ ਕਿਸੇ "
+"ਨੂੰ ਬਕਾਇਆ ਨਹੀਂ ਕਿਹਾ ਜਾ ਸਕਦਾ"
+
+#: .\reconcile.py:372
+msgid ""
+"this provider identifies no key version, so keys needing re-encryption after "
+"a rotation cannot be detected"
+msgstr ""
+"ਇਹ ਪ੍ਰਦਾਤਾ ਕੋਈ ਕੁੰਜੀ ਵਰਜਨ ਨਹੀਂ ਦੱਸਦਾ, ਇਸ ਲਈ ਰੋਟੇਸ਼ਨ ਤੋਂ ਬਾਅਦ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ ਦੀ ਲੋੜ ਵਾਲੀਆਂ "
+"ਕੁੰਜੀਆਂ ਦਾ ਪਤਾ ਨਹੀਂ ਲੱਗ ਸਕਦਾ"
+
+#: .\reconcile.py:375
+msgid ""
+"the key version lookup failed for one or more keys, so those keys were left "
+"out of the key re-encryption check"
+msgstr ""
+"ਇੱਕ ਜਾਂ ਵੱਧ ਕੁੰਜੀਆਂ ਲਈ ਕੁੰਜੀ ਵਰਜਨ ਦੀ ਖੋਜ ਅਸਫਲ ਰਹੀ, ਇਸ ਲਈ ਉਹ ਕੁੰਜੀਆਂ ਕੁੰਜੀ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ ਦੀ "
+"ਜਾਂਚ ਤੋਂ ਬਾਹਰ ਰੱਖੀਆਂ ਗਈਆਂ"
+
+#: .\safe_queries.py:69
+msgid "No content"
+msgstr "ਕੋਈ ਸਮੱਗਰੀ ਨਹੀਂ"
+
+#: .\safe_queries.py:70
+msgid "Unable to decrypt field."
+msgstr "ਖੇਤਰ ਡਿਕ੍ਰਿਪਟ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ।"
+
+#: .\safe_queries.py:71
+msgid "No file uploaded"
+msgstr "ਕੋਈ ਫਾਈਲ ਅੱਪਲੋਡ ਨਹੀਂ ਕੀਤੀ ਗਈ"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:14
+msgid "ready"
+msgstr "ਤਿਆਰ"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:16
+msgid "not usable"
+msgstr "ਵਰਤਣਯੋਗ ਨਹੀਂ"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:18
+msgid "missing"
+msgstr "ਗਾਇਬ"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+#: .\templates\admin\encryption_suite\reconcile_keys.html:201
+#: .\templates\admin\encryption_suite\reconcile_keys.html:252
+msgid "Yes"
+msgstr "ਹਾਂ"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+msgid "No"
+msgstr "ਨਹੀਂ"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:8
+#: .\templates\admin\encryption_suite\reconcile_keys.html:185
+#: .\templates\admin\encryption_suite\reconcile_keys.html:238
+#: .\templates\admin\encryption_suite\test_console.html:13
+msgid "Test console"
+msgstr "ਟੈਸਟ ਕੰਸੋਲ"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\inventory.html:10
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\reconcile_keys.html:10
+#: .\templates\admin\encryption_suite\settings.html:10
+#: .\templates\admin\encryption_suite\test_console.html:10
+msgid "Home"
+msgstr "ਘਰ"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s data encryption key. This cannot be "
+"undone."
+msgid_plural ""
+"You are about to destroy %(counter)s data encryption keys. This cannot be "
+"undone."
+msgstr[0] ""
+"ਤੁਸੀਂ %(counter)s ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨਸ਼ਟ ਕਰਨ ਜਾ ਰਹੇ ਹੋ। ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"
+msgstr[1] ""
+"ਤੁਸੀਂ %(counter)s ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਨਸ਼ਟ ਕਰਨ ਜਾ ਰਹੇ ਹੋ। ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:24
+msgid "None of the selected data encryption keys can be deleted yet."
+msgstr "ਚੁਣੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਵਿੱਚੋਂ ਕੋਈ ਵੀ ਹਾਲੇ ਮਿਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:29
+#, python-format
+msgid ""
+"%(counter)s selected key will not be destroyed (%(reasons)s) and is not "
+"listed below. Nothing about it changes, so resolving the cause and deleting "
+"again works."
+msgid_plural ""
+"%(counter)s selected keys will not be destroyed (%(reasons)s) and are not "
+"listed below. Nothing about them changes, so resolving the cause and "
+"deleting again works."
+msgstr[0] ""
+"%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਨਸ਼ਟ ਨਹੀਂ ਕੀਤੀ ਜਾਵੇਗੀ (%(reasons)s) ਅਤੇ ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਨਹੀਂ ਹੈ। ਇਸ "
+"ਬਾਰੇ ਕੁਝ ਨਹੀਂ ਬਦਲਦਾ, ਇਸ ਲਈ ਕਾਰਨ ਹੱਲ ਕਰਕੇ ਦੁਬਾਰਾ ਮਿਟਾਉਣਾ ਕੰਮ ਕਰਦਾ ਹੈ।"
+msgstr[1] ""
+"%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਨਸ਼ਟ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾਣਗੀਆਂ (%(reasons)s) ਅਤੇ ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਨਹੀਂ "
+"ਹਨ। ਇਹਨਾਂ ਬਾਰੇ ਕੁਝ ਨਹੀਂ ਬਦਲਦਾ, ਇਸ ਲਈ ਕਾਰਨ ਹੱਲ ਕਰਕੇ ਦੁਬਾਰਾ ਮਿਟਾਉਣਾ ਕੰਮ ਕਰਦਾ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:41
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:43
+#, python-format
+msgid ""
+"%(counter)s selected key is not scheduled for deletion, so there is nothing "
+"to delete and it is not listed below. Schedule it first — the deletion only "
+"ever acts on scheduled work whose restore window has closed."
+msgid_plural ""
+"%(counter)s selected keys are not scheduled for deletion, so there is "
+"nothing to delete and they are not listed below. Schedule them first — the "
+"deletion only ever acts on scheduled work whose restore window has closed."
+msgstr[0] ""
+"%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਮਿਟਾਉਣ ਲਈ ਤਹਿ ਨਹੀਂ ਹੈ, ਇਸ ਲਈ ਮਿਟਾਉਣ ਨੂੰ ਕੁਝ ਨਹੀਂ ਹੈ ਅਤੇ ਇਹ ਹੇਠਾਂ "
+"ਸੂਚੀਬੱਧ ਨਹੀਂ ਹੈ। ਪਹਿਲਾਂ ਇਸਨੂੰ ਤਹਿ ਕਰੋ — ਮਿਟਾਉਣਾ ਸਿਰਫ਼ ਉਸ ਤਹਿ ਕੀਤੇ ਕੰਮ ਉੱਤੇ ਚੱਲਦਾ ਹੈ ਜਿਸਦੀ "
+"ਬਹਾਲੀ ਮਿਆਦ ਬੰਦ ਹੋ ਚੁੱਕੀ ਹੈ।"
+msgstr[1] ""
+"%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਮਿਟਾਉਣ ਲਈ ਤਹਿ ਨਹੀਂ ਹਨ, ਇਸ ਲਈ ਮਿਟਾਉਣ ਨੂੰ ਕੁਝ ਨਹੀਂ ਹੈ ਅਤੇ ਇਹ "
+"ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਨਹੀਂ ਹਨ। ਪਹਿਲਾਂ ਇਹਨਾਂ ਨੂੰ ਤਹਿ ਕਰੋ — ਮਿਟਾਉਣਾ ਸਿਰਫ਼ ਉਸ ਤਹਿ ਕੀਤੇ ਕੰਮ ਉੱਤੇ ਚੱਲਦਾ ਹੈ "
+"ਜਿਸਦੀ ਬਹਾਲੀ ਮਿਆਦ ਬੰਦ ਹੋ ਚੁੱਕੀ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:55
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:57
+#, python-format
+msgid ""
+"%(counter)s selected key is scheduled but still inside its restore window, "
+"and is not listed below. It will not be touched until the window closes."
+msgid_plural ""
+"%(counter)s selected keys are scheduled but still inside their restore "
+"window, and are not listed below. They will not be touched until the window "
+"closes."
+msgstr[0] ""
+"%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਸਮਾਂ-ਬੱਧ ਹੈ ਪਰ ਹਾਲੇ ਵੀ ਆਪਣੀ ਬਹਾਲੀ ਵਿੰਡੋ ਦੇ ਅੰਦਰ ਹੈ, ਅਤੇ ਹੇਠਾਂ ਸੂਚੀਬੱਧ "
+"ਨਹੀਂ ਹੈ। ਵਿੰਡੋ ਬੰਦ ਹੋਣ ਤੱਕ ਇਸਨੂੰ ਛੂਹਿਆ ਨਹੀਂ ਜਾਵੇਗਾ।"
+msgstr[1] ""
+"%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਸਮਾਂ-ਬੱਧ ਹਨ ਪਰ ਹਾਲੇ ਵੀ ਆਪਣੀ ਬਹਾਲੀ ਵਿੰਡੋ ਦੇ ਅੰਦਰ ਹਨ, ਅਤੇ ਹੇਠਾਂ "
+"ਸੂਚੀਬੱਧ ਨਹੀਂ ਹਨ। ਵਿੰਡੋ ਬੰਦ ਹੋਣ ਤੱਕ ਇਹਨਾਂ ਨੂੰ ਛੂਹਿਆ ਨਹੀਂ ਜਾਵੇਗਾ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:68
+msgid ""
+"Each key below has its wrapped keyset cleared. Every encrypted field and "
+"file belonging to that silo becomes permanently unreadable."
+msgstr ""
+"ਹੇਠਾਂ ਹਰ ਕੁੰਜੀ ਦਾ ਲਪੇਟਿਆ ਕੀਸੈੱਟ ਸਾਫ਼ ਕਰ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। ਉਸ ਸਾਈਲੋ ਨਾਲ ਸਬੰਧਤ ਹਰ ਇਨਕ੍ਰਿਪਟਡ "
+"ਖੇਤਰ ਅਤੇ ਫ਼ਾਈਲ ਹਮੇਸ਼ਾ ਲਈ ਅਪੜ੍ਹਨਯੋਗ ਹੋ ਜਾਂਦੀ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:74
+msgid ""
+"No provider window stands behind this. Unlike destroying a key encryption "
+"key, there is nothing to cancel at the KMS afterwards — the only recovery is "
+"a database backup taken while the wrapping key still exists."
+msgstr ""
+"ਇਸ ਦੇ ਪਿੱਛੇ ਪ੍ਰਦਾਤਾ ਦੀ ਕੋਈ ਵਿੰਡੋ ਨਹੀਂ ਹੈ। ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨਸ਼ਟ ਕਰਨ ਦੇ ਉਲਟ, ਬਾਅਦ ਵਿੱਚ "
+"KMS ’ਤੇ ਰੱਦ ਕਰਨ ਲਈ ਕੁਝ ਨਹੀਂ ਹੁੰਦਾ — ਇੱਕੋ-ਇੱਕ ਬਹਾਲੀ ਉਹ ਡਾਟਾਬੇਸ ਬੈਕਅੱਪ ਹੈ ਜੋ ਲਪੇਟਣ ਵਾਲੀ ਕੁੰਜੀ ਦੇ "
+"ਮੌਜੂਦ ਹੁੰਦਿਆਂ ਲਿਆ ਗਿਆ ਹੋਵੇ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:81
+msgid ""
+"The row survives as a record that the key existed. Its lifecycle history is "
+"kept."
+msgstr ""
+"ਇਹ ਕਤਾਰ ਇਸ ਗੱਲ ਦੇ ਰਿਕਾਰਡ ਵਜੋਂ ਰਹਿੰਦੀ ਹੈ ਕਿ ਕੁੰਜੀ ਮੌਜੂਦ ਸੀ। ਇਸ ਦਾ ਜੀਵਨ-ਚੱਕਰ ਇਤਿਹਾਸ "
+"ਸੰਭਾਲਿਆ ਜਾਂਦਾ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:126
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:120
+#: .\templates\admin\encryption_suite\reconcile_keys.html:181
+#: .\templates\admin\encryption_suite\reconcile_keys.html:231
+msgid "KEK name"
+msgstr "KEK ਨਾਮ"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:118
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:123
+msgid "Yes, destroy these keys"
+msgstr "ਹਾਂ, ਇਹ ਕੁੰਜੀਆਂ ਨਸ਼ਟ ਕਰੋ"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:120
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:149
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:125
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:148
+msgid "No, take me back"
+msgstr "ਨਹੀਂ, ਵਾਪਸ ਜਾਓ"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid "%(counter)s selected key cannot be scheduled."
+msgid_plural "%(counter)s selected keys cannot be scheduled."
+msgstr[0] "%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਸਮਾਂ-ਬੱਧ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।"
+msgstr[1] "%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਸਮਾਂ-ਬੱਧ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:25
+msgid ""
+"Destroying one of these makes its silo's data permanently unreadable, and "
+"the deletion would refuse it for the same reason — so it is refused now "
+"rather than after a window has been waited out."
+msgstr ""
+"ਇਹਨਾਂ ਵਿੱਚੋਂ ਇੱਕ ਨੂੰ ਨਸ਼ਟ ਕਰਨ ਨਾਲ ਉਸਦੇ ਸਾਈਲੋ ਦਾ ਡਾਟਾ ਹਮੇਸ਼ਾ ਲਈ ਅਪੜ੍ਹਨਯੋਗ ਹੋ ਜਾਂਦਾ ਹੈ, ਅਤੇ "
+"ਮਿਟਾਉਣਾ ਵੀ ਇਸੇ ਕਾਰਨ ਇਸਨੂੰ ਇਨਕਾਰ ਕਰੇਗਾ — ਇਸ ਲਈ ਹੁਣੇ ਇਨਕਾਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਨਾ ਕਿ ਇੱਕ "
+"ਮਿਆਦ ਦੀ ਉਡੀਕ ਤੋਂ ਬਾਅਦ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:32
+msgid ""
+"Delete the silo first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to "
+"True in ENCRYPTION, which permits destroying a key that live data depends on "
+"— for an erasure obligation that must render the data unreadable while "
+"keeping the records."
+msgstr ""
+"ਪਹਿਲਾਂ ਸਾਈਲੋ ਮਿਟਾਓ, ਜਾਂ ENCRYPTION ਵਿੱਚ "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE ਨੂੰ True ਕਰੋ, ਜੋ ਉਸ ਕੁੰਜੀ ਨੂੰ ਨਸ਼ਟ ਕਰਨ ਦੀ "
+"ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ ਜਿਸ ’ਤੇ ਸਰਗਰਮ ਡਾਟਾ ਨਿਰਭਰ ਹੈ — ਉਸ ਮਿਟਾਉਣ ਦੀ ਜ਼ਿੰਮੇਵਾਰੀ ਲਈ ਜਿਸ ਵਿੱਚ "
+"ਡਾਟਾ ਅਪੜ੍ਹਨਯੋਗ ਕਰਨਾ ਪਰ ਰਿਕਾਰਡ ਰੱਖਣੇ ਜ਼ਰੂਰੀ ਹੋਣ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:61
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled or deleted — so "
+"there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled or deleted — so "
+"there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਸਰਗਰਮ ਨਹੀਂ ਹੈ — ਪਹਿਲਾਂ ਹੀ ਤਹਿ ਜਾਂ ਮਿਟਾਈ ਗਈ — ਇਸ ਲਈ ਤਹਿ ਕਰਨ ਨੂੰ "
+"ਕੁਝ ਨਹੀਂ ਹੈ ਅਤੇ ਇਹ ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਨਹੀਂ ਹੈ।"
+msgstr[1] ""
+"%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਸਰਗਰਮ ਨਹੀਂ ਹਨ — ਪਹਿਲਾਂ ਹੀ ਤਹਿ ਜਾਂ ਮਿਟਾਈਆਂ ਗਈਆਂ — ਇਸ ਲਈ ਤਹਿ "
+"ਕਰਨ ਨੂੰ ਕੁਝ ਨਹੀਂ ਹੈ ਅਤੇ ਇਹ ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਨਹੀਂ ਹਨ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:73
+#, python-format
+msgid ""
+"%(counter)s selected key belongs to the test console, which has its own "
+"deletion path, and is not listed below."
+msgid_plural ""
+"%(counter)s selected keys belong to the test console, which has its own "
+"deletion path, and are not listed below."
+msgstr[0] ""
+"%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਟੈਸਟ ਕੰਸੋਲ ਦੀ ਹੈ, ਜਿਸ ਦਾ ਆਪਣਾ ਮਿਟਾਉਣ ਦਾ ਰਾਹ ਹੈ, ਅਤੇ ਇਹ ਹੇਠਾਂ "
+"ਸੂਚੀਬੱਧ ਨਹੀਂ ਹੈ।"
+msgstr[1] ""
+"%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਟੈਸਟ ਕੰਸੋਲ ਦੀਆਂ ਹਨ, ਜਿਸ ਦਾ ਆਪਣਾ ਮਿਟਾਉਣ ਦਾ ਰਾਹ ਹੈ, ਅਤੇ ਇਹ ਹੇਠਾਂ "
+"ਸੂਚੀਬੱਧ ਨਹੀਂ ਹਨ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:85
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s data encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s data encryption keys."
+msgstr[0] "ਤੁਸੀਂ %(counter)s ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦਾ ਮਿਟਾਉਣਾ ਤੈਅ ਕਰਨ ਜਾ ਰਹੇ ਹੋ।"
+msgstr[1] "ਤੁਸੀਂ %(counter)s ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦਾ ਮਿਟਾਉਣਾ ਤੈਅ ਕਰਨ ਜਾ ਰਹੇ ਹੋ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:95
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys belongs to a silo that is still live. "
+"Scheduling blocks its encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys belong to silos that are still live. "
+"Scheduling blocks their encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgstr[0] ""
+"%(total)s ਵਿੱਚੋਂ %(counter)s ਚੁਣੀ ਕੁੰਜੀ ਅਜਿਹੇ ਸਿਲੋ ਦੀ ਹੈ ਜੋ ਹਾਲੇ ਸਰਗਰਮ ਹੈ। ਤੈਅ ਕਰਨ ਨਾਲ ਇਸ "
+"ਦੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਤੇ ਡਿਕ੍ਰਿਪਸ਼ਨ DEK_CACHE_TTL (%(ttl)s ਸਕਿੰਟ) ਦੇ ਅੰਦਰ ਰੁਕ ਜਾਵੇਗੀ।"
+msgstr[1] ""
+"%(total)s ਵਿੱਚੋਂ %(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਅਜਿਹੇ ਸਿਲੋਆਂ ਦੀਆਂ ਹਨ ਜੋ ਹਾਲੇ ਸਰਗਰਮ ਹਨ। ਤੈਅ ਕਰਨ "
+"ਨਾਲ ਇਹਨਾਂ ਦੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਤੇ ਡਿਕ੍ਰਿਪਸ਼ਨ DEK_CACHE_TTL (%(ttl)s ਸਕਿੰਟ) ਦੇ ਅੰਦਰ ਰੁਕ ਜਾਵੇਗੀ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:107
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:97
+#, python-format
+msgid ""
+"Nothing is destroyed now. The keys stay restorable for %(days)s day(s), set "
+"by KEY_DELETION_WINDOW_DAYS."
+msgstr ""
+"ਹੁਣ ਕੁਝ ਵੀ ਨਸ਼ਟ ਨਹੀਂ ਹੁੰਦਾ। ਕੁੰਜੀਆਂ %(days)s ਦਿਨ ਤੱਕ ਬਹਾਲ ਹੋਣਯੋਗ ਰਹਿੰਦੀਆਂ ਹਨ, ਜੋ "
+"KEY_DELETION_WINDOW_DAYS ਵੱਲੋਂ ਤੈਅ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:113
+msgid ""
+"Once that window expires, the deletion clears the key material for good and "
+"the data it protected can no longer be decrypted."
+msgstr ""
+"ਉਹ ਮਿਆਦ ਪੁੱਗਣ ਤੋਂ ਬਾਅਦ, ਮਿਟਾਉਣਾ ਕੁੰਜੀ ਸਮੱਗਰੀ ਨੂੰ ਹਮੇਸ਼ਾ ਲਈ ਸਾਫ਼ ਕਰ ਦਿੰਦਾ ਹੈ ਅਤੇ ਜੋ ਡਾਟਾ ਇਸ ਨੇ "
+"ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਸੀ ਉਹ ਹੁਣ ਡਿਕ੍ਰਿਪਟ ਨਹੀਂ ਹੋ ਸਕਦਾ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:118
+msgid "No key encryption key is scheduled or deleted by this action."
+msgstr "ਇਹ ਕਾਰਵਾਈ ਕਿਸੇ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਨਾ ਤੈਅ ਕਰਦੀ ਹੈ ਨਾ ਮਿਟਾਉਂਦੀ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:147
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:146
+msgid "Yes, schedule deletion"
+msgstr "ਹਾਂ, ਮਿਟਾਉਣਾ ਤੈਅ ਕਰੋ"
+
+#: .\templates\admin\encryption_suite\edit_inline\tabular_history.html:33
+msgid "Delete?"
+msgstr "ਮਿਟਾਉਣਾ ਹੈ?"
+
+#: .\templates\admin\encryption_suite\inventory.html:12
+#: .\templates\admin\encryption_suite\reconcile_keys.html:12
+#: .\templates\admin\encryption_suite\settings.html:12
+#: .\templates\admin\encryption_suite\test_console.html:12
+msgid "Data Encryption Keys"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ"
+
+#: .\templates\admin\encryption_suite\inventory.html:28
+msgid "KMS Adapter"
+msgstr "KMS ਅਡੈਪਟਰ"
+
+#: .\templates\admin\encryption_suite\inventory.html:29
+msgid "KEK strategy"
+msgstr "KEK ਰਣਨੀਤੀ"
+
+#: .\templates\admin\encryption_suite\inventory.html:32
+msgid "Oldest active KEK"
+msgstr "ਸਭ ਤੋਂ ਪੁਰਾਣੀ ਸਰਗਰਮ KEK"
+
+#: .\templates\admin\encryption_suite\inventory.html:43
+msgid "Not configured"
+msgstr "ਕੌਂਫਿਗਰ ਨਹੀਂ ਕੀਤਾ"
+
+#: .\templates\admin\encryption_suite\inventory.html:61
+#: .\templates\admin\encryption_suite\inventory.html:112
+msgid "Count"
+msgstr "ਗਿਣਤੀ"
+
+#: .\templates\admin\encryption_suite\inventory.html:79
+msgid "Configured for new key encryption keys"
+msgstr "ਨਵੀਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਲਈ ਕੌਂਫਿਗਰ ਕੀਤਾ"
+
+#: .\templates\admin\encryption_suite\inventory.html:85
+msgid "Silo adapter"
+msgstr "Silo ਅਡੈਪਟਰ"
+
+#: .\templates\admin\encryption_suite\inventory.html:113
+msgid "Oldest key material"
+msgstr "ਸਭ ਤੋਂ ਪੁਰਾਣੀ ਕੁੰਜੀ ਸਮੱਗਰੀ"
+
+#: .\templates\admin\encryption_suite\inventory.html:115
+#, python-format
+msgid "Older than %(days)s days"
+msgstr "%(days)s ਦਿਨਾਂ ਤੋਂ ਪੁਰਾਣੀਆਂ"
+
+#: .\templates\admin\encryption_suite\inventory.html:122
+msgid "(no settings entry)"
+msgstr "(ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕੋਈ ਐਂਟਰੀ ਨਹੀਂ)"
+
+#: .\templates\admin\encryption_suite\inventory.html:141
+msgid "Configured for new data encryption keys"
+msgstr "ਨਵੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਲਈ ਕੌਂਫਿਗਰ ਕੀਤਾ"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s key encryption key at the KMS provider. "
+"This cannot be undone from here."
+msgid_plural ""
+"You are about to destroy %(counter)s key encryption keys at the KMS "
+"provider. This cannot be undone from here."
+msgstr[0] ""
+"ਤੁਸੀਂ KMS ਪ੍ਰਦਾਤਾ ਕੋਲ %(counter)s ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨਸ਼ਟ ਕਰਨ ਜਾ ਰਹੇ ਹੋ। ਇਹ ਇੱਥੋਂ ਵਾਪਸ "
+"ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"
+msgstr[1] ""
+"ਤੁਸੀਂ KMS ਪ੍ਰਦਾਤਾ ਕੋਲ %(counter)s ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਨਸ਼ਟ ਕਰਨ ਜਾ ਰਹੇ ਹੋ। ਇਹ ਇੱਥੋਂ ਵਾਪਸ "
+"ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:26
+msgid ""
+"None of the selected key encryption keys will be destroyed. Review the "
+"decisions below."
+msgstr ""
+"ਚੁਣੀਆਂ ਗਈਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਵਿੱਚੋਂ ਕੋਈ ਵੀ ਨਸ਼ਟ ਨਹੀਂ ਕੀਤੀ ਜਾਵੇਗੀ। ਹੇਠਾਂ ਦਿੱਤੇ ਫ਼ੈਸਲੇ ਵੇਖੋ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:31
+#, python-format
+msgid ""
+"%(counter)s key still wraps live keysets. Every silo counted below loses its "
+"data permanently."
+msgid_plural ""
+"%(counter)s keys still wrap live keysets. Every silo counted below loses its "
+"data permanently."
+msgstr[0] ""
+"%(counter)s ਕੁੰਜੀ ਅਜੇ ਵੀ ਸਰਗਰਮ ਕੀਸੈੱਟ ਲਪੇਟਦੀ ਹੈ। ਹੇਠਾਂ ਗਿਣਿਆ ਹਰ ਸਾਈਲੋ ਆਪਣਾ ਡਾਟਾ ਹਮੇਸ਼ਾ "
+"ਲਈ ਗੁਆ ਦਿੰਦਾ ਹੈ।"
+msgstr[1] ""
+"%(counter)s ਕੁੰਜੀਆਂ ਅਜੇ ਵੀ ਸਰਗਰਮ ਕੀਸੈੱਟ ਲਪੇਟਦੀਆਂ ਹਨ। ਹੇਠਾਂ ਗਿਣਿਆ ਹਰ ਸਾਈਲੋ ਆਪਣਾ ਡਾਟਾ "
+"ਹਮੇਸ਼ਾ ਲਈ ਗੁਆ ਦਿੰਦਾ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:69
+msgid ""
+"The outcome column is the decision this deletion will make, taken from a "
+"preview run through the same gates. A key that shows retained or skipped is "
+"not destroyed, and the reason is recorded against it."
+msgstr ""
+"ਨਤੀਜਾ ਕਾਲਮ ਉਹ ਫ਼ੈਸਲਾ ਹੈ ਜੋ ਇਹ ਮਿਟਾਉਣਾ ਕਰੇਗਾ, ਜੋ ਉਹਨਾਂ ਹੀ ਜਾਂਚਾਂ ਵਿੱਚੋਂ ਲੰਘੀ ਇੱਕ ਝਲਕ ਤੋਂ ਲਿਆ "
+"ਗਿਆ ਹੈ। ਜੋ ਕੁੰਜੀ ਰੱਖੀ ਗਈ ਜਾਂ ਛੱਡੀ ਗਈ ਦਿਖਦੀ ਹੈ, ਉਹ ਨਸ਼ਟ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ, ਅਤੇ ਕਾਰਨ ਉਸ ਦੇ "
+"ਨਾਲ ਦਰਜ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:76
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:110
+msgid ""
+"Destroying a key encryption key cannot be undone from a database backup: "
+"what is lost is the key that backup's ciphertext depends on."
+msgstr ""
+"ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨਸ਼ਟ ਕਰਨਾ ਡਾਟਾਬੇਸ ਬੈਕਅੱਪ ਤੋਂ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ: ਜੋ ਗੁਆਚਦਾ ਹੈ ਉਹ "
+"ਉਹੀ ਕੁੰਜੀ ਹੈ ਜਿਸ ਉੱਤੇ ਉਸ ਬੈਕਅੱਪ ਦਾ ਸਿਫ਼ਰਟੈਕਸਟ ਨਿਰਭਰ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:82
+msgid ""
+"Providers with a recovery window hold the key for their own waiting period "
+"after this, recoverable only at the provider. Providers that delete "
+"immediately do not."
+msgstr ""
+"ਬਹਾਲੀ ਵਿੰਡੋ ਵਾਲੇ ਪ੍ਰਦਾਤਾ ਇਸ ਤੋਂ ਬਾਅਦ ਕੁੰਜੀ ਨੂੰ ਆਪਣੀ ਉਡੀਕ ਮਿਆਦ ਤੱਕ ਰੱਖਦੇ ਹਨ, ਜੋ ਸਿਰਫ਼ ਪ੍ਰਦਾਤਾ "
+"ਕੋਲ ਹੀ ਬਹਾਲ ਹੋ ਸਕਦੀ ਹੈ। ਤੁਰੰਤ ਮਿਟਾਉਣ ਵਾਲੇ ਪ੍ਰਦਾਤਾ ਅਜਿਹਾ ਨਹੀਂ ਕਰਦੇ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:94
+msgid "Outcome"
+msgstr "ਨਤੀਜਾ"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:95
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:45
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:123
+msgid "Silos still holding keysets"
+msgstr "ਸਿਲੋ ਜਿਨ੍ਹਾਂ ਕੋਲ ਹਾਲੇ ਕੁੰਜੀ-ਸੈੱਟ ਹਨ"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:104
+msgid "Will be destroyed"
+msgstr "ਨਸ਼ਟ ਕੀਤੀ ਜਾਵੇਗੀ"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:105
+#, python-format
+msgid "Retained — %(reason)s"
+msgstr "ਰੱਖੀ ਗਈ — %(reason)s"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:106
+msgid "Skipped — another provider's key"
+msgstr "ਛੱਡੀ ਗਈ — ਕਿਸੇ ਹੋਰ ਪ੍ਰਦਾਤਾ ਦੀ ਕੁੰਜੀ"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:107
+msgid "Provider call failed on preview"
+msgstr "ਪੂਰਵ-ਝਲਕ ਦੌਰਾਨ ਪ੍ਰਦਾਤਾ ਨੂੰ ਕਾਲ ਅਸਫਲ ਰਹੀ"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:108
+msgid "Not eligible yet"
+msgstr "ਹਾਲੇ ਯੋਗ ਨਹੀਂ"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid ""
+"%(counter)s selected key cannot be scheduled: live data still depends on it, "
+"and destroying it would make that data permanently unreadable."
+msgid_plural ""
+"%(counter)s selected keys cannot be scheduled: live data still depends on "
+"them, and destroying them would make that data permanently unreadable."
+msgstr[0] ""
+"%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਸਮਾਂ-ਬੱਧ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ: ਸਰਗਰਮ ਡਾਟਾ ਅਜੇ ਵੀ ਇਸ ’ਤੇ ਨਿਰਭਰ ਹੈ, "
+"ਅਤੇ ਇਸਨੂੰ ਨਸ਼ਟ ਕਰਨ ਨਾਲ ਉਹ ਡਾਟਾ ਹਮੇਸ਼ਾ ਲਈ ਅਪੜ੍ਹਨਯੋਗ ਹੋ ਜਾਵੇਗਾ।"
+msgstr[1] ""
+"%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਸਮਾਂ-ਬੱਧ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ: ਸਰਗਰਮ ਡਾਟਾ ਅਜੇ ਵੀ ਇਹਨਾਂ ’ਤੇ "
+"ਨਿਰਭਰ ਹੈ, ਅਤੇ ਇਹਨਾਂ ਨੂੰ ਨਸ਼ਟ ਕਰਨ ਨਾਲ ਉਹ ਡਾਟਾ ਹਮੇਸ਼ਾ ਲਈ ਅਪੜ੍ਹਨਯੋਗ ਹੋ ਜਾਵੇਗਾ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:27
+msgid ""
+"Delete the silos still using the key, then schedule it. Their data "
+"encryption keys are deleted first, which is what leaves the key with nothing "
+"depending on it."
+msgstr ""
+"ਪਹਿਲਾਂ ਉਹ silo ਮਿਟਾਓ ਜੋ ਹਾਲੇ ਵੀ ਕੁੰਜੀ ਵਰਤ ਰਹੇ ਹਨ, ਫਿਰ ਇਸ ਨੂੰ ਸਮਾਂ-ਬੱਧ ਕਰੋ। ਉਹਨਾਂ ਦੀਆਂ "
+"ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਪਹਿਲਾਂ ਮਿਟਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ, ਜਿਸ ਨਾਲ ਕੁੰਜੀ ਉੱਤੇ ਕੁਝ ਵੀ ਨਿਰਭਰ ਨਹੀਂ "
+"ਰਹਿੰਦਾ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:33
+msgid ""
+"Or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION, "
+"which permits destroying a key that live data depends on — for an erasure "
+"obligation that must render the data unreadable while keeping the records."
+msgstr ""
+"ਜਾਂ ENCRYPTION ਵਿੱਚ KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE ਨੂੰ True ਕਰੋ, ਜੋ ਉਸ "
+"ਕੁੰਜੀ ਨੂੰ ਨਸ਼ਟ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ ਜਿਸ ’ਤੇ ਸਰਗਰਮ ਡਾਟਾ ਨਿਰਭਰ ਹੈ — ਉਸ ਮਿਟਾਉਣ ਦੀ "
+"ਜ਼ਿੰਮੇਵਾਰੀ ਲਈ ਜਿਸ ਵਿੱਚ ਡਾਟਾ ਅਪੜ੍ਹਨਯੋਗ ਕਰਨਾ ਪਰ ਰਿਕਾਰਡ ਰੱਖਣੇ ਜ਼ਰੂਰੀ ਹੋਣ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:62
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"%(counter)s ਚੁਣੀ ਕੁੰਜੀ ਸਰਗਰਮ ਨਹੀਂ ਹੈ — ਪਹਿਲਾਂ ਹੀ ਸਮਾਂ-ਬੱਧ, ਰੱਖੀ ਜਾਂ ਮਿਟਾਈ ਜਾ ਚੁੱਕੀ — ਸੋ "
+"ਸਮਾਂ-ਬੱਧ ਕਰਨ ਲਈ ਕੁਝ ਨਹੀਂ ਹੈ ਅਤੇ ਇਹ ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਨਹੀਂ ਹੈ।"
+msgstr[1] ""
+"%(counter)s ਚੁਣੀਆਂ ਕੁੰਜੀਆਂ ਸਰਗਰਮ ਨਹੀਂ ਹਨ — ਪਹਿਲਾਂ ਹੀ ਸਮਾਂ-ਬੱਧ, ਰੱਖੀਆਂ ਜਾਂ ਮਿਟਾਈਆਂ ਜਾ ਚੁੱਕੀਆਂ "
+"— ਸੋ ਸਮਾਂ-ਬੱਧ ਕਰਨ ਲਈ ਕੁਝ ਨਹੀਂ ਹੈ ਅਤੇ ਇਹ ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਨਹੀਂ ਹਨ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:74
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s key encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s key encryption keys."
+msgstr[0] "ਤੁਸੀਂ %(counter)s ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਦਾ ਮਿਟਾਉਣਾ ਸਮਾਂ-ਬੱਧ ਕਰਨ ਜਾ ਰਹੇ ਹੋ।"
+msgstr[1] "ਤੁਸੀਂ %(counter)s ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਦਾ ਮਿਟਾਉਣਾ ਸਮਾਂ-ਬੱਧ ਕਰਨ ਜਾ ਰਹੇ ਹੋ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:84
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys still wraps live keysets. Every silo "
+"counted below loses its data permanently if that key is destroyed."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys still wrap live keysets. Every silo "
+"counted below loses its data permanently if those keys are destroyed."
+msgstr[0] ""
+"%(total)s ਚੁਣੀਆਂ ਵਿੱਚੋਂ %(counter)s ਕੁੰਜੀ ਹਾਲੇ ਵੀ ਜੀਵਿਤ ਕੁੰਜੀ-ਸੈੱਟ ਲਪੇਟਦੀ ਹੈ। ਹੇਠਾਂ ਗਿਣਿਆ ਹਰ "
+"ਸਿਲੋ ਉਸ ਕੁੰਜੀ ਦੇ ਨਸ਼ਟ ਹੋਣ ਨਾਲ ਆਪਣਾ ਡਾਟਾ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਗੁਆ ਦੇਵੇਗਾ।"
+msgstr[1] ""
+"%(total)s ਚੁਣੀਆਂ ਵਿੱਚੋਂ %(counter)s ਕੁੰਜੀਆਂ ਹਾਲੇ ਵੀ ਜੀਵਿਤ ਕੁੰਜੀ-ਸੈੱਟ ਲਪੇਟਦੀਆਂ ਹਨ। ਹੇਠਾਂ ਗਿਣਿਆ "
+"ਹਰ ਸਿਲੋ ਉਹਨਾਂ ਕੁੰਜੀਆਂ ਦੇ ਨਸ਼ਟ ਹੋਣ ਨਾਲ ਆਪਣਾ ਡਾਟਾ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਗੁਆ ਦੇਵੇਗਾ।"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:103
+msgid ""
+"Scheduling states intent; the deletion decides. It re-checks every gate at "
+"the moment of destruction and retains a key that is still in use, shared, or "
+"not provably owned by this deployment, recording the reason."
+msgstr ""
+"ਤਹਿ ਕਰਨਾ ਇਰਾਦਾ ਦੱਸਦਾ ਹੈ; ਫ਼ੈਸਲਾ ਮਿਟਾਉਣਾ ਕਰਦਾ ਹੈ। ਇਹ ਨਸ਼ਟ ਕਰਨ ਦੇ ਪਲ ਹਰ ਜਾਂਚ ਦੁਬਾਰਾ "
+"ਕਰਦਾ ਹੈ ਅਤੇ ਉਸ ਕੁੰਜੀ ਨੂੰ ਰੱਖ ਲੈਂਦਾ ਹੈ ਜੋ ਹਾਲੇ ਵਰਤੋਂ ਵਿੱਚ ਹੈ, ਸਾਂਝੀ ਹੈ, ਜਾਂ ਸਾਬਤ ਤੌਰ ਤੇ ਇਸ ਤੈਨਾਤੀ "
+"ਦੀ ਨਹੀਂ ਹੈ, ਅਤੇ ਕਾਰਨ ਦਰਜ ਕਰਦਾ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:32
+#, python-format
+msgid "Not configured: %(stores)s"
+msgstr "ਕੌਂਫਿਗਰ ਨਹੀਂ ਕੀਤਾ: %(stores)s"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:36
+msgid "Summary"
+msgstr "ਸਾਰ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:38
+msgid "Silos discovered"
+msgstr "ਲੱਭੇ ਗਏ silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:39
+msgid "Missing keys"
+msgstr "ਗੁੰਮ ਕੁੰਜੀਆਂ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:40
+msgid "Orphaned data encryption keys"
+msgstr "ਅਨਾਥ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:41
+msgid "Orphaned key encryption keys"
+msgstr "ਅਨਾਥ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:42
+msgid "Key re-encryption due"
+msgstr "ਕੁੰਜੀ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ ਬਕਾਇਆ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:43
+msgid "Data re-encryption due"
+msgstr "ਡਾਟਾ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ ਬਕਾਇਆ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:51
+msgid ""
+"\n"
+"      Silo enumeration is owned by the configured silo adapter. To list "
+"silos\n"
+"      here, override <code>iter_silos()</code> on the adapter (and set\n"
+"      <code>supports_enumeration = True</code>).\n"
+"      "
+msgstr ""
+"\n"
+"      Silo ਦੀ ਗਿਣਤੀ ਸੰਰਚਿਤ silo ਅਡੈਪਟਰ ਦੇ ਅਧੀਨ ਹੈ। ਇੱਥੇ silo ਸੂਚੀਬੱਧ ਕਰਨ\n"
+"      ਲਈ, ਅਡੈਪਟਰ ਉੱਤੇ <code>iter_silos()</code> ਨੂੰ ਓਵਰਰਾਈਡ ਕਰੋ (ਅਤੇ\n"
+"      <code>supports_enumeration = True</code> ਸੈੱਟ ਕਰੋ)।\n"
+"      "
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:62
+msgid "Silos"
+msgstr "Silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:64
+msgid ""
+"A key marked with a check is present and live. A key marked with an x is not "
+"found. A key marked with an alert icon exists but will not encrypt or "
+"decrypt, because its lifecycle status has moved out of active."
+msgstr ""
+"ਸਹੀ ਦੇ ਨਿਸ਼ਾਨ ਵਾਲੀ ਕੁੰਜੀ ਮੌਜੂਦ ਅਤੇ ਸਰਗਰਮ ਹੈ। x ਵਾਲੀ ਕੁੰਜੀ ਨਹੀਂ ਮਿਲੀ। ਚੇਤਾਵਨੀ ਆਈਕਾਨ ਵਾਲੀ "
+"ਕੁੰਜੀ ਮੌਜੂਦ ਹੈ ਪਰ ਇਹ ਇਨਕ੍ਰਿਪਟ ਜਾਂ ਡਿਕ੍ਰਿਪਟ ਨਹੀਂ ਕਰੇਗੀ, ਕਿਉਂਕਿ ਇਸਦੀ ਜੀਵਨ-ਚੱਕਰ ਸਥਿਤੀ ਹੁਣ "
+"ਸਰਗਰਮ ਨਹੀਂ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:74
+#: .\templates\admin\encryption_suite\reconcile_keys.html:178
+msgid "Type"
+msgstr "ਕਿਸਮ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:76
+msgid "Expected KEK Name"
+msgstr "ਅਨੁਮਾਨਿਤ KEK ਨਾਮ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:78
+#: .\templates\admin\encryption_suite\reconcile_keys.html:234
+msgid "KEK (live)"
+msgstr "KEK (ਲਾਈਵ)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:79
+#: .\templates\admin\encryption_suite\reconcile_keys.html:235
+msgid "KEK (last known)"
+msgstr "KEK (ਆਖਰੀ ਜਾਣੀ)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:81
+msgid "Field DEK"
+msgstr "ਫੀਲਡ DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:82
+msgid "File DEK"
+msgstr "ਫਾਈਲ DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:83
+msgid "Index DEK"
+msgstr "ਇੰਡੈਕਸ DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:97
+msgid "Stored key differs:"
+msgstr "ਸਟੋਰ ਕੀਤੀ ਕੁੰਜੀ ਵੱਖਰੀ ਹੈ:"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:101
+#: .\templates\admin\encryption_suite\reconcile_keys.html:248
+msgid "unknown"
+msgstr "ਅਣਜਾਣ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:117
+msgid "Needs setup"
+msgstr "ਸੈੱਟਅੱਪ ਦੀ ਲੋੜ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:119
+msgid "Key deletion scheduled"
+msgstr "ਕੁੰਜੀ ਮਿਟਾਉਣ ਦੀ ਸਮਾਂ-ਸੂਚੀ ਬਣੀ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:121
+msgid "Ready"
+msgstr "ਤਿਆਰ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:133
+msgid "Missing Keys"
+msgstr "ਗੁੰਮ ਕੁੰਜੀਆਂ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Key encryption keys are created automatically by the configured provisioner."
+msgstr "ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਸੰਰਚਿਤ ਪ੍ਰੋਵਿਜ਼ਨਰ ਵੱਲੋਂ ਆਪਣੇ-ਆਪ ਬਣਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Create each key encryption key listed below on your KMS provider, granting "
+"your application encrypt/decrypt permission on it."
+msgstr ""
+"ਹੇਠਾਂ ਸੂਚੀਬੱਧ ਹਰੇਕ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਆਪਣੇ KMS ਪ੍ਰਦਾਤਾ ਉੱਤੇ ਬਣਾਓ, ਅਤੇ ਆਪਣੀ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ "
+"ਉਸ ਉੱਤੇ ਇਨਕ੍ਰਿਪਟ/ਡਿਕ੍ਰਿਪਟ ਇਜਾਜ਼ਤ ਦਿਓ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Data encryption keys are created automatically the first time each silo "
+"encrypts a value."
+msgstr ""
+"ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਉਸ ਪਹਿਲੀ ਵਾਰੀ ਆਪਣੇ-ਆਪ ਬਣਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ ਜਦੋਂ ਹਰੇਕ silo ਕੋਈ ਮੁੱਲ "
+"ਇਨਕ੍ਰਿਪਟ ਕਰਦਾ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Run python manage.py setup_encryption_keys to create the data encryption "
+"keys."
+msgstr ""
+"ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਬਣਾਉਣ ਲਈ python manage.py setup_encryption_keys ਚਲਾਓ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:143
+msgid "Missing DEKs"
+msgstr "ਗੁੰਮ DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:144
+msgid "Missing KEK"
+msgstr "ਗੁੰਮ KEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:163
+msgid "Data Encryption Keys Without a Live Silo"
+msgstr "ਜੀਵਿਤ ਸਿਲੋ ਤੋਂ ਬਿਨਾਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:165
+msgid ""
+"The data encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their silo no longer exists. To remove one, select "
+"it on the Data Encryption Keys page and choose \"Schedule deletion\" — this "
+"starts a reversible deletion window. Once the window expires, the delete "
+"action destroys the data encryption key for good."
+msgstr ""
+"ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਕਿਸੇ ਜਿਊਂਦੇ silo ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀਆਂ। ਜੋ ਅਨਾਥ ਵਜੋਂ "
+"ਨਿਸ਼ਾਨਬੱਧ ਹਨ, ਉਹਨਾਂ ਉੱਤੇ ਕਾਰਵਾਈ ਕਰਨੀ ਬਣਦੀ ਹੈ: ਉਹਨਾਂ ਦਾ silo ਹੁਣ ਮੌਜੂਦ ਨਹੀਂ। ਕਿਸੇ ਇੱਕ ਨੂੰ "
+"ਹਟਾਉਣ ਲਈ, ਉਸ ਨੂੰ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਪੰਨੇ ਉੱਤੇ ਚੁਣੋ ਅਤੇ “ਮਿਟਾਉਣ ਦੀ ਸਮਾਂ-ਸੂਚੀ” ਚੁਣੋ — ਇਸ "
+"ਨਾਲ ਵਾਪਸ ਹੋਣ ਯੋਗ ਮਿਟਾਉਣ ਵਿੰਡੋ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ। ਵਿੰਡੋ ਖਤਮ ਹੋਣ ਤੋਂ ਬਾਅਦ, ਮਿਟਾਉਣ ਦੀ ਕਾਰਵਾਈ ਡਾਟਾ "
+"ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਨੂੰ ਹਮੇਸ਼ਾ ਲਈ ਨਸ਼ਟ ਕਰ ਦਿੰਦੀ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:183
+msgid "DEK (live)"
+msgstr "DEK (ਲਾਈਵ)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:193
+msgid "The settings do not define this key set"
+msgstr "ਸੈਟਿੰਗਾਂ ਇਸ ਕੁੰਜੀ ਸੈੱਟ ਨੂੰ ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ ਕਰਦੀਆਂ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:206
+msgid "Go to the Data Encryption Keys page →"
+msgstr "ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਪੰਨੇ 'ਤੇ ਜਾਓ →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:214
+msgid "Key Encryption Keys Without a Live Silo"
+msgstr "ਜੀਵਿਤ ਸਿਲੋ ਤੋਂ ਬਿਨਾਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:220
+msgid ""
+"The key encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their data is already gone and the keys remain on "
+"the KMS, costing money. To act on one, select it on the Key Encryption Keys "
+"page and choose schedule deletion, restore, or record an action taken in the "
+"KMS."
+msgstr ""
+"ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਕਿਸੇ ਜਿਊਂਦੇ silo ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀਆਂ। ਜੋ ਅਨਾਥ ਵਜੋਂ "
+"ਨਿਸ਼ਾਨਬੱਧ ਹਨ, ਉਹਨਾਂ ਉੱਤੇ ਕਾਰਵਾਈ ਕਰਨੀ ਬਣਦੀ ਹੈ: ਉਹਨਾਂ ਦਾ ਡਾਟਾ ਪਹਿਲਾਂ ਹੀ ਜਾ ਚੁੱਕਾ ਹੈ ਅਤੇ "
+"ਕੁੰਜੀਆਂ KMS ਉੱਤੇ ਰਹਿ ਕੇ ਪੈਸੇ ਖਰਚ ਕਰਦੀਆਂ ਹਨ। ਕਿਸੇ ਇੱਕ ਉੱਤੇ ਕਾਰਵਾਈ ਲਈ, ਉਸ ਨੂੰ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ "
+"ਕੁੰਜੀਆਂ ਪੰਨੇ ਉੱਤੇ ਚੁਣੋ ਅਤੇ ਮਿਟਾਉਣ ਦੀ ਸਮਾਂ-ਸੂਚੀ, ਬਹਾਲੀ, ਜਾਂ KMS ਵਿੱਚ ਕੀਤੀ ਕਾਰਵਾਈ ਦਰਜ ਕਰਨਾ "
+"ਚੁਣੋ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:237
+msgid "KMS deletion"
+msgstr "KMS ਮਿਟਾਉਣਾ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:260
+msgid "Go to the Key Encryption Keys page →"
+msgstr "ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਪੰਨੇ 'ਤੇ ਜਾਓ →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:267
+msgid "Key Re-encryption Due"
+msgstr "ਕੁੰਜੀ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ ਬਕਾਇਆ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:269
+msgid ""
+"The data key needs to be re-encrypted after a KMS key rotation. Run 'python "
+"manage.py reencrypt_keys' to move key encryption to the current version; no "
+"data is touched."
+msgstr ""
+"KMS ਕੁੰਜੀ ਰੋਟੇਸ਼ਨ ਤੋਂ ਬਾਅਦ ਡਾਟਾ ਕੁੰਜੀ ਨੂੰ ਮੁੜ-ਇਨਕ੍ਰਿਪਟ ਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ। ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਨੂੰ "
+"ਮੌਜੂਦਾ ਵਰਜਨ ਉੱਤੇ ਲਿਜਾਣ ਲਈ 'python manage.py reencrypt_keys' ਚਲਾਓ; ਕੋਈ ਡਾਟਾ ਨਹੀਂ "
+"ਛੂਹਿਆ ਜਾਂਦਾ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:281
+msgid "Wrapped by version"
+msgstr "ਵਰਜਨ ਨਾਲ ਲਪੇਟੀ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:282
+msgid "Last re-encrypted"
+msgstr "ਆਖਰੀ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:302
+msgid "Data Re-encryption Due"
+msgstr "ਡਾਟਾ ਮੁੜ-ਇਨਕ੍ਰਿਪਸ਼ਨ ਬਕਾਇਆ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:304
+msgid ""
+"The data key's own material is older than DEK_ROTATION_PERIOD_DAYS. Run "
+"'python manage.py reencrypt_data' to re-encrypt a silo's data with new keys, "
+"a computationally intensive process."
+msgstr ""
+"ਡਾਟਾ ਕੁੰਜੀ ਦੀ ਆਪਣੀ ਸਮੱਗਰੀ DEK_ROTATION_PERIOD_DAYS ਤੋਂ ਪੁਰਾਣੀ ਹੈ। ਕਿਸੇ silo ਦੇ ਡਾਟੇ ਨੂੰ "
+"ਨਵੀਆਂ ਕੁੰਜੀਆਂ ਨਾਲ ਮੁੜ-ਇਨਕ੍ਰਿਪਟ ਕਰਨ ਲਈ 'python manage.py reencrypt_data' ਚਲਾਓ — ਇਹ "
+"ਗਣਨਾ ਪੱਖੋਂ ਭਾਰੀ ਕੰਮ ਹੈ।"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:316
+msgid "Key material generated"
+msgstr "ਕੁੰਜੀ ਸਮੱਗਰੀ ਬਣਾਈ ਗਈ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:336
+msgid "Reconcile Findings"
+msgstr "ਮਿਲਾਨ ਦੇ ਨਤੀਜੇ"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:339
+msgid "Newly discovered keys (now tracked)"
+msgstr "ਨਵੀਆਂ ਲੱਭੀਆਂ ਕੁੰਜੀਆਂ (ਹੁਣ ਟਰੈਕ ਕੀਤੀਆਂ)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:343
+msgid "Confirmed deleted (gone from the KMS)"
+msgstr "ਮਿਟਾਉਣ ਦੀ ਪੁਸ਼ਟੀ (KMS ਤੋਂ ਚਲੀ ਗਈ)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:349
+msgid ""
+"Out of sync — still on the provider, should be gone. Their deletion date has "
+"passed, so a provider deletion was canceled in the KMS, or failed. "
+"Investigate on the provider:"
+msgstr ""
+"ਬੇਮੇਲ — ਹਾਲੇ ਵੀ ਪ੍ਰਦਾਤਾ ਕੋਲ ਹਨ, ਜਦਕਿ ਜਾ ਚੁੱਕੀਆਂ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਸਨ। ਉਹਨਾਂ ਦੀ ਮਿਟਾਉਣ ਦੀ "
+"ਮਿਤੀ ਲੰਘ ਚੁੱਕੀ ਹੈ, ਸੋ ਮਿਟਾਉਣਾ KMS ਵਿੱਚ ਰੱਦ ਹੋਇਆ ਜਾਂ ਅਸਫਲ ਰਿਹਾ। ਪ੍ਰਦਾਤਾ ਕੋਲ ਜਾਂਚ ਕਰੋ:"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:359
+msgid ""
+"Out of sync — gone from the provider, no record of why. An active or "
+"scheduled key vanished from the listing (deleted in the KMS). Record the "
+"deletion on the Key Encryption Keys page to close it:"
+msgstr ""
+"ਬੇਮੇਲ — ਪ੍ਰਦਾਤਾ ਤੋਂ ਗਾਇਬ, ਕਾਰਨ ਦਾ ਕੋਈ ਰਿਕਾਰਡ ਨਹੀਂ। ਇੱਕ ਸਰਗਰਮ ਜਾਂ ਸਮਾਂ-ਬੱਧ ਕੁੰਜੀ ਸੂਚੀ ਵਿੱਚੋਂ "
+"ਗਾਇਬ ਹੋ ਗਈ (KMS ਵਿੱਚ ਮਿਟਾਈ ਗਈ)। ਇਸ ਨੂੰ ਬੰਦ ਕਰਨ ਲਈ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀਆਂ ਪੰਨੇ ਉੱਤੇ ਮਿਟਾਉਣਾ "
+"ਦਰਜ ਕਰੋ:"
+
+#: .\templates\admin\encryption_suite\settings.html:26
+msgid "Setting"
+msgstr "ਸੈਟਿੰਗ"
+
+#: .\templates\admin\encryption_suite\settings.html:27
+msgid "Value"
+msgstr "ਮੁੱਲ"
+
+#: .\templates\admin\encryption_suite\settings.html:28
+msgid "Source"
+msgstr "ਸਰੋਤ"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "configured"
+msgstr "ਸੰਰਚਿਤ"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "default"
+msgstr "ਡਿਫਾਲਟ"
+
+#: .\templates\admin\encryption_suite\test_console.html:26
+#: .\templates\admin\encryption_suite\test_console.html:77
+msgid "Pass"
+msgstr "ਪਾਸ"
+
+#: .\templates\admin\encryption_suite\test_console.html:27
+#: .\templates\admin\encryption_suite\test_console.html:78
+msgid "Fail"
+msgstr "ਫੇਲ੍ਹ"
+
+#: .\templates\admin\encryption_suite\test_console.html:28
+#: .\templates\admin\encryption_suite\test_console.html:79
+msgid "Not run"
+msgstr "ਨਹੀਂ ਚਲਾਇਆ"
+
+#: .\templates\admin\encryption_suite\test_console.html:44
+msgid "Tests"
+msgstr "ਟੈਸਟ"
+
+#: .\templates\admin\encryption_suite\test_console.html:54
+msgid "Run all tests"
+msgstr "ਸਾਰੇ ਟੈਸਟ ਚਲਾਓ"
+
+#: .\templates\admin\encryption_suite\test_console.html:55
+msgid "Clear results"
+msgstr "ਨਤੀਜੇ ਸਾਫ਼ ਕਰੋ"
+
+#: .\templates\admin\encryption_suite\test_console.html:61
+msgid "Test"
+msgstr "ਟੈਸਟ"
+
+#: .\templates\admin\encryption_suite\test_console.html:62
+msgid "Engine"
+msgstr "ਇੰਜਣ"
+
+#: .\templates\admin\encryption_suite\test_console.html:65
+msgid "Result"
+msgstr "ਨਤੀਜਾ"
+
+#: .\templates\admin\encryption_suite\test_console.html:66
+msgid "Action"
+msgstr "ਕਾਰਵਾਈ"
+
+#: .\templates\admin\encryption_suite\test_console.html:85
+msgid "Run"
+msgstr "ਚਲਾਓ"
+
+#: .\templates\admin\encryption_suite\test_console.html:95
+msgid "Delete"
+msgstr "ਮਿਟਾਓ"
+
+#: .\templates\admin\encryption_suite\test_console.html:97
+msgid ""
+"The full field and full file tests create disposable data encryption key "
+"entries. Delete below. A key encryption key this deployment cannot delete is "
+"left in place and must be deleted on the KMS by hand — it keeps incurring "
+"charges until you do."
+msgstr ""
+"ਪੂਰੇ ਫੀਲਡ ਅਤੇ ਫਾਈਲ ਟੈਸਟ ਵਰਤ ਕੇ ਸੁੱਟਣਯੋਗ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਐਂਟਰੀਆਂ ਬਣਾਉਂਦੇ ਹਨ। ਹੇਠਾਂ ਮਿਟਾਓ। "
+"ਜਿਹੜੀ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਇਹ ਡਿਪਲਾਇਮੈਂਟ ਮਿਟਾ ਨਹੀਂ ਸਕਦੀ, ਉਹ ਥਾਂ ਉੱਤੇ ਹੀ ਰਹਿੰਦੀ ਹੈ ਅਤੇ KMS "
+"ਉੱਤੇ ਹੱਥੀਂ ਮਿਟਾਉਣੀ ਪਵੇਗੀ — ਉਦੋਂ ਤੱਕ ਇਸ ਦਾ ਖਰਚਾ ਪੈਂਦਾ ਰਹੇਗਾ।"
+
+#: .\templates\admin\encryption_suite\test_console.html:107
+msgid ""
+"Delete the test keys? This removes their data encryption key entries and "
+"deletes the key encryption key when this deployment is able to."
+msgstr ""
+"ਟੈਸਟ ਕੁੰਜੀਆਂ ਮਿਟਾਉਣੀਆਂ ਹਨ? ਇਸ ਨਾਲ ਉਹਨਾਂ ਦੀਆਂ ਡਾਟਾ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਐਂਟਰੀਆਂ ਹਟ ਜਾਣਗੀਆਂ, ਅਤੇ "
+"ਜੇ ਇਹ ਡਿਪਲਾਇਮੈਂਟ ਸਮਰੱਥ ਹੋਵੇ ਤਾਂ ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਕੁੰਜੀ ਵੀ ਮਿਟ ਜਾਵੇਗੀ।"
+
+#: .\templates\admin\encryption_suite\test_console.html:110
+msgid "Delete test key(s)"
+msgstr "ਟੈਸਟ ਕੁੰਜੀ(ਆਂ) ਮਿਟਾਓ"
+
+#: .\user_context.py:392
+#, python-format
+msgid "Deleted user #%(user_id)s"
+msgstr "ਮਿਟਾਇਆ ਵਰਤੋਂਕਾਰ #%(user_id)s"
+
+#: .\widgets.py:25
+msgid "Encrypted file"
+msgstr "ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਫਾਈਲ"

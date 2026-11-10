@@ -1,0 +1,165 @@
+{% extends "admin/base_site.html" %}
+{% load i18n tz %}
+
+{% block extrastyle %}{{ block.super }}
+{% include "admin/encryption_suite/_admin_styles.html" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+  &rsaquo; <a href="{% url 'admin:app_list' app_label='encryption_suite' %}">encryption_suite</a>
+  &rsaquo; <a href="{{ changelist_url }}">{% trans "Data Encryption Keys" %}</a>
+  &rsaquo; {% trans "Cryptographic inventory" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+  {% get_current_timezone as current_timezone %}
+  <p class="help">{{ inventory.generated_at|date:"DATETIME_FORMAT" }} ({{ current_timezone }})</p>
+
+  <div class="module">
+    <h2>{% trans "Key management system (KMS)" %}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Key store" %}</th>
+          <th scope="col">{% trans "KMS Adapter" %}</th>
+          <th scope="col">{% trans "KEK strategy" %}</th>
+          <th scope="col">{% trans "Key encryption keys" %}</th>
+          <th scope="col">{% trans "Data encryption keys" %}</th>
+          <th scope="col">{% trans "Oldest active KEK" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in kms_rows %}
+        <tr>
+          <th scope="row"><code>{{ row.entry.key_store }}</code></th>
+          {% if row.entry.configured %}
+          <td><code>{{ row.adapter_parts.0 }}<wbr>{{ row.adapter_parts.1 }}</code></td>
+          <td><code>{% if row.entry.kek_strategy %}{{ row.kek_strategy_parts.0 }}<wbr>{{ row.kek_strategy_parts.1 }}{% else %}—{% endif %}</code></td>
+          {% else %}
+          <td colspan="2">{% trans "Not configured" %}</td>
+          {% endif %}
+          <td>{% if row.kek_url %}<a href="{{ row.kek_url }}"><code>{{ row.entry.key_encryption_key_count }}</code></a>{% else %}<code>{{ row.entry.key_encryption_key_count }}</code>{% endif %}</td>
+          <td>{% if row.dek_url %}<a href="{{ row.dek_url }}"><code>{{ row.entry.data_encryption_key_count }}</code></a>{% else %}<code>{{ row.entry.data_encryption_key_count }}</code>{% endif %}</td>
+          <td><code>{{ row.entry.oldest_active_kek_at|date:"DATETIME_FORMAT"|default:"—" }}</code></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="module">
+    <h2>{% trans "Key encryption keys" %}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Key store" %}</th>
+          <th scope="col">{% trans "Status" %}</th>
+          <th scope="col">{% trans "Count" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in kek_rows %}
+        <tr>
+          <td><code>{{ row.group.key_store }}</code></td>
+          <td><code>{{ row.group.status }}</code></td>
+          <td>{% if row.url %}<a href="{{ row.url }}"><code>{{ row.group.count }}</code></a>{% else %}<code>{{ row.group.count }}</code>{% endif %}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">—</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="module">
+    <h2>{% trans "Configured for new key encryption keys" %}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Key set" %}</th>
+          <th scope="col">{% trans "Key store" %}</th>
+          <th scope="col">{% trans "Silo adapter" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in key_store_rows %}
+        <tr>
+          <td><code>{{ row.choice.key_set }}</code></td>
+          <td>{% if row.choice.key_store %}<code>{{ row.choice.key_store }}</code>{% else %}—{% endif %}</td>
+          <td>{% if row.choice.silo_adapter %}<code>{{ row.adapter_parts.0 }}<wbr>{{ row.adapter_parts.1 }}</code>{% else %}—{% endif %}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">—</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="module">
+    <h2>{% trans "Data encryption keys" %}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Key set" %}</th>
+          <th scope="col">{% trans "Purpose" %}</th>
+          <th scope="col">{% trans "Cryptographic engine" %}</th>
+          <th scope="col">{% trans "Algorithm" %}</th>
+          <th scope="col">{% trans "Key store" %}</th>
+          <th scope="col">{% trans "Count" %}</th>
+          <th scope="col">{% trans "Oldest key material" %}</th>
+          {% if inventory.rotation_period_days is not None %}
+          <th scope="col">{% blocktrans trimmed with days=inventory.rotation_period_days %}Older than {{ days }} days{% endblocktrans %}</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data_key_rows %}
+        <tr>
+          <td><code>{{ row.group.key_set }}</code>{% if not row.group.in_settings %} <strong>{% trans "(no settings entry)" %}</strong>{% endif %}</td>
+          <td><code>{{ row.group.purpose }}</code></td>
+          <td><code>{{ row.group.cryptographic_engine|default:"—" }}</code></td>
+          <td><code>{{ row.group.algorithm|default:"—" }}</code></td>
+          <td><code>{{ row.group.key_store }}</code></td>
+          <td>{% if row.url %}<a href="{{ row.url }}"><code>{{ row.group.count }}</code></a>{% else %}<code>{{ row.group.count }}</code>{% endif %}</td>
+          <td><code>{{ row.group.oldest_key_material_at|date:"DATETIME_FORMAT"|default:"—" }}</code></td>
+          {% if inventory.rotation_period_days is not None %}
+          <td><code>{{ row.group.older_than_rotation_period }}</code></td>
+          {% endif %}
+        </tr>
+        {% empty %}
+        <tr><td colspan="9">—</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="module">
+    <h2>{% trans "Configured for new data encryption keys" %}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Purpose" %}</th>
+          <th scope="col">{% trans "Cryptographic engine" %}</th>
+          <th scope="col">{% trans "Algorithm" %}</th>
+          {% for label in engine_headers %}<th scope="col">{{ label }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in engine_rows %}
+        <tr>
+          <td>{% if row.purpose %}<code>{{ row.purpose }}</code>{% else %}—{% endif %}</td>
+          <td>{% if row.engine %}<code>{{ row.engine }}</code>{% else %}—{% endif %}</td>
+          <td>{% if row.algorithm %}<code>{{ row.algorithm }}</code>{% else %}—{% endif %}</td>
+          {% for value in row.extras %}<td>{% if value %}<code>{{ value }}</code>{% else %}—{% endif %}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</div>
+{% endblock %}

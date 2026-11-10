@@ -1,0 +1,45 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block extrastyle %}{{ block.super }}
+{% include "admin/encryption_suite/_admin_styles.html" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+  &rsaquo; <a href="{% url 'admin:app_list' app_label='encryption_suite' %}">encryption_suite</a>
+  &rsaquo; <a href="{{ changelist_url }}">{% trans "Data Encryption Keys" %}</a>
+  &rsaquo; {% trans "Encryption settings" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+  {% for group in groups %}
+  <div class="module">
+    <h2>{{ group.label }}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Setting" %}</th>
+          <th scope="col">{% trans "Value" %}</th>
+          <th scope="col">{% trans "Source" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in group.rows %}
+        <tr>
+          <th scope="row"><code>{{ row.name }}</code></th>
+          <td>{{ row.value }}</td>
+          <td>{% if row.source %}{{ row.source }}{% elif row.is_configured %}{% trans "configured" %}{% else %}{% trans "default" %}{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+
+</div>
+{% endblock %}

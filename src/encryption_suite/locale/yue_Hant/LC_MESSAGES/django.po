@@ -1,0 +1,2268 @@
+# Cantonese (Traditional) translations for django-encryption-suite.
+# Copyright (C) 2026 J. Randall Emery
+# This file is distributed under the same license as the django-encryption-suite
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-encryption-suite 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-06 23:13-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: django-encryption-suite contributors\n"
+"Language-Team: yue_Hant\n"
+"Language: yue_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: .\admin.py:53
+msgid "Rotation age"
+msgstr "輪換時長"
+
+#: .\admin.py:67 .\models.py:337 .\models.py:711
+msgid "KEK resource name"
+msgstr "KEK 資源名稱"
+
+#: .\admin.py:72 .\lifecycle.py:48 .\models.py:165 .\models.py:411
+#: .\models.py:670
+msgid "Key encryption key"
+msgstr "金鑰加密金鑰"
+
+#: .\admin.py:85
+msgid "Silo name"
+msgstr "Silo 名稱"
+
+#: .\admin.py:106 .\admin.py:114
+msgid "— (unavailable)"
+msgstr "— (無法提供)"
+
+#: .\admin.py:113
+msgid "— (silo no longer exists)"
+msgstr "— (Silo 已經唔存在)"
+
+#: .\admin.py:116 .\models.py:141
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:91
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:125
+#: .\templates\admin\encryption_suite\inventory.html:108
+#: .\templates\admin\encryption_suite\inventory.html:145
+#: .\templates\admin\encryption_suite\reconcile_keys.html:180
+#: .\templates\admin\encryption_suite\reconcile_keys.html:280
+#: .\templates\admin\encryption_suite\reconcile_keys.html:315
+msgid "Purpose"
+msgstr "用途"
+
+#: .\admin.py:120
+msgid "Scheduled deletion by"
+msgstr "安排刪除者"
+
+#: .\admin.py:140 .\models.py:155
+msgid "Encrypted DEK"
+msgstr "已加密 DEK"
+
+#: .\admin.py:152
+msgid "— (cleared)"
+msgstr "— (已清除)"
+
+#: .\admin.py:153
+#, python-format
+msgid "DEK encrypted by %(provider)s KEK"
+msgstr "資料加密金鑰由 %(provider)s 金鑰加密金鑰加密"
+
+#: .\admin.py:240
+msgid "Schedule deletion of selected data encryption key(s)"
+msgstr "安排刪除所選嘅資料加密金鑰"
+
+#: .\admin.py:306
+#, python-format
+msgid ""
+"Scheduled %(n)d data encryption key(s) for deletion. Restore within the "
+"window."
+msgstr "已安排刪除 %(n)d 個資料加密金鑰。喺視窗內可以還原。"
+
+#: .\admin.py:318
+#, python-format
+msgid "%(uids)s and %(n)d more"
+msgstr "%(uids)s 同另外 %(n)d 個"
+
+#: .\admin.py:322
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s) (%(reasons)s). Destroying one makes its silo's "
+"data permanently unreadable, and deleting would refuse it for the same "
+"reason. Delete the silo first, or set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION. %(uids)s"
+msgstr ""
+"無法安排刪除 %(n)d 個金鑰（%(reasons)s）。銷毀其中任何一個都會令佢個 silo 嘅"
+"資料永久無法讀取，而刪除亦會基於同一理由拒絕。請先刪除該 silo，或喺 "
+"ENCRYPTION 將 KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE 設為 True。%(uids)s"
+
+#: .\admin.py:337
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled or deleted."
+msgstr "已略過 %(n)d 個非活躍嘅金鑰 — 已安排刪除或已刪除。"
+
+#: .\admin.py:343
+#, python-format
+msgid "Skipped %(n)d test console key(s), which have their own deletion path."
+msgstr "已略過 %(n)d 個測試主控台金鑰，佢哋有自己嘅刪除路徑。"
+
+#: .\admin.py:365 .\admin_lifecycle.py:677
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:9
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:9
+msgid "Schedule deletion"
+msgstr "安排刪除"
+
+#: .\admin.py:382
+msgid "Restore selected scheduled data encryption key(s)"
+msgstr "還原所選已安排刪除嘅資料加密金鑰"
+
+#: .\admin.py:398
+#, python-format
+msgid "Restored %(n)d data encryption key(s)."
+msgstr "已還原 %(n)d 個資料加密金鑰。"
+
+#: .\admin.py:402
+msgid "Delete selected expired data encryption key(s)"
+msgstr "刪除所選已過期嘅資料加密金鑰"
+
+#: .\admin.py:435
+#, python-format
+msgid ""
+"Deletion complete: %(destroyed)d of %(picked)d selected data encryption "
+"key(s) destroyed."
+msgstr "刪除完成：已銷毀 %(picked)d 個所選資料加密金鑰中嘅 %(destroyed)d 個。"
+
+#: .\admin.py:448
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works. Set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION to delete "
+"them regardless, making that data permanently unreadable."
+msgstr ""
+"已保留 %(n)d 個金鑰：%(reasons)s。冇任何變化 — 佢哋仍然處於已安排刪除狀態，所"
+"以解決成因之後再刪除一次係有效嘅。若要照樣刪除，請喺 ENCRYPTION 將 "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE 設為 True；咁做會令嗰啲資料永久無法"
+"讀取。"
+
+#: .\admin.py:464
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works."
+msgstr ""
+"已保留 %(n)d 個金鑰：%(reasons)s。冇任何變化 — 佢哋仍然處於已安排刪除狀態，所"
+"以解決成因之後再刪除一次係有效嘅。"
+
+#: .\admin.py:474 .\admin_lifecycle.py:899
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not scheduled for deletion. Schedule them "
+"first — deleting only acts on scheduled work whose restore window has closed."
+msgstr ""
+"已略過 %(n)d 個未安排刪除嘅金鑰。請先安排刪除 — 刪除只會處理還原視窗已經關閉"
+"嘅已安排項目。"
+
+#: .\admin.py:483 .\admin_lifecycle.py:908
+#, python-format
+msgid "Skipped %(n)d key(s) still inside their restore window."
+msgstr "已略過 %(n)d 個仍然喺還原視窗之內嘅金鑰。"
+
+#: .\admin.py:525
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:9
+msgid "Delete data encryption keys"
+msgstr "刪除資料加密金鑰"
+
+#: .\admin_inventory.py:72
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\inventory.html:13
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:29
+msgid "Cryptographic inventory"
+msgstr "加密清單"
+
+#: .\admin_lifecycle.py:45 .\models.py:238 .\models.py:400
+#: .\templates\admin\encryption_suite\reconcile_keys.html:239
+msgid "Orphaned"
+msgstr "孤立"
+
+#: .\admin_lifecycle.py:57
+msgid "key kind"
+msgstr "金鑰種類"
+
+#: .\admin_lifecycle.py:89 .\models.py:785
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:44
+msgid "Reason"
+msgstr "原因"
+
+#: .\admin_lifecycle.py:105 .\models.py:661
+msgid "Event"
+msgstr "事件"
+
+#: .\admin_lifecycle.py:109 .\models.py:774
+msgid "Trigger"
+msgstr "觸發方式"
+
+#: .\admin_lifecycle.py:126 .\contrib\simpleteams\models.py:43 .\models.py:809
+msgid "User"
+msgstr "用戶"
+
+#: .\admin_lifecycle.py:230
+msgid "Key kind"
+msgstr "金鑰種類"
+
+#: .\admin_lifecycle.py:525
+msgid "Schedule deletion of selected key encryption key(s)"
+msgstr "安排刪除已選取嘅金鑰加密金鑰"
+
+#: .\admin_lifecycle.py:608
+#, python-format
+msgid ""
+"Scheduled %(n)d key encryption key(s) for deletion. Restore within the "
+"window, or run the deletion."
+msgstr "已為 %(n)d 個金鑰加密金鑰安排刪除。請喺視窗期內還原，或者執行刪除。"
+
+#: .\admin_lifecycle.py:638
+#, python-format
+msgid "%(names)s and %(n)d more"
+msgstr "%(names)s 同另外 %(n)d 個"
+
+#: .\admin_lifecycle.py:642
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s): live data still depends on them, and "
+"destroying them would make it permanently unreadable. Delete the silos using "
+"them first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in "
+"ENCRYPTION. %(names)s"
+msgstr ""
+"無法安排刪除 %(n)d 個金鑰：仍然有活動資料倚賴佢哋，銷毀會令呢啲資料永久讀唔"
+"到。請先刪除使用緊佢哋嘅資料倉，或者喺 ENCRYPTION 入面將 "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE 設為 True。%(names)s"
+
+#: .\admin_lifecycle.py:653
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled, retained, or "
+"deleted."
+msgstr ""
+"已略過 %(n)d 個唔係活動狀態嘅金鑰 — 佢哋已經安排咗刪除、已保留或者已刪除。"
+
+#: .\admin_lifecycle.py:691
+msgid "Restore selected scheduled or retained key encryption key(s)"
+msgstr "還原所選已安排刪除或已保留嘅金鑰加密金鑰"
+
+#: .\admin_lifecycle.py:712
+#, python-format
+msgid "Restored %(n)d key encryption key(s) to active."
+msgstr "已將 %(n)d 個金鑰加密金鑰還原為運作中。"
+
+#: .\admin_lifecycle.py:716
+msgid "Record selected as deleted in the key store"
+msgstr "將所選記錄為已喺金鑰儲存庫刪除"
+
+#: .\admin_lifecycle.py:720
+msgid "Record selected as deletion requested in the key store"
+msgstr "將所選記錄為已喺金鑰儲存庫請求刪除"
+
+#: .\admin_lifecycle.py:724
+msgid "Record selected as deletion canceled in the key store"
+msgstr "將所選記錄為已喺金鑰儲存庫取消刪除"
+
+#: .\admin_lifecycle.py:776 .\admin_lifecycle.py:891
+#, python-format
+msgid "Retained %(n)d key(s): %(reasons)s."
+msgstr "已保留 %(n)d 個金鑰：%(reasons)s。"
+
+#: .\admin_lifecycle.py:783
+#, python-format
+msgid "Recorded %(n)d key encryption key(s) as '%(verb)s' in the key store."
+msgstr "已將 %(n)d 個金鑰加密金鑰記錄為喺金鑰儲存庫「%(verb)s」。"
+
+#: .\admin_lifecycle.py:789
+#, python-format
+msgid "Skipped %(n)d key encryption key(s) already recorded as '%(verb)s'."
+msgstr "已略過 %(n)d 個已經記錄為「%(verb)s」嘅金鑰加密金鑰。"
+
+#: .\admin_lifecycle.py:793
+msgid "Delete selected expired key encryption key(s)"
+msgstr "刪除所選已過期嘅金鑰加密金鑰"
+
+#: .\admin_lifecycle.py:813
+msgid ""
+"Select the key encryption keys to delete individually. Deleting a key at the "
+"provider cannot be undone from here, so this action does not act on every "
+"matching record at once."
+msgstr ""
+"請逐個揀選要刪除嘅金鑰加密金鑰。喺供應商刪除金鑰之後無法喺呢度復原，所以呢個"
+"操作唔會一次過處理所有符合嘅紀錄。"
+
+#: .\admin_lifecycle.py:857
+#, python-format
+msgid ""
+"Deletion complete on %(picked)d selected key encryption key(s): %(del)d "
+"deleted, %(req)d requested at the provider, %(retain)d retained, %(fail)d "
+"failed, %(skip)d skipped."
+msgstr ""
+"已對 %(picked)d 個所選金鑰加密金鑰完成刪除：%(del)d 個已刪除，%(req)d 個已向"
+"供應商申請，%(retain)d 個已保留，%(fail)d 個失敗，%(skip)d 個已略過。"
+
+#: .\admin_lifecycle.py:949
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:9
+msgid "Delete key encryption keys"
+msgstr "刪除金鑰加密金鑰"
+
+#: .\admin_reconcile.py:152
+msgid ""
+"The configured silo adapter cannot enumerate silos, so per-silo status and "
+"orphan detection are unavailable. Override iter_silos() on the adapter to "
+"enable them."
+msgstr ""
+"已設定嘅 silo 配接器無法列舉 silo，所以無法提供逐個 silo 嘅狀態同孤立偵測。請"
+"喺配接器上覆寫 iter_silos() 以啟用佢哋。"
+
+#: .\admin_reconcile.py:222
+msgid "field"
+msgstr "欄位"
+
+#: .\admin_reconcile.py:223
+msgid "file"
+msgstr "檔案"
+
+#: .\admin_reconcile.py:224
+msgid "index"
+msgstr "索引"
+
+#: .\admin_reconcile.py:496
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:15
+#: .\templates\admin\encryption_suite\reconcile_keys.html:13
+msgid "Reconcile Keys"
+msgstr "對賬金鑰"
+
+#: .\admin_settings.py:34
+msgid "General"
+msgstr "一般"
+
+#: .\admin_settings.py:35
+msgid "Recording and identity"
+msgstr "記錄同身份"
+
+#: .\admin_settings.py:36 .\admin_test_console.py:417 .\models.py:183
+#: .\models.py:754 .\templates\admin\encryption_suite\inventory.html:109
+#: .\templates\admin\encryption_suite\inventory.html:146
+msgid "Cryptographic engine"
+msgstr "加密引擎"
+
+#: .\admin_settings.py:37
+msgid "Silo"
+msgstr "Silo"
+
+#: .\admin_settings.py:38
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:44
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:121
+#: .\templates\admin\encryption_suite\test_console.html:63
+msgid "KMS"
+msgstr "KMS"
+
+#: .\admin_settings.py:39
+msgid "Keys and rotation"
+msgstr "金鑰同輪換"
+
+#: .\admin_settings.py:40 .\admin_test_console.py:538
+#: .\templates\admin\encryption_suite\test_console.html:64
+msgid "Storage"
+msgstr "儲存"
+
+#: .\admin_settings.py:41
+msgid "Other"
+msgstr "其他"
+
+#: .\admin_settings.py:44
+msgid "(hidden)"
+msgstr "（已隱藏）"
+
+#: .\admin_settings.py:72 .\admin_settings.py:73 .\admin_settings.py:77
+#: .\admin_settings.py:121
+msgid "(empty)"
+msgstr "（空）"
+
+#: .\admin_settings.py:79
+msgid "(not set)"
+msgstr "（未設定）"
+
+#: .\admin_settings.py:109
+msgid "named by STORAGE_ALIAS"
+msgstr "由 STORAGE_ALIAS 指定"
+
+#: .\admin_settings.py:111
+msgid "fallback — no STORAGES entry is named by STORAGE_ALIAS"
+msgstr "後備 — STORAGE_ALIAS 冇指定任何 STORAGES 項目"
+
+#: .\admin_settings.py:120 .\admin_settings.py:121
+msgid "resolved"
+msgstr "已解析"
+
+#: .\admin_settings.py:126
+msgid "none — the package's own file storage"
+msgstr "冇 — 套件自己嘅檔案儲存"
+
+#: .\admin_settings.py:127
+msgid "fallback — no STORAGES entry resolved"
+msgstr "後備 — 冇解析到任何 STORAGES 項目"
+
+#: .\admin_settings.py:187
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:22
+#: .\templates\admin\encryption_suite\settings.html:13
+msgid "Encryption settings"
+msgstr "加密設定"
+
+#: .\admin_site.py:37
+msgid "Data encryption keys (per silo)"
+msgstr "資料加密金鑰（每個 silo）"
+
+#: .\admin_site.py:38
+msgid "Key encryption keys (on key store)"
+msgstr "金鑰加密金鑰（喺金鑰儲存庫上）"
+
+#: .\admin_test_console.py:43
+msgid "Field (in memory)"
+msgstr "欄位（記憶體中）"
+
+#: .\admin_test_console.py:44
+msgid "File (in memory)"
+msgstr "檔案（記憶體中）"
+
+#: .\admin_test_console.py:45
+msgid "Field (via KMS)"
+msgstr "欄位（透過 KMS）"
+
+#: .\admin_test_console.py:46
+msgid "File (via KMS)"
+msgstr "檔案（透過 KMS）"
+
+#: .\admin_test_console.py:47
+msgid "File storage reachable (read-only)"
+msgstr "檔案儲存可連線（唯讀）"
+
+#: .\admin_test_console.py:66
+msgid "Cipher"
+msgstr "加密演算法"
+
+#: .\admin_test_console.py:67
+msgid "File segment size (bytes)"
+msgstr "檔案分段大小（位元組）"
+
+#: .\admin_test_console.py:68
+msgid "Field AEAD"
+msgstr "欄位 AEAD"
+
+#: .\admin_test_console.py:69
+msgid "File streaming AEAD"
+msgstr "檔案串流 AEAD"
+
+#: .\admin_test_console.py:129
+msgid "There was a problem. Check the server logs for details."
+msgstr "發生問題。詳情請查看伺服器日誌。"
+
+#: .\admin_test_console.py:318
+msgid "Test Console"
+msgstr "測試主控台"
+
+#: .\admin_test_console.py:403 .\admin_test_console.py:409
+#: .\admin_test_console.py:525 .\admin_test_console.py:534
+msgid "Backend"
+msgstr "後端"
+
+#: .\admin_test_console.py:438
+msgid "One shared KEK"
+msgstr "一個共用 KEK"
+
+#: .\admin_test_console.py:441
+msgid "One KEK per silo"
+msgstr "每個 silo 一個 KEK"
+
+#: .\admin_test_console.py:452 .\admin_test_console.py:502 .\models.py:332
+#: .\models.py:734 .\templates\admin\encryption_suite\inventory.html:27
+#: .\templates\admin\encryption_suite\inventory.html:59
+#: .\templates\admin\encryption_suite\inventory.html:84
+#: .\templates\admin\encryption_suite\inventory.html:111
+#: .\templates\admin\encryption_suite\reconcile_keys.html:22
+msgid "Key store"
+msgstr "金鑰儲存庫"
+
+#: .\admin_test_console.py:453 .\admin_test_console.py:503
+msgid "Adapter"
+msgstr "配接器"
+
+#: .\admin_test_console.py:457
+msgid "KMS instance"
+msgstr "KMS 執行個體"
+
+#: .\admin_test_console.py:458 .\admin_test_console.py:504
+msgid "Key distribution"
+msgstr "金鑰分佈"
+
+#: .\admin_test_console.py:460 .\admin_test_console.py:507
+#: .\admin_test_console.py:509 .\admin_test_console.py:511
+msgid "Key"
+msgstr "金鑰"
+
+#: .\admin_test_console.py:469 .\admin_test_console.py:512
+msgid "Ownership"
+msgstr "擁有權"
+
+#: .\admin_test_console.py:471
+#, python-format
+msgid "Name prefix: %(prefix)s"
+msgstr "名稱前綴：%(prefix)s"
+
+#: .\admin_test_console.py:473
+msgid "Not provable — key deletion is refused"
+msgstr "無法證明 — 拒絕刪除金鑰"
+
+#: .\admin_test_console.py:483
+msgid "Tags"
+msgstr "標籤"
+
+#: .\admin_test_console.py:489
+#, python-format
+msgid "%(count)s configured — not written by this provisioner"
+msgstr "已設定 %(count)s 個 — 呢個佈建器唔會寫入"
+
+#: .\admin_test_console.py:516
+#: .\templates\admin\encryption_suite\inventory.html:23
+msgid "Key management system (KMS)"
+msgstr "金鑰管理系統 (KMS)"
+
+#: .\admin_test_console.py:527
+msgid "Location"
+msgstr "位置"
+
+#: .\admin_test_console.py:559
+msgid "Test results cleared."
+msgstr "測試結果已清除。"
+
+#: .\admin_test_console.py:575
+msgid "Rate limit exceeded."
+msgstr "超出速率限制。"
+
+#: .\admin_test_console.py:594
+msgid "All tests passed."
+msgstr "所有測試通過。"
+
+#: .\admin_test_console.py:598
+#, python-format
+msgid "Stopped at '%(label)s': %(detail)s"
+msgstr "喺「%(label)s」停止：%(detail)s"
+
+#: .\admin_test_console.py:605
+msgid "Unknown test."
+msgstr "未知測試。"
+
+#: .\admin_test_console.py:612
+#, python-format
+msgid "%(label)s: passed. %(detail)s"
+msgstr "%(label)s：通過。%(detail)s"
+
+#: .\admin_test_console.py:614
+#, python-format
+msgid "%(label)s: failed. %(detail)s"
+msgstr "%(label)s：失敗。%(detail)s"
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt matched."
+msgstr "加密/解密一致。"
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt mismatch."
+msgstr "加密/解密唔一致。"
+
+#: .\admin_test_console.py:704
+msgid "Backend reachable."
+msgstr "後端可連線。"
+
+#: .\admin_test_console.py:733
+#, python-format
+msgid "Deleted %(n)d test DEK(s)."
+msgstr "已刪除 %(n)d 個測試 DEK。"
+
+#: .\admin_test_console.py:735
+msgid "No test key rows to delete."
+msgstr "冇測試金鑰列可刪除。"
+
+#: .\admin_test_console.py:737
+#, python-format
+msgid "Deleted %(n)d test KEK(s)."
+msgstr "已刪除 %(n)d 個測試 KEK。"
+
+#: .\admin_test_console.py:747
+#, python-format
+msgid "%(n)d test KEK(s) could not be deleted — see the log."
+msgstr "%(n)d 個測試 KEK 無法刪除——請查看日誌。"
+
+#: .\admin_test_console.py:754
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s)."
+msgstr "保留咗 %(n)d 個測試 KEK，未刪除（%(reasons)s）。"
+
+#: .\admin_test_console.py:759
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s); deleted their records."
+msgstr "保留咗 %(n)d 個測試 KEK，未刪除（%(reasons)s）；已刪除佢哋嘅記錄。"
+
+#: .\apps.py:25
+msgid "Encryption"
+msgstr "加密"
+
+#: .\contrib\simpleteams\apps.py:9 .\contrib\simpleteams\models.py:30
+msgid "Simple teams"
+msgstr "簡易團隊"
+
+#: .\contrib\simpleteams\models.py:20
+msgid "Name"
+msgstr "名稱"
+
+#: .\contrib\simpleteams\models.py:29
+msgid "Simple team"
+msgstr "簡易團隊"
+
+#: .\contrib\simpleteams\models.py:45
+msgid "Team"
+msgstr "團隊"
+
+#: .\contrib\simpleteams\models.py:48
+msgid "Simple team membership"
+msgstr "簡易團隊成員資格"
+
+#: .\contrib\simpleteams\models.py:49
+msgid "Simple team memberships"
+msgstr "簡易團隊成員資格"
+
+#: .\exceptions.py:53
+msgid "Encryption and decryption are unavailable for this data."
+msgstr "呢啲資料嘅加密同解密都無法使用。"
+
+#: .\exceptions.py:59
+msgid "Encryption failed."
+msgstr "加密失敗。"
+
+#: .\exceptions.py:60
+msgid "Decryption failed."
+msgstr "解密失敗。"
+
+#: .\fields.py:122
+msgid "Unable to decrypt."
+msgstr "解密唔到。"
+
+#: .\file_download_view_helper.py:88 .\file_download_view_helper.py:165
+#: .\file_download_view_helper.py:166 .\safe_queries.py:72
+msgid "Unable to decrypt file."
+msgstr "解密唔到個檔案。"
+
+#: .\lifecycle.py:49 .\models.py:270 .\models.py:681
+msgid "Data encryption key"
+msgstr "資料加密金鑰"
+
+#: .\lifecycle.py:58 .\models.py:724
+msgid "KEK"
+msgstr "KEK"
+
+#: .\lifecycle.py:59
+msgid "DEK"
+msgstr "DEK"
+
+#: .\lifecycle.py:86
+msgid "Active"
+msgstr "活躍"
+
+#: .\lifecycle.py:87
+msgid "Re-encrypting"
+msgstr "重新加密中"
+
+#: .\lifecycle.py:88
+msgid "Deletion scheduled (app window)"
+msgstr "已安排刪除（應用程式視窗期）"
+
+#: .\lifecycle.py:89
+msgid "Deletion requested (provider window)"
+msgstr "已請求刪除（供應商視窗期）"
+
+#: .\lifecycle.py:90
+msgid "Retained (deletion not allowed)"
+msgstr "已保留（唔准刪除）"
+
+#: .\lifecycle.py:91 .\lifecycle.py:176
+msgid "Deletion failed"
+msgstr "刪除失敗"
+
+#: .\lifecycle.py:92 .\lifecycle.py:177
+msgid "Deleted"
+msgstr "已刪除"
+
+#: .\lifecycle.py:167
+msgid "Created"
+msgstr "已建立"
+
+#: .\lifecycle.py:168
+msgid "Discovered"
+msgstr "已發現"
+
+#: .\lifecycle.py:169
+msgid "Reencrypted"
+msgstr "已重新加密"
+
+#: .\lifecycle.py:170
+msgid "Rotated"
+msgstr "已輪換"
+
+#: .\lifecycle.py:171
+msgid "Rotation started"
+msgstr "輪換已開始"
+
+#: .\lifecycle.py:172
+msgid "Rotation abandoned"
+msgstr "輪換已放棄"
+
+#: .\lifecycle.py:173
+msgid "Deletion scheduling failed"
+msgstr "安排刪除失敗"
+
+#: .\lifecycle.py:174
+msgid "Deletion scheduled"
+msgstr "已安排刪除"
+
+#: .\lifecycle.py:175
+msgid "Deletion requested"
+msgstr "已請求刪除"
+
+#: .\lifecycle.py:178
+msgid "Restored"
+msgstr "已還原"
+
+#: .\lifecycle.py:179
+msgid "Silo found"
+msgstr "搵到 silo"
+
+#: .\lifecycle.py:180
+msgid "Silo not found"
+msgstr "搵唔到 silo"
+
+#: .\lifecycle.py:204
+msgid "Asked for directly"
+msgstr "直接要求"
+
+#: .\lifecycle.py:205
+msgid "Followed from another act"
+msgstr "跟隨另一項操作"
+
+#: .\lifecycle.py:206
+msgid "Script or schedule"
+msgstr "腳本或排程"
+
+#: .\lifecycle.py:254
+msgid "Recorded by an operator"
+msgstr "由營運人員記錄"
+
+#: .\lifecycle.py:255
+msgid "Observed at the provider"
+msgstr "喺供應商處觀察到"
+
+#: .\lifecycle.py:256
+msgid "Confirmed by reconcile"
+msgstr "經對賬確認"
+
+#: .\lifecycle.py:257
+msgid "Determined by reconcile"
+msgstr "經對賬判定"
+
+#: .\lifecycle.py:258
+msgid "The silo was created"
+msgstr "silo 已建立"
+
+#: .\lifecycle.py:259
+msgid "The silo was deleted"
+msgstr "silo 已刪除"
+
+#: .\lifecycle.py:260
+msgid "First encryption for the silo"
+msgstr "silo 嘅第一次加密"
+
+#: .\lifecycle.py:261
+msgid "A live silo turned up again"
+msgstr "有個活躍 silo 再次出現"
+
+#: .\lifecycle.py:262
+msgid "The provider call failed"
+msgstr "供應商調用失敗"
+
+#: .\lifecycle.py:263
+msgid "The data encryption key was deleted"
+msgstr "資料加密金鑰已刪除"
+
+#: .\lifecycle.py:264
+msgid "Rows could not be converted"
+msgstr "有啲行無法轉換"
+
+#: .\lifecycle.py:287
+msgid "shared or operator-supplied key"
+msgstr "共用或者由操作員提供嘅金鑰"
+
+#: .\lifecycle.py:292
+msgid "key deletion is not enabled for this provisioner"
+msgstr "呢個佈建器未啟用刪除金鑰"
+
+#: .\lifecycle.py:293
+msgid "not provisioned by this deployment"
+msgstr "並非由此部署佈建"
+
+#: .\lifecycle.py:294
+msgid "still referenced by another key record"
+msgstr "仍然被另一筆金鑰記錄引用"
+
+#: .\lifecycle.py:295
+msgid "no KEK provisioner configured"
+msgstr "未設定 KEK 佈建器"
+
+#: .\lifecycle.py:296
+msgid "the silo still exists"
+msgstr "個資料倉仍然存在"
+
+#: .\lifecycle.py:297
+msgid "the silo adapter cannot report whether the silo still exists"
+msgstr "資料倉配接器無法報告個資料倉係咪仍然存在"
+
+#: .\lifecycle.py:298
+msgid "checking whether the silo still exists failed"
+msgstr "檢查資料倉係咪仍然存在時失敗"
+
+#: .\models.py:114
+msgid "Field encryption (AEAD)"
+msgstr "欄位加密 (AEAD)"
+
+#: .\models.py:115
+msgid "File encryption (Streaming AEAD)"
+msgstr "檔案加密 (Streaming AEAD)"
+
+#: .\models.py:116
+msgid "Blind index (keyed hash)"
+msgstr "盲索引（帶金鑰雜湊）"
+
+#: .\models.py:117
+msgid "Admin test console (isolated)"
+msgstr "管理員測試主控台（隔離）"
+
+#: .\models.py:125 .\models.py:690
+#: .\templates\admin\encryption_suite\inventory.html:83
+#: .\templates\admin\encryption_suite\inventory.html:107
+#: .\templates\admin\encryption_suite\reconcile_keys.html:75
+#: .\templates\admin\encryption_suite\reconcile_keys.html:142
+#: .\templates\admin\encryption_suite\reconcile_keys.html:179
+#: .\templates\admin\encryption_suite\reconcile_keys.html:279
+#: .\templates\admin\encryption_suite\reconcile_keys.html:314
+#: .\templates\admin\encryption_suite\test_console.html:48
+msgid "Key set"
+msgstr "金鑰集"
+
+#: .\models.py:127
+msgid ""
+"A key set is one silo adapter and one key store. Fields that name the same "
+"set share its keys, and the settings choose the adapter and the key store."
+msgstr ""
+"金鑰集係一個 silo 轉接器加一個金鑰儲存庫。指定同一金鑰集嘅欄位共用當中嘅金"
+"鑰，由設定決定轉接器同金鑰儲存庫。"
+
+#: .\models.py:134 .\models.py:701
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:90
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:42
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:124
+#: .\templates\admin\encryption_suite\reconcile_keys.html:73
+#: .\templates\admin\encryption_suite\reconcile_keys.html:141
+#: .\templates\admin\encryption_suite\reconcile_keys.html:177
+#: .\templates\admin\encryption_suite\reconcile_keys.html:278
+#: .\templates\admin\encryption_suite\reconcile_keys.html:313
+msgid "Silo UID"
+msgstr "Silo UID"
+
+#: .\models.py:135
+msgid ""
+"The silo adapter sets this identifier, and no two silos of one key set share "
+"one."
+msgstr ""
+"由 silo 轉接器設定此識別碼，同一金鑰集嘅兩個 silo 唔會共用同一個識別碼。"
+
+#: .\models.py:143
+msgid ""
+"This says what the key does: it encrypts model fields, encrypts stored "
+"files, or computes a blind index. The admin test console uses keys of its "
+"own."
+msgstr ""
+"呢項講明金鑰嘅用途：加密模型欄位、加密儲存嘅檔案，或者計算盲索引。管理員測試"
+"控制台會用自己嘅金鑰。"
+
+#: .\models.py:149
+msgid "Silo label"
+msgstr "Silo 標籤"
+
+#: .\models.py:150
+msgid "The silo adapter names its silos with this label."
+msgstr "silo 轉接器用此標籤為其 silo 命名。"
+
+#: .\models.py:157
+msgid ""
+"The key encryption key encrypts this data encryption key, and only the "
+"encrypted form is stored. Deleting the key clears it."
+msgstr ""
+"金鑰加密金鑰會加密呢把資料加密金鑰，而且只會儲存加密後嘅形式。刪除金鑰就會清"
+"除佢。"
+
+#: .\models.py:166
+msgid "This key encryption key encrypts the data encryption key."
+msgstr "呢個金鑰加密金鑰負責加密資料加密金鑰。"
+
+#: .\models.py:172 .\models.py:395 .\models.py:744
+msgid "KEK key version"
+msgstr "KEK 金鑰版本"
+
+#: .\models.py:174
+msgid ""
+"The KMS reported this version of the key encryption key when it encrypted "
+"the data encryption key. Some providers need it to decrypt, and the rest "
+"keep it for reference. It is empty where the provider reports no version."
+msgstr ""
+"KMS 加密資料加密金鑰嗰陣，報告咗金鑰加密金鑰嘅呢個版本。部分供應商解密時需要"
+"用，其餘嘅只作記錄參考。供應商冇報告版本嘅話就留空。"
+
+#: .\models.py:185
+msgid ""
+"This crypto backend, such as 'tink' or 'cryptography', generated the data "
+"encryption key. The application checks it when it loads the key, so a "
+"different backend never loads it. It is empty for a blind index key."
+msgstr ""
+"呢個加密後端（例如 'tink' 或 'cryptography'）生成咗資料加密金鑰。應用程式載入"
+"金鑰時會檢查，所以唔同嘅後端永遠唔會載入佢。盲索引金鑰嘅話會留空。"
+
+#: .\models.py:194 .\models.py:764
+#: .\templates\admin\encryption_suite\inventory.html:110
+#: .\templates\admin\encryption_suite\inventory.html:147
+msgid "Algorithm"
+msgstr "演算法"
+
+#: .\models.py:196
+msgid ""
+"The crypto backend generated the data encryption key for this algorithm, "
+"such as 'AES256_GCM', and names it in its own terms."
+msgstr ""
+"加密後端為呢個演算法（例如 'AES256_GCM'）生成咗資料加密金鑰，並用佢自己嘅術語"
+"命名。"
+
+#: .\models.py:202
+msgid "Encrypted key writes"
+msgstr "加密金鑰寫入次數"
+
+#: .\models.py:204
+msgid ""
+"The application adds one each time it writes new encrypted key material to "
+"this row: when a key encryption key re-encrypts the same key, or when a "
+"rotation replaces it."
+msgstr ""
+"每次有新嘅已加密金鑰材料寫入呢一行，應用程式就加一：金鑰加密金鑰重新加密同一"
+"把金鑰，或者輪換取代佢嗰陣。"
+
+#: .\models.py:210
+msgid "DEK key version"
+msgstr "DEK 金鑰版本"
+
+#: .\models.py:212
+msgid ""
+"The application counts the generations of this key's material: 1 for the "
+"first key, then one more for each rotation. Unlike the key encryption key "
+"version, it is not a provider identifier. Unlike the count of encrypted key "
+"writes, it does not change when another key encryption key re-encrypts the "
+"same material."
+msgstr ""
+"應用程式會計算呢把金鑰材料嘅世代：第一把為 1，之後每輪換一次就加一。同金鑰加"
+"密金鑰版本唔同，佢唔係供應商嘅識別碼。同已加密金鑰寫入次數唔同，另一個金鑰加"
+"密金鑰重新加密同一份材料時，佢唔會改變。"
+
+#: .\models.py:223 .\models.py:345
+#: .\templates\admin\encryption_suite\inventory.html:60
+#: .\templates\admin\encryption_suite\reconcile_keys.html:84
+#: .\templates\admin\encryption_suite\reconcile_keys.html:182
+#: .\templates\admin\encryption_suite\reconcile_keys.html:232
+msgid "Status"
+msgstr "狀態"
+
+#: .\models.py:224 .\models.py:346
+msgid ""
+"The application derives the key's current status from its key lifecycle "
+"events."
+msgstr "應用程式由金鑰生命週期事件推導出金鑰目前嘅狀態。"
+
+#: .\models.py:229 .\models.py:351
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:94
+#: .\templates\admin\encryption_suite\reconcile_keys.html:184
+msgid "Undeletable until"
+msgstr "喺此之前不可刪除"
+
+#: .\models.py:231 .\models.py:353
+msgid ""
+"The application's deletion window ends at this time. Nothing can destroy the "
+"key before then; after it, deleting the key may destroy it. The key can be "
+"restored until it is actually deleted."
+msgstr ""
+"應用程式嘅刪除視窗喺呢個時間結束。喺此之前唔可以銷毀金鑰；之後刪除金鑰就可以"
+"銷毀佢。金鑰真正被刪除之前都可以還原。"
+
+#: .\models.py:240
+msgid ""
+"Reconcile sets this when no live silo matches the key's silo UID. It is for "
+"display only: every action that destroys a key checks again before it acts."
+msgstr ""
+"當冇運作中嘅 silo 對應金鑰嘅 silo UID 時，對賬會設定呢項。佢只供顯示：每個會"
+"銷毀金鑰嘅操作，執行前都會再檢查一次。"
+
+#: .\models.py:247
+msgid "Key material last generated at"
+msgstr "金鑰材料最近生成時間"
+
+#: .\models.py:249
+msgid ""
+"The key material now in use was generated at this time. A data encryption "
+"key's cryptoperiod counts from here, not from the row's creation date, which "
+"a revived key keeps from its first life. Re-encrypting the key onto another "
+"key encryption key does not change it, because the material stays the same."
+msgstr ""
+"而家使用緊嘅金鑰材料喺呢個時間生成。資料加密金鑰嘅使用期限由呢個時間開始計，"
+"而唔係由該行嘅建立日期計，因為復用嘅金鑰會保留佢第一世嘅建立日期。將金鑰重新"
+"加密到另一個金鑰加密金鑰上，並唔會改變呢個時間，因為材料依然一樣。"
+
+#: .\models.py:258
+msgid "Last re-encrypted at"
+msgstr "最近重新加密時間"
+
+#: .\models.py:260
+msgid ""
+"Its key encryption key last re-encrypted this data encryption key at this "
+"time. Rotating a key encryption key protects nothing already stored until "
+"this re-encryption runs, so a key encryption key's cryptoperiod counts "
+"against this time, not against the rotation."
+msgstr ""
+"佢嘅金鑰加密金鑰喺呢個時間最近一次重新加密咗呢把資料加密金鑰。輪換金鑰加密金"
+"鑰之後，喺重新加密完成之前，已經儲存嘅資料一啲都未受保護，所以金鑰加密金鑰嘅"
+"使用期限係由呢個時間開始計，而唔係由輪換開始計。"
+
+#: .\models.py:265 .\models.py:406
+msgid "Created at"
+msgstr "建立於"
+
+#: .\models.py:266 .\models.py:407
+msgid "Updated at"
+msgstr "更新於"
+
+#: .\models.py:271 .\templates\admin\encryption_suite\inventory.html:31
+#: .\templates\admin\encryption_suite\inventory.html:103
+msgid "Data encryption keys"
+msgstr "資料加密金鑰"
+
+#: .\models.py:324
+msgid "Silo-exclusive — eligible for deleting"
+msgstr "silo 專屬——可刪除"
+
+#: .\models.py:325
+msgid "Shared/opaque — never auto-deleted"
+msgstr "共用/不透明——永不自動刪除"
+
+#: .\models.py:333
+msgid ""
+"This key store holds the key encryption key. The name is a block in the "
+"KMS_KEY_STORES setting."
+msgstr ""
+"呢個金鑰儲存庫持有金鑰加密金鑰。名稱係 KMS_KEY_STORES 設定入面嘅一個區塊。"
+
+#: .\models.py:338
+msgid "The KMS knows this key encryption key by this full resource name."
+msgstr "KMS 以呢個完整資源名稱識別呢個金鑰加密金鑰。"
+
+#: .\models.py:361
+msgid "KMS deletion at"
+msgstr "KMS 刪除時間"
+
+#: .\models.py:363
+msgid ""
+"The provider destroys the key at this time. The application sets it when it "
+"asks the provider to delete the key, or when it finds a deletion already "
+"under way. Only the provider can cancel the deletion; this application "
+"cannot."
+msgstr ""
+"供應商喺呢個時間銷毀金鑰。應用程式請供應商刪除金鑰，或者發現刪除已經進行緊嗰"
+"陣就會設定。只有供應商可以取消刪除，呢個應用程式取消唔到。"
+
+#: .\models.py:373
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:122
+msgid "Disposition"
+msgstr "處置方式"
+
+#: .\models.py:375
+msgid ""
+"This says whether the key encryption key could be deleted when it was "
+"scheduled for deletion. Wherever a data encryption key still names the key, "
+"the deletion works this out again from the running configuration and uses "
+"that answer instead."
+msgstr ""
+"呢項講明金鑰加密金鑰被安排刪除嗰陣，係咪可以刪除。只要仲有資料加密金鑰指名呢"
+"個金鑰，刪除就會由運行中嘅設定重新計算，並改用嗰個答案。"
+
+#: .\models.py:384
+msgid "Owner prefix"
+msgstr "擁有者前綴"
+
+#: .\models.py:386
+msgid ""
+"This prefix marked the key as this application's when it was scheduled for "
+"deletion. It stays empty until then, and the application refuses to delete "
+"the key if the current prefix no longer matches."
+msgstr ""
+"金鑰被安排刪除嗰陣，呢個前綴標記咗金鑰屬於呢個應用程式。喺嗰之前會留空，而如"
+"果現行嘅前綴唔再一致，應用程式會拒絕刪除金鑰。"
+
+#: .\models.py:396
+msgid ""
+"The KMS last reported this version of the key encryption key as current."
+msgstr "KMS 最近報告金鑰加密金鑰嘅呢個版本為目前版本。"
+
+#: .\models.py:402
+msgid ""
+"Reconcile sets this when no live silo uses the key. It is for display only: "
+"every action that destroys a key checks again before it acts."
+msgstr ""
+"當冇運作中嘅 silo 使用金鑰時，對賬會設定呢項。佢只供顯示：每個會銷毀金鑰嘅操"
+"作，執行前都會再檢查一次。"
+
+#: .\models.py:412 .\templates\admin\encryption_suite\inventory.html:30
+#: .\templates\admin\encryption_suite\inventory.html:55
+msgid "Key encryption keys"
+msgstr "金鑰加密金鑰"
+
+#: .\models.py:505
+msgid "Recorded IP address"
+msgstr "已記錄嘅 IP 位址"
+
+#: .\models.py:506
+msgid "Recorded IP addresses"
+msgstr "已記錄嘅 IP 位址"
+
+#: .\models.py:545
+msgid "Recorded OS user"
+msgstr "已記錄嘅作業系統用戶"
+
+#: .\models.py:546
+msgid "Recorded OS users"
+msgstr "已記錄嘅作業系統用戶"
+
+#: .\models.py:662
+msgid "This names what happened to the key."
+msgstr "呢項講明金鑰發生咗咩事。"
+
+#: .\models.py:672
+msgid ""
+"The event is about this key encryption key. It is empty when the event is "
+"about a data encryption key."
+msgstr "事件關於呢個金鑰加密金鑰。事件關於資料加密金鑰嘅時候會留空。"
+
+#: .\models.py:683
+msgid ""
+"The event is about this data encryption key. It is empty when the event is "
+"about a key encryption key."
+msgstr "事件關於呢把資料加密金鑰。事件關於金鑰加密金鑰嘅時候會留空。"
+
+#: .\models.py:692
+msgid ""
+"At the time of this event, the key belonged to this key set. It is empty for "
+"a key encryption key that is shared or belongs to no silo."
+msgstr ""
+"事件發生嗰陣，金鑰屬於呢個金鑰集。共用或者唔屬於任何 silo 嘅金鑰加密金鑰會留"
+"空。"
+
+#: .\models.py:703
+msgid ""
+"At the time of this event, the key belonged to this silo. It is empty for a "
+"key encryption key that is shared or belongs to no silo."
+msgstr ""
+"事件發生嗰陣，金鑰屬於呢個 silo。共用或者唔屬於任何 silo 嘅金鑰加密金鑰會留"
+"空。"
+
+#: .\models.py:712
+msgid ""
+"At the time of this event, the key encryption key involved had this resource "
+"name."
+msgstr "事件發生嗰陣，所涉及嘅金鑰加密金鑰嘅資源名稱係呢個。"
+
+#: .\models.py:726
+msgid ""
+"At the time of this event, this key encryption key encrypted the data "
+"encryption key. It is empty on a key encryption key's own events."
+msgstr ""
+"事件發生嗰陣，呢個金鑰加密金鑰加密咗資料加密金鑰。金鑰加密金鑰自己嘅事件會留"
+"空。"
+
+#: .\models.py:736
+msgid ""
+"At the time of this event, this key store held the key encryption key. It is "
+"empty on a key encryption key's own events."
+msgstr ""
+"事件發生嗰陣，呢個金鑰儲存庫持有金鑰加密金鑰。金鑰加密金鑰自己嘅事件會留空。"
+
+#: .\models.py:746
+msgid ""
+"At the time of this event, the KMS reported this version of the key "
+"encryption key. It is empty where the provider reports no version."
+msgstr ""
+"事件發生嗰陣，KMS 報告金鑰加密金鑰嘅呢個版本。供應商冇報告版本嘅話就留空。"
+
+#: .\models.py:756
+msgid ""
+"At the time of this event, the data encryption key came from this crypto "
+"backend. It is empty for a blind index key and on a key encryption key's own "
+"events."
+msgstr ""
+"事件發生嗰陣，資料加密金鑰來自呢個加密後端。盲索引金鑰同金鑰加密金鑰自己嘅事"
+"件會留空。"
+
+#: .\models.py:766
+msgid ""
+"At the time of this event, the data encryption key was generated for this "
+"algorithm. It is empty on a key encryption key's own events."
+msgstr ""
+"事件發生嗰陣，資料加密金鑰係為呢個演算法生成嘅。金鑰加密金鑰自己嘅事件會留"
+"空。"
+
+#: .\models.py:776
+msgid ""
+"This says how the event came about: someone asked for it, it followed from "
+"another act, or a script or schedule ran it."
+msgstr "呢項講明事件點樣發生：有人要求、跟隨另一項操作，或者由腳本或排程執行。"
+
+#: .\models.py:786
+msgid "This says why the event happened, where the event alone does not."
+msgstr "呢項講明事件點解會發生，喺單靠事件講唔明白嘅時候補充。"
+
+#: .\models.py:791
+msgid "Effective at"
+msgstr "生效時間"
+
+#: .\models.py:793
+msgid ""
+"The event set this deletion date, where it set one: the end of the "
+"application's window for a scheduling event, or the provider's date for a "
+"requested deletion."
+msgstr ""
+"事件訂立咗呢個刪除日期（如果有訂立）：排程事件係應用程式視窗嘅結束時間，已請"
+"求嘅刪除就係供應商嘅日期。"
+
+#: .\models.py:811
+msgid ""
+"This user acted, where the configuration records one. The reference stays "
+"after the user is deleted."
+msgstr "呢個用戶執行咗操作（如果設定有記錄）。用戶被刪除之後，引用依然保留。"
+
+#: .\models.py:822
+msgid "OS login account"
+msgstr "作業系統登入帳戶"
+
+#: .\models.py:824
+msgid ""
+"A command-line act ran under this operating-system account, shown with its "
+"uid, where the configuration records one."
+msgstr ""
+"命令列操作喺呢個作業系統帳戶下執行，連同執行嘅 uid 一齊顯示（如果設定有記"
+"錄）。"
+
+#: .\models.py:834
+msgid "User IP address"
+msgstr "用戶 IP 位址"
+
+#: .\models.py:835
+msgid "The act came from this address, where the configuration records one."
+msgstr "操作來自呢個位址（如果設定有記錄）。"
+
+#: .\models.py:837
+msgid "Recorded at"
+msgstr "記錄於"
+
+#: .\models.py:841
+msgid "Key lifecycle event"
+msgstr "金鑰生命週期事件"
+
+#: .\models.py:842
+msgid "Key lifecycle events"
+msgstr "金鑰生命週期事件"
+
+#: .\models.py:1131
+msgid "Data encryption key rotation"
+msgstr "資料加密金鑰輪換"
+
+#: .\models.py:1132
+msgid "Data encryption key rotations"
+msgstr "資料加密金鑰輪換"
+
+#: .\models.py:1171
+msgid "Data encryption key rotation work item"
+msgstr "資料加密金鑰輪換工作項目"
+
+#: .\models.py:1172
+msgid "Data encryption key rotation work items"
+msgstr "資料加密金鑰輪換工作項目"
+
+#: .\models.py:1225
+msgid "Blind index entry"
+msgstr "盲索引項目"
+
+#: .\models.py:1226
+msgid "Blind index entries"
+msgstr "盲索引項目"
+
+#: .\models.py:1271 .\models.py:1272
+msgid "Encryption tools"
+msgstr "加密工具"
+
+#: .\reconcile.py:63
+msgid ""
+"the silo adapter cannot enumerate silos, so deleted-silo (DB-side) orphans "
+"cannot be detected"
+msgstr ""
+"silo 配接器無法列舉 silo，所以無法偵測已刪除 silo（資料庫側）產生嘅孤立項"
+
+#: .\reconcile.py:66
+msgid ""
+"enumerating the silos failed, so deleted-silo (DB-side) orphans could not be "
+"detected on this pass"
+msgstr ""
+"列舉 silo 失敗，所以今次過程偵測唔到因 silo 被刪除而產生嘅孤立項（資料庫嗰"
+"邊）"
+
+#: .\reconcile.py:69
+msgid ""
+"the provisioner cannot list key encryption keys, so orphaned keys cannot be "
+"detected"
+msgstr "佈建器無法列出金鑰加密金鑰，所以無法偵測孤立金鑰"
+
+#: .\reconcile.py:72
+msgid ""
+"listing the key encryption keys failed, so orphaned keys could not be "
+"detected on this pass"
+msgstr "列出金鑰加密金鑰失敗，所以今次過程偵測唔到孤立金鑰"
+
+#: .\reconcile.py:75
+msgid ""
+"no owner prefix (shared or KEK_MAP key naming), so key encryption keys "
+"cannot be attributed to this deployment"
+msgstr ""
+"冇擁有者前綴（共用或者 KEK_MAP 金鑰命名），所以無法將金鑰加密金鑰歸屬於此部署"
+
+#: .\reconcile.py:296 .\reconcile.py:313
+msgid "the KMS provider"
+msgstr "KMS 供應商"
+
+#: .\reconcile.py:304
+#, python-format
+msgid ""
+"Delete key encryption key '%(name)s' on %(provider)s in the KMS — the "
+"configured provisioner cannot delete it. The silo it backed no longer exists."
+msgstr ""
+"請喺 KMS 度刪除 %(provider)s 上嘅金鑰加密金鑰「%(name)s」——所設定嘅佈建器刪唔"
+"到佢。佢以前支撐嘅資料艙已經冇咗。"
+
+#: .\reconcile.py:317
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List key encryption keys "
+"whose name starts with '%(prefix)s' on %(provider)s and audit them against "
+"your live silos by hand; delete any that back no silo."
+msgstr ""
+"KMS 側對賬無法使用（%(reasons)s）。請喺 %(provider)s 上列出名稱以"
+"「%(prefix)s」開頭嘅金鑰加密金鑰，並手動對照你嘅活躍 silo 進行稽核；刪除任何"
+"唔支撐 silo 嘅金鑰。"
+
+#: .\reconcile.py:323
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List the key encryption "
+"keys this deployment uses on %(provider)s and audit them against your live "
+"silos by hand; delete any that back no silo."
+msgstr ""
+"KMS 側對賬無法使用（%(reasons)s）。請列出此部署喺 %(provider)s 上使用嘅金鑰加"
+"密金鑰，並手動對照你嘅活躍 silo 進行稽核；刪除任何唔支撐 silo 嘅金鑰。"
+
+#: .\reconcile.py:369
+msgid ""
+"no data key rotation period is declared (DEK_ROTATION_PERIOD_DAYS), so "
+"nothing can be called overdue"
+msgstr ""
+"未有為資料金鑰宣告輪換週期（DEK_ROTATION_PERIOD_DAYS），所以冇任何金鑰可以話"
+"係逾期"
+
+#: .\reconcile.py:372
+msgid ""
+"this provider identifies no key version, so keys needing re-encryption after "
+"a rotation cannot be detected"
+msgstr "呢個供應商唔會標示金鑰版本，所以偵測唔到輪換之後需要重新加密嘅金鑰"
+
+#: .\reconcile.py:375
+msgid ""
+"the key version lookup failed for one or more keys, so those keys were left "
+"out of the key re-encryption check"
+msgstr "有一把或多把金鑰嘅版本查詢失敗，所以嗰啲金鑰冇納入金鑰重新加密嘅檢查"
+
+#: .\safe_queries.py:69
+msgid "No content"
+msgstr "冇內容"
+
+#: .\safe_queries.py:70
+msgid "Unable to decrypt field."
+msgstr "解密唔到個欄位。"
+
+#: .\safe_queries.py:71
+msgid "No file uploaded"
+msgstr "冇上載任何檔案"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:14
+msgid "ready"
+msgstr "就緒"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:16
+msgid "not usable"
+msgstr "無法使用"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:18
+msgid "missing"
+msgstr "缺失"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+#: .\templates\admin\encryption_suite\reconcile_keys.html:201
+#: .\templates\admin\encryption_suite\reconcile_keys.html:252
+msgid "Yes"
+msgstr "是"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+msgid "No"
+msgstr "否"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:8
+#: .\templates\admin\encryption_suite\reconcile_keys.html:185
+#: .\templates\admin\encryption_suite\reconcile_keys.html:238
+#: .\templates\admin\encryption_suite\test_console.html:13
+msgid "Test console"
+msgstr "測試主控台"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\inventory.html:10
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\reconcile_keys.html:10
+#: .\templates\admin\encryption_suite\settings.html:10
+#: .\templates\admin\encryption_suite\test_console.html:10
+msgid "Home"
+msgstr "主頁"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s data encryption key. This cannot be "
+"undone."
+msgid_plural ""
+"You are about to destroy %(counter)s data encryption keys. This cannot be "
+"undone."
+msgstr[0] "你就快要銷毀 %(counter)s 個資料加密金鑰。呢個操作無法復原。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:24
+msgid "None of the selected data encryption keys can be deleted yet."
+msgstr "所選資料加密金鑰全部都未可以刪除。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:29
+#, python-format
+msgid ""
+"%(counter)s selected key will not be destroyed (%(reasons)s) and is not "
+"listed below. Nothing about it changes, so resolving the cause and deleting "
+"again works."
+msgid_plural ""
+"%(counter)s selected keys will not be destroyed (%(reasons)s) and are not "
+"listed below. Nothing about them changes, so resolving the cause and "
+"deleting again works."
+msgstr[0] ""
+"%(counter)s 個所選金鑰唔會被銷毀（%(reasons)s），亦冇喺下面列出。佢冇任何改"
+"變，所以解決成因之後再刪除一次係有效嘅。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:41
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:43
+#, python-format
+msgid ""
+"%(counter)s selected key is not scheduled for deletion, so there is nothing "
+"to delete and it is not listed below. Schedule it first — the deletion only "
+"ever acts on scheduled work whose restore window has closed."
+msgid_plural ""
+"%(counter)s selected keys are not scheduled for deletion, so there is "
+"nothing to delete and they are not listed below. Schedule them first — the "
+"deletion only ever acts on scheduled work whose restore window has closed."
+msgstr[0] ""
+"%(counter)s 個所選金鑰未安排刪除，所以冇嘢可以刪除，下面亦唔會列出。請先安排"
+"刪除 — 刪除只作用於還原視窗已關閉嘅已安排項目。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:55
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:57
+#, python-format
+msgid ""
+"%(counter)s selected key is scheduled but still inside its restore window, "
+"and is not listed below. It will not be touched until the window closes."
+msgid_plural ""
+"%(counter)s selected keys are scheduled but still inside their restore "
+"window, and are not listed below. They will not be touched until the window "
+"closes."
+msgstr[0] ""
+"有 %(counter)s 個所揀嘅金鑰已安排刪除，但仍然喺還原視窗之內，並冇喺下面列出。"
+"喺視窗關閉之前唔會郁佢哋。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:68
+msgid ""
+"Each key below has its wrapped keyset cleared. Every encrypted field and "
+"file belonging to that silo becomes permanently unreadable."
+msgstr ""
+"下面每個金鑰嘅封裝金鑰組都會被清空。屬於嗰個資料倉嘅每個加密欄位同檔案都會永"
+"久讀唔到。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:74
+msgid ""
+"No provider window stands behind this. Unlike destroying a key encryption "
+"key, there is nothing to cancel at the KMS afterwards — the only recovery is "
+"a database backup taken while the wrapping key still exists."
+msgstr ""
+"呢個操作背後冇供應商視窗。同銷毀金鑰加密金鑰唔同，事後喺 KMS 度冇嘢可以取消 "
+"— 唯一嘅補救方法係喺封裝金鑰仍然存在嗰陣做嘅資料庫備份。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:81
+msgid ""
+"The row survives as a record that the key existed. Its lifecycle history is "
+"kept."
+msgstr "呢一行會保留低，作為呢個金鑰曾經存在嘅記錄。佢嘅生命週期歷史會保留。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:126
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:120
+#: .\templates\admin\encryption_suite\reconcile_keys.html:181
+#: .\templates\admin\encryption_suite\reconcile_keys.html:231
+msgid "KEK name"
+msgstr "KEK 名稱"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:118
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:123
+msgid "Yes, destroy these keys"
+msgstr "係，銷毀呢啲金鑰"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:120
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:149
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:125
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:148
+msgid "No, take me back"
+msgstr "唔係，返去"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid "%(counter)s selected key cannot be scheduled."
+msgid_plural "%(counter)s selected keys cannot be scheduled."
+msgstr[0] "有 %(counter)s 個所揀嘅金鑰無法安排刪除。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:25
+msgid ""
+"Destroying one of these makes its silo's data permanently unreadable, and "
+"the deletion would refuse it for the same reason — so it is refused now "
+"rather than after a window has been waited out."
+msgstr ""
+"銷毀其中一個會令佢個孤島嘅資料永久讀唔到，刪除亦會用同樣理由拒絕佢 — 所以而家"
+"就拒絕，而唔係等完一個視窗期之後。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:32
+msgid ""
+"Delete the silo first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to "
+"True in ENCRYPTION, which permits destroying a key that live data depends on "
+"— for an erasure obligation that must render the data unreadable while "
+"keeping the records."
+msgstr ""
+"請先刪除嗰個資料倉，或者喺 ENCRYPTION 入面將 "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE 設為 True，咁就容許銷毀仍然有活動資"
+"料倚賴嘅金鑰 — 用嚟應付必須令資料讀唔到、但又要保留記錄嘅刪除責任。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:61
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled or deleted — so "
+"there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled or deleted — so "
+"there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"%(counter)s 個所選金鑰唔係活躍狀態 — 已安排刪除或已刪除 — 所以冇嘢可以安排，"
+"下面亦唔會列出。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:73
+#, python-format
+msgid ""
+"%(counter)s selected key belongs to the test console, which has its own "
+"deletion path, and is not listed below."
+msgid_plural ""
+"%(counter)s selected keys belong to the test console, which has its own "
+"deletion path, and are not listed below."
+msgstr[0] ""
+"有 %(counter)s 個所揀嘅金鑰屬於測試主控台，佢有自己嘅刪除路徑，並冇喺下面列"
+"出。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:85
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s data encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s data encryption keys."
+msgstr[0] "你即將安排刪除 %(counter)s 個資料加密金鑰。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:95
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys belongs to a silo that is still live. "
+"Scheduling blocks its encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys belong to silos that are still live. "
+"Scheduling blocks their encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgstr[0] ""
+"所選 %(total)s 個金鑰之中有 %(counter)s 個屬於仍然運作中嘅 silo。安排之後，"
+"喺 DEK_CACHE_TTL（%(ttl)s 秒）之內就會封鎖佢哋嘅加密同解密。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:107
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:97
+#, python-format
+msgid ""
+"Nothing is destroyed now. The keys stay restorable for %(days)s day(s), set "
+"by KEY_DELETION_WINDOW_DAYS."
+msgstr ""
+"而家唔會銷毀任何嘢。金鑰喺 %(days)s 日內都可以還原，由 "
+"KEY_DELETION_WINDOW_DAYS 設定。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:113
+msgid ""
+"Once that window expires, the deletion clears the key material for good and "
+"the data it protected can no longer be decrypted."
+msgstr "個視窗期完咗之後，刪除會永久清除金鑰材料，佢保護嘅資料就再解密唔到。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:118
+msgid "No key encryption key is scheduled or deleted by this action."
+msgstr "呢個操作唔會安排或刪除任何金鑰加密金鑰。"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:147
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:146
+msgid "Yes, schedule deletion"
+msgstr "係，安排刪除"
+
+#: .\templates\admin\encryption_suite\edit_inline\tabular_history.html:33
+msgid "Delete?"
+msgstr "刪除？"
+
+#: .\templates\admin\encryption_suite\inventory.html:12
+#: .\templates\admin\encryption_suite\reconcile_keys.html:12
+#: .\templates\admin\encryption_suite\settings.html:12
+#: .\templates\admin\encryption_suite\test_console.html:12
+msgid "Data Encryption Keys"
+msgstr "資料加密金鑰"
+
+#: .\templates\admin\encryption_suite\inventory.html:28
+msgid "KMS Adapter"
+msgstr "KMS 配接器"
+
+#: .\templates\admin\encryption_suite\inventory.html:29
+msgid "KEK strategy"
+msgstr "KEK 策略"
+
+#: .\templates\admin\encryption_suite\inventory.html:32
+msgid "Oldest active KEK"
+msgstr "最舊嘅有效 KEK"
+
+#: .\templates\admin\encryption_suite\inventory.html:43
+msgid "Not configured"
+msgstr "未設定"
+
+#: .\templates\admin\encryption_suite\inventory.html:61
+#: .\templates\admin\encryption_suite\inventory.html:112
+msgid "Count"
+msgstr "數量"
+
+#: .\templates\admin\encryption_suite\inventory.html:79
+msgid "Configured for new key encryption keys"
+msgstr "新金鑰加密金鑰嘅設定"
+
+#: .\templates\admin\encryption_suite\inventory.html:85
+msgid "Silo adapter"
+msgstr "Silo 配接器"
+
+#: .\templates\admin\encryption_suite\inventory.html:113
+msgid "Oldest key material"
+msgstr "最舊嘅金鑰材料"
+
+#: .\templates\admin\encryption_suite\inventory.html:115
+#, python-format
+msgid "Older than %(days)s days"
+msgstr "超過 %(days)s 日"
+
+#: .\templates\admin\encryption_suite\inventory.html:122
+msgid "(no settings entry)"
+msgstr "（設定中沒有對應項目）"
+
+#: .\templates\admin\encryption_suite\inventory.html:141
+msgid "Configured for new data encryption keys"
+msgstr "新資料加密金鑰嘅設定"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s key encryption key at the KMS provider. "
+"This cannot be undone from here."
+msgid_plural ""
+"You are about to destroy %(counter)s key encryption keys at the KMS "
+"provider. This cannot be undone from here."
+msgstr[0] ""
+"你就快要喺 KMS 供應商度銷毀 %(counter)s 個金鑰加密金鑰。呢個操作無法喺呢度復"
+"原。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:26
+msgid ""
+"None of the selected key encryption keys will be destroyed. Review the "
+"decisions below."
+msgstr "所揀嘅金鑰加密金鑰全部都唔會被銷毀。請睇下面嘅判定結果。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:31
+#, python-format
+msgid ""
+"%(counter)s key still wraps live keysets. Every silo counted below loses its "
+"data permanently."
+msgid_plural ""
+"%(counter)s keys still wrap live keysets. Every silo counted below loses its "
+"data permanently."
+msgstr[0] ""
+"有 %(counter)s 個金鑰仍然封裝緊活動嘅金鑰組。下面點算到嘅每個資料倉都會永久失"
+"去佢嘅資料。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:69
+msgid ""
+"The outcome column is the decision this deletion will make, taken from a "
+"preview run through the same gates. A key that shows retained or skipped is "
+"not destroyed, and the reason is recorded against it."
+msgstr ""
+"結果欄係今次刪除將會做嘅決定，取自經過相同關卡嘅預覽執行。顯示為已保留或已略"
+"過嘅金鑰唔會被銷毀，並且會記錄原因。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:76
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:110
+msgid ""
+"Destroying a key encryption key cannot be undone from a database backup: "
+"what is lost is the key that backup's ciphertext depends on."
+msgstr ""
+"銷毀金鑰加密金鑰係冇得靠資料庫備份復原嘅：失去嘅正正係嗰個備份嘅密文所倚賴嘅"
+"金鑰。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:82
+msgid ""
+"Providers with a recovery window hold the key for their own waiting period "
+"after this, recoverable only at the provider. Providers that delete "
+"immediately do not."
+msgstr ""
+"有還原視窗嘅供應商喺此之後會按佢哋自己嘅等候期保留呢個金鑰，只可以喺供應商嗰"
+"邊還原。即時刪除嘅供應商就唔會。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:94
+msgid "Outcome"
+msgstr "結果"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:95
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:45
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:123
+msgid "Silos still holding keysets"
+msgstr "仍然持有金鑰組嘅資料艙"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:104
+msgid "Will be destroyed"
+msgstr "將會被銷毀"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:105
+#, python-format
+msgid "Retained — %(reason)s"
+msgstr "已保留 — %(reason)s"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:106
+msgid "Skipped — another provider's key"
+msgstr "已略過 — 屬於另一個供應商嘅金鑰"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:107
+msgid "Provider call failed on preview"
+msgstr "預演時呼叫供應商失敗"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:108
+msgid "Not eligible yet"
+msgstr "尚未符合條件"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid ""
+"%(counter)s selected key cannot be scheduled: live data still depends on it, "
+"and destroying it would make that data permanently unreadable."
+msgid_plural ""
+"%(counter)s selected keys cannot be scheduled: live data still depends on "
+"them, and destroying them would make that data permanently unreadable."
+msgstr[0] ""
+"有 %(counter)s 個所揀嘅金鑰無法安排刪除：仍然有活動資料倚賴佢哋，銷毀會令呢啲"
+"資料永久讀唔到。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:27
+msgid ""
+"Delete the silos still using the key, then schedule it. Their data "
+"encryption keys are deleted first, which is what leaves the key with nothing "
+"depending on it."
+msgstr ""
+"請先刪除仍然使用該金鑰嘅 silo，然後先安排刪除佢。佢哋嘅資料加密金鑰會先被刪"
+"除，咁先會令呢把金鑰再冇任何嘢依賴佢。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:33
+msgid ""
+"Or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION, "
+"which permits destroying a key that live data depends on — for an erasure "
+"obligation that must render the data unreadable while keeping the records."
+msgstr ""
+"或者喺 ENCRYPTION 入面將 KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE 設為 "
+"True，咁就容許銷毀仍然有活動資料倚賴嘅金鑰 — 用嚟應付必須令資料讀唔到、但又要"
+"保留記錄嘅刪除責任。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:62
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"有 %(counter)s 個所揀嘅金鑰唔係活動狀態 — 已安排刪除、已保留或者已刪除 — 所以"
+"冇嘢可以安排，並冇喺下面列出。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:74
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s key encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s key encryption keys."
+msgstr[0] "你即將安排刪除 %(counter)s 個金鑰加密金鑰。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:84
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys still wraps live keysets. Every silo "
+"counted below loses its data permanently if that key is destroyed."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys still wrap live keysets. Every silo "
+"counted below loses its data permanently if those keys are destroyed."
+msgstr[0] ""
+"所選 %(total)s 個金鑰之中有 %(counter)s 個仲包住使用緊嘅金鑰組。如果銷毀嗰啲"
+"金鑰，下面點算嘅每個資料艙都會永久失去佢嘅資料。"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:103
+msgid ""
+"Scheduling states intent; the deletion decides. It re-checks every gate at "
+"the moment of destruction and retains a key that is still in use, shared, or "
+"not provably owned by this deployment, recording the reason."
+msgstr ""
+"安排表達嘅係意圖；由刪除嚟決定。佢喺銷毀嗰一刻重新檢查每一道關卡，並保留仍然"
+"喺度用、共享或者無法證明屬於本部署嘅金鑰，同時記錄原因。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:32
+#, python-format
+msgid "Not configured: %(stores)s"
+msgstr "未設定：%(stores)s"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:36
+msgid "Summary"
+msgstr "摘要"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:38
+msgid "Silos discovered"
+msgstr "發現嘅 silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:39
+msgid "Missing keys"
+msgstr "缺失嘅金鑰"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:40
+msgid "Orphaned data encryption keys"
+msgstr "孤立嘅資料加密金鑰"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:41
+msgid "Orphaned key encryption keys"
+msgstr "孤立嘅金鑰加密金鑰"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:42
+msgid "Key re-encryption due"
+msgstr "金鑰需要重新加密"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:43
+msgid "Data re-encryption due"
+msgstr "資料需要重新加密"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:51
+msgid ""
+"\n"
+"      Silo enumeration is owned by the configured silo adapter. To list "
+"silos\n"
+"      here, override <code>iter_silos()</code> on the adapter (and set\n"
+"      <code>supports_enumeration = True</code>).\n"
+"      "
+msgstr ""
+"\n"
+"      silo 列舉由已設定嘅 silo 配接器負責。要喺呢度列出 silo，\n"
+"      請喺配接器上覆寫 <code>iter_silos()</code>（並設定\n"
+"      <code>supports_enumeration = True</code>）。\n"
+"      "
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:62
+msgid "Silos"
+msgstr "Silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:64
+msgid ""
+"A key marked with a check is present and live. A key marked with an x is not "
+"found. A key marked with an alert icon exists but will not encrypt or "
+"decrypt, because its lifecycle status has moved out of active."
+msgstr ""
+"標示剔號嘅金鑰存在而且使用中。標示 x 嘅金鑰搵唔到。標示警示圖示嘅金鑰雖然存"
+"在，但唔會加密或解密，因為佢嘅生命週期狀態已經唔再係使用中。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:74
+#: .\templates\admin\encryption_suite\reconcile_keys.html:178
+msgid "Type"
+msgstr "類型"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:76
+msgid "Expected KEK Name"
+msgstr "預期嘅 KEK 名稱"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:78
+#: .\templates\admin\encryption_suite\reconcile_keys.html:234
+msgid "KEK (live)"
+msgstr "KEK（即時）"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:79
+#: .\templates\admin\encryption_suite\reconcile_keys.html:235
+msgid "KEK (last known)"
+msgstr "KEK（最後已知）"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:81
+msgid "Field DEK"
+msgstr "欄位 DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:82
+msgid "File DEK"
+msgstr "檔案 DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:83
+msgid "Index DEK"
+msgstr "索引 DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:97
+msgid "Stored key differs:"
+msgstr "已儲存嘅金鑰唔同："
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:101
+#: .\templates\admin\encryption_suite\reconcile_keys.html:248
+msgid "unknown"
+msgstr "未知"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:117
+msgid "Needs setup"
+msgstr "需要設定"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:119
+msgid "Key deletion scheduled"
+msgstr "已排定刪除金鑰"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:121
+msgid "Ready"
+msgstr "就緒"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:133
+msgid "Missing Keys"
+msgstr "缺失嘅金鑰"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Key encryption keys are created automatically by the configured provisioner."
+msgstr "金鑰加密金鑰會由已設定嘅佈建器自動建立。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Create each key encryption key listed below on your KMS provider, granting "
+"your application encrypt/decrypt permission on it."
+msgstr ""
+"請喺你嘅 KMS 供應商上建立下面列出嘅每個金鑰加密金鑰，並授予你嘅應用程式加密／"
+"解密權限。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Data encryption keys are created automatically the first time each silo "
+"encrypts a value."
+msgstr "資料加密金鑰會喺每個 silo 首次加密數值時自動建立。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Run python manage.py setup_encryption_keys to create the data encryption "
+"keys."
+msgstr "執行 python manage.py setup_encryption_keys 嚟建立資料加密金鑰。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:143
+msgid "Missing DEKs"
+msgstr "缺失嘅 DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:144
+msgid "Missing KEK"
+msgstr "缺失嘅 KEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:163
+msgid "Data Encryption Keys Without a Live Silo"
+msgstr "冇活躍資料艙嘅資料加密金鑰"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:165
+msgid ""
+"The data encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their silo no longer exists. To remove one, select "
+"it on the Data Encryption Keys page and choose \"Schedule deletion\" — this "
+"starts a reversible deletion window. Once the window expires, the delete "
+"action destroys the data encryption key for good."
+msgstr ""
+"下面嘅資料加密金鑰冇支援任何仍然存在嘅 silo。標示為孤立嘅先係需要處理嘅：佢哋"
+"嘅 silo 已經唔存在。要移除其中一個，喺「資料加密金鑰」頁面揀選佢，然後選「安"
+"排刪除」——咁會開始一個可還原嘅刪除視窗。視窗結束之後，刪除操作就會永久銷毀該"
+"資料加密金鑰。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:183
+msgid "DEK (live)"
+msgstr "DEK（即時）"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:193
+msgid "The settings do not define this key set"
+msgstr "設定入面冇定義呢個金鑰集"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:206
+msgid "Go to the Data Encryption Keys page →"
+msgstr "前往資料加密金鑰頁面 →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:214
+msgid "Key Encryption Keys Without a Live Silo"
+msgstr "冇活躍資料艙嘅金鑰加密金鑰"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:220
+msgid ""
+"The key encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their data is already gone and the keys remain on "
+"the KMS, costing money. To act on one, select it on the Key Encryption Keys "
+"page and choose schedule deletion, restore, or record an action taken in the "
+"KMS."
+msgstr ""
+"下面嘅金鑰加密金鑰冇支援任何仍然存在嘅 silo。標示為孤立嘅先係需要處理嘅：佢哋"
+"嘅資料已經冇咗，而金鑰仲留喺 KMS 度繼續收費。要處理其中一個，喺「金鑰加密金"
+"鑰」頁面揀選佢，然後選安排刪除、還原，或者記錄喺 KMS 入面做過嘅操作。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:237
+msgid "KMS deletion"
+msgstr "KMS 刪除"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:260
+msgid "Go to the Key Encryption Keys page →"
+msgstr "前往金鑰加密金鑰頁面 →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:267
+msgid "Key Re-encryption Due"
+msgstr "金鑰需要重新加密"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:269
+msgid ""
+"The data key needs to be re-encrypted after a KMS key rotation. Run 'python "
+"manage.py reencrypt_keys' to move key encryption to the current version; no "
+"data is touched."
+msgstr ""
+"KMS 金鑰輪換之後，資料金鑰需要重新加密。執行 'python manage.py "
+"reencrypt_keys' 將金鑰加密轉到現行版本；唔會動到任何資料。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:281
+msgid "Wrapped by version"
+msgstr "包裹版本"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:282
+msgid "Last re-encrypted"
+msgstr "最近重新加密"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:302
+msgid "Data Re-encryption Due"
+msgstr "資料需要重新加密"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:304
+msgid ""
+"The data key's own material is older than DEK_ROTATION_PERIOD_DAYS. Run "
+"'python manage.py reencrypt_data' to re-encrypt a silo's data with new keys, "
+"a computationally intensive process."
+msgstr ""
+"資料金鑰本身嘅材料比 DEK_ROTATION_PERIOD_DAYS 舊。執行 'python manage.py "
+"reencrypt_data' 用新金鑰重新加密某個 silo 嘅資料，呢個過程好耗運算資源。"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:316
+msgid "Key material generated"
+msgstr "金鑰材料生成時間"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:336
+msgid "Reconcile Findings"
+msgstr "對賬結果"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:339
+msgid "Newly discovered keys (now tracked)"
+msgstr "新發現嘅金鑰（而家已追蹤）"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:343
+msgid "Confirmed deleted (gone from the KMS)"
+msgstr "已確認刪除（已經喺 KMS 度消失）"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:349
+msgid ""
+"Out of sync — still on the provider, should be gone. Their deletion date has "
+"passed, so a provider deletion was canceled in the KMS, or failed. "
+"Investigate on the provider:"
+msgstr ""
+"狀態唔同步——本應冇咗，但仲喺供應商嗰邊。佢哋嘅刪除日期已經過咗，即係話刪除喺 "
+"KMS 度被取消咗或者失敗咗。請喺供應商嗰邊查一查："
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:359
+msgid ""
+"Out of sync — gone from the provider, no record of why. An active or "
+"scheduled key vanished from the listing (deleted in the KMS). Record the "
+"deletion on the Key Encryption Keys page to close it:"
+msgstr ""
+"狀態唔同步——已經喺供應商嗰邊消失咗，但冇原因紀錄。有個活躍或者已安排嘅金鑰喺"
+"清單度唔見咗（喺 KMS 度被刪除）。請喺「金鑰加密金鑰」頁記錄呢次刪除嚟結案："
+
+#: .\templates\admin\encryption_suite\settings.html:26
+msgid "Setting"
+msgstr "設定"
+
+#: .\templates\admin\encryption_suite\settings.html:27
+msgid "Value"
+msgstr "值"
+
+#: .\templates\admin\encryption_suite\settings.html:28
+msgid "Source"
+msgstr "來源"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "configured"
+msgstr "已設定"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "default"
+msgstr "預設"
+
+#: .\templates\admin\encryption_suite\test_console.html:26
+#: .\templates\admin\encryption_suite\test_console.html:77
+msgid "Pass"
+msgstr "通過"
+
+#: .\templates\admin\encryption_suite\test_console.html:27
+#: .\templates\admin\encryption_suite\test_console.html:78
+msgid "Fail"
+msgstr "失敗"
+
+#: .\templates\admin\encryption_suite\test_console.html:28
+#: .\templates\admin\encryption_suite\test_console.html:79
+msgid "Not run"
+msgstr "未執行"
+
+#: .\templates\admin\encryption_suite\test_console.html:44
+msgid "Tests"
+msgstr "測試"
+
+#: .\templates\admin\encryption_suite\test_console.html:54
+msgid "Run all tests"
+msgstr "執行所有測試"
+
+#: .\templates\admin\encryption_suite\test_console.html:55
+msgid "Clear results"
+msgstr "清除結果"
+
+#: .\templates\admin\encryption_suite\test_console.html:61
+msgid "Test"
+msgstr "測試"
+
+#: .\templates\admin\encryption_suite\test_console.html:62
+msgid "Engine"
+msgstr "引擎"
+
+#: .\templates\admin\encryption_suite\test_console.html:65
+msgid "Result"
+msgstr "結果"
+
+#: .\templates\admin\encryption_suite\test_console.html:66
+msgid "Action"
+msgstr "操作"
+
+#: .\templates\admin\encryption_suite\test_console.html:85
+msgid "Run"
+msgstr "執行"
+
+#: .\templates\admin\encryption_suite\test_console.html:95
+msgid "Delete"
+msgstr "刪除"
+
+#: .\templates\admin\encryption_suite\test_console.html:97
+msgid ""
+"The full field and full file tests create disposable data encryption key "
+"entries. Delete below. A key encryption key this deployment cannot delete is "
+"left in place and must be deleted on the KMS by hand — it keeps incurring "
+"charges until you do."
+msgstr ""
+"完整欄位同完整檔案測試會建立用完即棄嘅資料加密金鑰項目。請喺下面刪除。此部署"
+"無法刪除嘅金鑰加密金鑰會保留喺原處，必須喺 KMS 上手動刪除——喺你處理之前會持續"
+"產生費用。"
+
+#: .\templates\admin\encryption_suite\test_console.html:107
+msgid ""
+"Delete the test keys? This removes their data encryption key entries and "
+"deletes the key encryption key when this deployment is able to."
+msgstr ""
+"要刪除測試金鑰嗎？呢個操作會移除佢哋嘅資料加密金鑰項目，並喺此部署有能力時刪"
+"除金鑰加密金鑰。"
+
+#: .\templates\admin\encryption_suite\test_console.html:110
+msgid "Delete test key(s)"
+msgstr "刪除測試金鑰"
+
+#: .\user_context.py:392
+#, python-format
+msgid "Deleted user #%(user_id)s"
+msgstr "已刪除用戶 #%(user_id)s"
+
+#: .\widgets.py:25
+msgid "Encrypted file"
+msgstr "已加密檔案"

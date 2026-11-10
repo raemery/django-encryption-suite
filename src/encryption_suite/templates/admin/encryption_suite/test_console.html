@@ -1,0 +1,117 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }}
+{% include "admin/encryption_suite/_admin_styles.html" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+  &rsaquo; <a href="{% url 'admin:app_list' app_label='encryption_suite' %}">encryption_suite</a>
+  &rsaquo; <a href="{% url 'admin:encryption_suite_dataencryptionkey_changelist' %}">{% trans "Data Encryption Keys" %}</a>
+  &rsaquo; {% trans "Test console" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+<div class="es-boxes">
+  {% for box in boxes %}
+  <div class="module">
+    <h2{% if box.status == "pass" %} class="es-pass"{% elif box.status == "fail" %} class="es-fail"{% endif %}>
+      <span>{{ box.title }}</span>
+      <span>
+        {% if box.status == "pass" %}<img src="{% static 'admin/img/icon-yes.svg' %}" alt="{% trans 'Pass' %}">
+        {% elif box.status == "fail" %}<img src="{% static 'admin/img/icon-no.svg' %}" alt="{% trans 'Fail' %}">
+        {% else %}<img src="{% static 'admin/img/icon-info.svg' %}" alt="{% trans 'Not run' %}">{% endif %}
+      </span>
+    </h2>
+    <table>
+      {% for line in box.lines %}
+      <tr>
+        <th scope="row">{{ line.0 }}</th>
+        <td><code>{{ line.1 }}</code></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="module">
+  <h2>{% trans "Tests" %}</h2>
+  <form method="post" action="{{ run_url }}">
+    {% csrf_token %}
+    <div class="submit-row">
+      <label for="es-key-set" class="es-center">{% trans "Key set" %}</label>
+      <select id="es-key-set" name="key_set" onchange="this.form.submit()">
+        {% for choice in key_set_choices %}
+        <option value="{{ choice.key_set }}"{% if choice.key_set == key_set %} selected{% endif %}>{{ choice.label }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" name="run_all" value="1" class="button default">{% trans "Run all tests" %}</button>
+      <button type="submit" name="reset" value="1" class="button es-delete es-right">{% trans "Clear results" %}</button>
+    </div>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">{% trans "Test" %}</th>
+        <th scope="col" class="es-marker">{% trans "Engine" %}</th>
+        <th scope="col" class="es-marker">{% trans "KMS" %}</th>
+        <th scope="col" class="es-marker">{% trans "Storage" %}</th>
+        <th scope="col" class="es-result">{% trans "Result" %}</th>
+        <th scope="col">{% trans "Action" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in tests %}
+      <tr>
+        <th scope="row">{{ t.label }}</th>
+        <td class="es-marker">{% if "backend" in t.components %}&bull;{% endif %}</td>
+        <td class="es-marker">{% if "kms" in t.components %}&bull;{% endif %}</td>
+        <td class="es-marker">{% if "storage" in t.components %}&bull;{% endif %}</td>
+        <td class="es-result" {% if t.detail %}title="{{ t.detail }}"{% endif %}>
+          {% if t.status == "pass" %}<img src="{% static 'admin/img/icon-yes.svg' %}" alt="{% trans 'Pass' %}">
+          {% elif t.status == "fail" %}<img src="{% static 'admin/img/icon-no.svg' %}" alt="{% trans 'Fail' %}">
+          {% else %}<img src="{% static 'admin/img/icon-unknown.svg' %}" alt="{% trans 'Not run' %}">{% endif %}
+        </td>
+        <td>
+          <form method="post" action="{{ run_url }}">
+            {% csrf_token %}
+            <input type="hidden" name="key_set" value="{{ key_set }}">
+            <button type="submit" name="test" value="{{ t.id }}" class="button">{% trans "Run" %}</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="module">
+  <h2>{% trans "Delete" %}</h2>
+  <p class="help">
+    {% blocktrans trimmed %}
+    The full field and full file tests create disposable data encryption key
+    entries. Delete below. A key encryption key this deployment cannot delete is
+    left in place and must be deleted on the KMS by hand — it keeps incurring
+    charges until you do.
+    {% endblocktrans %}
+  </p>
+  <div class="submit-row">
+    <form method="post" action="{{ delete_url }}">
+      {% csrf_token %}
+      {% trans "Delete the test keys? This removes their data encryption key entries and deletes the key encryption key when this deployment is able to." as delete_confirm %}
+      <button type="submit" class="button es-delete"
+              onclick="return confirm('{{ delete_confirm|escapejs }}')">
+        {% trans "Delete test key(s)" %}
+      </button>
+    </form>
+  </div>
+</div>
+
+</div>
+{% endblock %}

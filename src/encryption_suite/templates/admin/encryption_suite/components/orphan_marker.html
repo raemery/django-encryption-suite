@@ -1,0 +1,21 @@
+{% load i18n static %}
+{% comment %}
+  One row's answer to "is this key orphaned?", for the reconcile page and both
+  changelists.
+
+  Only the orphaned state gets an icon, and it is the alert icon rather than a
+  check. Django's boolean icons encode true/false, but they read as good/bad, so
+  rendering this field with them put a green check on every row needing action
+  and a red cross on every healthy one — the eye was drawn to exactly the wrong
+  rows. Here the ink marks what is actionable and nothing else.
+
+  Both states answer in words — "Yes" and "No" — because the column asks a yes/no
+  question; the icon only weights the answer that needs acting on. A dash in a
+  health column would read as missing data instead.
+
+  The icon carries no alt text: the word beside it already says what it means, and
+  a screen reader would otherwise announce the answer twice.
+
+  Expects: is_orphaned (bool).
+{% endcomment %}
+{% if is_orphaned %}<img src="{% static 'admin/img/icon-alert.svg' %}" alt="">&nbsp;{% trans "Yes" %}{% else %}{% trans "No" %}{% endif %}

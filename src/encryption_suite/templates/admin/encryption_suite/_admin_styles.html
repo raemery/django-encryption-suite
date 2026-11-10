@@ -1,0 +1,57 @@
+{% load static %}
+{# Shared styling for the encryption-suite admin pages (Status + Test console). #}
+{# Layout and reuse of admin theme variables only — no hand-rolled colors or #}
+{# fonts. Include inside the {% block extrastyle %} of each page. #}
+<link rel="stylesheet" href="{% static 'admin/css/forms.css' %}">
+<style>
+  /* Row of card-like .module boxes. */
+  .es-boxes { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
+  .es-boxes .module { flex: 1 1 240px; min-width: 0; margin: 0; }
+  .es-boxes .module table { width: 100%; }
+  /* A dotted path offers no break opportunity, so one long value would set the
+     box's minimum width and push a sibling onto a second row. */
+  .es-boxes .module td code { overflow-wrap: anywhere; }
+  /* Box header: title left, status icon right. */
+  .es-boxes .module h2 { display: flex; justify-content: space-between; align-items: center; }
+  /* Centered icon columns/cells. */
+  .es-result, .es-marker { text-align: center; }
+  /* Pass / fail tint on box headers reuses the admin message palette
+     (theme-aware), overriding admin's blue ".module h2"; dark text for contrast. */
+  .es-boxes .module h2.es-pass { background: var(--message-success-bg, #dfd); color: var(--body-fg); }
+  .es-boxes .module h2.es-fail { background: var(--message-error-bg, #ffefef); color: var(--body-fg); }
+  /* Danger button (delete): admin scopes its red to a.deletelink, which
+     does not match a <button>, so reuse the same delete color vars here. */
+  .submit-row button.es-delete { background: var(--delete-button-bg); color: var(--button-fg); }
+  .submit-row button.es-delete:hover,
+  .submit-row button.es-delete:focus { background: var(--delete-button-hover-bg); }
+  /* Push a button to the right of the bar, as admin does for a.deletelink. */
+  .submit-row .es-right { margin-left: auto; }
+  /* Center a bar item vertically, so a text label lines up with the buttons
+     beside it rather than with their top edge. */
+  .submit-row .es-center { align-self: center; }
+  /* At admin's mobile breakpoint the .submit-row switches to a stretched
+     column, blowing buttons up to full width. Keep the desktop row layout
+     instead (content-width buttons, primary left and the right-pushed button
+     right), wrapping only when they genuinely don't fit. Scoped under
+     #content-main so it outranks admin's own responsive .submit-row rule
+     (same class specificity, but admin's stylesheet loads later). */
+  @media (max-width: 767px) {
+    #content-main .submit-row {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  /* Collapsible section: style <summary> like a ".module h2" header bar so a
+     <details class="module"> reads as a normal admin section that folds. */
+  details.module > summary {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    background: var(--header-bg);
+    color: var(--header-link-color);
+    cursor: pointer;
+  }
+</style>

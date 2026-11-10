@@ -1,0 +1,19 @@
+{% load i18n static %}
+{% comment %}
+  One key's state in the silos table: present, present-but-blocked, or absent.
+
+  A blocked key exists — on a provider with a deletion window it still lists at
+  the KMS — but its lifecycle status stops encrypt and decrypt, so it must not
+  read the same as a healthy one. The icon alone carries that: the row's Status
+  column already names what is wrong, so repeating the status per marker only
+  crowded the cell.
+
+  Expects: marker.state ("present" / "blocked" / "absent").
+{% endcomment %}
+{% if marker.state == 'present' %}
+  <img src="{% static 'admin/img/icon-yes.svg' %}" alt="{% trans 'ready' %}">
+{% elif marker.state == 'blocked' %}
+  <img src="{% static 'admin/img/icon-alert.svg' %}" alt="{% trans 'not usable' %}">
+{% else %}
+  <img src="{% static 'admin/img/icon-no.svg' %}" alt="{% trans 'missing' %}">
+{% endif %}

@@ -1,0 +1,153 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+  &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+  &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+  &rsaquo; {% trans "Schedule deletion" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="module">
+  {% if blocked %}
+  <p class="errornote">
+    {% blocktrans trimmed count counter=blocked|length %}
+    {{ counter }} selected key cannot be scheduled.
+    {% plural %}
+    {{ counter }} selected keys cannot be scheduled.
+    {% endblocktrans %}
+  </p>
+  <ul class="help">
+    <li>
+      {% blocktrans trimmed %}
+      Destroying one of these makes its silo's data permanently unreadable, and the deletion
+      would refuse it for the same reason — so it is refused now rather than after a
+      window has been waited out.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans trimmed %}
+      Delete the silo first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True
+      in ENCRYPTION, which permits destroying a key that live data depends on — for an
+      erasure obligation that must render the data unreadable while keeping the records.
+      {% endblocktrans %}
+    </li>
+  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">{% trans "Silo UID" %}</th>
+        <th scope="col">{% trans "Purpose" %}</th>
+        <th scope="col">{% trans "Reason" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row, reason in blocked %}
+      <tr>
+        <td>{{ row.silo_uid }}</td>
+        <td>{{ row.get_purpose_display|default:row.purpose }}</td>
+        <td>{{ reason|capfirst }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  {% if inactive_count %}
+  <p class="help">
+    {% blocktrans trimmed count counter=inactive_count %}
+    {{ counter }} selected key is not active — already scheduled or deleted — so there is
+    nothing to schedule and it is not listed below.
+    {% plural %}
+    {{ counter }} selected keys are not active — already scheduled or deleted — so there is
+    nothing to schedule and they are not listed below.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if test_count %}
+  <p class="help">
+    {% blocktrans trimmed count counter=test_count %}
+    {{ counter }} selected key belongs to the test console, which has its own deletion path,
+    and is not listed below.
+    {% plural %}
+    {{ counter }} selected keys belong to the test console, which has its own deletion path,
+    and are not listed below.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if total_count %}
+  <p>
+    {% blocktrans trimmed count counter=total_count %}
+    You are about to schedule deletion of {{ counter }} data encryption key.
+    {% plural %}
+    You are about to schedule deletion of {{ counter }} data encryption keys.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if live_count %}
+  <p class="errornote">
+    {% blocktrans trimmed count counter=live_count with total=total_count ttl=cache_ttl %}
+    {{ counter }} of {{ total }} selected keys belongs to a silo that is still live.
+    Scheduling blocks its encryption and decryption within DEK_CACHE_TTL ({{ ttl }} seconds).
+    {% plural %}
+    {{ counter }} of {{ total }} selected keys belong to silos that are still live.
+    Scheduling blocks their encryption and decryption within DEK_CACHE_TTL ({{ ttl }} seconds).
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  <ul class="help">
+    <li>
+      {% blocktrans trimmed with days=window_days %}
+      Nothing is destroyed now. The keys stay restorable for {{ days }} day(s), set by
+      KEY_DELETION_WINDOW_DAYS.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans trimmed %}
+      Once that window expires, the deletion clears the key material for good and the data it
+      protected can no longer be decrypted.
+      {% endblocktrans %}
+    </li>
+    <li>{% trans "No key encryption key is scheduled or deleted by this action." %}</li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">{% trans "Silo UID" %}</th>
+        <th scope="col">{% trans "Purpose" %}</th>
+        <th scope="col">{% trans "KEK name" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td>{{ row.silo_uid }}</td>
+        <td>{{ row.purpose }}</td>
+        <td>{{ row.kek.kek_resource_name }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <form method="post">
+    {% csrf_token %}
+    {% for pk in selected %}<input type="hidden" name="_selected_action" value="{{ pk }}">{% endfor %}
+    <input type="hidden" name="action" value="{{ action_name }}">
+    <input type="hidden" name="confirmed" value="1">
+    <div class="submit-row">
+      {% if total_count %}
+      <input type="submit" class="default" value="{% trans 'Yes, schedule deletion' %}">
+      {% endif %}
+      <a href="{% url opts|admin_urlname:'changelist' %}" class="button cancel-link">{% trans "No, take me back" %}</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

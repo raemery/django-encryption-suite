@@ -1,0 +1,2484 @@
+# Italian translations for django-encryption-suite.
+# Copyright (C) 2026 J. Randall Emery
+# This file is distributed under the same license as the django-encryption-suite
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-encryption-suite 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-06 23:13-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: django-encryption-suite contributors\n"
+"Language-Team: it\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: .\admin.py:53
+msgid "Rotation age"
+msgstr "Durata della rotazione"
+
+#: .\admin.py:67 .\models.py:337 .\models.py:711
+msgid "KEK resource name"
+msgstr "Nome risorsa della KEK"
+
+#: .\admin.py:72 .\lifecycle.py:48 .\models.py:165 .\models.py:411
+#: .\models.py:670
+msgid "Key encryption key"
+msgstr "Chiave di crittografia delle chiavi"
+
+#: .\admin.py:85
+msgid "Silo name"
+msgstr "Nome del silo"
+
+#: .\admin.py:106 .\admin.py:114
+msgid "— (unavailable)"
+msgstr "— (non disponibile)"
+
+#: .\admin.py:113
+msgid "— (silo no longer exists)"
+msgstr "— (il silo non esiste più)"
+
+#: .\admin.py:116 .\models.py:141
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:91
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:125
+#: .\templates\admin\encryption_suite\inventory.html:108
+#: .\templates\admin\encryption_suite\inventory.html:145
+#: .\templates\admin\encryption_suite\reconcile_keys.html:180
+#: .\templates\admin\encryption_suite\reconcile_keys.html:280
+#: .\templates\admin\encryption_suite\reconcile_keys.html:315
+msgid "Purpose"
+msgstr "Scopo"
+
+#: .\admin.py:120
+msgid "Scheduled deletion by"
+msgstr "Eliminazione pianificata da"
+
+#: .\admin.py:140 .\models.py:155
+msgid "Encrypted DEK"
+msgstr "DEK crittografata"
+
+#: .\admin.py:152
+msgid "— (cleared)"
+msgstr "— (cancellata)"
+
+#: .\admin.py:153
+#, python-format
+msgid "DEK encrypted by %(provider)s KEK"
+msgstr ""
+"Chiave di crittografia dei dati cifrata dalla chiave di crittografia delle "
+"chiavi di %(provider)s"
+
+#: .\admin.py:240
+msgid "Schedule deletion of selected data encryption key(s)"
+msgstr ""
+"Pianifica l’eliminazione delle chiavi di crittografia dei dati selezionate"
+
+#: .\admin.py:306
+#, python-format
+msgid ""
+"Scheduled %(n)d data encryption key(s) for deletion. Restore within the "
+"window."
+msgstr ""
+"Pianificata l’eliminazione di %(n)d chiave/i di crittografia dei dati. "
+"Ripristinabili entro la finestra."
+
+#: .\admin.py:318
+#, python-format
+msgid "%(uids)s and %(n)d more"
+msgstr "%(uids)s e altri %(n)d"
+
+#: .\admin.py:322
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s) (%(reasons)s). Destroying one makes its silo's "
+"data permanently unreadable, and deleting would refuse it for the same "
+"reason. Delete the silo first, or set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION. %(uids)s"
+msgstr ""
+"Impossibile pianificare %(n)d chiave/i (%(reasons)s). Distruggerne una rende "
+"i dati del suo silo permanentemente illeggibili, e l’eliminazione la "
+"rifiuterebbe per lo stesso motivo. Elimina prima il silo, oppure imposta "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE su True in ENCRYPTION. %(uids)s"
+
+#: .\admin.py:337
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled or deleted."
+msgstr "Saltate %(n)d chiave/i non attive — già pianificate o eliminate."
+
+#: .\admin.py:343
+#, python-format
+msgid "Skipped %(n)d test console key(s), which have their own deletion path."
+msgstr ""
+"Saltate %(n)d chiave/i della console di test, che hanno un proprio percorso "
+"di eliminazione."
+
+#: .\admin.py:365 .\admin_lifecycle.py:677
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:9
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:9
+msgid "Schedule deletion"
+msgstr "Pianifica eliminazione"
+
+#: .\admin.py:382
+msgid "Restore selected scheduled data encryption key(s)"
+msgstr "Ripristina le chiavi di crittografia dei dati pianificate selezionate"
+
+#: .\admin.py:398
+#, python-format
+msgid "Restored %(n)d data encryption key(s)."
+msgstr "Ripristinate %(n)d chiave/i di crittografia dei dati."
+
+#: .\admin.py:402
+msgid "Delete selected expired data encryption key(s)"
+msgstr "Elimina le chiavi di crittografia dei dati scadute selezionate"
+
+#: .\admin.py:435
+#, python-format
+msgid ""
+"Deletion complete: %(destroyed)d of %(picked)d selected data encryption "
+"key(s) destroyed."
+msgstr ""
+"Eliminazione completata: %(destroyed)d di %(picked)d chiave/i di "
+"crittografia dei dati selezionata/e distrutta/e."
+
+#: .\admin.py:448
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works. Set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION to delete "
+"them regardless, making that data permanently unreadable."
+msgstr ""
+"Conservate %(n)d chiave/i: %(reasons)s. Nulla è cambiato — restano "
+"pianificate, quindi risolvere la causa ed eliminare di nuovo funziona. "
+"Imposta KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE su True in ENCRYPTION per "
+"eliminarle comunque, rendendo quei dati permanentemente illeggibili."
+
+#: .\admin.py:464
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works."
+msgstr ""
+"Conservate %(n)d chiave/i: %(reasons)s. Nulla è cambiato — restano "
+"pianificate, quindi risolvere la causa ed eliminare di nuovo funziona."
+
+#: .\admin.py:474 .\admin_lifecycle.py:899
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not scheduled for deletion. Schedule them "
+"first — deleting only acts on scheduled work whose restore window has closed."
+msgstr ""
+"Saltate %(n)d chiave/i non pianificate per l’eliminazione. Pianificale prima "
+"— l’eliminazione agisce solo sul lavoro pianificato la cui finestra di "
+"ripristino è chiusa."
+
+#: .\admin.py:483 .\admin_lifecycle.py:908
+#, python-format
+msgid "Skipped %(n)d key(s) still inside their restore window."
+msgstr ""
+"Saltate %(n)d chiave/i ancora all'interno della loro finestra di ripristino."
+
+#: .\admin.py:525
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:9
+msgid "Delete data encryption keys"
+msgstr "Elimina chiavi di crittografia dei dati"
+
+#: .\admin_inventory.py:72
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\inventory.html:13
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:29
+msgid "Cryptographic inventory"
+msgstr "Inventario crittografico"
+
+#: .\admin_lifecycle.py:45 .\models.py:238 .\models.py:400
+#: .\templates\admin\encryption_suite\reconcile_keys.html:239
+msgid "Orphaned"
+msgstr "Orfana"
+
+#: .\admin_lifecycle.py:57
+msgid "key kind"
+msgstr "tipo di chiave"
+
+#: .\admin_lifecycle.py:89 .\models.py:785
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:44
+msgid "Reason"
+msgstr "Motivo"
+
+#: .\admin_lifecycle.py:105 .\models.py:661
+msgid "Event"
+msgstr "Evento"
+
+#: .\admin_lifecycle.py:109 .\models.py:774
+msgid "Trigger"
+msgstr "Causa scatenante"
+
+#: .\admin_lifecycle.py:126 .\contrib\simpleteams\models.py:43 .\models.py:809
+msgid "User"
+msgstr "Utente"
+
+#: .\admin_lifecycle.py:230
+msgid "Key kind"
+msgstr "Tipo di chiave"
+
+#: .\admin_lifecycle.py:525
+msgid "Schedule deletion of selected key encryption key(s)"
+msgstr ""
+"Pianifica l'eliminazione delle chiavi di cifratura delle chiavi selezionate"
+
+#: .\admin_lifecycle.py:608
+#, python-format
+msgid ""
+"Scheduled %(n)d key encryption key(s) for deletion. Restore within the "
+"window, or run the deletion."
+msgstr ""
+"Pianificate %(n)d chiave/i di crittografia delle chiavi per l'eliminazione. "
+"Ripristinale entro la finestra oppure esegui l'eliminazione."
+
+#: .\admin_lifecycle.py:638
+#, python-format
+msgid "%(names)s and %(n)d more"
+msgstr "%(names)s e altri %(n)d"
+
+#: .\admin_lifecycle.py:642
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s): live data still depends on them, and "
+"destroying them would make it permanently unreadable. Delete the silos using "
+"them first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in "
+"ENCRYPTION. %(names)s"
+msgstr ""
+"Impossibile pianificare %(n)d chiave/i: dati attivi dipendono ancora da "
+"esse, e distruggerle li renderebbe definitivamente illeggibili. Elimina "
+"prima i silo che le usano, oppure imposta "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE su True in ENCRYPTION. %(names)s"
+
+#: .\admin_lifecycle.py:653
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled, retained, or "
+"deleted."
+msgstr ""
+"Saltate %(n)d chiave/i non attive — già pianificate, conservate o eliminate."
+
+#: .\admin_lifecycle.py:691
+msgid "Restore selected scheduled or retained key encryption key(s)"
+msgstr ""
+"Ripristina le chiavi di crittografia delle chiavi pianificate o conservate "
+"selezionate"
+
+#: .\admin_lifecycle.py:712
+#, python-format
+msgid "Restored %(n)d key encryption key(s) to active."
+msgstr ""
+"Riportate allo stato attivo %(n)d chiave/i di crittografia delle chiavi."
+
+#: .\admin_lifecycle.py:716
+msgid "Record selected as deleted in the key store"
+msgstr "Registra la selezione come eliminata nell’archivio di chiavi"
+
+#: .\admin_lifecycle.py:720
+msgid "Record selected as deletion requested in the key store"
+msgstr "Registra la selezione come eliminazione richiesta nell’archivio di chiavi"
+
+#: .\admin_lifecycle.py:724
+msgid "Record selected as deletion canceled in the key store"
+msgstr "Registra la selezione come eliminazione annullata nell’archivio di chiavi"
+
+#: .\admin_lifecycle.py:776 .\admin_lifecycle.py:891
+#, python-format
+msgid "Retained %(n)d key(s): %(reasons)s."
+msgstr "Conservate %(n)d chiave/i: %(reasons)s."
+
+#: .\admin_lifecycle.py:783
+#, python-format
+msgid "Recorded %(n)d key encryption key(s) as '%(verb)s' in the key store."
+msgstr ""
+"%(n)d chiave/i di cifratura delle chiavi registrate come «%(verb)s» "
+"nell’archivio di chiavi."
+
+#: .\admin_lifecycle.py:789
+#, python-format
+msgid "Skipped %(n)d key encryption key(s) already recorded as '%(verb)s'."
+msgstr ""
+"Saltate %(n)d chiave/i di crittografia delle chiavi già registrate come "
+"«%(verb)s»."
+
+#: .\admin_lifecycle.py:793
+msgid "Delete selected expired key encryption key(s)"
+msgstr "Elimina le chiavi di crittografia delle chiavi scadute selezionate"
+
+#: .\admin_lifecycle.py:813
+msgid ""
+"Select the key encryption keys to delete individually. Deleting a key at the "
+"provider cannot be undone from here, so this action does not act on every "
+"matching record at once."
+msgstr ""
+"Seleziona singolarmente le chiavi di crittografia delle chiavi da eliminare. "
+"Eliminare una chiave presso il provider non è annullabile da qui, quindi "
+"questa azione non agisce su tutti i record corrispondenti in una volta."
+
+#: .\admin_lifecycle.py:857
+#, python-format
+msgid ""
+"Deletion complete on %(picked)d selected key encryption key(s): %(del)d "
+"deleted, %(req)d requested at the provider, %(retain)d retained, %(fail)d "
+"failed, %(skip)d skipped."
+msgstr ""
+"Eliminazione completata su %(picked)d chiave/i di crittografia delle chiavi "
+"selezionate: %(del)d eliminate, %(req)d richieste al provider, %(retain)d "
+"conservate, %(fail)d non riuscite, %(skip)d saltate."
+
+#: .\admin_lifecycle.py:949
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:9
+msgid "Delete key encryption keys"
+msgstr "Elimina chiavi di crittografia delle chiavi"
+
+#: .\admin_reconcile.py:152
+msgid ""
+"The configured silo adapter cannot enumerate silos, so per-silo status and "
+"orphan detection are unavailable. Override iter_silos() on the adapter to "
+"enable them."
+msgstr ""
+"L'adattatore di silo configurato non può enumerare i silo, quindi lo stato "
+"per silo e il rilevamento degli orfani non sono disponibili. Sovrascrivi "
+"iter_silos() sull'adattatore per abilitarli."
+
+#: .\admin_reconcile.py:222
+msgid "field"
+msgstr "campo"
+
+#: .\admin_reconcile.py:223
+msgid "file"
+msgstr "file"
+
+#: .\admin_reconcile.py:224
+msgid "index"
+msgstr "indice"
+
+#: .\admin_reconcile.py:496
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:15
+#: .\templates\admin\encryption_suite\reconcile_keys.html:13
+msgid "Reconcile Keys"
+msgstr "Riconcilia chiavi"
+
+#: .\admin_settings.py:34
+msgid "General"
+msgstr "Generale"
+
+#: .\admin_settings.py:35
+msgid "Recording and identity"
+msgstr "Registrazione e identità"
+
+#: .\admin_settings.py:36 .\admin_test_console.py:417 .\models.py:183
+#: .\models.py:754 .\templates\admin\encryption_suite\inventory.html:109
+#: .\templates\admin\encryption_suite\inventory.html:146
+msgid "Cryptographic engine"
+msgstr "Motore crittografico"
+
+#: .\admin_settings.py:37
+msgid "Silo"
+msgstr "Silo"
+
+#: .\admin_settings.py:38
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:44
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:121
+#: .\templates\admin\encryption_suite\test_console.html:63
+msgid "KMS"
+msgstr "KMS"
+
+#: .\admin_settings.py:39
+msgid "Keys and rotation"
+msgstr "Chiavi e rotazione"
+
+#: .\admin_settings.py:40 .\admin_test_console.py:538
+#: .\templates\admin\encryption_suite\test_console.html:64
+msgid "Storage"
+msgstr "Archiviazione"
+
+#: .\admin_settings.py:41
+msgid "Other"
+msgstr "Altro"
+
+#: .\admin_settings.py:44
+msgid "(hidden)"
+msgstr "(nascosto)"
+
+#: .\admin_settings.py:72 .\admin_settings.py:73 .\admin_settings.py:77
+#: .\admin_settings.py:121
+msgid "(empty)"
+msgstr "(vuoto)"
+
+#: .\admin_settings.py:79
+msgid "(not set)"
+msgstr "(non impostato)"
+
+#: .\admin_settings.py:109
+msgid "named by STORAGE_ALIAS"
+msgstr "indicato da STORAGE_ALIAS"
+
+#: .\admin_settings.py:111
+msgid "fallback — no STORAGES entry is named by STORAGE_ALIAS"
+msgstr "ripiego — STORAGE_ALIAS non indica alcuna voce di STORAGES"
+
+#: .\admin_settings.py:120 .\admin_settings.py:121
+msgid "resolved"
+msgstr "risolto"
+
+#: .\admin_settings.py:126
+msgid "none — the package's own file storage"
+msgstr "nessuna — l’archiviazione di file del pacchetto stesso"
+
+#: .\admin_settings.py:127
+msgid "fallback — no STORAGES entry resolved"
+msgstr "ripiego — nessuna voce di STORAGES risolta"
+
+#: .\admin_settings.py:187
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:22
+#: .\templates\admin\encryption_suite\settings.html:13
+msgid "Encryption settings"
+msgstr "Impostazioni di crittografia"
+
+#: .\admin_site.py:37
+msgid "Data encryption keys (per silo)"
+msgstr "Chiavi di crittografia dei dati (per silo)"
+
+#: .\admin_site.py:38
+msgid "Key encryption keys (on key store)"
+msgstr "Chiavi di crittografia delle chiavi (nell’archivio di chiavi)"
+
+#: .\admin_test_console.py:43
+msgid "Field (in memory)"
+msgstr "Campo (in memoria)"
+
+#: .\admin_test_console.py:44
+msgid "File (in memory)"
+msgstr "File (in memoria)"
+
+#: .\admin_test_console.py:45
+msgid "Field (via KMS)"
+msgstr "Campo (tramite KMS)"
+
+#: .\admin_test_console.py:46
+msgid "File (via KMS)"
+msgstr "File (tramite KMS)"
+
+#: .\admin_test_console.py:47
+msgid "File storage reachable (read-only)"
+msgstr "Archiviazione file raggiungibile (sola lettura)"
+
+#: .\admin_test_console.py:66
+msgid "Cipher"
+msgstr "Cifrario"
+
+#: .\admin_test_console.py:67
+msgid "File segment size (bytes)"
+msgstr "Dimensione del segmento di file (byte)"
+
+#: .\admin_test_console.py:68
+msgid "Field AEAD"
+msgstr "AEAD di campo"
+
+#: .\admin_test_console.py:69
+msgid "File streaming AEAD"
+msgstr "AEAD di file in streaming"
+
+#: .\admin_test_console.py:129
+msgid "There was a problem. Check the server logs for details."
+msgstr ""
+"Si è verificato un problema. Controlla i log del server per i dettagli."
+
+#: .\admin_test_console.py:318
+msgid "Test Console"
+msgstr "Console di test"
+
+#: .\admin_test_console.py:403 .\admin_test_console.py:409
+#: .\admin_test_console.py:525 .\admin_test_console.py:534
+msgid "Backend"
+msgstr "Backend"
+
+#: .\admin_test_console.py:438
+msgid "One shared KEK"
+msgstr "Una KEK condivisa"
+
+#: .\admin_test_console.py:441
+msgid "One KEK per silo"
+msgstr "Una KEK per silo"
+
+#: .\admin_test_console.py:452 .\admin_test_console.py:502 .\models.py:332
+#: .\models.py:734 .\templates\admin\encryption_suite\inventory.html:27
+#: .\templates\admin\encryption_suite\inventory.html:59
+#: .\templates\admin\encryption_suite\inventory.html:84
+#: .\templates\admin\encryption_suite\inventory.html:111
+#: .\templates\admin\encryption_suite\reconcile_keys.html:22
+msgid "Key store"
+msgstr "Archivio di chiavi"
+
+#: .\admin_test_console.py:453 .\admin_test_console.py:503
+msgid "Adapter"
+msgstr "Adattatore"
+
+#: .\admin_test_console.py:457
+msgid "KMS instance"
+msgstr "Istanza KMS"
+
+#: .\admin_test_console.py:458 .\admin_test_console.py:504
+msgid "Key distribution"
+msgstr "Distribuzione delle chiavi"
+
+#: .\admin_test_console.py:460 .\admin_test_console.py:507
+#: .\admin_test_console.py:509 .\admin_test_console.py:511
+msgid "Key"
+msgstr "Chiave"
+
+#: .\admin_test_console.py:469 .\admin_test_console.py:512
+msgid "Ownership"
+msgstr "Proprietà"
+
+#: .\admin_test_console.py:471
+#, python-format
+msgid "Name prefix: %(prefix)s"
+msgstr "Prefisso del nome: %(prefix)s"
+
+#: .\admin_test_console.py:473
+msgid "Not provable — key deletion is refused"
+msgstr "Non dimostrabile — l'eliminazione della chiave viene rifiutata"
+
+#: .\admin_test_console.py:483
+msgid "Tags"
+msgstr "Tag"
+
+#: .\admin_test_console.py:489
+#, python-format
+msgid "%(count)s configured — not written by this provisioner"
+msgstr "%(count)s configurati — non scritti da questo provisioner"
+
+#: .\admin_test_console.py:516
+#: .\templates\admin\encryption_suite\inventory.html:23
+msgid "Key management system (KMS)"
+msgstr "Sistema di gestione delle chiavi (KMS)"
+
+#: .\admin_test_console.py:527
+msgid "Location"
+msgstr "Posizione"
+
+#: .\admin_test_console.py:559
+msgid "Test results cleared."
+msgstr "Risultati dei test cancellati."
+
+#: .\admin_test_console.py:575
+msgid "Rate limit exceeded."
+msgstr "Limite di frequenza superato."
+
+#: .\admin_test_console.py:594
+msgid "All tests passed."
+msgstr "Tutti i test superati."
+
+#: .\admin_test_console.py:598
+#, python-format
+msgid "Stopped at '%(label)s': %(detail)s"
+msgstr "Interrotto a «%(label)s»: %(detail)s"
+
+#: .\admin_test_console.py:605
+msgid "Unknown test."
+msgstr "Test sconosciuto."
+
+#: .\admin_test_console.py:612
+#, python-format
+msgid "%(label)s: passed. %(detail)s"
+msgstr "%(label)s: superato. %(detail)s"
+
+#: .\admin_test_console.py:614
+#, python-format
+msgid "%(label)s: failed. %(detail)s"
+msgstr "%(label)s: fallito. %(detail)s"
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt matched."
+msgstr "Cifratura/decifratura corrispondono."
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt mismatch."
+msgstr "Cifratura/decifratura non corrispondono."
+
+#: .\admin_test_console.py:704
+msgid "Backend reachable."
+msgstr "Backend raggiungibile."
+
+#: .\admin_test_console.py:733
+#, python-format
+msgid "Deleted %(n)d test DEK(s)."
+msgstr "Eliminate %(n)d DEK di test."
+
+#: .\admin_test_console.py:735
+msgid "No test key rows to delete."
+msgstr "Nessuna riga della chiave di test da eliminare."
+
+#: .\admin_test_console.py:737
+#, python-format
+msgid "Deleted %(n)d test KEK(s)."
+msgstr "Eliminate %(n)d KEK di test."
+
+#: .\admin_test_console.py:747
+#, python-format
+msgid "%(n)d test KEK(s) could not be deleted — see the log."
+msgstr "Impossibile eliminare %(n)d KEK di test — consulta il log."
+
+#: .\admin_test_console.py:754
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s)."
+msgstr "Conservate %(n)d KEK di test, non eliminate (%(reasons)s)."
+
+#: .\admin_test_console.py:759
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s); deleted their records."
+msgstr "Conservate %(n)d KEK di test, non eliminate (%(reasons)s); i loro record sono stati eliminati."
+
+#: .\apps.py:25
+msgid "Encryption"
+msgstr "Crittografia"
+
+#: .\contrib\simpleteams\apps.py:9 .\contrib\simpleteams\models.py:30
+msgid "Simple teams"
+msgstr "Team semplici"
+
+#: .\contrib\simpleteams\models.py:20
+msgid "Name"
+msgstr "Nome"
+
+#: .\contrib\simpleteams\models.py:29
+msgid "Simple team"
+msgstr "Team semplice"
+
+#: .\contrib\simpleteams\models.py:45
+msgid "Team"
+msgstr "Team"
+
+#: .\contrib\simpleteams\models.py:48
+msgid "Simple team membership"
+msgstr "Appartenenza a un team semplice"
+
+#: .\contrib\simpleteams\models.py:49
+msgid "Simple team memberships"
+msgstr "Appartenenze a team semplici"
+
+#: .\exceptions.py:53
+msgid "Encryption and decryption are unavailable for this data."
+msgstr ""
+"La crittografia e la decrittografia non sono disponibili per questi dati."
+
+#: .\exceptions.py:59
+msgid "Encryption failed."
+msgstr "Crittografia non riuscita."
+
+#: .\exceptions.py:60
+msgid "Decryption failed."
+msgstr "Decifratura non riuscita."
+
+#: .\fields.py:122
+msgid "Unable to decrypt."
+msgstr "Impossibile decifrare."
+
+#: .\file_download_view_helper.py:88 .\file_download_view_helper.py:165
+#: .\file_download_view_helper.py:166 .\safe_queries.py:72
+msgid "Unable to decrypt file."
+msgstr "Impossibile decifrare il file."
+
+#: .\lifecycle.py:49 .\models.py:270 .\models.py:681
+msgid "Data encryption key"
+msgstr "Chiave di crittografia dei dati"
+
+#: .\lifecycle.py:58 .\models.py:724
+msgid "KEK"
+msgstr "KEK"
+
+#: .\lifecycle.py:59
+msgid "DEK"
+msgstr "DEK"
+
+#: .\lifecycle.py:86
+msgid "Active"
+msgstr "Attiva"
+
+#: .\lifecycle.py:87
+msgid "Re-encrypting"
+msgstr "In ricifratura"
+
+#: .\lifecycle.py:88
+msgid "Deletion scheduled (app window)"
+msgstr "Eliminazione pianificata (finestra dell'applicazione)"
+
+#: .\lifecycle.py:89
+msgid "Deletion requested (provider window)"
+msgstr "Eliminazione richiesta (finestra del provider)"
+
+#: .\lifecycle.py:90
+msgid "Retained (deletion not allowed)"
+msgstr "Conservata (eliminazione non consentita)"
+
+#: .\lifecycle.py:91 .\lifecycle.py:176
+msgid "Deletion failed"
+msgstr "Eliminazione non riuscita"
+
+#: .\lifecycle.py:92 .\lifecycle.py:177
+msgid "Deleted"
+msgstr "Eliminata"
+
+#: .\lifecycle.py:167
+msgid "Created"
+msgstr "Creata"
+
+#: .\lifecycle.py:168
+msgid "Discovered"
+msgstr "Rilevata"
+
+#: .\lifecycle.py:169
+msgid "Reencrypted"
+msgstr "Ricifrata"
+
+#: .\lifecycle.py:170
+msgid "Rotated"
+msgstr "Ruotata"
+
+#: .\lifecycle.py:171
+msgid "Rotation started"
+msgstr "Rotazione avviata"
+
+#: .\lifecycle.py:172
+msgid "Rotation abandoned"
+msgstr "Rotazione abbandonata"
+
+#: .\lifecycle.py:173
+msgid "Deletion scheduling failed"
+msgstr "Pianificazione dell'eliminazione non riuscita"
+
+#: .\lifecycle.py:174
+msgid "Deletion scheduled"
+msgstr "Eliminazione pianificata"
+
+#: .\lifecycle.py:175
+msgid "Deletion requested"
+msgstr "Eliminazione richiesta"
+
+#: .\lifecycle.py:178
+msgid "Restored"
+msgstr "Ripristinata"
+
+#: .\lifecycle.py:179
+msgid "Silo found"
+msgstr "Silo trovato"
+
+#: .\lifecycle.py:180
+msgid "Silo not found"
+msgstr "Silo non trovato"
+
+#: .\lifecycle.py:204
+msgid "Asked for directly"
+msgstr "Richiesto direttamente"
+
+#: .\lifecycle.py:205
+msgid "Followed from another act"
+msgstr "Conseguente a un altro atto"
+
+#: .\lifecycle.py:206
+msgid "Script or schedule"
+msgstr "Script o pianificazione"
+
+#: .\lifecycle.py:254
+msgid "Recorded by an operator"
+msgstr "Registrato da un operatore"
+
+#: .\lifecycle.py:255
+msgid "Observed at the provider"
+msgstr "Osservato presso il provider"
+
+#: .\lifecycle.py:256
+msgid "Confirmed by reconcile"
+msgstr "Confermato dalla riconciliazione"
+
+#: .\lifecycle.py:257
+msgid "Determined by reconcile"
+msgstr "Determinato dalla riconciliazione"
+
+#: .\lifecycle.py:258
+msgid "The silo was created"
+msgstr "Il silo è stato creato"
+
+#: .\lifecycle.py:259
+msgid "The silo was deleted"
+msgstr "Il silo è stato eliminato"
+
+#: .\lifecycle.py:260
+msgid "First encryption for the silo"
+msgstr "Prima cifratura per il silo"
+
+#: .\lifecycle.py:261
+msgid "A live silo turned up again"
+msgstr "È ricomparso un silo attivo"
+
+#: .\lifecycle.py:262
+msgid "The provider call failed"
+msgstr "La chiamata al provider non è riuscita"
+
+#: .\lifecycle.py:263
+msgid "The data encryption key was deleted"
+msgstr "La chiave di crittografia dei dati è stata eliminata"
+
+#: .\lifecycle.py:264
+msgid "Rows could not be converted"
+msgstr "Non è stato possibile convertire alcune righe"
+
+#: .\lifecycle.py:287
+msgid "shared or operator-supplied key"
+msgstr "chiave condivisa o fornita dall'operatore"
+
+#: .\lifecycle.py:292
+msgid "key deletion is not enabled for this provisioner"
+msgstr "l'eliminazione delle chiavi non è abilitata per questo provisioner"
+
+#: .\lifecycle.py:293
+msgid "not provisioned by this deployment"
+msgstr "non provvista da questo deployment"
+
+#: .\lifecycle.py:294
+msgid "still referenced by another key record"
+msgstr "ancora referenziata da un altro record di chiave"
+
+#: .\lifecycle.py:295
+msgid "no KEK provisioner configured"
+msgstr "nessun provisioner di KEK configurato"
+
+#: .\lifecycle.py:296
+msgid "the silo still exists"
+msgstr "il silo esiste ancora"
+
+#: .\lifecycle.py:297
+msgid "the silo adapter cannot report whether the silo still exists"
+msgstr "l'adattatore dei silo non può indicare se il silo esiste ancora"
+
+#: .\lifecycle.py:298
+msgid "checking whether the silo still exists failed"
+msgstr "la verifica dell'esistenza del silo non è riuscita"
+
+#: .\models.py:114
+msgid "Field encryption (AEAD)"
+msgstr "Crittografia di campo (AEAD)"
+
+#: .\models.py:115
+msgid "File encryption (Streaming AEAD)"
+msgstr "Crittografia di file (Streaming AEAD)"
+
+#: .\models.py:116
+msgid "Blind index (keyed hash)"
+msgstr "Indice cieco (hash con chiave)"
+
+#: .\models.py:117
+msgid "Admin test console (isolated)"
+msgstr "Console di test admin (isolata)"
+
+#: .\models.py:125 .\models.py:690
+#: .\templates\admin\encryption_suite\inventory.html:83
+#: .\templates\admin\encryption_suite\inventory.html:107
+#: .\templates\admin\encryption_suite\reconcile_keys.html:75
+#: .\templates\admin\encryption_suite\reconcile_keys.html:142
+#: .\templates\admin\encryption_suite\reconcile_keys.html:179
+#: .\templates\admin\encryption_suite\reconcile_keys.html:279
+#: .\templates\admin\encryption_suite\reconcile_keys.html:314
+#: .\templates\admin\encryption_suite\test_console.html:48
+msgid "Key set"
+msgstr "Set di chiavi"
+
+#: .\models.py:127
+msgid ""
+"A key set is one silo adapter and one key store. Fields that name the same "
+"set share its keys, and the settings choose the adapter and the key store."
+msgstr ""
+"Un set di chiavi è un adattatore di silo e un archivio di chiavi. I campi "
+"che indicano lo stesso set condividono le sue chiavi, e le impostazioni "
+"stabiliscono l'adattatore e l'archivio di chiavi."
+
+#: .\models.py:134 .\models.py:701
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:90
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:42
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:124
+#: .\templates\admin\encryption_suite\reconcile_keys.html:73
+#: .\templates\admin\encryption_suite\reconcile_keys.html:141
+#: .\templates\admin\encryption_suite\reconcile_keys.html:177
+#: .\templates\admin\encryption_suite\reconcile_keys.html:278
+#: .\templates\admin\encryption_suite\reconcile_keys.html:313
+msgid "Silo UID"
+msgstr "UID del silo"
+
+#: .\models.py:135
+msgid ""
+"The silo adapter sets this identifier, and no two silos of one key set share "
+"one."
+msgstr ""
+"L'adattatore del silo imposta questo identificatore, e due silo dello stesso "
+"set di chiavi non ne condividono mai uno."
+
+#: .\models.py:143
+msgid ""
+"This says what the key does: it encrypts model fields, encrypts stored "
+"files, or computes a blind index. The admin test console uses keys of its "
+"own."
+msgstr ""
+"Indica la funzione della chiave: cifra i campi del modello, cifra i file "
+"archiviati oppure calcola un indice cieco. La console di test admin usa "
+"chiavi proprie."
+
+#: .\models.py:149
+msgid "Silo label"
+msgstr "Etichetta del silo"
+
+#: .\models.py:150
+msgid "The silo adapter names its silos with this label."
+msgstr "L'adattatore del silo dà un nome ai suoi silo con questa etichetta."
+
+#: .\models.py:157
+msgid ""
+"The key encryption key encrypts this data encryption key, and only the "
+"encrypted form is stored. Deleting the key clears it."
+msgstr ""
+"La chiave di crittografia delle chiavi cifra questa chiave di crittografia "
+"dei dati e viene memorizzata solo la forma cifrata. L’eliminazione della "
+"chiave la cancella."
+
+#: .\models.py:166
+msgid "This key encryption key encrypts the data encryption key."
+msgstr ""
+"Questa chiave di crittografia delle chiavi cifra la chiave di crittografia "
+"dei dati."
+
+#: .\models.py:172 .\models.py:395 .\models.py:744
+msgid "KEK key version"
+msgstr "Versione della chiave KEK"
+
+#: .\models.py:174
+msgid ""
+"The KMS reported this version of the key encryption key when it encrypted "
+"the data encryption key. Some providers need it to decrypt, and the rest "
+"keep it for reference. It is empty where the provider reports no version."
+msgstr ""
+"Il KMS ha riportato questa versione della chiave di crittografia delle "
+"chiavi quando ha cifrato la chiave di crittografia dei dati. Alcuni provider "
+"ne hanno bisogno per decifrare, gli altri la conservano a titolo "
+"informativo. È vuota dove il provider non riporta alcuna versione."
+
+#: .\models.py:185
+msgid ""
+"This crypto backend, such as 'tink' or 'cryptography', generated the data "
+"encryption key. The application checks it when it loads the key, so a "
+"different backend never loads it. It is empty for a blind index key."
+msgstr ""
+"Questo backend crittografico, ad es. 'tink' o 'cryptography', ha generato la "
+"chiave di crittografia dei dati. L’applicazione lo controlla quando carica "
+"la chiave, così un backend diverso non la carica mai. È vuoto per una chiave "
+"di indice cieco."
+
+#: .\models.py:194 .\models.py:764
+#: .\templates\admin\encryption_suite\inventory.html:110
+#: .\templates\admin\encryption_suite\inventory.html:147
+msgid "Algorithm"
+msgstr "Algoritmo"
+
+#: .\models.py:196
+msgid ""
+"The crypto backend generated the data encryption key for this algorithm, "
+"such as 'AES256_GCM', and names it in its own terms."
+msgstr ""
+"Il backend crittografico ha generato la chiave di crittografia dei dati per "
+"questo algoritmo, ad es. 'AES256_GCM', e lo indica con i propri termini."
+
+#: .\models.py:202
+msgid "Encrypted key writes"
+msgstr "Scritture della chiave cifrata"
+
+#: .\models.py:204
+msgid ""
+"The application adds one each time it writes new encrypted key material to "
+"this row: when a key encryption key re-encrypts the same key, or when a "
+"rotation replaces it."
+msgstr ""
+"L’applicazione ne aggiunge uno ogni volta che scrive nuovo materiale di "
+"chiave cifrato in questa riga: quando una chiave di crittografia delle "
+"chiavi ricifra la stessa chiave o quando una rotazione la sostituisce."
+
+#: .\models.py:210
+msgid "DEK key version"
+msgstr "Versione della chiave DEK"
+
+#: .\models.py:212
+msgid ""
+"The application counts the generations of this key's material: 1 for the "
+"first key, then one more for each rotation. Unlike the key encryption key "
+"version, it is not a provider identifier. Unlike the count of encrypted key "
+"writes, it does not change when another key encryption key re-encrypts the "
+"same material."
+msgstr ""
+"L’applicazione conta le generazioni del materiale di questa chiave: 1 per la "
+"prima chiave, poi una in più a ogni rotazione. A differenza della versione "
+"della chiave di crittografia delle chiavi, non è un identificatore del "
+"provider. A differenza del numero di scritture della chiave cifrata, non "
+"cambia quando un’altra chiave di crittografia delle chiavi ricifra lo stesso "
+"materiale."
+
+#: .\models.py:223 .\models.py:345
+#: .\templates\admin\encryption_suite\inventory.html:60
+#: .\templates\admin\encryption_suite\reconcile_keys.html:84
+#: .\templates\admin\encryption_suite\reconcile_keys.html:182
+#: .\templates\admin\encryption_suite\reconcile_keys.html:232
+msgid "Status"
+msgstr "Stato"
+
+#: .\models.py:224 .\models.py:346
+msgid ""
+"The application derives the key's current status from its key lifecycle "
+"events."
+msgstr ""
+"L’applicazione ricava lo stato attuale della chiave dai suoi eventi del "
+"ciclo di vita."
+
+#: .\models.py:229 .\models.py:351
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:94
+#: .\templates\admin\encryption_suite\reconcile_keys.html:184
+msgid "Undeletable until"
+msgstr "Non eliminabile fino al"
+
+#: .\models.py:231 .\models.py:353
+msgid ""
+"The application's deletion window ends at this time. Nothing can destroy the "
+"key before then; after it, deleting the key may destroy it. The key can be "
+"restored until it is actually deleted."
+msgstr ""
+"La finestra di eliminazione dell’applicazione termina in questo momento. "
+"Nulla può distruggere la chiave prima di allora; dopo, l’eliminazione della "
+"chiave può distruggerla. La chiave può essere ripristinata finché non viene "
+"effettivamente eliminata."
+
+#: .\models.py:240
+msgid ""
+"Reconcile sets this when no live silo matches the key's silo UID. It is for "
+"display only: every action that destroys a key checks again before it acts."
+msgstr ""
+"La riconciliazione lo imposta quando nessun silo attivo corrisponde all’UID "
+"di silo della chiave. Serve solo per la visualizzazione: ogni azione che "
+"distrugge una chiave verifica di nuovo prima di agire."
+
+#: .\models.py:247
+msgid "Key material last generated at"
+msgstr "Materiale della chiave generato l’ultima volta il"
+
+#: .\models.py:249
+msgid ""
+"The key material now in use was generated at this time. A data encryption "
+"key's cryptoperiod counts from here, not from the row's creation date, which "
+"a revived key keeps from its first life. Re-encrypting the key onto another "
+"key encryption key does not change it, because the material stays the same."
+msgstr ""
+"Il materiale di chiave attualmente in uso è stato generato in questo "
+"momento. Il crittoperiodo di una chiave di crittografia dei dati si conta da "
+"qui, non dalla data di creazione della riga, che una chiave rigenerata "
+"conserva dalla sua prima vita. Ricifrare la chiave con un’altra chiave di "
+"crittografia delle chiavi non lo modifica, perché il materiale resta lo "
+"stesso."
+
+#: .\models.py:258
+msgid "Last re-encrypted at"
+msgstr "Ultima ricifratura il"
+
+#: .\models.py:260
+msgid ""
+"Its key encryption key last re-encrypted this data encryption key at this "
+"time. Rotating a key encryption key protects nothing already stored until "
+"this re-encryption runs, so a key encryption key's cryptoperiod counts "
+"against this time, not against the rotation."
+msgstr ""
+"La sua chiave di crittografia delle chiavi ha ricifrato questa chiave di "
+"crittografia dei dati l’ultima volta in questo momento. Ruotare una chiave "
+"di crittografia delle chiavi non protegge nulla di già archiviato finché "
+"questa ricifratura non viene eseguita, quindi il crittoperiodo di una chiave "
+"di crittografia delle chiavi si conta da questo momento, non dalla rotazione."
+
+#: .\models.py:265 .\models.py:406
+msgid "Created at"
+msgstr "Creato il"
+
+#: .\models.py:266 .\models.py:407
+msgid "Updated at"
+msgstr "Aggiornato il"
+
+#: .\models.py:271 .\templates\admin\encryption_suite\inventory.html:31
+#: .\templates\admin\encryption_suite\inventory.html:103
+msgid "Data encryption keys"
+msgstr "Chiavi di crittografia dei dati"
+
+#: .\models.py:324
+msgid "Silo-exclusive — eligible for deleting"
+msgstr "Esclusiva del silo — idonea all'eliminazione"
+
+#: .\models.py:325
+msgid "Shared/opaque — never auto-deleted"
+msgstr "Condivisa/opaca — mai eliminata automaticamente"
+
+#: .\models.py:333
+msgid ""
+"This key store holds the key encryption key. The name is a block in the "
+"KMS_KEY_STORES setting."
+msgstr ""
+"Questo archivio di chiavi detiene la chiave di crittografia delle chiavi. Il "
+"nome è un blocco dell’impostazione KMS_KEY_STORES."
+
+#: .\models.py:338
+msgid "The KMS knows this key encryption key by this full resource name."
+msgstr ""
+"Il KMS conosce questa chiave di crittografia delle chiavi con questo nome di "
+"risorsa completo."
+
+#: .\models.py:361
+msgid "KMS deletion at"
+msgstr "Eliminazione KMS il"
+
+#: .\models.py:363
+msgid ""
+"The provider destroys the key at this time. The application sets it when it "
+"asks the provider to delete the key, or when it finds a deletion already "
+"under way. Only the provider can cancel the deletion; this application "
+"cannot."
+msgstr ""
+"Il provider distrugge la chiave in questo momento. L’applicazione lo imposta "
+"quando chiede al provider di eliminare la chiave o quando rileva "
+"un’eliminazione già in corso. Solo il provider può annullare l’eliminazione; "
+"questa applicazione non può."
+
+#: .\models.py:373
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:122
+msgid "Disposition"
+msgstr "Disposizione"
+
+#: .\models.py:375
+msgid ""
+"This says whether the key encryption key could be deleted when it was "
+"scheduled for deletion. Wherever a data encryption key still names the key, "
+"the deletion works this out again from the running configuration and uses "
+"that answer instead."
+msgstr ""
+"Indica se la chiave di crittografia delle chiavi poteva essere eliminata "
+"quando ne è stata pianificata l’eliminazione. Ovunque una chiave di "
+"crittografia dei dati nomini ancora la chiave, l’eliminazione ricalcola "
+"questo valore dalla configurazione in esecuzione e usa quella risposta al "
+"suo posto."
+
+#: .\models.py:384
+msgid "Owner prefix"
+msgstr "Prefisso del proprietario"
+
+#: .\models.py:386
+msgid ""
+"This prefix marked the key as this application's when it was scheduled for "
+"deletion. It stays empty until then, and the application refuses to delete "
+"the key if the current prefix no longer matches."
+msgstr ""
+"Questo prefisso ha contrassegnato la chiave come appartenente a questa "
+"applicazione quando ne è stata pianificata l’eliminazione. Resta vuoto fino "
+"ad allora, e l’applicazione rifiuta di eliminare la chiave se il prefisso "
+"attuale non corrisponde più."
+
+#: .\models.py:396
+msgid ""
+"The KMS last reported this version of the key encryption key as current."
+msgstr ""
+"Il KMS ha riportato per ultima questa versione della chiave di crittografia "
+"delle chiavi come corrente."
+
+#: .\models.py:402
+msgid ""
+"Reconcile sets this when no live silo uses the key. It is for display only: "
+"every action that destroys a key checks again before it acts."
+msgstr ""
+"La riconciliazione lo imposta quando nessun silo attivo usa la chiave. Serve "
+"solo per la visualizzazione: ogni azione che distrugge una chiave verifica "
+"di nuovo prima di agire."
+
+#: .\models.py:412 .\templates\admin\encryption_suite\inventory.html:30
+#: .\templates\admin\encryption_suite\inventory.html:55
+msgid "Key encryption keys"
+msgstr "Chiavi di crittografia delle chiavi"
+
+#: .\models.py:505
+msgid "Recorded IP address"
+msgstr "Indirizzo IP registrato"
+
+#: .\models.py:506
+msgid "Recorded IP addresses"
+msgstr "Indirizzi IP registrati"
+
+#: .\models.py:545
+msgid "Recorded OS user"
+msgstr "Utente del sistema operativo registrato"
+
+#: .\models.py:546
+msgid "Recorded OS users"
+msgstr "Utenti del sistema operativo registrati"
+
+#: .\models.py:662
+msgid "This names what happened to the key."
+msgstr "Indica che cosa è successo alla chiave."
+
+#: .\models.py:672
+msgid ""
+"The event is about this key encryption key. It is empty when the event is "
+"about a data encryption key."
+msgstr ""
+"L’evento riguarda questa chiave di crittografia delle chiavi. È vuoto quando "
+"l’evento riguarda una chiave di crittografia dei dati."
+
+#: .\models.py:683
+msgid ""
+"The event is about this data encryption key. It is empty when the event is "
+"about a key encryption key."
+msgstr ""
+"L’evento riguarda questa chiave di crittografia dei dati. È vuoto quando "
+"l’evento riguarda una chiave di crittografia delle chiavi."
+
+#: .\models.py:692
+msgid ""
+"At the time of this event, the key belonged to this key set. It is empty for "
+"a key encryption key that is shared or belongs to no silo."
+msgstr ""
+"Al momento di questo evento, la chiave apparteneva a questo set di chiavi. È "
+"vuoto per una chiave di crittografia delle chiavi condivisa o che non "
+"appartiene ad alcun silo."
+
+#: .\models.py:703
+msgid ""
+"At the time of this event, the key belonged to this silo. It is empty for a "
+"key encryption key that is shared or belongs to no silo."
+msgstr ""
+"Al momento di questo evento, la chiave apparteneva a questo silo. È vuoto "
+"per una chiave di crittografia delle chiavi condivisa o che non appartiene "
+"ad alcun silo."
+
+#: .\models.py:712
+msgid ""
+"At the time of this event, the key encryption key involved had this resource "
+"name."
+msgstr ""
+"Al momento di questo evento, la chiave di crittografia delle chiavi "
+"coinvolta aveva questo nome di risorsa."
+
+#: .\models.py:726
+msgid ""
+"At the time of this event, this key encryption key encrypted the data "
+"encryption key. It is empty on a key encryption key's own events."
+msgstr ""
+"Al momento di questo evento, questa chiave di crittografia delle chiavi "
+"cifrava la chiave di crittografia dei dati. È vuoto negli eventi propri di "
+"una chiave di crittografia delle chiavi."
+
+#: .\models.py:736
+msgid ""
+"At the time of this event, this key store held the key encryption key. It is "
+"empty on a key encryption key's own events."
+msgstr ""
+"Al momento di questo evento, questo archivio di chiavi deteneva la chiave di "
+"crittografia delle chiavi. È vuoto negli eventi propri di una chiave di "
+"crittografia delle chiavi."
+
+#: .\models.py:746
+msgid ""
+"At the time of this event, the KMS reported this version of the key "
+"encryption key. It is empty where the provider reports no version."
+msgstr ""
+"Al momento di questo evento, il KMS ha riportato questa versione della "
+"chiave di crittografia delle chiavi. È vuota dove il provider non riporta "
+"alcuna versione."
+
+#: .\models.py:756
+msgid ""
+"At the time of this event, the data encryption key came from this crypto "
+"backend. It is empty for a blind index key and on a key encryption key's own "
+"events."
+msgstr ""
+"Al momento di questo evento, la chiave di crittografia dei dati proveniva da "
+"questo backend crittografico. È vuoto per una chiave di indice cieco e negli "
+"eventi propri di una chiave di crittografia delle chiavi."
+
+#: .\models.py:766
+msgid ""
+"At the time of this event, the data encryption key was generated for this "
+"algorithm. It is empty on a key encryption key's own events."
+msgstr ""
+"Al momento di questo evento, la chiave di crittografia dei dati era stata "
+"generata per questo algoritmo. È vuoto negli eventi propri di una chiave di "
+"crittografia delle chiavi."
+
+#: .\models.py:776
+msgid ""
+"This says how the event came about: someone asked for it, it followed from "
+"another act, or a script or schedule ran it."
+msgstr ""
+"Indica come si è verificato l’evento: qualcuno lo ha richiesto, è conseguito "
+"a un altro atto, oppure lo ha eseguito uno script o una pianificazione."
+
+#: .\models.py:786
+msgid "This says why the event happened, where the event alone does not."
+msgstr ""
+"Indica perché l’evento si è verificato, quando l’evento da solo non lo dice."
+
+#: .\models.py:791
+msgid "Effective at"
+msgstr "Efficace il"
+
+#: .\models.py:793
+msgid ""
+"The event set this deletion date, where it set one: the end of the "
+"application's window for a scheduling event, or the provider's date for a "
+"requested deletion."
+msgstr ""
+"L’evento ha stabilito questa data di eliminazione, ove ne abbia stabilita "
+"una: la fine della finestra dell’applicazione per un evento di "
+"pianificazione, oppure la data del provider per un’eliminazione richiesta."
+
+#: .\models.py:811
+msgid ""
+"This user acted, where the configuration records one. The reference stays "
+"after the user is deleted."
+msgstr ""
+"Questo utente ha agito, ove la configurazione ne registri uno. Il "
+"riferimento resta dopo l’eliminazione dell’utente."
+
+#: .\models.py:822
+msgid "OS login account"
+msgstr "Account di accesso del sistema operativo"
+
+#: .\models.py:824
+msgid ""
+"A command-line act ran under this operating-system account, shown with its "
+"uid, where the configuration records one."
+msgstr ""
+"Un atto da riga di comando è stato eseguito con questo account del sistema "
+"operativo, mostrato con l’uid, ove la configurazione ne registri uno."
+
+#: .\models.py:834
+msgid "User IP address"
+msgstr "Indirizzo IP dell’utente"
+
+#: .\models.py:835
+msgid "The act came from this address, where the configuration records one."
+msgstr ""
+"L’atto proviene da questo indirizzo, ove la configurazione ne registri uno."
+
+#: .\models.py:837
+msgid "Recorded at"
+msgstr "Registrato il"
+
+#: .\models.py:841
+msgid "Key lifecycle event"
+msgstr "Evento del ciclo di vita della chiave"
+
+#: .\models.py:842
+msgid "Key lifecycle events"
+msgstr "Eventi del ciclo di vita della chiave"
+
+#: .\models.py:1131
+msgid "Data encryption key rotation"
+msgstr "Rotazione della chiave di crittografia dei dati"
+
+#: .\models.py:1132
+msgid "Data encryption key rotations"
+msgstr "Rotazioni delle chiavi di crittografia dei dati"
+
+#: .\models.py:1171
+msgid "Data encryption key rotation work item"
+msgstr ""
+"Elemento di lavoro della rotazione della chiave di crittografia dei dati"
+
+#: .\models.py:1172
+msgid "Data encryption key rotation work items"
+msgstr ""
+"Elementi di lavoro della rotazione delle chiavi di crittografia dei dati"
+
+#: .\models.py:1225
+msgid "Blind index entry"
+msgstr "Voce di indice cieco"
+
+#: .\models.py:1226
+msgid "Blind index entries"
+msgstr "Voci di indice cieco"
+
+#: .\models.py:1271 .\models.py:1272
+msgid "Encryption tools"
+msgstr "Strumenti di crittografia"
+
+#: .\reconcile.py:63
+msgid ""
+"the silo adapter cannot enumerate silos, so deleted-silo (DB-side) orphans "
+"cannot be detected"
+msgstr ""
+"l'adattatore di silo non può enumerare i silo, quindi non è possibile "
+"rilevare gli orfani da silo eliminato (lato database)"
+
+#: .\reconcile.py:66
+msgid ""
+"enumerating the silos failed, so deleted-silo (DB-side) orphans could not be "
+"detected on this pass"
+msgstr ""
+"l’enumerazione dei silo non è riuscita, quindi in questo passaggio non è "
+"stato possibile rilevare gli orfani da silo eliminati (lato database)"
+
+#: .\reconcile.py:69
+msgid ""
+"the provisioner cannot list key encryption keys, so orphaned keys cannot be "
+"detected"
+msgstr ""
+"il provisioner non può elencare le chiavi di crittografia delle chiavi, "
+"quindi non è possibile rilevare le chiavi orfane"
+
+#: .\reconcile.py:72
+msgid ""
+"listing the key encryption keys failed, so orphaned keys could not be "
+"detected on this pass"
+msgstr ""
+"l’elenco delle chiavi di crittografia delle chiavi non è riuscito, quindi in "
+"questo passaggio non è stato possibile rilevare le chiavi orfane"
+
+#: .\reconcile.py:75
+msgid ""
+"no owner prefix (shared or KEK_MAP key naming), so key encryption keys "
+"cannot be attributed to this deployment"
+msgstr ""
+"nessun prefisso del proprietario (denominazione chiave condivisa o KEK_MAP), "
+"quindi le chiavi di crittografia delle chiavi non possono essere attribuite "
+"a questo deployment"
+
+#: .\reconcile.py:296 .\reconcile.py:313
+msgid "the KMS provider"
+msgstr "il provider KMS"
+
+#: .\reconcile.py:304
+#, python-format
+msgid ""
+"Delete key encryption key '%(name)s' on %(provider)s in the KMS — the "
+"configured provisioner cannot delete it. The silo it backed no longer exists."
+msgstr ""
+"Elimina la chiave di cifratura delle chiavi «%(name)s» su %(provider)s nel "
+"KMS: il provisioner configurato non può eliminarla. Il silo che proteggeva "
+"non esiste più."
+
+#: .\reconcile.py:317
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List key encryption keys "
+"whose name starts with '%(prefix)s' on %(provider)s and audit them against "
+"your live silos by hand; delete any that back no silo."
+msgstr ""
+"La riconciliazione lato KMS non è disponibile (%(reasons)s). Elenca le "
+"chiavi di crittografia delle chiavi il cui nome inizia con «%(prefix)s» su "
+"%(provider)s e verificale manualmente rispetto ai tuoi silo attivi; elimina "
+"quelle che non proteggono alcun silo."
+
+#: .\reconcile.py:323
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List the key encryption "
+"keys this deployment uses on %(provider)s and audit them against your live "
+"silos by hand; delete any that back no silo."
+msgstr ""
+"La riconciliazione lato KMS non è disponibile (%(reasons)s). Elenca le "
+"chiavi di crittografia delle chiavi che questo deployment utilizza su "
+"%(provider)s e verificale manualmente rispetto ai tuoi silo attivi; elimina "
+"quelle che non proteggono alcun silo."
+
+#: .\reconcile.py:369
+msgid ""
+"no data key rotation period is declared (DEK_ROTATION_PERIOD_DAYS), so "
+"nothing can be called overdue"
+msgstr ""
+"non è dichiarato alcun periodo di rotazione per le chiavi dati "
+"(DEK_ROTATION_PERIOD_DAYS), quindi nulla può essere considerato scaduto"
+
+#: .\reconcile.py:372
+msgid ""
+"this provider identifies no key version, so keys needing re-encryption after "
+"a rotation cannot be detected"
+msgstr ""
+"questo provider non identifica alcuna versione della chiave, quindi le "
+"chiavi da ricifrare dopo una rotazione non possono essere rilevate"
+
+#: .\reconcile.py:375
+msgid ""
+"the key version lookup failed for one or more keys, so those keys were left "
+"out of the key re-encryption check"
+msgstr ""
+"la ricerca della versione della chiave non è riuscita per una o più chiavi, "
+"che sono quindi state escluse dal controllo di ricifratura delle chiavi"
+
+#: .\safe_queries.py:69
+msgid "No content"
+msgstr "Nessun contenuto"
+
+#: .\safe_queries.py:70
+msgid "Unable to decrypt field."
+msgstr "Impossibile decifrare il campo."
+
+#: .\safe_queries.py:71
+msgid "No file uploaded"
+msgstr "Nessun file caricato"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:14
+msgid "ready"
+msgstr "pronta"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:16
+msgid "not usable"
+msgstr "non utilizzabile"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:18
+msgid "missing"
+msgstr "mancante"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+#: .\templates\admin\encryption_suite\reconcile_keys.html:201
+#: .\templates\admin\encryption_suite\reconcile_keys.html:252
+msgid "Yes"
+msgstr "Sì"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+msgid "No"
+msgstr "No"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:8
+#: .\templates\admin\encryption_suite\reconcile_keys.html:185
+#: .\templates\admin\encryption_suite\reconcile_keys.html:238
+#: .\templates\admin\encryption_suite\test_console.html:13
+msgid "Test console"
+msgstr "Console di test"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\inventory.html:10
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\reconcile_keys.html:10
+#: .\templates\admin\encryption_suite\settings.html:10
+#: .\templates\admin\encryption_suite\test_console.html:10
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s data encryption key. This cannot be "
+"undone."
+msgid_plural ""
+"You are about to destroy %(counter)s data encryption keys. This cannot be "
+"undone."
+msgstr[0] ""
+"Stai per distruggere %(counter)s chiave di cifratura dei dati. L'operazione "
+"non è annullabile."
+msgstr[1] ""
+"Stai per distruggere %(counter)s chiavi di cifratura dei dati. L'operazione "
+"non è annullabile."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:24
+msgid "None of the selected data encryption keys can be deleted yet."
+msgstr ""
+"Nessuna delle chiavi di crittografia dei dati selezionate può ancora essere "
+"eliminata."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:29
+#, python-format
+msgid ""
+"%(counter)s selected key will not be destroyed (%(reasons)s) and is not "
+"listed below. Nothing about it changes, so resolving the cause and deleting "
+"again works."
+msgid_plural ""
+"%(counter)s selected keys will not be destroyed (%(reasons)s) and are not "
+"listed below. Nothing about them changes, so resolving the cause and "
+"deleting again works."
+msgstr[0] ""
+"%(counter)s chiave selezionata non verrà distrutta (%(reasons)s) e non è "
+"elencata sotto. Nulla cambia al suo riguardo, quindi risolvere la causa ed "
+"eliminare di nuovo funziona."
+msgstr[1] ""
+"%(counter)s chiavi selezionate non verranno distrutte (%(reasons)s) e non "
+"sono elencate sotto. Nulla cambia al loro riguardo, quindi risolvere la "
+"causa ed eliminare di nuovo funziona."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:41
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:43
+#, python-format
+msgid ""
+"%(counter)s selected key is not scheduled for deletion, so there is nothing "
+"to delete and it is not listed below. Schedule it first — the deletion only "
+"ever acts on scheduled work whose restore window has closed."
+msgid_plural ""
+"%(counter)s selected keys are not scheduled for deletion, so there is "
+"nothing to delete and they are not listed below. Schedule them first — the "
+"deletion only ever acts on scheduled work whose restore window has closed."
+msgstr[0] ""
+"%(counter)s chiave selezionata non è pianificata per l'eliminazione, quindi "
+"non c'è nulla da eliminare e non è elencata sotto. Pianificala prima — "
+"l'eliminazione agisce solo sul lavoro pianificato la cui finestra di "
+"ripristino è chiusa."
+msgstr[1] ""
+"%(counter)s chiavi selezionate non sono pianificate per l'eliminazione, "
+"quindi non c'è nulla da eliminare e non sono elencate sotto. Pianificale "
+"prima — l'eliminazione agisce solo sul lavoro pianificato la cui finestra di "
+"ripristino è chiusa."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:55
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:57
+#, python-format
+msgid ""
+"%(counter)s selected key is scheduled but still inside its restore window, "
+"and is not listed below. It will not be touched until the window closes."
+msgid_plural ""
+"%(counter)s selected keys are scheduled but still inside their restore "
+"window, and are not listed below. They will not be touched until the window "
+"closes."
+msgstr[0] ""
+"%(counter)s chiave selezionata è pianificata ma ancora nella sua finestra di "
+"ripristino, e non è elencata sotto. Non sarà toccata finché la finestra non "
+"si chiude."
+msgstr[1] ""
+"%(counter)s chiavi selezionate sono pianificate ma ancora nella loro "
+"finestra di ripristino, e non sono elencate sotto. Non saranno toccate "
+"finché la finestra non si chiude."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:68
+msgid ""
+"Each key below has its wrapped keyset cleared. Every encrypted field and "
+"file belonging to that silo becomes permanently unreadable."
+msgstr ""
+"A ogni chiave elencata sotto viene cancellato il keyset incapsulato. Ogni "
+"campo e file cifrato appartenente a quel silo diventa definitivamente "
+"illeggibile."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:74
+msgid ""
+"No provider window stands behind this. Unlike destroying a key encryption "
+"key, there is nothing to cancel at the KMS afterwards — the only recovery is "
+"a database backup taken while the wrapping key still exists."
+msgstr ""
+"Nessuna finestra del provider protegge questa operazione. A differenza della "
+"distruzione di una chiave di cifratura delle chiavi, dopo non c'è nulla da "
+"annullare presso il KMS — l'unico recupero è un backup del database eseguito "
+"mentre la chiave incapsulante esiste ancora."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:81
+msgid ""
+"The row survives as a record that the key existed. Its lifecycle history is "
+"kept."
+msgstr ""
+"La riga sopravvive come traccia dell'esistenza della chiave. La sua "
+"cronologia del ciclo di vita è conservata."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:126
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:120
+#: .\templates\admin\encryption_suite\reconcile_keys.html:181
+#: .\templates\admin\encryption_suite\reconcile_keys.html:231
+msgid "KEK name"
+msgstr "Nome della KEK"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:118
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:123
+msgid "Yes, destroy these keys"
+msgstr "Sì, distruggi queste chiavi"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:120
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:149
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:125
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:148
+msgid "No, take me back"
+msgstr "No, torna indietro"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid "%(counter)s selected key cannot be scheduled."
+msgid_plural "%(counter)s selected keys cannot be scheduled."
+msgstr[0] "%(counter)s chiave selezionata non può essere pianificata."
+msgstr[1] "%(counter)s chiavi selezionate non possono essere pianificate."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:25
+msgid ""
+"Destroying one of these makes its silo's data permanently unreadable, and "
+"the deletion would refuse it for the same reason — so it is refused now "
+"rather than after a window has been waited out."
+msgstr ""
+"Distruggerne una rende i dati del suo silo permanentemente illeggibili, e "
+"l'eliminazione la rifiuterebbe per lo stesso motivo — quindi viene rifiutata "
+"ora anziché dopo aver atteso una finestra."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:32
+msgid ""
+"Delete the silo first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to "
+"True in ENCRYPTION, which permits destroying a key that live data depends on "
+"— for an erasure obligation that must render the data unreadable while "
+"keeping the records."
+msgstr ""
+"Elimina prima il silo, oppure imposta "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE su True in ENCRYPTION, che "
+"consente di distruggere una chiave da cui dipendono dati attivi — per un "
+"obbligo di cancellazione che deve rendere i dati illeggibili conservando i "
+"record."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:61
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled or deleted — so "
+"there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled or deleted — so "
+"there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"%(counter)s chiave selezionata non è attiva — già pianificata o eliminata — "
+"quindi non c'è nulla da pianificare e non è elencata sotto."
+msgstr[1] ""
+"%(counter)s chiavi selezionate non sono attive — già pianificate o eliminate "
+"— quindi non c'è nulla da pianificare e non sono elencate sotto."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:73
+#, python-format
+msgid ""
+"%(counter)s selected key belongs to the test console, which has its own "
+"deletion path, and is not listed below."
+msgid_plural ""
+"%(counter)s selected keys belong to the test console, which has its own "
+"deletion path, and are not listed below."
+msgstr[0] ""
+"%(counter)s chiave selezionata appartiene alla console di test, che ha un "
+"proprio percorso di eliminazione, e non è elencata sotto."
+msgstr[1] ""
+"%(counter)s chiavi selezionate appartengono alla console di test, che ha un "
+"proprio percorso di eliminazione, e non sono elencate sotto."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:85
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s data encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s data encryption keys."
+msgstr[0] ""
+"Stai per pianificare l’eliminazione di %(counter)s chiave di crittografia "
+"dei dati."
+msgstr[1] ""
+"Stai per pianificare l’eliminazione di %(counter)s chiavi di crittografia "
+"dei dati."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:95
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys belongs to a silo that is still live. "
+"Scheduling blocks its encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys belong to silos that are still live. "
+"Scheduling blocks their encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgstr[0] ""
+"%(counter)s delle %(total)s chiavi selezionate appartiene a un silo ancora "
+"attivo. La pianificazione ne blocca crittografia e decrittografia entro "
+"DEK_CACHE_TTL (%(ttl)s secondi)."
+msgstr[1] ""
+"%(counter)s delle %(total)s chiavi selezionate appartengono a silo ancora "
+"attivi. La pianificazione ne blocca crittografia e decrittografia entro "
+"DEK_CACHE_TTL (%(ttl)s secondi)."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:107
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:97
+#, python-format
+msgid ""
+"Nothing is destroyed now. The keys stay restorable for %(days)s day(s), set "
+"by KEY_DELETION_WINDOW_DAYS."
+msgstr ""
+"Al momento non viene distrutto nulla. Le chiavi restano ripristinabili per "
+"%(days)s giorno/i, impostato da KEY_DELETION_WINDOW_DAYS."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:113
+msgid ""
+"Once that window expires, the deletion clears the key material for good and "
+"the data it protected can no longer be decrypted."
+msgstr ""
+"Alla scadenza di quella finestra, l'eliminazione cancella definitivamente il "
+"materiale della chiave e i dati che proteggeva non possono più essere "
+"decrittati."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:118
+msgid "No key encryption key is scheduled or deleted by this action."
+msgstr ""
+"Questa azione non pianifica né elimina alcuna chiave di crittografia delle "
+"chiavi."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:147
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:146
+msgid "Yes, schedule deletion"
+msgstr "Sì, pianifica l’eliminazione"
+
+#: .\templates\admin\encryption_suite\edit_inline\tabular_history.html:33
+msgid "Delete?"
+msgstr "Eliminare?"
+
+#: .\templates\admin\encryption_suite\inventory.html:12
+#: .\templates\admin\encryption_suite\reconcile_keys.html:12
+#: .\templates\admin\encryption_suite\settings.html:12
+#: .\templates\admin\encryption_suite\test_console.html:12
+msgid "Data Encryption Keys"
+msgstr "Chiavi di crittografia dei dati"
+
+#: .\templates\admin\encryption_suite\inventory.html:28
+msgid "KMS Adapter"
+msgstr "Adattatore KMS"
+
+#: .\templates\admin\encryption_suite\inventory.html:29
+msgid "KEK strategy"
+msgstr "Strategia KEK"
+
+#: .\templates\admin\encryption_suite\inventory.html:32
+msgid "Oldest active KEK"
+msgstr "KEK attiva più vecchia"
+
+#: .\templates\admin\encryption_suite\inventory.html:43
+msgid "Not configured"
+msgstr "Non configurato"
+
+#: .\templates\admin\encryption_suite\inventory.html:61
+#: .\templates\admin\encryption_suite\inventory.html:112
+msgid "Count"
+msgstr "Numero"
+
+#: .\templates\admin\encryption_suite\inventory.html:79
+msgid "Configured for new key encryption keys"
+msgstr "Configurato per le nuove chiavi di crittografia delle chiavi"
+
+#: .\templates\admin\encryption_suite\inventory.html:85
+msgid "Silo adapter"
+msgstr "Adattatore di silo"
+
+#: .\templates\admin\encryption_suite\inventory.html:113
+msgid "Oldest key material"
+msgstr "Materiale della chiave più vecchio"
+
+#: .\templates\admin\encryption_suite\inventory.html:115
+#, python-format
+msgid "Older than %(days)s days"
+msgstr "Più vecchie di %(days)s giorni"
+
+#: .\templates\admin\encryption_suite\inventory.html:122
+msgid "(no settings entry)"
+msgstr "(nessuna voce nelle impostazioni)"
+
+#: .\templates\admin\encryption_suite\inventory.html:141
+msgid "Configured for new data encryption keys"
+msgstr "Configurato per le nuove chiavi di crittografia dei dati"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s key encryption key at the KMS provider. "
+"This cannot be undone from here."
+msgid_plural ""
+"You are about to destroy %(counter)s key encryption keys at the KMS "
+"provider. This cannot be undone from here."
+msgstr[0] ""
+"Stai per distruggere %(counter)s chiave di cifratura delle chiavi presso il "
+"provider KMS. L'operazione non è annullabile da qui."
+msgstr[1] ""
+"Stai per distruggere %(counter)s chiavi di cifratura delle chiavi presso il "
+"provider KMS. L'operazione non è annullabile da qui."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:26
+msgid ""
+"None of the selected key encryption keys will be destroyed. Review the "
+"decisions below."
+msgstr ""
+"Nessuna delle chiavi di cifratura delle chiavi selezionate sarà distrutta. "
+"Esamina le decisioni qui sotto."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:31
+#, python-format
+msgid ""
+"%(counter)s key still wraps live keysets. Every silo counted below loses its "
+"data permanently."
+msgid_plural ""
+"%(counter)s keys still wrap live keysets. Every silo counted below loses its "
+"data permanently."
+msgstr[0] ""
+"%(counter)s chiave incapsula ancora keyset attivi. Ogni silo conteggiato "
+"sotto perde i propri dati definitivamente."
+msgstr[1] ""
+"%(counter)s chiavi incapsulano ancora keyset attivi. Ogni silo conteggiato "
+"sotto perde i propri dati definitivamente."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:69
+msgid ""
+"The outcome column is the decision this deletion will make, taken from a "
+"preview run through the same gates. A key that shows retained or skipped is "
+"not destroyed, and the reason is recorded against it."
+msgstr ""
+"La colonna Esito è la decisione che prenderà questa eliminazione, ricavata "
+"da un'esecuzione di anteprima attraverso gli stessi controlli. Una chiave "
+"che risulta conservata o saltata non viene distrutta, e il motivo viene "
+"registrato su di essa."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:76
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:110
+msgid ""
+"Destroying a key encryption key cannot be undone from a database backup: "
+"what is lost is the key that backup's ciphertext depends on."
+msgstr ""
+"La distruzione di una chiave di cifratura delle chiavi non è annullabile da "
+"un backup del database: ciò che si perde è la chiave da cui dipende il testo "
+"cifrato di quel backup."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:82
+msgid ""
+"Providers with a recovery window hold the key for their own waiting period "
+"after this, recoverable only at the provider. Providers that delete "
+"immediately do not."
+msgstr ""
+"I provider con una finestra di recupero trattengono poi la chiave per il "
+"proprio periodo di attesa, recuperabile solo presso il provider. Quelli che "
+"eliminano immediatamente no."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:94
+msgid "Outcome"
+msgstr "Esito"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:95
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:45
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:123
+msgid "Silos still holding keysets"
+msgstr "Silo che detengono ancora insiemi di chiavi"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:104
+msgid "Will be destroyed"
+msgstr "Sarà distrutta"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:105
+#, python-format
+msgid "Retained — %(reason)s"
+msgstr "Conservata — %(reason)s"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:106
+msgid "Skipped — another provider's key"
+msgstr "Saltata — chiave di un altro provider"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:107
+msgid "Provider call failed on preview"
+msgstr "La chiamata al provider è fallita durante l'anteprima"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:108
+msgid "Not eligible yet"
+msgstr "Non ancora idonea"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid ""
+"%(counter)s selected key cannot be scheduled: live data still depends on it, "
+"and destroying it would make that data permanently unreadable."
+msgid_plural ""
+"%(counter)s selected keys cannot be scheduled: live data still depends on "
+"them, and destroying them would make that data permanently unreadable."
+msgstr[0] ""
+"%(counter)s chiave selezionata non può essere pianificata: dati attivi "
+"dipendono ancora da essa, e distruggerla renderebbe quei dati "
+"definitivamente illeggibili."
+msgstr[1] ""
+"%(counter)s chiavi selezionate non possono essere pianificate: dati attivi "
+"dipendono ancora da esse, e distruggerle renderebbe quei dati "
+"definitivamente illeggibili."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:27
+msgid ""
+"Delete the silos still using the key, then schedule it. Their data "
+"encryption keys are deleted first, which is what leaves the key with nothing "
+"depending on it."
+msgstr ""
+"Elimina prima i silo che usano ancora la chiave, poi pianificala. Le loro "
+"chiavi di crittografia dei dati vengono eliminate per prime, ed è questo a "
+"lasciare la chiave senza nulla che dipenda da essa."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:33
+msgid ""
+"Or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION, "
+"which permits destroying a key that live data depends on — for an erasure "
+"obligation that must render the data unreadable while keeping the records."
+msgstr ""
+"Oppure imposta KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE su True in "
+"ENCRYPTION, che consente di distruggere una chiave da cui dipendono dati "
+"attivi — per un obbligo di cancellazione che deve rendere i dati illeggibili "
+"conservando i record."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:62
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"%(counter)s chiave selezionata non è attiva — già pianificata, conservata o "
+"eliminata — quindi non c'è nulla da pianificare e non è elencata sotto."
+msgstr[1] ""
+"%(counter)s chiavi selezionate non sono attive — già pianificate, conservate "
+"o eliminate — quindi non c'è nulla da pianificare e non sono elencate sotto."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:74
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s key encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s key encryption keys."
+msgstr[0] ""
+"Stai per pianificare l'eliminazione di %(counter)s chiave di cifratura delle "
+"chiavi."
+msgstr[1] ""
+"Stai per pianificare l'eliminazione di %(counter)s chiavi di cifratura delle "
+"chiavi."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:84
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys still wraps live keysets. Every silo "
+"counted below loses its data permanently if that key is destroyed."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys still wrap live keysets. Every silo "
+"counted below loses its data permanently if those keys are destroyed."
+msgstr[0] ""
+"%(counter)s di %(total)s chiavi selezionate avvolge ancora insiemi di chiavi "
+"attivi. Ogni silo conteggiato sotto perde i suoi dati in modo permanente se "
+"quella chiave viene distrutta."
+msgstr[1] ""
+"%(counter)s di %(total)s chiavi selezionate avvolgono ancora insiemi di "
+"chiavi attivi. Ogni silo conteggiato sotto perde i suoi dati in modo "
+"permanente se quelle chiavi vengono distrutte."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:103
+msgid ""
+"Scheduling states intent; the deletion decides. It re-checks every gate at "
+"the moment of destruction and retains a key that is still in use, shared, or "
+"not provably owned by this deployment, recording the reason."
+msgstr ""
+"La pianificazione esprime un'intenzione; è l'eliminazione a decidere. "
+"Ricontrolla ogni condizione al momento della distruzione e conserva una "
+"chiave ancora in uso, condivisa o non dimostrabilmente di proprietà di "
+"questo deployment, registrandone il motivo."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:32
+#, python-format
+msgid "Not configured: %(stores)s"
+msgstr "Non configurato: %(stores)s"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:36
+msgid "Summary"
+msgstr "Riepilogo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:38
+msgid "Silos discovered"
+msgstr "Silo scoperti"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:39
+msgid "Missing keys"
+msgstr "Chiavi mancanti"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:40
+msgid "Orphaned data encryption keys"
+msgstr "Chiavi di cifratura dei dati orfane"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:41
+msgid "Orphaned key encryption keys"
+msgstr "Chiavi di cifratura delle chiavi orfane"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:42
+msgid "Key re-encryption due"
+msgstr "Ricifratura delle chiavi dovuta"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:43
+msgid "Data re-encryption due"
+msgstr "Ricifratura dei dati dovuta"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:51
+msgid ""
+"\n"
+"      Silo enumeration is owned by the configured silo adapter. To list "
+"silos\n"
+"      here, override <code>iter_silos()</code> on the adapter (and set\n"
+"      <code>supports_enumeration = True</code>).\n"
+"      "
+msgstr ""
+"\n"
+"      L'enumerazione dei silo è gestita dall'adattatore di silo configurato. "
+"Per elencare i silo\n"
+"      qui, sovrascrivi <code>iter_silos()</code> sull'adattatore (e imposta\n"
+"      <code>supports_enumeration = True</code>).\n"
+"      "
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:62
+msgid "Silos"
+msgstr "Silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:64
+msgid ""
+"A key marked with a check is present and live. A key marked with an x is not "
+"found. A key marked with an alert icon exists but will not encrypt or "
+"decrypt, because its lifecycle status has moved out of active."
+msgstr ""
+"Una chiave contrassegnata da un segno di spunta è presente e attiva. Una "
+"chiave contrassegnata da una x non è stata trovata. Una chiave "
+"contrassegnata da un'icona di avviso esiste ma non cifrerà né decifrerà, "
+"perché il suo stato del ciclo di vita non è più attivo."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:74
+#: .\templates\admin\encryption_suite\reconcile_keys.html:178
+msgid "Type"
+msgstr "Tipo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:76
+msgid "Expected KEK Name"
+msgstr "Nome della KEK previsto"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:78
+#: .\templates\admin\encryption_suite\reconcile_keys.html:234
+msgid "KEK (live)"
+msgstr "KEK (in tempo reale)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:79
+#: .\templates\admin\encryption_suite\reconcile_keys.html:235
+msgid "KEK (last known)"
+msgstr "KEK (ultimo stato noto)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:81
+msgid "Field DEK"
+msgstr "DEK di campo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:82
+msgid "File DEK"
+msgstr "DEK di file"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:83
+msgid "Index DEK"
+msgstr "DEK di indice"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:97
+msgid "Stored key differs:"
+msgstr "La chiave memorizzata differisce:"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:101
+#: .\templates\admin\encryption_suite\reconcile_keys.html:248
+msgid "unknown"
+msgstr "sconosciuto"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:117
+msgid "Needs setup"
+msgstr "Configurazione necessaria"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:119
+msgid "Key deletion scheduled"
+msgstr "Eliminazione della chiave programmata"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:121
+msgid "Ready"
+msgstr "Pronta"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:133
+msgid "Missing Keys"
+msgstr "Chiavi mancanti"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Key encryption keys are created automatically by the configured provisioner."
+msgstr ""
+"Le chiavi di crittografia delle chiavi vengono create automaticamente dal "
+"provisioner configurato."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Create each key encryption key listed below on your KMS provider, granting "
+"your application encrypt/decrypt permission on it."
+msgstr ""
+"Crea ciascuna chiave di crittografia delle chiavi elencata di seguito sul "
+"tuo provider KMS, concedendo alla tua applicazione l'autorizzazione di "
+"cifratura/decifratura su di essa."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Data encryption keys are created automatically the first time each silo "
+"encrypts a value."
+msgstr ""
+"Le chiavi di crittografia dei dati vengono create automaticamente la prima "
+"volta che ciascun silo cifra un valore."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Run python manage.py setup_encryption_keys to create the data encryption "
+"keys."
+msgstr ""
+"Esegui python manage.py setup_encryption_keys per creare le chiavi di "
+"crittografia dei dati."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:143
+msgid "Missing DEKs"
+msgstr "DEK mancanti"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:144
+msgid "Missing KEK"
+msgstr "KEK mancante"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:163
+msgid "Data Encryption Keys Without a Live Silo"
+msgstr "Chiavi di cifratura dei dati senza un silo attivo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:165
+msgid ""
+"The data encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their silo no longer exists. To remove one, select "
+"it on the Data Encryption Keys page and choose \"Schedule deletion\" — this "
+"starts a reversible deletion window. Once the window expires, the delete "
+"action destroys the data encryption key for good."
+msgstr ""
+"Le chiavi di crittografia dei dati elencate sotto non sostengono alcun silo "
+"attivo. Quelle contrassegnate come orfane sono quelle su cui agire: il loro "
+"silo non esiste più. Per rimuoverne una, selezionala nella pagina Chiavi di "
+"crittografia dei dati e scegli «Pianifica eliminazione»: si apre una "
+"finestra di eliminazione reversibile. Alla scadenza della finestra, l’azione "
+"di eliminazione distrugge definitivamente la chiave di crittografia dei dati."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:183
+msgid "DEK (live)"
+msgstr "DEK (in tempo reale)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:193
+msgid "The settings do not define this key set"
+msgstr "Le impostazioni non definiscono questo set di chiavi"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:206
+msgid "Go to the Data Encryption Keys page →"
+msgstr "Vai alla pagina Chiavi di crittografia dei dati →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:214
+msgid "Key Encryption Keys Without a Live Silo"
+msgstr "Chiavi di cifratura delle chiavi senza un silo attivo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:220
+msgid ""
+"The key encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their data is already gone and the keys remain on "
+"the KMS, costing money. To act on one, select it on the Key Encryption Keys "
+"page and choose schedule deletion, restore, or record an action taken in the "
+"KMS."
+msgstr ""
+"Le chiavi di crittografia delle chiavi elencate sotto non sostengono alcun "
+"silo attivo. Quelle contrassegnate come orfane sono quelle su cui agire: i "
+"loro dati non ci sono più e le chiavi restano sul KMS, con un costo. Per "
+"agire su una, selezionala nella pagina Chiavi di crittografia delle chiavi e "
+"scegli pianifica eliminazione, ripristina, o registra un’azione eseguita nel "
+"KMS."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:237
+msgid "KMS deletion"
+msgstr "Eliminazione KMS"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:260
+msgid "Go to the Key Encryption Keys page →"
+msgstr "Vai alla pagina Chiavi di crittografia delle chiavi →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:267
+msgid "Key Re-encryption Due"
+msgstr "Ricifratura delle chiavi dovuta"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:269
+msgid ""
+"The data key needs to be re-encrypted after a KMS key rotation. Run 'python "
+"manage.py reencrypt_keys' to move key encryption to the current version; no "
+"data is touched."
+msgstr ""
+"La chiave dati va ricifrata dopo una rotazione della chiave nel KMS. Esegui "
+"'python manage.py reencrypt_keys' per portare la cifratura delle chiavi alla "
+"versione corrente; nessun dato viene toccato."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:281
+msgid "Wrapped by version"
+msgstr "Incapsulata dalla versione"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:282
+msgid "Last re-encrypted"
+msgstr "Ultima ricifratura"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:302
+msgid "Data Re-encryption Due"
+msgstr "Ricifratura dei dati dovuta"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:304
+msgid ""
+"The data key's own material is older than DEK_ROTATION_PERIOD_DAYS. Run "
+"'python manage.py reencrypt_data' to re-encrypt a silo's data with new keys, "
+"a computationally intensive process."
+msgstr ""
+"Il materiale della chiave dati stessa è più vecchio di "
+"DEK_ROTATION_PERIOD_DAYS. Esegui 'python manage.py reencrypt_data' per "
+"ricifrare i dati di un silo con chiavi nuove, un processo computazionalmente "
+"oneroso."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:316
+msgid "Key material generated"
+msgstr "Materiale della chiave generato"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:336
+msgid "Reconcile Findings"
+msgstr "Risultati della riconciliazione"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:339
+msgid "Newly discovered keys (now tracked)"
+msgstr "Chiavi appena scoperte (ora tracciate)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:343
+msgid "Confirmed deleted (gone from the KMS)"
+msgstr "Eliminazione confermata (assente dal KMS)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:349
+msgid ""
+"Out of sync — still on the provider, should be gone. Their deletion date has "
+"passed, so a provider deletion was canceled in the KMS, or failed. "
+"Investigate on the provider:"
+msgstr ""
+"Non allineate: ancora presso il provider, quando dovrebbero essere sparite. "
+"La data di eliminazione è passata, quindi l'eliminazione è stata annullata "
+"nel KMS oppure è fallita. Verifica presso il provider:"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:359
+msgid ""
+"Out of sync — gone from the provider, no record of why. An active or "
+"scheduled key vanished from the listing (deleted in the KMS). Record the "
+"deletion on the Key Encryption Keys page to close it:"
+msgstr ""
+"Non allineate: sparite dal provider, senza traccia del motivo. Una chiave "
+"attiva o pianificata è scomparsa dall'elenco (eliminata nel KMS). Registra "
+"l'eliminazione nella pagina Chiavi di cifratura delle chiavi per chiudere il "
+"caso:"
+
+#: .\templates\admin\encryption_suite\settings.html:26
+msgid "Setting"
+msgstr "Impostazione"
+
+#: .\templates\admin\encryption_suite\settings.html:27
+msgid "Value"
+msgstr "Valore"
+
+#: .\templates\admin\encryption_suite\settings.html:28
+msgid "Source"
+msgstr "Origine"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "configured"
+msgstr "configurato"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "default"
+msgstr "predefinito"
+
+#: .\templates\admin\encryption_suite\test_console.html:26
+#: .\templates\admin\encryption_suite\test_console.html:77
+msgid "Pass"
+msgstr "Superato"
+
+#: .\templates\admin\encryption_suite\test_console.html:27
+#: .\templates\admin\encryption_suite\test_console.html:78
+msgid "Fail"
+msgstr "Fallito"
+
+#: .\templates\admin\encryption_suite\test_console.html:28
+#: .\templates\admin\encryption_suite\test_console.html:79
+msgid "Not run"
+msgstr "Non eseguito"
+
+#: .\templates\admin\encryption_suite\test_console.html:44
+msgid "Tests"
+msgstr "Test"
+
+#: .\templates\admin\encryption_suite\test_console.html:54
+msgid "Run all tests"
+msgstr "Esegui tutti i test"
+
+#: .\templates\admin\encryption_suite\test_console.html:55
+msgid "Clear results"
+msgstr "Cancella risultati"
+
+#: .\templates\admin\encryption_suite\test_console.html:61
+msgid "Test"
+msgstr "Test"
+
+#: .\templates\admin\encryption_suite\test_console.html:62
+msgid "Engine"
+msgstr "Motore"
+
+#: .\templates\admin\encryption_suite\test_console.html:65
+msgid "Result"
+msgstr "Risultato"
+
+#: .\templates\admin\encryption_suite\test_console.html:66
+msgid "Action"
+msgstr "Azione"
+
+#: .\templates\admin\encryption_suite\test_console.html:85
+msgid "Run"
+msgstr "Esegui"
+
+#: .\templates\admin\encryption_suite\test_console.html:95
+msgid "Delete"
+msgstr "Elimina"
+
+#: .\templates\admin\encryption_suite\test_console.html:97
+msgid ""
+"The full field and full file tests create disposable data encryption key "
+"entries. Delete below. A key encryption key this deployment cannot delete is "
+"left in place and must be deleted on the KMS by hand — it keeps incurring "
+"charges until you do."
+msgstr ""
+"I test completi su campo e file creano voci di chiave di crittografia dei "
+"dati usa e getta. Eliminale qui sotto. Una chiave di crittografia delle "
+"chiavi che questo deployment non può eliminare resta al suo posto e deve "
+"essere eliminata manualmente sul KMS: continuerà a generare costi finché non "
+"lo farai."
+
+#: .\templates\admin\encryption_suite\test_console.html:107
+msgid ""
+"Delete the test keys? This removes their data encryption key entries and "
+"deletes the key encryption key when this deployment is able to."
+msgstr ""
+"Eliminare le chiavi di test? Questa operazione rimuove le loro voci di "
+"chiave di crittografia dei dati ed elimina la chiave di crittografia delle "
+"chiavi quando questo deployment è in grado di farlo."
+
+#: .\templates\admin\encryption_suite\test_console.html:110
+msgid "Delete test key(s)"
+msgstr "Elimina chiave/i di test"
+
+#: .\user_context.py:392
+#, python-format
+msgid "Deleted user #%(user_id)s"
+msgstr "Utente eliminato n. %(user_id)s"
+
+#: .\widgets.py:25
+msgid "Encrypted file"
+msgstr "File cifrato"

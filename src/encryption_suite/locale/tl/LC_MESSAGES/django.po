@@ -1,0 +1,2454 @@
+# Filipino (Philippines) translations for django-encryption-suite.
+# Copyright (C) 2026 J. Randall Emery
+# This file is distributed under the same license as the django-encryption-suite
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-encryption-suite 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-06 23:13-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: django-encryption-suite contributors\n"
+"Language-Team: tl\n"
+"Language: tl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: .\admin.py:53
+msgid "Rotation age"
+msgstr "Tagal ng rotation"
+
+#: .\admin.py:67 .\models.py:337 .\models.py:711
+msgid "KEK resource name"
+msgstr "Pangalan ng KEK resource"
+
+#: .\admin.py:72 .\lifecycle.py:48 .\models.py:165 .\models.py:411
+#: .\models.py:670
+msgid "Key encryption key"
+msgstr "Key encryption key"
+
+#: .\admin.py:85
+msgid "Silo name"
+msgstr "Pangalan ng silo"
+
+#: .\admin.py:106 .\admin.py:114
+msgid "— (unavailable)"
+msgstr "— (hindi available)"
+
+#: .\admin.py:113
+msgid "— (silo no longer exists)"
+msgstr "— (wala na ang silo)"
+
+#: .\admin.py:116 .\models.py:141
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:91
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:125
+#: .\templates\admin\encryption_suite\inventory.html:108
+#: .\templates\admin\encryption_suite\inventory.html:145
+#: .\templates\admin\encryption_suite\reconcile_keys.html:180
+#: .\templates\admin\encryption_suite\reconcile_keys.html:280
+#: .\templates\admin\encryption_suite\reconcile_keys.html:315
+msgid "Purpose"
+msgstr "Layunin"
+
+#: .\admin.py:120
+msgid "Scheduled deletion by"
+msgstr "Naka-iskedyul ang pagbura ni"
+
+#: .\admin.py:140 .\models.py:155
+msgid "Encrypted DEK"
+msgstr "Naka-encrypt na DEK"
+
+#: .\admin.py:152
+msgid "— (cleared)"
+msgstr "— (na-clear)"
+
+#: .\admin.py:153
+#, python-format
+msgid "DEK encrypted by %(provider)s KEK"
+msgstr "Data encryption key na na-encrypt ng %(provider)s key encryption key"
+
+#: .\admin.py:240
+msgid "Schedule deletion of selected data encryption key(s)"
+msgstr "I-iskedyul ang pagbura ng mga napiling data encryption key"
+
+#: .\admin.py:306
+#, python-format
+msgid ""
+"Scheduled %(n)d data encryption key(s) for deletion. Restore within the "
+"window."
+msgstr ""
+"Naiskedyul ang pagbura ng %(n)d na data encryption key. Maibabalik sa loob "
+"ng window."
+
+#: .\admin.py:318
+#, python-format
+msgid "%(uids)s and %(n)d more"
+msgstr "%(uids)s at %(n)d pa"
+
+#: .\admin.py:322
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s) (%(reasons)s). Destroying one makes its silo's "
+"data permanently unreadable, and deleting would refuse it for the same "
+"reason. Delete the silo first, or set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION. %(uids)s"
+msgstr ""
+"Hindi maiiskedyul ang %(n)d (na) susi (%(reasons)s). Ang pagsira sa isa ay "
+"permanenteng nagpapabasa-imposible sa data ng silo nito, at tatanggihan din "
+"ito ng pagtanggal sa parehong dahilan. Tanggalin muna ang silo, o itakda ang "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE sa True sa ENCRYPTION. %(uids)s"
+
+#: .\admin.py:337
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled or deleted."
+msgstr ""
+"Nilaktawan ang %(n)d (na) key na hindi aktibo — naka-iskedyul o nabura na."
+
+#: .\admin.py:343
+#, python-format
+msgid "Skipped %(n)d test console key(s), which have their own deletion path."
+msgstr ""
+"Nilaktawan ang %(n)d (na) susi ng test console, na may sariling daan sa "
+"pagbura."
+
+#: .\admin.py:365 .\admin_lifecycle.py:677
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:9
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:9
+msgid "Schedule deletion"
+msgstr "I-iskedyul ang pagbura"
+
+#: .\admin.py:382
+msgid "Restore selected scheduled data encryption key(s)"
+msgstr "Ibalik ang mga napiling nakaiskedyul na data encryption key"
+
+#: .\admin.py:398
+#, python-format
+msgid "Restored %(n)d data encryption key(s)."
+msgstr "Naibalik ang %(n)d na data encryption key."
+
+#: .\admin.py:402
+msgid "Delete selected expired data encryption key(s)"
+msgstr "Burahin ang mga napiling expired na data encryption key"
+
+#: .\admin.py:435
+#, python-format
+msgid ""
+"Deletion complete: %(destroyed)d of %(picked)d selected data encryption "
+"key(s) destroyed."
+msgstr ""
+"Tapos ang pagtanggal: %(destroyed)d sa %(picked)d napiling data encryption "
+"key ang winasak."
+
+#: .\admin.py:448
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works. Set "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION to delete "
+"them regardless, making that data permanently unreadable."
+msgstr ""
+"Pinanatili ang %(n)d (na) susi: %(reasons)s. Walang nagbago — nananatili "
+"silang naiskedyul, kaya gumagana ang pag-aayos ng dahilan at muling "
+"pagtanggal. Itakda ang KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE sa True sa "
+"ENCRYPTION upang tanggalin pa rin ang mga ito, na permanenteng gagawing "
+"hindi mababasa ang data na iyon."
+
+#: .\admin.py:464
+#, python-format
+msgid ""
+"Retained %(n)d key(s): %(reasons)s. Nothing changed — they stay scheduled, "
+"so resolving the cause and deleting again works."
+msgstr ""
+"Pinanatili ang %(n)d (na) susi: %(reasons)s. Walang nagbago — nananatili "
+"silang naiskedyul, kaya gumagana ang pag-aayos ng dahilan at muling "
+"pagtanggal."
+
+#: .\admin.py:474 .\admin_lifecycle.py:899
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not scheduled for deletion. Schedule them "
+"first — deleting only acts on scheduled work whose restore window has closed."
+msgstr ""
+"Nilaktawan ang %(n)d (na) susi na hindi naiskedyul para tanggalin. "
+"Iskedyulin muna ang mga ito — ang pagtanggal ay kumikilos lamang sa "
+"naiskedyul na gawain na sarado na ang restore window."
+
+#: .\admin.py:483 .\admin_lifecycle.py:908
+#, python-format
+msgid "Skipped %(n)d key(s) still inside their restore window."
+msgstr ""
+"Nilaktawan ang %(n)d (na) susi na nasa loob pa ng kanilang restore window."
+
+#: .\admin.py:525
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:9
+msgid "Delete data encryption keys"
+msgstr "Burahin ang mga data encryption key"
+
+#: .\admin_inventory.py:72
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\inventory.html:13
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:29
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:29
+msgid "Cryptographic inventory"
+msgstr "Imbentaryo ng cryptography"
+
+#: .\admin_lifecycle.py:45 .\models.py:238 .\models.py:400
+#: .\templates\admin\encryption_suite\reconcile_keys.html:239
+msgid "Orphaned"
+msgstr "Orphaned"
+
+#: .\admin_lifecycle.py:57
+msgid "key kind"
+msgstr "uri ng key"
+
+#: .\admin_lifecycle.py:89 .\models.py:785
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:44
+msgid "Reason"
+msgstr "Dahilan"
+
+#: .\admin_lifecycle.py:105 .\models.py:661
+msgid "Event"
+msgstr "Event"
+
+#: .\admin_lifecycle.py:109 .\models.py:774
+msgid "Trigger"
+msgstr "Trigger"
+
+#: .\admin_lifecycle.py:126 .\contrib\simpleteams\models.py:43 .\models.py:809
+msgid "User"
+msgstr "User"
+
+#: .\admin_lifecycle.py:230
+msgid "Key kind"
+msgstr "Uri ng key"
+
+#: .\admin_lifecycle.py:525
+msgid "Schedule deletion of selected key encryption key(s)"
+msgstr "Iiskedyul ang pagbura ng mga napiling key encryption key"
+
+#: .\admin_lifecycle.py:608
+#, python-format
+msgid ""
+"Scheduled %(n)d key encryption key(s) for deletion. Restore within the "
+"window, or run the deletion."
+msgstr ""
+"Naka-iskedyul ang %(n)d (na) key encryption key para sa pagbura. Ibalik ang "
+"mga ito sa loob ng panahon, o patakbuhin ang pagbura."
+
+#: .\admin_lifecycle.py:638
+#, python-format
+msgid "%(names)s and %(n)d more"
+msgstr "%(names)s at %(n)d pa"
+
+#: .\admin_lifecycle.py:642
+#, python-format
+msgid ""
+"Cannot schedule %(n)d key(s): live data still depends on them, and "
+"destroying them would make it permanently unreadable. Delete the silos using "
+"them first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in "
+"ENCRYPTION. %(names)s"
+msgstr ""
+"Hindi maiiskedyul ang %(n)d (na) susi: may aktibong datos na umaasa pa rin "
+"sa kanila, at ang pagsira sa mga ito ay permanenteng magpapabasa-hindi sa "
+"datos. Burahin muna ang mga silo na gumagamit ng mga ito, o itakda ang "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE sa True sa ENCRYPTION. %(names)s"
+
+#: .\admin_lifecycle.py:653
+#, python-format
+msgid ""
+"Skipped %(n)d key(s) that are not active — already scheduled, retained, or "
+"deleted."
+msgstr ""
+"Nilaktawan ang %(n)d (na) susi na hindi aktibo — naiskedyul na, pinanatili, "
+"o nabura na."
+
+#: .\admin_lifecycle.py:691
+msgid "Restore selected scheduled or retained key encryption key(s)"
+msgstr "Ibalik ang mga napiling nakaiskedyul o pinanatiling key encryption key"
+
+#: .\admin_lifecycle.py:712
+#, python-format
+msgid "Restored %(n)d key encryption key(s) to active."
+msgstr "Naibalik sa aktibo ang %(n)d na key encryption key."
+
+#: .\admin_lifecycle.py:716
+msgid "Record selected as deleted in the key store"
+msgstr "Itala ang napili bilang binura sa key store"
+
+#: .\admin_lifecycle.py:720
+msgid "Record selected as deletion requested in the key store"
+msgstr "Itala ang napili bilang hiniling na burahin sa key store"
+
+#: .\admin_lifecycle.py:724
+msgid "Record selected as deletion canceled in the key store"
+msgstr "Itala ang napili bilang kanseladong pagbura sa key store"
+
+#: .\admin_lifecycle.py:776 .\admin_lifecycle.py:891
+#, python-format
+msgid "Retained %(n)d key(s): %(reasons)s."
+msgstr "Pinanatili ang %(n)d (na) susi: %(reasons)s."
+
+#: .\admin_lifecycle.py:783
+#, python-format
+msgid "Recorded %(n)d key encryption key(s) as '%(verb)s' in the key store."
+msgstr "Naitala ang %(n)d key encryption key bilang '%(verb)s' sa key store."
+
+#: .\admin_lifecycle.py:789
+#, python-format
+msgid "Skipped %(n)d key encryption key(s) already recorded as '%(verb)s'."
+msgstr ""
+"Nilaktawan ang %(n)d (na) key encryption key na naitala na bilang '%(verb)s'."
+
+#: .\admin_lifecycle.py:793
+msgid "Delete selected expired key encryption key(s)"
+msgstr "Burahin ang mga napiling expired na key encryption key"
+
+#: .\admin_lifecycle.py:813
+msgid ""
+"Select the key encryption keys to delete individually. Deleting a key at the "
+"provider cannot be undone from here, so this action does not act on every "
+"matching record at once."
+msgstr ""
+"Piliin nang isa-isa ang mga key encryption key na tatanggalin. Ang "
+"pagtanggal ng susi sa provider ay hindi na maibabalik mula rito, kaya hindi "
+"kumikilos ang aksyong ito sa lahat ng tumutugmang tala nang sabay-sabay."
+
+#: .\admin_lifecycle.py:857
+#, python-format
+msgid ""
+"Deletion complete on %(picked)d selected key encryption key(s): %(del)d "
+"deleted, %(req)d requested at the provider, %(retain)d retained, %(fail)d "
+"failed, %(skip)d skipped."
+msgstr ""
+"Tapos ang pagbura sa %(picked)d napiling key encryption key: %(del)d ang "
+"nabura, %(req)d ang hiniling sa provider, %(retain)d ang pinanatili, "
+"%(fail)d ang nabigo, %(skip)d ang nilaktawan."
+
+#: .\admin_lifecycle.py:949
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:9
+msgid "Delete key encryption keys"
+msgstr "Burahin ang mga key encryption key"
+
+#: .\admin_reconcile.py:152
+msgid ""
+"The configured silo adapter cannot enumerate silos, so per-silo status and "
+"orphan detection are unavailable. Override iter_silos() on the adapter to "
+"enable them."
+msgstr ""
+"Hindi maaaring ma-enumerate ng naka-configure na silo adapter ang mga silo, "
+"kaya hindi available ang per-silo status at orphan detection. I-override ang "
+"iter_silos() sa adapter para paganahin ang mga ito."
+
+#: .\admin_reconcile.py:222
+msgid "field"
+msgstr "field"
+
+#: .\admin_reconcile.py:223
+msgid "file"
+msgstr "file"
+
+#: .\admin_reconcile.py:224
+msgid "index"
+msgstr "index"
+
+#: .\admin_reconcile.py:496
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:15
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:15
+#: .\templates\admin\encryption_suite\reconcile_keys.html:13
+msgid "Reconcile Keys"
+msgstr "I-reconcile ang mga Key"
+
+#: .\admin_settings.py:34
+msgid "General"
+msgstr "Pangkalahatan"
+
+#: .\admin_settings.py:35
+msgid "Recording and identity"
+msgstr "Pagtatala at pagkakakilanlan"
+
+#: .\admin_settings.py:36 .\admin_test_console.py:417 .\models.py:183
+#: .\models.py:754 .\templates\admin\encryption_suite\inventory.html:109
+#: .\templates\admin\encryption_suite\inventory.html:146
+msgid "Cryptographic engine"
+msgstr "Cryptographic engine"
+
+#: .\admin_settings.py:37
+msgid "Silo"
+msgstr "Silo"
+
+#: .\admin_settings.py:38
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:93
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:44
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:121
+#: .\templates\admin\encryption_suite\test_console.html:63
+msgid "KMS"
+msgstr "KMS"
+
+#: .\admin_settings.py:39
+msgid "Keys and rotation"
+msgstr "Mga key at rotation"
+
+#: .\admin_settings.py:40 .\admin_test_console.py:538
+#: .\templates\admin\encryption_suite\test_console.html:64
+msgid "Storage"
+msgstr "Storage"
+
+#: .\admin_settings.py:41
+msgid "Other"
+msgstr "Iba pa"
+
+#: .\admin_settings.py:44
+msgid "(hidden)"
+msgstr "(nakatago)"
+
+#: .\admin_settings.py:72 .\admin_settings.py:73 .\admin_settings.py:77
+#: .\admin_settings.py:121
+msgid "(empty)"
+msgstr "(walang laman)"
+
+#: .\admin_settings.py:79
+msgid "(not set)"
+msgstr "(hindi nakatakda)"
+
+#: .\admin_settings.py:109
+msgid "named by STORAGE_ALIAS"
+msgstr "pinangalanan ng STORAGE_ALIAS"
+
+#: .\admin_settings.py:111
+msgid "fallback — no STORAGES entry is named by STORAGE_ALIAS"
+msgstr "fallback — walang STORAGES entry na pinangalanan ng STORAGE_ALIAS"
+
+#: .\admin_settings.py:120 .\admin_settings.py:121
+msgid "resolved"
+msgstr "nalutas"
+
+#: .\admin_settings.py:126
+msgid "none — the package's own file storage"
+msgstr "wala — ang sariling file storage ng package"
+
+#: .\admin_settings.py:127
+msgid "fallback — no STORAGES entry resolved"
+msgstr "fallback — walang STORAGES entry na nalutas"
+
+#: .\admin_settings.py:187
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:22
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:22
+#: .\templates\admin\encryption_suite\settings.html:13
+msgid "Encryption settings"
+msgstr "Mga setting ng pag-encrypt"
+
+#: .\admin_site.py:37
+msgid "Data encryption keys (per silo)"
+msgstr "Mga data encryption key (bawat silo)"
+
+#: .\admin_site.py:38
+msgid "Key encryption keys (on key store)"
+msgstr "Key encryption keys (nasa key store)"
+
+#: .\admin_test_console.py:43
+msgid "Field (in memory)"
+msgstr "Field (sa memory)"
+
+#: .\admin_test_console.py:44
+msgid "File (in memory)"
+msgstr "File (sa memory)"
+
+#: .\admin_test_console.py:45
+msgid "Field (via KMS)"
+msgstr "Field (sa pamamagitan ng KMS)"
+
+#: .\admin_test_console.py:46
+msgid "File (via KMS)"
+msgstr "File (sa pamamagitan ng KMS)"
+
+#: .\admin_test_console.py:47
+msgid "File storage reachable (read-only)"
+msgstr "Naa-access ang file storage (read-only)"
+
+#: .\admin_test_console.py:66
+msgid "Cipher"
+msgstr "Cipher"
+
+#: .\admin_test_console.py:67
+msgid "File segment size (bytes)"
+msgstr "Laki ng file segment (bytes)"
+
+#: .\admin_test_console.py:68
+msgid "Field AEAD"
+msgstr "Field AEAD"
+
+#: .\admin_test_console.py:69
+msgid "File streaming AEAD"
+msgstr "File streaming AEAD"
+
+#: .\admin_test_console.py:129
+msgid "There was a problem. Check the server logs for details."
+msgstr "May naganap na problema. Tingnan ang mga server log para sa detalye."
+
+#: .\admin_test_console.py:318
+msgid "Test Console"
+msgstr "Test Console"
+
+#: .\admin_test_console.py:403 .\admin_test_console.py:409
+#: .\admin_test_console.py:525 .\admin_test_console.py:534
+msgid "Backend"
+msgstr "Backend"
+
+#: .\admin_test_console.py:438
+msgid "One shared KEK"
+msgstr "Isang nakabahaging KEK"
+
+#: .\admin_test_console.py:441
+msgid "One KEK per silo"
+msgstr "Isang KEK kada silo"
+
+#: .\admin_test_console.py:452 .\admin_test_console.py:502 .\models.py:332
+#: .\models.py:734 .\templates\admin\encryption_suite\inventory.html:27
+#: .\templates\admin\encryption_suite\inventory.html:59
+#: .\templates\admin\encryption_suite\inventory.html:84
+#: .\templates\admin\encryption_suite\inventory.html:111
+#: .\templates\admin\encryption_suite\reconcile_keys.html:22
+msgid "Key store"
+msgstr "Key store"
+
+#: .\admin_test_console.py:453 .\admin_test_console.py:503
+msgid "Adapter"
+msgstr "Adapter"
+
+#: .\admin_test_console.py:457
+msgid "KMS instance"
+msgstr "KMS instance"
+
+#: .\admin_test_console.py:458 .\admin_test_console.py:504
+msgid "Key distribution"
+msgstr "Pamamahagi ng key"
+
+#: .\admin_test_console.py:460 .\admin_test_console.py:507
+#: .\admin_test_console.py:509 .\admin_test_console.py:511
+msgid "Key"
+msgstr "Key"
+
+#: .\admin_test_console.py:469 .\admin_test_console.py:512
+msgid "Ownership"
+msgstr "Pagmamay-ari"
+
+#: .\admin_test_console.py:471
+#, python-format
+msgid "Name prefix: %(prefix)s"
+msgstr "Prefix ng pangalan: %(prefix)s"
+
+#: .\admin_test_console.py:473
+msgid "Not provable — key deletion is refused"
+msgstr "Hindi mapatunayan — tinatanggihan ang pagtanggal ng key"
+
+#: .\admin_test_console.py:483
+msgid "Tags"
+msgstr "Mga tag"
+
+#: .\admin_test_console.py:489
+#, python-format
+msgid "%(count)s configured — not written by this provisioner"
+msgstr "%(count)s na naka-configure — hindi isinusulat ng provisioner na ito"
+
+#: .\admin_test_console.py:516
+#: .\templates\admin\encryption_suite\inventory.html:23
+msgid "Key management system (KMS)"
+msgstr "Key management system (KMS)"
+
+#: .\admin_test_console.py:527
+msgid "Location"
+msgstr "Lokasyon"
+
+#: .\admin_test_console.py:559
+msgid "Test results cleared."
+msgstr "Na-clear ang mga resulta ng test."
+
+#: .\admin_test_console.py:575
+msgid "Rate limit exceeded."
+msgstr "Lumampas sa rate limit."
+
+#: .\admin_test_console.py:594
+msgid "All tests passed."
+msgstr "Pasado ang lahat ng test."
+
+#: .\admin_test_console.py:598
+#, python-format
+msgid "Stopped at '%(label)s': %(detail)s"
+msgstr "Huminto sa '%(label)s': %(detail)s"
+
+#: .\admin_test_console.py:605
+msgid "Unknown test."
+msgstr "Hindi kilalang test."
+
+#: .\admin_test_console.py:612
+#, python-format
+msgid "%(label)s: passed. %(detail)s"
+msgstr "%(label)s: pasado. %(detail)s"
+
+#: .\admin_test_console.py:614
+#, python-format
+msgid "%(label)s: failed. %(detail)s"
+msgstr "%(label)s: bigo. %(detail)s"
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt matched."
+msgstr "Tugma ang encrypt/decrypt."
+
+#: .\admin_test_console.py:681
+msgid "Encrypt/decrypt mismatch."
+msgstr "Hindi tugma ang encrypt/decrypt."
+
+#: .\admin_test_console.py:704
+msgid "Backend reachable."
+msgstr "Naa-access ang backend."
+
+#: .\admin_test_console.py:733
+#, python-format
+msgid "Deleted %(n)d test DEK(s)."
+msgstr "Nabura ang %(n)d test DEK."
+
+#: .\admin_test_console.py:735
+msgid "No test key rows to delete."
+msgstr "Walang test key row na buburahin."
+
+#: .\admin_test_console.py:737
+#, python-format
+msgid "Deleted %(n)d test KEK(s)."
+msgstr "Nabura ang %(n)d test KEK."
+
+#: .\admin_test_console.py:747
+#, python-format
+msgid "%(n)d test KEK(s) could not be deleted — see the log."
+msgstr "Hindi mabura ang %(n)d test KEK — tingnan ang log."
+
+#: .\admin_test_console.py:754
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s)."
+msgstr "Pinanatili ang %(n)d test KEK, hindi nabura (%(reasons)s)."
+
+#: .\admin_test_console.py:759
+#, python-format
+msgid "Retained %(n)d test KEK(s), not deleted (%(reasons)s); deleted their records."
+msgstr "Pinanatili ang %(n)d test KEK, hindi nabura (%(reasons)s); nabura ang kanilang mga record."
+
+#: .\apps.py:25
+msgid "Encryption"
+msgstr "Pag-encrypt"
+
+#: .\contrib\simpleteams\apps.py:9 .\contrib\simpleteams\models.py:30
+msgid "Simple teams"
+msgstr "Mga simpleng team"
+
+#: .\contrib\simpleteams\models.py:20
+msgid "Name"
+msgstr "Pangalan"
+
+#: .\contrib\simpleteams\models.py:29
+msgid "Simple team"
+msgstr "Simpleng team"
+
+#: .\contrib\simpleteams\models.py:45
+msgid "Team"
+msgstr "Team"
+
+#: .\contrib\simpleteams\models.py:48
+msgid "Simple team membership"
+msgstr "Pagiging miyembro ng simpleng team"
+
+#: .\contrib\simpleteams\models.py:49
+msgid "Simple team memberships"
+msgstr "Mga pagiging miyembro ng simpleng team"
+
+#: .\exceptions.py:53
+msgid "Encryption and decryption are unavailable for this data."
+msgstr "Hindi magagamit ang pag-encrypt at pag-decrypt para sa datos na ito."
+
+#: .\exceptions.py:59
+msgid "Encryption failed."
+msgstr "Nabigo ang pag-encrypt."
+
+#: .\exceptions.py:60
+msgid "Decryption failed."
+msgstr "Nabigo ang pag-decrypt."
+
+#: .\fields.py:122
+msgid "Unable to decrypt."
+msgstr "Hindi ma-decrypt."
+
+#: .\file_download_view_helper.py:88 .\file_download_view_helper.py:165
+#: .\file_download_view_helper.py:166 .\safe_queries.py:72
+msgid "Unable to decrypt file."
+msgstr "Hindi ma-decrypt ang file."
+
+#: .\lifecycle.py:49 .\models.py:270 .\models.py:681
+msgid "Data encryption key"
+msgstr "Data encryption key"
+
+#: .\lifecycle.py:58 .\models.py:724
+msgid "KEK"
+msgstr "KEK"
+
+#: .\lifecycle.py:59
+msgid "DEK"
+msgstr "DEK"
+
+#: .\lifecycle.py:86
+msgid "Active"
+msgstr "Aktibo"
+
+#: .\lifecycle.py:87
+msgid "Re-encrypting"
+msgstr "Muling ine-encrypt"
+
+#: .\lifecycle.py:88
+msgid "Deletion scheduled (app window)"
+msgstr "Naka-iskedyul ang pagbura (window ng app)"
+
+#: .\lifecycle.py:89
+msgid "Deletion requested (provider window)"
+msgstr "Hiniling ang pagbura (window ng provider)"
+
+#: .\lifecycle.py:90
+msgid "Retained (deletion not allowed)"
+msgstr "Pinanatili (hindi pinapayagan ang pagbura)"
+
+#: .\lifecycle.py:91 .\lifecycle.py:176
+msgid "Deletion failed"
+msgstr "Nabigo ang pagbura"
+
+#: .\lifecycle.py:92 .\lifecycle.py:177
+msgid "Deleted"
+msgstr "Nabura"
+
+#: .\lifecycle.py:167
+msgid "Created"
+msgstr "Nilikha"
+
+#: .\lifecycle.py:168
+msgid "Discovered"
+msgstr "Natuklasan"
+
+#: .\lifecycle.py:169
+msgid "Reencrypted"
+msgstr "Muling na-encrypt"
+
+#: .\lifecycle.py:170
+msgid "Rotated"
+msgstr "Na-rotate"
+
+#: .\lifecycle.py:171
+msgid "Rotation started"
+msgstr "Nagsimula ang rotation"
+
+#: .\lifecycle.py:172
+msgid "Rotation abandoned"
+msgstr "Iniwan ang rotation"
+
+#: .\lifecycle.py:173
+msgid "Deletion scheduling failed"
+msgstr "Nabigo ang pag-iskedyul ng pagbura"
+
+#: .\lifecycle.py:174
+msgid "Deletion scheduled"
+msgstr "Naka-iskedyul ang pagbura"
+
+#: .\lifecycle.py:175
+msgid "Deletion requested"
+msgstr "Hiniling ang pagbura"
+
+#: .\lifecycle.py:178
+msgid "Restored"
+msgstr "Na-restore"
+
+#: .\lifecycle.py:179
+msgid "Silo found"
+msgstr "Natagpuan ang silo"
+
+#: .\lifecycle.py:180
+msgid "Silo not found"
+msgstr "Hindi natagpuan ang silo"
+
+#: .\lifecycle.py:204
+msgid "Asked for directly"
+msgstr "Direktang hiniling"
+
+#: .\lifecycle.py:205
+msgid "Followed from another act"
+msgstr "Sumunod sa ibang gawain"
+
+#: .\lifecycle.py:206
+msgid "Script or schedule"
+msgstr "Script o iskedyul"
+
+#: .\lifecycle.py:254
+msgid "Recorded by an operator"
+msgstr "Naitala ng isang operator"
+
+#: .\lifecycle.py:255
+msgid "Observed at the provider"
+msgstr "Nakita sa provider"
+
+#: .\lifecycle.py:256
+msgid "Confirmed by reconcile"
+msgstr "Nakumpirma ng reconcile"
+
+#: .\lifecycle.py:257
+msgid "Determined by reconcile"
+msgstr "Natukoy ng reconcile"
+
+#: .\lifecycle.py:258
+msgid "The silo was created"
+msgstr "Nilikha ang silo"
+
+#: .\lifecycle.py:259
+msgid "The silo was deleted"
+msgstr "Binura ang silo"
+
+#: .\lifecycle.py:260
+msgid "First encryption for the silo"
+msgstr "Unang pag-encrypt para sa silo"
+
+#: .\lifecycle.py:261
+msgid "A live silo turned up again"
+msgstr "May aktibong silo na lumitaw muli"
+
+#: .\lifecycle.py:262
+msgid "The provider call failed"
+msgstr "Nabigo ang tawag sa provider"
+
+#: .\lifecycle.py:263
+msgid "The data encryption key was deleted"
+msgstr "Binura ang data encryption key"
+
+#: .\lifecycle.py:264
+msgid "Rows could not be converted"
+msgstr "Hindi ma-convert ang ilang row"
+
+#: .\lifecycle.py:287
+msgid "shared or operator-supplied key"
+msgstr "nakabahagi o key na ibinigay ng operator"
+
+#: .\lifecycle.py:292
+msgid "key deletion is not enabled for this provisioner"
+msgstr "hindi pinagana ang pagtanggal ng key para sa provisioner na ito"
+
+#: .\lifecycle.py:293
+msgid "not provisioned by this deployment"
+msgstr "hindi na-provision ng deployment na ito"
+
+#: .\lifecycle.py:294
+msgid "still referenced by another key record"
+msgstr "ginagamit pa rin ng ibang key record"
+
+#: .\lifecycle.py:295
+msgid "no KEK provisioner configured"
+msgstr "walang naka-configure na KEK provisioner"
+
+#: .\lifecycle.py:296
+msgid "the silo still exists"
+msgstr "umiiral pa rin ang silo"
+
+#: .\lifecycle.py:297
+msgid "the silo adapter cannot report whether the silo still exists"
+msgstr "hindi maiulat ng silo adapter kung umiiral pa rin ang silo"
+
+#: .\lifecycle.py:298
+msgid "checking whether the silo still exists failed"
+msgstr "nabigo ang pagsuri kung umiiral pa rin ang silo"
+
+#: .\models.py:114
+msgid "Field encryption (AEAD)"
+msgstr "Field encryption (AEAD)"
+
+#: .\models.py:115
+msgid "File encryption (Streaming AEAD)"
+msgstr "File encryption (Streaming AEAD)"
+
+#: .\models.py:116
+msgid "Blind index (keyed hash)"
+msgstr "Blind index (keyed hash)"
+
+#: .\models.py:117
+msgid "Admin test console (isolated)"
+msgstr "Admin test console (isolated)"
+
+#: .\models.py:125 .\models.py:690
+#: .\templates\admin\encryption_suite\inventory.html:83
+#: .\templates\admin\encryption_suite\inventory.html:107
+#: .\templates\admin\encryption_suite\reconcile_keys.html:75
+#: .\templates\admin\encryption_suite\reconcile_keys.html:142
+#: .\templates\admin\encryption_suite\reconcile_keys.html:179
+#: .\templates\admin\encryption_suite\reconcile_keys.html:279
+#: .\templates\admin\encryption_suite\reconcile_keys.html:314
+#: .\templates\admin\encryption_suite\test_console.html:48
+msgid "Key set"
+msgstr "Set ng mga key"
+
+#: .\models.py:127
+msgid ""
+"A key set is one silo adapter and one key store. Fields that name the same "
+"set share its keys, and the settings choose the adapter and the key store."
+msgstr ""
+"Ang set ng mga key ay isang silo adapter at isang key store. Ang mga field "
+"na pareho ang pinangalanang set ay nagbabahagi ng mga key nito, at ang mga "
+"setting ang nagtatakda ng adapter at ng key store."
+
+#: .\models.py:134 .\models.py:701
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:90
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:42
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:124
+#: .\templates\admin\encryption_suite\reconcile_keys.html:73
+#: .\templates\admin\encryption_suite\reconcile_keys.html:141
+#: .\templates\admin\encryption_suite\reconcile_keys.html:177
+#: .\templates\admin\encryption_suite\reconcile_keys.html:278
+#: .\templates\admin\encryption_suite\reconcile_keys.html:313
+msgid "Silo UID"
+msgstr "Silo UID"
+
+#: .\models.py:135
+msgid ""
+"The silo adapter sets this identifier, and no two silos of one key set share "
+"one."
+msgstr ""
+"Itinatakda ng silo adapter ang identifier na ito, at walang dalawang silo ng "
+"iisang set ng mga key na may parehong identifier."
+
+#: .\models.py:143
+msgid ""
+"This says what the key does: it encrypts model fields, encrypts stored "
+"files, or computes a blind index. The admin test console uses keys of its "
+"own."
+msgstr ""
+"Sinasabi nito kung ano ang ginagawa ng key: nag-e-encrypt ito ng mga model "
+"field, nag-e-encrypt ng mga nakaimbak na file, o nagko-compute ng blind "
+"index. May sariling mga key ang admin test console."
+
+#: .\models.py:149
+msgid "Silo label"
+msgstr "Label ng silo"
+
+#: .\models.py:150
+msgid "The silo adapter names its silos with this label."
+msgstr ""
+"Ito ang label na ginagamit ng silo adapter sa pagpapangalan ng mga silo "
+"nito."
+
+#: .\models.py:157
+msgid ""
+"The key encryption key encrypts this data encryption key, and only the "
+"encrypted form is stored. Deleting the key clears it."
+msgstr ""
+"Ine-encrypt ng key encryption key ang data encryption key na ito, at ang "
+"naka-encrypt na anyo lamang ang itinatabi. Nawawala ito kapag binura ang key."
+
+#: .\models.py:166
+msgid "This key encryption key encrypts the data encryption key."
+msgstr "Ine-encrypt ng key encryption key na ito ang data encryption key."
+
+#: .\models.py:172 .\models.py:395 .\models.py:744
+msgid "KEK key version"
+msgstr "Bersyon ng KEK key"
+
+#: .\models.py:174
+msgid ""
+"The KMS reported this version of the key encryption key when it encrypted "
+"the data encryption key. Some providers need it to decrypt, and the rest "
+"keep it for reference. It is empty where the provider reports no version."
+msgstr ""
+"Iniulat ng KMS ang bersyong ito ng key encryption key nang i-encrypt nito "
+"ang data encryption key. Kailangan ito ng ilang provider para mag-decrypt, "
+"at itinatago naman ito ng iba para sa sanggunian. Walang laman ito kung saan "
+"walang iniuulat na bersyon ang provider."
+
+#: .\models.py:185
+msgid ""
+"This crypto backend, such as 'tink' or 'cryptography', generated the data "
+"encryption key. The application checks it when it loads the key, so a "
+"different backend never loads it. It is empty for a blind index key."
+msgstr ""
+"Ang crypto backend na ito, gaya ng 'tink' o 'cryptography', ang gumawa ng "
+"data encryption key. Sinusuri ito ng application kapag nilo-load ang key, "
+"kaya hindi ito kailanman nilo-load ng ibang backend. Walang laman ito para "
+"sa isang blind index key."
+
+#: .\models.py:194 .\models.py:764
+#: .\templates\admin\encryption_suite\inventory.html:110
+#: .\templates\admin\encryption_suite\inventory.html:147
+msgid "Algorithm"
+msgstr "Algorithm"
+
+#: .\models.py:196
+msgid ""
+"The crypto backend generated the data encryption key for this algorithm, "
+"such as 'AES256_GCM', and names it in its own terms."
+msgstr ""
+"Ginawa ng crypto backend ang data encryption key para sa algorithm na ito, "
+"gaya ng 'AES256_GCM', at pinangangalanan ito sa sarili nitong mga termino."
+
+#: .\models.py:202
+msgid "Encrypted key writes"
+msgstr "Bilang ng pagsulat ng naka-encrypt na key"
+
+#: .\models.py:204
+msgid ""
+"The application adds one each time it writes new encrypted key material to "
+"this row: when a key encryption key re-encrypts the same key, or when a "
+"rotation replaces it."
+msgstr ""
+"Nagdaragdag ang application ng isa sa tuwing may bagong naka-encrypt na key "
+"material na isinusulat sa row na ito: kapag muling ine-encrypt ng isang key "
+"encryption key ang parehong key, o kapag pinalitan ito ng isang rotation."
+
+#: .\models.py:210
+msgid "DEK key version"
+msgstr "Bersyon ng DEK key"
+
+#: .\models.py:212
+msgid ""
+"The application counts the generations of this key's material: 1 for the "
+"first key, then one more for each rotation. Unlike the key encryption key "
+"version, it is not a provider identifier. Unlike the count of encrypted key "
+"writes, it does not change when another key encryption key re-encrypts the "
+"same material."
+msgstr ""
+"Binibilang ng application ang mga henerasyon ng material ng key na ito: 1 "
+"para sa unang key, at isa pa sa bawat rotation. Hindi ito identifier ng "
+"provider, hindi tulad ng bersyon ng key encryption key. Hindi ito nagbabago "
+"kapag muling ine-encrypt ng ibang key encryption key ang parehong material, "
+"hindi tulad ng bilang ng pagsulat ng naka-encrypt na key."
+
+#: .\models.py:223 .\models.py:345
+#: .\templates\admin\encryption_suite\inventory.html:60
+#: .\templates\admin\encryption_suite\reconcile_keys.html:84
+#: .\templates\admin\encryption_suite\reconcile_keys.html:182
+#: .\templates\admin\encryption_suite\reconcile_keys.html:232
+msgid "Status"
+msgstr "Katayuan"
+
+#: .\models.py:224 .\models.py:346
+msgid ""
+"The application derives the key's current status from its key lifecycle "
+"events."
+msgstr ""
+"Hinahango ng application ang kasalukuyang katayuan ng key mula sa mga key "
+"lifecycle event nito."
+
+#: .\models.py:229 .\models.py:351
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:94
+#: .\templates\admin\encryption_suite\reconcile_keys.html:184
+msgid "Undeletable until"
+msgstr "Hindi mabubura hanggang"
+
+#: .\models.py:231 .\models.py:353
+msgid ""
+"The application's deletion window ends at this time. Nothing can destroy the "
+"key before then; after it, deleting the key may destroy it. The key can be "
+"restored until it is actually deleted."
+msgstr ""
+"Nagtatapos sa oras na ito ang window ng pagtanggal ng application. Walang "
+"makakasira sa key bago ito; pagkatapos nito, maaaring sirain ng pagtanggal "
+"sa key. Maaaring ibalik ang key hanggang sa tunay itong matanggal."
+
+#: .\models.py:240
+msgid ""
+"Reconcile sets this when no live silo matches the key's silo UID. It is for "
+"display only: every action that destroys a key checks again before it acts."
+msgstr ""
+"Itinatakda ito ng reconcile kapag walang aktibong silo na tumutugma sa silo "
+"UID ng key. Pantanaw lamang ito: bago kumilos ang bawat aksyong sumisira ng "
+"key, muli itong sinusuri."
+
+#: .\models.py:247
+msgid "Key material last generated at"
+msgstr "Huling nabuo ang key material noong"
+
+#: .\models.py:249
+msgid ""
+"The key material now in use was generated at this time. A data encryption "
+"key's cryptoperiod counts from here, not from the row's creation date, which "
+"a revived key keeps from its first life. Re-encrypting the key onto another "
+"key encryption key does not change it, because the material stays the same."
+msgstr ""
+"Nabuo ang key material na ginagamit ngayon sa oras na ito. Dito "
+"nagsisimulang bilangin ang cryptoperiod ng isang data encryption key, hindi "
+"sa petsa ng paggawa ng row, na pinananatili ng isang binuhay na key mula sa "
+"unang buhay nito. Hindi ito nagbabago kapag muling ine-encrypt ang key tungo "
+"sa ibang key encryption key, dahil nananatiling pareho ang material."
+
+#: .\models.py:258
+msgid "Last re-encrypted at"
+msgstr "Huling muling na-encrypt noong"
+
+#: .\models.py:260
+msgid ""
+"Its key encryption key last re-encrypted this data encryption key at this "
+"time. Rotating a key encryption key protects nothing already stored until "
+"this re-encryption runs, so a key encryption key's cryptoperiod counts "
+"against this time, not against the rotation."
+msgstr ""
+"Huling muling ine-encrypt ng key encryption key nito ang data encryption key "
+"na ito sa oras na ito. Walang naiingatan ang pag-rotate ng key encryption "
+"key sa mga naka-imbak nang data hangga't hindi naisasagawa ang muling pag-"
+"encrypt na ito, kaya ang cryptoperiod ng isang key encryption key ay "
+"binibilang mula sa oras na ito, hindi mula sa rotation."
+
+#: .\models.py:265 .\models.py:406
+msgid "Created at"
+msgstr "Nilikha noong"
+
+#: .\models.py:266 .\models.py:407
+msgid "Updated at"
+msgstr "Na-update noong"
+
+#: .\models.py:271 .\templates\admin\encryption_suite\inventory.html:31
+#: .\templates\admin\encryption_suite\inventory.html:103
+msgid "Data encryption keys"
+msgstr "Mga data encryption key"
+
+#: .\models.py:324
+msgid "Silo-exclusive — eligible for deleting"
+msgstr "Silo-exclusive — kuwalipikado para sa pagbura"
+
+#: .\models.py:325
+msgid "Shared/opaque — never auto-deleted"
+msgstr "Nakabahagi/opaque — hindi kailanman awtomatikong binura"
+
+#: .\models.py:333
+msgid ""
+"This key store holds the key encryption key. The name is a block in the "
+"KMS_KEY_STORES setting."
+msgstr ""
+"Hawak ng key store na ito ang key encryption key. Ang pangalan ay isang "
+"block sa setting na KMS_KEY_STORES."
+
+#: .\models.py:338
+msgid "The KMS knows this key encryption key by this full resource name."
+msgstr ""
+"Kilala ng KMS ang key encryption key na ito sa buong pangalan ng resource na "
+"ito."
+
+#: .\models.py:361
+msgid "KMS deletion at"
+msgstr "Pagbura sa KMS noong"
+
+#: .\models.py:363
+msgid ""
+"The provider destroys the key at this time. The application sets it when it "
+"asks the provider to delete the key, or when it finds a deletion already "
+"under way. Only the provider can cancel the deletion; this application "
+"cannot."
+msgstr ""
+"Sinisira ng provider ang key sa oras na ito. Itinatakda ito ng application "
+"kapag hiniling nito sa provider na tanggalin ang key, o kapag natuklasan "
+"nitong may nagaganap nang pagtanggal. Ang provider lamang ang makakakansela "
+"ng pagtanggal; hindi ito magagawa ng application na ito."
+
+#: .\models.py:373
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:122
+msgid "Disposition"
+msgstr "Disposisyon"
+
+#: .\models.py:375
+msgid ""
+"This says whether the key encryption key could be deleted when it was "
+"scheduled for deletion. Wherever a data encryption key still names the key, "
+"the deletion works this out again from the running configuration and uses "
+"that answer instead."
+msgstr ""
+"Sinasabi nito kung puwedeng tanggalin ang key encryption key nang i-iskedyul "
+"ang pagtanggal nito. Saanman may data encryption key na nagpapangalan pa rin "
+"sa key, muling kinukuwenta ng pagtanggal ito mula sa kasalukuyang "
+"configuration at ginagamit ang sagot na iyon sa halip."
+
+#: .\models.py:384
+msgid "Owner prefix"
+msgstr "Prefix ng owner"
+
+#: .\models.py:386
+msgid ""
+"This prefix marked the key as this application's when it was scheduled for "
+"deletion. It stays empty until then, and the application refuses to delete "
+"the key if the current prefix no longer matches."
+msgstr ""
+"Minarkahan ng prefix na ito ang key bilang pag-aari ng application na ito "
+"nang i-iskedyul ang pagtanggal nito. Mananatili itong walang laman hanggang "
+"noon, at tatanggi ang application na tanggalin ang key kung hindi na tugma "
+"ang kasalukuyang prefix."
+
+#: .\models.py:396
+msgid ""
+"The KMS last reported this version of the key encryption key as current."
+msgstr ""
+"Huling iniulat ng KMS ang bersyong ito ng key encryption key bilang "
+"kasalukuyan."
+
+#: .\models.py:402
+msgid ""
+"Reconcile sets this when no live silo uses the key. It is for display only: "
+"every action that destroys a key checks again before it acts."
+msgstr ""
+"Itinatakda ito ng reconcile kapag walang aktibong silo na gumagamit sa key. "
+"Pantanaw lamang ito: bago kumilos ang bawat aksyong sumisira ng key, muli "
+"itong sinusuri."
+
+#: .\models.py:412 .\templates\admin\encryption_suite\inventory.html:30
+#: .\templates\admin\encryption_suite\inventory.html:55
+msgid "Key encryption keys"
+msgstr "Mga key encryption key"
+
+#: .\models.py:505
+msgid "Recorded IP address"
+msgstr "Naitalang IP address"
+
+#: .\models.py:506
+msgid "Recorded IP addresses"
+msgstr "Mga naitalang IP address"
+
+#: .\models.py:545
+msgid "Recorded OS user"
+msgstr "Naitalang OS user"
+
+#: .\models.py:546
+msgid "Recorded OS users"
+msgstr "Mga naitalang OS user"
+
+#: .\models.py:662
+msgid "This names what happened to the key."
+msgstr "Pinangangalanan nito kung ano ang nangyari sa key."
+
+#: .\models.py:672
+msgid ""
+"The event is about this key encryption key. It is empty when the event is "
+"about a data encryption key."
+msgstr ""
+"Tungkol sa key encryption key na ito ang event. Walang laman ito kapag "
+"tungkol sa data encryption key ang event."
+
+#: .\models.py:683
+msgid ""
+"The event is about this data encryption key. It is empty when the event is "
+"about a key encryption key."
+msgstr ""
+"Tungkol sa data encryption key na ito ang event. Walang laman ito kapag "
+"tungkol sa key encryption key ang event."
+
+#: .\models.py:692
+msgid ""
+"At the time of this event, the key belonged to this key set. It is empty for "
+"a key encryption key that is shared or belongs to no silo."
+msgstr ""
+"Sa oras ng event na ito, nabibilang ang key sa set ng mga key na ito. Walang "
+"laman ito para sa key encryption key na shared o walang silo."
+
+#: .\models.py:703
+msgid ""
+"At the time of this event, the key belonged to this silo. It is empty for a "
+"key encryption key that is shared or belongs to no silo."
+msgstr ""
+"Sa oras ng event na ito, nabibilang ang key sa silo na ito. Walang laman ito "
+"para sa key encryption key na shared o walang silo."
+
+#: .\models.py:712
+msgid ""
+"At the time of this event, the key encryption key involved had this resource "
+"name."
+msgstr ""
+"Sa oras ng event na ito, ito ang pangalan ng resource ng kasangkot na key "
+"encryption key."
+
+#: .\models.py:726
+msgid ""
+"At the time of this event, this key encryption key encrypted the data "
+"encryption key. It is empty on a key encryption key's own events."
+msgstr ""
+"Sa oras ng event na ito, ine-encrypt ng key encryption key na ito ang data "
+"encryption key. Walang laman ito sa mga sariling event ng isang key "
+"encryption key."
+
+#: .\models.py:736
+msgid ""
+"At the time of this event, this key store held the key encryption key. It is "
+"empty on a key encryption key's own events."
+msgstr ""
+"Sa oras ng event na ito, hawak ng key store na ito ang key encryption key. "
+"Walang laman ito sa mga sariling event ng isang key encryption key."
+
+#: .\models.py:746
+msgid ""
+"At the time of this event, the KMS reported this version of the key "
+"encryption key. It is empty where the provider reports no version."
+msgstr ""
+"Sa oras ng event na ito, iniulat ng KMS ang bersyong ito ng key encryption "
+"key. Walang laman ito kung saan walang iniuulat na bersyon ang provider."
+
+#: .\models.py:756
+msgid ""
+"At the time of this event, the data encryption key came from this crypto "
+"backend. It is empty for a blind index key and on a key encryption key's own "
+"events."
+msgstr ""
+"Sa oras ng event na ito, nagmula ang data encryption key sa crypto backend "
+"na ito. Walang laman ito para sa isang blind index key at sa mga sariling "
+"event ng isang key encryption key."
+
+#: .\models.py:766
+msgid ""
+"At the time of this event, the data encryption key was generated for this "
+"algorithm. It is empty on a key encryption key's own events."
+msgstr ""
+"Sa oras ng event na ito, ginawa ang data encryption key para sa algorithm na "
+"ito. Walang laman ito sa mga sariling event ng isang key encryption key."
+
+#: .\models.py:776
+msgid ""
+"This says how the event came about: someone asked for it, it followed from "
+"another act, or a script or schedule ran it."
+msgstr ""
+"Sinasabi nito kung paano nangyari ang event: hiniling ito ng isang tao, "
+"sumunod ito sa ibang gawain, o pinatakbo ito ng isang script o iskedyul."
+
+#: .\models.py:786
+msgid "This says why the event happened, where the event alone does not."
+msgstr ""
+"Sinasabi nito kung bakit nangyari ang event, kapag hindi ito sinasabi ng "
+"event lamang."
+
+#: .\models.py:791
+msgid "Effective at"
+msgstr "Epektibo noong"
+
+#: .\models.py:793
+msgid ""
+"The event set this deletion date, where it set one: the end of the "
+"application's window for a scheduling event, or the provider's date for a "
+"requested deletion."
+msgstr ""
+"Itinakda ng event ang petsa ng pagtanggal na ito, kung may itinakda ito: ang "
+"katapusan ng window ng application para sa isang event ng pag-iiskedyul, o "
+"ang petsa ng provider para sa hiniling na pagtanggal."
+
+#: .\models.py:811
+msgid ""
+"This user acted, where the configuration records one. The reference stays "
+"after the user is deleted."
+msgstr ""
+"Kumilos ang user na ito, kung may itinala ang configuration. Nananatili ang "
+"reference kahit mabura ang user."
+
+#: .\models.py:822
+msgid "OS login account"
+msgstr "OS login account"
+
+#: .\models.py:824
+msgid ""
+"A command-line act ran under this operating-system account, shown with its "
+"uid, where the configuration records one."
+msgstr ""
+"Tumakbo ang isang gawain sa command line sa ilalim ng operating-system "
+"account na ito, na ipinapakita kasama ang uid nito, kung may itinala ang "
+"configuration."
+
+#: .\models.py:834
+msgid "User IP address"
+msgstr "IP address ng user"
+
+#: .\models.py:835
+msgid "The act came from this address, where the configuration records one."
+msgstr ""
+"Nanggaling ang gawain sa address na ito, kung may itinala ang configuration."
+
+#: .\models.py:837
+msgid "Recorded at"
+msgstr "Naitala noong"
+
+#: .\models.py:841
+msgid "Key lifecycle event"
+msgstr "Key lifecycle event"
+
+#: .\models.py:842
+msgid "Key lifecycle events"
+msgstr "Mga key lifecycle event"
+
+#: .\models.py:1131
+msgid "Data encryption key rotation"
+msgstr "Rotation ng data encryption key"
+
+#: .\models.py:1132
+msgid "Data encryption key rotations"
+msgstr "Mga rotation ng data encryption key"
+
+#: .\models.py:1171
+msgid "Data encryption key rotation work item"
+msgstr "Work item ng rotation ng data encryption key"
+
+#: .\models.py:1172
+msgid "Data encryption key rotation work items"
+msgstr "Mga work item ng rotation ng data encryption key"
+
+#: .\models.py:1225
+msgid "Blind index entry"
+msgstr "Blind index entry"
+
+#: .\models.py:1226
+msgid "Blind index entries"
+msgstr "Mga blind index entry"
+
+#: .\models.py:1271 .\models.py:1272
+msgid "Encryption tools"
+msgstr "Mga tool sa pag-encrypt"
+
+#: .\reconcile.py:63
+msgid ""
+"the silo adapter cannot enumerate silos, so deleted-silo (DB-side) orphans "
+"cannot be detected"
+msgstr ""
+"hindi ma-enumerate ng silo adapter ang mga silo, kaya hindi matukoy ang mga "
+"orphan mula sa binurang silo (sa panig ng DB)"
+
+#: .\reconcile.py:66
+msgid ""
+"enumerating the silos failed, so deleted-silo (DB-side) orphans could not be "
+"detected on this pass"
+msgstr ""
+"nabigo ang pag-enumerate ng mga silo, kaya hindi natukoy sa pagdaang ito ang "
+"mga ulila mula sa mga natanggal na silo (sa panig ng database)"
+
+#: .\reconcile.py:69
+msgid ""
+"the provisioner cannot list key encryption keys, so orphaned keys cannot be "
+"detected"
+msgstr ""
+"hindi mailista ng provisioner ang mga key encryption key, kaya hindi matukoy "
+"ang mga orphaned na key"
+
+#: .\reconcile.py:72
+msgid ""
+"listing the key encryption keys failed, so orphaned keys could not be "
+"detected on this pass"
+msgstr ""
+"nabigo ang paglilista ng mga key encryption key, kaya hindi natukoy ang mga "
+"ulilang key sa pagdaang ito"
+
+#: .\reconcile.py:75
+msgid ""
+"no owner prefix (shared or KEK_MAP key naming), so key encryption keys "
+"cannot be attributed to this deployment"
+msgstr ""
+"walang owner prefix (shared o KEK_MAP na pagpapangalan ng key), kaya hindi "
+"maiuugnay ang mga key encryption key sa deployment na ito"
+
+#: .\reconcile.py:296 .\reconcile.py:313
+msgid "the KMS provider"
+msgstr "ang KMS provider"
+
+#: .\reconcile.py:304
+#, python-format
+msgid ""
+"Delete key encryption key '%(name)s' on %(provider)s in the KMS — the "
+"configured provisioner cannot delete it. The silo it backed no longer exists."
+msgstr ""
+"Burahin ang key encryption key na '%(name)s' sa %(provider)s mismo sa KMS — "
+"hindi ito kayang burahin ng nakatakdang provisioner. Wala na ang silong "
+"sinusuportahan nito."
+
+#: .\reconcile.py:317
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List key encryption keys "
+"whose name starts with '%(prefix)s' on %(provider)s and audit them against "
+"your live silos by hand; delete any that back no silo."
+msgstr ""
+"Hindi available ang reconcile sa panig ng KMS (%(reasons)s). Ilista ang mga "
+"key encryption key na nagsisimula ang pangalan sa '%(prefix)s' sa "
+"%(provider)s at suriin ang mga ito nang manu-mano laban sa inyong mga "
+"aktibong silo; burahin ang alinmang hindi sumusuporta sa kahit anong silo."
+
+#: .\reconcile.py:323
+#, python-format
+msgid ""
+"KMS-side reconcile is unavailable (%(reasons)s). List the key encryption "
+"keys this deployment uses on %(provider)s and audit them against your live "
+"silos by hand; delete any that back no silo."
+msgstr ""
+"Hindi available ang reconcile sa panig ng KMS (%(reasons)s). Ilista ang mga "
+"key encryption key na ginagamit ng deployment na ito sa %(provider)s at "
+"suriin ang mga ito nang manu-mano laban sa inyong mga aktibong silo; burahin "
+"ang alinmang hindi sumusuporta sa kahit anong silo."
+
+#: .\reconcile.py:369
+msgid ""
+"no data key rotation period is declared (DEK_ROTATION_PERIOD_DAYS), so "
+"nothing can be called overdue"
+msgstr ""
+"walang nakadeklarang rotation period para sa data keys "
+"(DEK_ROTATION_PERIOD_DAYS), kaya walang matatawag na lampas sa takdang "
+"panahon"
+
+#: .\reconcile.py:372
+msgid ""
+"this provider identifies no key version, so keys needing re-encryption after "
+"a rotation cannot be detected"
+msgstr ""
+"hindi tumutukoy ng anumang bersyon ng key ang provider na ito, kaya hindi "
+"matutukoy ang mga key na kailangang muling i-encrypt matapos ang isang "
+"rotation"
+
+#: .\reconcile.py:375
+msgid ""
+"the key version lookup failed for one or more keys, so those keys were left "
+"out of the key re-encryption check"
+msgstr ""
+"nabigo ang paghahanap ng bersyon ng key para sa isa o higit pang key, kaya "
+"hindi kasama ang mga iyon sa pagsuri ng muling pag-encrypt ng key"
+
+#: .\safe_queries.py:69
+msgid "No content"
+msgstr "Walang nilalaman"
+
+#: .\safe_queries.py:70
+msgid "Unable to decrypt field."
+msgstr "Hindi ma-decrypt ang field."
+
+#: .\safe_queries.py:71
+msgid "No file uploaded"
+msgstr "Walang na-upload na file"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:14
+msgid "ready"
+msgstr "handa"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:16
+msgid "not usable"
+msgstr "hindi magagamit"
+
+#: .\templates\admin\encryption_suite\components\key_marker.html:18
+msgid "missing"
+msgstr "nawawala"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+#: .\templates\admin\encryption_suite\reconcile_keys.html:201
+#: .\templates\admin\encryption_suite\reconcile_keys.html:252
+msgid "Yes"
+msgstr "Oo"
+
+#: .\templates\admin\encryption_suite\components\orphan_marker.html:21
+msgid "No"
+msgstr "Hindi"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keyencryptionkey\change_list.html:8
+#: .\templates\admin\encryption_suite\keylifecycleevent\change_list.html:8
+#: .\templates\admin\encryption_suite\reconcile_keys.html:185
+#: .\templates\admin\encryption_suite\reconcile_keys.html:238
+#: .\templates\admin\encryption_suite\test_console.html:13
+msgid "Test console"
+msgstr "Test Console"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\inventory.html:10
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:6
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:6
+#: .\templates\admin\encryption_suite\reconcile_keys.html:10
+#: .\templates\admin\encryption_suite\settings.html:10
+#: .\templates\admin\encryption_suite\test_console.html:10
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s data encryption key. This cannot be "
+"undone."
+msgid_plural ""
+"You are about to destroy %(counter)s data encryption keys. This cannot be "
+"undone."
+msgstr[0] ""
+"Sisirain mo ang %(counter)s susi sa pag-encrypt ng datos. Hindi ito "
+"maibabalik."
+msgstr[1] ""
+"Sisirain mo ang %(counter)s (na) susi sa pag-encrypt ng datos. Hindi ito "
+"maibabalik."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:24
+msgid "None of the selected data encryption keys can be deleted yet."
+msgstr "Wala pa sa mga napiling data encryption key ang maaaring burahin."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:29
+#, python-format
+msgid ""
+"%(counter)s selected key will not be destroyed (%(reasons)s) and is not "
+"listed below. Nothing about it changes, so resolving the cause and deleting "
+"again works."
+msgid_plural ""
+"%(counter)s selected keys will not be destroyed (%(reasons)s) and are not "
+"listed below. Nothing about them changes, so resolving the cause and "
+"deleting again works."
+msgstr[0] ""
+"%(counter)s napiling susi ang hindi sisirain (%(reasons)s) at hindi "
+"nakalista sa ibaba. Walang nagbabago tungkol dito, kaya gumagana ang pag-"
+"aayos ng dahilan at muling pagtanggal."
+msgstr[1] ""
+"%(counter)s (na) napiling susi ang hindi sisirain (%(reasons)s) at hindi "
+"nakalista sa ibaba. Walang nagbabago tungkol sa kanila, kaya gumagana ang "
+"pag-aayos ng dahilan at muling pagtanggal."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:41
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:43
+#, python-format
+msgid ""
+"%(counter)s selected key is not scheduled for deletion, so there is nothing "
+"to delete and it is not listed below. Schedule it first — the deletion only "
+"ever acts on scheduled work whose restore window has closed."
+msgid_plural ""
+"%(counter)s selected keys are not scheduled for deletion, so there is "
+"nothing to delete and they are not listed below. Schedule them first — the "
+"deletion only ever acts on scheduled work whose restore window has closed."
+msgstr[0] ""
+"%(counter)s napiling key ang hindi naka-iskedyul para sa pagbura, kaya "
+"walang buburahin at hindi ito nakalista sa ibaba. I-iskedyul muna ito — ang "
+"pagbura ay kumikilos lamang sa naka-iskedyul na gawain na sarado na ang "
+"panahon ng pagbalik."
+msgstr[1] ""
+"%(counter)s napiling key ang hindi naka-iskedyul para sa pagbura, kaya "
+"walang buburahin at hindi ang mga ito nakalista sa ibaba. I-iskedyul muna "
+"ang mga ito — ang pagbura ay kumikilos lamang sa naka-iskedyul na gawain na "
+"sarado na ang panahon ng pagbalik."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:55
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:57
+#, python-format
+msgid ""
+"%(counter)s selected key is scheduled but still inside its restore window, "
+"and is not listed below. It will not be touched until the window closes."
+msgid_plural ""
+"%(counter)s selected keys are scheduled but still inside their restore "
+"window, and are not listed below. They will not be touched until the window "
+"closes."
+msgstr[0] ""
+"%(counter)s napiling susi ang naiskedyul na ngunit nasa loob pa ng restore "
+"window nito, at hindi nakalista sa ibaba. Hindi ito gagalawin hangga't hindi "
+"sarado ang window."
+msgstr[1] ""
+"%(counter)s (na) napiling susi ang naiskedyul na ngunit nasa loob pa ng "
+"kanilang restore window, at hindi nakalista sa ibaba. Hindi sila gagalawin "
+"hangga't hindi sarado ang window."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:68
+msgid ""
+"Each key below has its wrapped keyset cleared. Every encrypted field and "
+"file belonging to that silo becomes permanently unreadable."
+msgstr ""
+"Bawat susi sa ibaba ay buburahan ng nakabalot nitong keyset. Bawat naka-"
+"encrypt na field at file na kabilang sa silong iyon ay magiging permanenteng "
+"hindi mababasa."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:74
+msgid ""
+"No provider window stands behind this. Unlike destroying a key encryption "
+"key, there is nothing to cancel at the KMS afterwards — the only recovery is "
+"a database backup taken while the wrapping key still exists."
+msgstr ""
+"Walang window ng provider na sumusuporta rito. Hindi tulad ng pagsira ng "
+"susi sa pag-encrypt ng susi, wala nang makakansela sa KMS pagkatapos — ang "
+"tanging pagbawi ay isang database backup na kinuha habang umiiral pa ang "
+"nakabalot na susi."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:81
+msgid ""
+"The row survives as a record that the key existed. Its lifecycle history is "
+"kept."
+msgstr ""
+"Nananatili ang row bilang tala na umiral ang susi. Iniingatan ang kasaysayan "
+"ng lifecycle nito."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:126
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:92
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:43
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:120
+#: .\templates\admin\encryption_suite\reconcile_keys.html:181
+#: .\templates\admin\encryption_suite\reconcile_keys.html:231
+msgid "KEK name"
+msgstr "Pangalan ng KEK"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:118
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:123
+msgid "Yes, destroy these keys"
+msgstr "Oo, sirain ang mga susing ito"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\purge_confirm.html:120
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:149
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:125
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:148
+msgid "No, take me back"
+msgstr "Hindi, bumalik"
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid "%(counter)s selected key cannot be scheduled."
+msgid_plural "%(counter)s selected keys cannot be scheduled."
+msgstr[0] "%(counter)s napiling susi ang hindi maiiskedyul."
+msgstr[1] "%(counter)s (na) napiling susi ang hindi maiiskedyul."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:25
+msgid ""
+"Destroying one of these makes its silo's data permanently unreadable, and "
+"the deletion would refuse it for the same reason — so it is refused now "
+"rather than after a window has been waited out."
+msgstr ""
+"Ang pagwasak sa isa sa mga ito ay gagawing permanenteng hindi mabasa ang "
+"data ng silo nito, at tatanggihan din ito ng pagbura sa parehong dahilan — "
+"kaya tinatanggihan na ngayon sa halip na pagkatapos maghintay ng panahon."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:32
+msgid ""
+"Delete the silo first, or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to "
+"True in ENCRYPTION, which permits destroying a key that live data depends on "
+"— for an erasure obligation that must render the data unreadable while "
+"keeping the records."
+msgstr ""
+"Burahin muna ang silo, o itakda ang "
+"KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE sa True sa ENCRYPTION, na "
+"nagpapahintulot na sirain ang susing inaasahan pa ng aktibong datos — para "
+"sa obligasyong magbura na dapat gawing hindi mababasa ang datos habang "
+"iniingatan ang mga rekord."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:61
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled or deleted — so "
+"there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled or deleted — so "
+"there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"%(counter)s napiling key ang hindi aktibo — naka-iskedyul o nabura na — kaya "
+"walang ii-iskedyul at hindi ito nakalista sa ibaba."
+msgstr[1] ""
+"%(counter)s napiling key ang hindi aktibo — naka-iskedyul o nabura na — kaya "
+"walang ii-iskedyul at hindi ang mga ito nakalista sa ibaba."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:73
+#, python-format
+msgid ""
+"%(counter)s selected key belongs to the test console, which has its own "
+"deletion path, and is not listed below."
+msgid_plural ""
+"%(counter)s selected keys belong to the test console, which has its own "
+"deletion path, and are not listed below."
+msgstr[0] ""
+"%(counter)s napiling susi ang pag-aari ng test console, na may sariling daan "
+"sa pagbura, at hindi nakalista sa ibaba."
+msgstr[1] ""
+"%(counter)s (na) napiling susi ang pag-aari ng test console, na may sariling "
+"daan sa pagbura, at hindi nakalista sa ibaba."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:85
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s data encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s data encryption keys."
+msgstr[0] ""
+"Malapit mo nang i-iskedyul ang pagbura ng %(counter)s na data encryption key."
+msgstr[1] ""
+"Malapit mo nang i-iskedyul ang pagbura ng %(counter)s na data encryption key."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:95
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys belongs to a silo that is still live. "
+"Scheduling blocks its encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys belong to silos that are still live. "
+"Scheduling blocks their encryption and decryption within DEK_CACHE_TTL "
+"(%(ttl)s seconds)."
+msgstr[0] ""
+"%(counter)s sa %(total)s napiling key ay pag-aari ng silo na aktibo pa. "
+"Hinaharangan ng pag-iiskedyul ang encryption at decryption nito sa loob ng "
+"DEK_CACHE_TTL (%(ttl)s segundo)."
+msgstr[1] ""
+"%(counter)s sa %(total)s napiling key ay pag-aari ng mga silo na aktibo pa. "
+"Hinaharangan ng pag-iiskedyul ang encryption at decryption ng mga ito sa "
+"loob ng DEK_CACHE_TTL (%(ttl)s segundo)."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:107
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:97
+#, python-format
+msgid ""
+"Nothing is destroyed now. The keys stay restorable for %(days)s day(s), set "
+"by KEY_DELETION_WINDOW_DAYS."
+msgstr ""
+"Walang nasisira ngayon. Nananatiling maibabalik ang mga key sa loob ng "
+"%(days)s araw, itinakda ng KEY_DELETION_WINDOW_DAYS."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:113
+msgid ""
+"Once that window expires, the deletion clears the key material for good and "
+"the data it protected can no longer be decrypted."
+msgstr ""
+"Kapag natapos ang panahong iyon, buburahin nang tuluyan ng pagbura ang key "
+"material at hindi na madi-decrypt ang data na pinrotektahan nito."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:118
+msgid "No key encryption key is scheduled or deleted by this action."
+msgstr "Walang key encryption key na ini-iskedyul o binubura ang aksyong ito."
+
+#: .\templates\admin\encryption_suite\dataencryptionkey\schedule_confirm.html:147
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:146
+msgid "Yes, schedule deletion"
+msgstr "Oo, i-iskedyul ang pagbura"
+
+#: .\templates\admin\encryption_suite\edit_inline\tabular_history.html:33
+msgid "Delete?"
+msgstr "Burahin?"
+
+#: .\templates\admin\encryption_suite\inventory.html:12
+#: .\templates\admin\encryption_suite\reconcile_keys.html:12
+#: .\templates\admin\encryption_suite\settings.html:12
+#: .\templates\admin\encryption_suite\test_console.html:12
+msgid "Data Encryption Keys"
+msgstr "Mga data encryption key"
+
+#: .\templates\admin\encryption_suite\inventory.html:28
+msgid "KMS Adapter"
+msgstr "KMS Adapter"
+
+#: .\templates\admin\encryption_suite\inventory.html:29
+msgid "KEK strategy"
+msgstr "Estratehiya ng KEK"
+
+#: .\templates\admin\encryption_suite\inventory.html:32
+msgid "Oldest active KEK"
+msgstr "Pinakamatandang aktibong KEK"
+
+#: .\templates\admin\encryption_suite\inventory.html:43
+msgid "Not configured"
+msgstr "Hindi naka-configure"
+
+#: .\templates\admin\encryption_suite\inventory.html:61
+#: .\templates\admin\encryption_suite\inventory.html:112
+msgid "Count"
+msgstr "Bilang"
+
+#: .\templates\admin\encryption_suite\inventory.html:79
+msgid "Configured for new key encryption keys"
+msgstr "Naka-configure para sa mga bagong key encryption key"
+
+#: .\templates\admin\encryption_suite\inventory.html:85
+msgid "Silo adapter"
+msgstr "Silo adapter"
+
+#: .\templates\admin\encryption_suite\inventory.html:113
+msgid "Oldest key material"
+msgstr "Pinakamatandang key material"
+
+#: .\templates\admin\encryption_suite\inventory.html:115
+#, python-format
+msgid "Older than %(days)s days"
+msgstr "Mas matanda sa %(days)s araw"
+
+#: .\templates\admin\encryption_suite\inventory.html:122
+msgid "(no settings entry)"
+msgstr "(walang entry sa mga setting)"
+
+#: .\templates\admin\encryption_suite\inventory.html:141
+msgid "Configured for new data encryption keys"
+msgstr "Naka-configure para sa mga bagong data encryption key"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:17
+#, python-format
+msgid ""
+"You are about to destroy %(counter)s key encryption key at the KMS provider. "
+"This cannot be undone from here."
+msgid_plural ""
+"You are about to destroy %(counter)s key encryption keys at the KMS "
+"provider. This cannot be undone from here."
+msgstr[0] ""
+"Sisirain mo ang %(counter)s susi sa pag-encrypt ng susi sa KMS provider. "
+"Hindi ito maibabalik mula rito."
+msgstr[1] ""
+"Sisirain mo ang %(counter)s (na) susi sa pag-encrypt ng susi sa KMS "
+"provider. Hindi ito maibabalik mula rito."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:26
+msgid ""
+"None of the selected key encryption keys will be destroyed. Review the "
+"decisions below."
+msgstr ""
+"Wala sa mga napiling susi sa pag-encrypt ng susi ang sisirain. Suriin ang "
+"mga desisyon sa ibaba."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:31
+#, python-format
+msgid ""
+"%(counter)s key still wraps live keysets. Every silo counted below loses its "
+"data permanently."
+msgid_plural ""
+"%(counter)s keys still wrap live keysets. Every silo counted below loses its "
+"data permanently."
+msgstr[0] ""
+"%(counter)s susi ang nakabalot pa rin sa mga aktibong keyset. Bawat silo na "
+"binilang sa ibaba ay permanenteng mawawalan ng datos nito."
+msgstr[1] ""
+"%(counter)s (na) susi ang nakabalot pa rin sa mga aktibong keyset. Bawat "
+"silo na binilang sa ibaba ay permanenteng mawawalan ng datos nito."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:69
+msgid ""
+"The outcome column is the decision this deletion will make, taken from a "
+"preview run through the same gates. A key that shows retained or skipped is "
+"not destroyed, and the reason is recorded against it."
+msgstr ""
+"Ang kolum na Resulta ang desisyon na gagawin ng pagburang ito, mula sa isang "
+"preview na dumaan sa parehong mga pagsusuri. Ang key na lumalabas na "
+"pinanatili o nilaktawan ay hindi winawasak, at naitatala ang dahilan dito."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:76
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:110
+msgid ""
+"Destroying a key encryption key cannot be undone from a database backup: "
+"what is lost is the key that backup's ciphertext depends on."
+msgstr ""
+"Hindi maibabalik mula sa backup ng database ang pagsira ng isang key "
+"encryption key: ang nawawala ay ang mismong susing pinagbabatayan ng "
+"ciphertext ng backup na iyon."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:82
+msgid ""
+"Providers with a recovery window hold the key for their own waiting period "
+"after this, recoverable only at the provider. Providers that delete "
+"immediately do not."
+msgstr ""
+"Ang mga provider na may recovery window ay hahawakan ang susi sa sarili "
+"nilang panahon ng paghihintay pagkatapos nito, mababawi lamang sa provider. "
+"Hindi ganito ang mga provider na agad na nagbubura."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:94
+msgid "Outcome"
+msgstr "Resulta"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:95
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:45
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:123
+msgid "Silos still holding keysets"
+msgstr "Mga silo na may hawak pa ring keyset"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:104
+msgid "Will be destroyed"
+msgstr "Sisirain"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:105
+#, python-format
+msgid "Retained — %(reason)s"
+msgstr "Pinanatili — %(reason)s"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:106
+msgid "Skipped — another provider's key"
+msgstr "Nilaktawan — susi ng ibang provider"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:107
+msgid "Provider call failed on preview"
+msgstr "Nabigo ang tawag sa provider sa preview"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\purge_confirm.html:108
+msgid "Not eligible yet"
+msgstr "Hindi pa karapat-dapat"
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:17
+#, python-format
+msgid ""
+"%(counter)s selected key cannot be scheduled: live data still depends on it, "
+"and destroying it would make that data permanently unreadable."
+msgid_plural ""
+"%(counter)s selected keys cannot be scheduled: live data still depends on "
+"them, and destroying them would make that data permanently unreadable."
+msgstr[0] ""
+"%(counter)s napiling susi ang hindi maiiskedyul: may aktibong datos na "
+"umaasa pa rin dito, at ang pagsira rito ay permanenteng magpapabasa-hindi sa "
+"datos na iyon."
+msgstr[1] ""
+"%(counter)s (na) napiling susi ang hindi maiiskedyul: may aktibong datos na "
+"umaasa pa rin sa kanila, at ang pagsira sa kanila ay permanenteng "
+"magpapabasa-hindi sa datos na iyon."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:27
+msgid ""
+"Delete the silos still using the key, then schedule it. Their data "
+"encryption keys are deleted first, which is what leaves the key with nothing "
+"depending on it."
+msgstr ""
+"Tanggalin muna ang mga silo na gumagamit pa ng susi, pagkatapos ay "
+"iskedyulin ito. Ang kanilang mga data encryption key ay tinatanggal muna, at "
+"iyon ang nag-iiwan sa susi na walang anumang umaasa rito."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:33
+msgid ""
+"Or set KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE to True in ENCRYPTION, "
+"which permits destroying a key that live data depends on — for an erasure "
+"obligation that must render the data unreadable while keeping the records."
+msgstr ""
+"O itakda ang KEY_DELETION_CAN_RENDER_DATA_INACCESSIBLE sa True sa "
+"ENCRYPTION, na nagpapahintulot na sirain ang susing inaasahan pa ng aktibong "
+"datos — para sa obligasyong magbura na dapat gawing hindi mababasa ang datos "
+"habang iniingatan ang mga rekord."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:62
+#, python-format
+msgid ""
+"%(counter)s selected key is not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and it is not listed below."
+msgid_plural ""
+"%(counter)s selected keys are not active — already scheduled, retained, or "
+"deleted — so there is nothing to schedule and they are not listed below."
+msgstr[0] ""
+"%(counter)s napiling susi ang hindi aktibo — naiskedyul na, pinanatili, o "
+"nabura na — kaya walang dapat iiskedyul at hindi ito nakalista sa ibaba."
+msgstr[1] ""
+"%(counter)s (na) napiling susi ang hindi aktibo — naiskedyul na, pinanatili, "
+"o nabura na — kaya walang dapat iiskedyul at hindi sila nakalista sa ibaba."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:74
+#, python-format
+msgid "You are about to schedule deletion of %(counter)s key encryption key."
+msgid_plural ""
+"You are about to schedule deletion of %(counter)s key encryption keys."
+msgstr[0] "Iiskedyul mo na ang pagbura ng %(counter)s key encryption key."
+msgstr[1] "Iiskedyul mo na ang pagbura ng %(counter)s key encryption key."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:84
+#, python-format
+msgid ""
+"%(counter)s of %(total)s selected keys still wraps live keysets. Every silo "
+"counted below loses its data permanently if that key is destroyed."
+msgid_plural ""
+"%(counter)s of %(total)s selected keys still wrap live keysets. Every silo "
+"counted below loses its data permanently if those keys are destroyed."
+msgstr[0] ""
+"%(counter)s sa %(total)s napiling susi ay bumabalot pa rin ng buhay na "
+"keyset. Permanenteng mawawala ang data ng bawat silong nabilang sa ibaba "
+"kapag sinira ang susing iyon."
+msgstr[1] ""
+"%(counter)s sa %(total)s napiling susi ay bumabalot pa rin ng buhay na "
+"keyset. Permanenteng mawawala ang data ng bawat silong nabilang sa ibaba "
+"kapag sinira ang mga susing iyon."
+
+#: .\templates\admin\encryption_suite\keyencryptionkey\schedule_confirm.html:103
+msgid ""
+"Scheduling states intent; the deletion decides. It re-checks every gate at "
+"the moment of destruction and retains a key that is still in use, shared, or "
+"not provably owned by this deployment, recording the reason."
+msgstr ""
+"Ang pag-iskedyul ay pagpapahayag ng layunin; ang pagbura ang nagdedesisyon. "
+"Sinusuri nitong muli ang bawat kondisyon sa sandali ng pagwasak at "
+"pinapanatili ang key na ginagamit pa, ibinabahagi, o hindi mapatunayang pag-"
+"aari ng deployment na ito, at itinatala ang dahilan."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:32
+#, python-format
+msgid "Not configured: %(stores)s"
+msgstr "Hindi naka-configure: %(stores)s"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:36
+msgid "Summary"
+msgstr "Buod"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:38
+msgid "Silos discovered"
+msgstr "Mga natuklasang silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:39
+msgid "Missing keys"
+msgstr "Mga nawawalang susi"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:40
+msgid "Orphaned data encryption keys"
+msgstr "Mga ulilang data encryption key"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:41
+msgid "Orphaned key encryption keys"
+msgstr "Mga ulilang key encryption key"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:42
+msgid "Key re-encryption due"
+msgstr "Dapat nang muling i-encrypt ang mga susi"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:43
+msgid "Data re-encryption due"
+msgstr "Dapat nang muling i-encrypt ang data"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:51
+msgid ""
+"\n"
+"      Silo enumeration is owned by the configured silo adapter. To list "
+"silos\n"
+"      here, override <code>iter_silos()</code> on the adapter (and set\n"
+"      <code>supports_enumeration = True</code>).\n"
+"      "
+msgstr ""
+"\n"
+"      Pinamamahalaan ng naka-configure na silo adapter ang enumeration ng "
+"silo. Para ilista ang mga silo\n"
+"      dito, i-override ang <code>iter_silos()</code> sa adapter (at itakda "
+"ang\n"
+"      <code>supports_enumeration = True</code>).\n"
+"      "
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:62
+msgid "Silos"
+msgstr "Mga Silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:64
+msgid ""
+"A key marked with a check is present and live. A key marked with an x is not "
+"found. A key marked with an alert icon exists but will not encrypt or "
+"decrypt, because its lifecycle status has moved out of active."
+msgstr ""
+"Ang susing may check ay naroroon at aktibo. Ang susing may x ay hindi "
+"natagpuan. Ang susing may alert na icon ay umiiral ngunit hindi mag-e-"
+"encrypt o magde-decrypt, dahil ang status ng lifecycle nito ay hindi na "
+"aktibo."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:74
+#: .\templates\admin\encryption_suite\reconcile_keys.html:178
+msgid "Type"
+msgstr "Uri"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:76
+msgid "Expected KEK Name"
+msgstr "Inaasahang pangalan ng KEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:78
+#: .\templates\admin\encryption_suite\reconcile_keys.html:234
+msgid "KEK (live)"
+msgstr "KEK (live)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:79
+#: .\templates\admin\encryption_suite\reconcile_keys.html:235
+msgid "KEK (last known)"
+msgstr "KEK (huling nalaman)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:81
+msgid "Field DEK"
+msgstr "Field DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:82
+msgid "File DEK"
+msgstr "File DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:83
+msgid "Index DEK"
+msgstr "Index DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:97
+msgid "Stored key differs:"
+msgstr "Magkaiba ang naka-store na key:"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:101
+#: .\templates\admin\encryption_suite\reconcile_keys.html:248
+msgid "unknown"
+msgstr "hindi alam"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:117
+msgid "Needs setup"
+msgstr "Kailangan ng setup"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:119
+msgid "Key deletion scheduled"
+msgstr "Nakaiskedyul ang pagbura ng key"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:121
+msgid "Ready"
+msgstr "Handa"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:133
+msgid "Missing Keys"
+msgstr "Mga Nawawalang Susi"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Key encryption keys are created automatically by the configured provisioner."
+msgstr ""
+"Awtomatikong ginagawa ng naka-configure na provisioner ang mga key "
+"encryption key."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:135
+msgid ""
+"Create each key encryption key listed below on your KMS provider, granting "
+"your application encrypt/decrypt permission on it."
+msgstr ""
+"Gawin ang bawat key encryption key na nakalista sa ibaba sa inyong KMS "
+"provider, na binibigyan ang inyong aplikasyon ng pahintulot na mag-encrypt/"
+"decrypt dito."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Data encryption keys are created automatically the first time each silo "
+"encrypts a value."
+msgstr ""
+"Awtomatikong ginagawa ang mga data encryption key sa unang pagkakataon na "
+"mag-encrypt ng halaga ang bawat silo."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:136
+msgid ""
+"Run python manage.py setup_encryption_keys to create the data encryption "
+"keys."
+msgstr ""
+"Patakbuhin ang python manage.py setup_encryption_keys para gawin ang mga "
+"data encryption key."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:143
+msgid "Missing DEKs"
+msgstr "Mga nawawalang DEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:144
+msgid "Missing KEK"
+msgstr "Nawawalang KEK"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:163
+msgid "Data Encryption Keys Without a Live Silo"
+msgstr "Mga Data Encryption Key na Walang Buhay na Silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:165
+msgid ""
+"The data encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their silo no longer exists. To remove one, select "
+"it on the Data Encryption Keys page and choose \"Schedule deletion\" — this "
+"starts a reversible deletion window. Once the window expires, the delete "
+"action destroys the data encryption key for good."
+msgstr ""
+"Ang mga data encryption key sa ibaba ay walang sinusuportahang buhay na "
+"silo. Ang mga markadong ulila ang dapat aksyunan: wala na ang kanilang silo. "
+"Upang alisin ang isa, piliin ito sa pahinang Data Encryption Keys at piliin "
+"ang “Schedule deletion” — magsisimula ito ng nababawing window ng "
+"pagtanggal. Kapag natapos ang window, tuluyan nang sisirain ng aksyong "
+"pagtanggal ang data encryption key."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:183
+msgid "DEK (live)"
+msgstr "DEK (live)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:193
+msgid "The settings do not define this key set"
+msgstr "Hindi tinutukoy ng mga setting ang key set na ito"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:206
+msgid "Go to the Data Encryption Keys page →"
+msgstr "Pumunta sa pahina ng Mga data encryption key →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:214
+msgid "Key Encryption Keys Without a Live Silo"
+msgstr "Mga Key Encryption Key na Walang Buhay na Silo"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:220
+msgid ""
+"The key encryption keys below support no live silo. Those marked orphaned "
+"are the actionable ones: their data is already gone and the keys remain on "
+"the KMS, costing money. To act on one, select it on the Key Encryption Keys "
+"page and choose schedule deletion, restore, or record an action taken in the "
+"KMS."
+msgstr ""
+"Ang mga key encryption key sa ibaba ay walang sinusuportahang buhay na silo. "
+"Ang mga markadong ulila ang dapat aksyunan: wala na ang kanilang data at "
+"nananatili ang mga susi sa KMS, na may gastos. Upang aksyunan ang isa, "
+"piliin ito sa pahinang Key Encryption Keys at piliin ang schedule deletion, "
+"restore, o itala ang aksyong ginawa sa KMS."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:237
+msgid "KMS deletion"
+msgstr "Pagbura sa KMS"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:260
+msgid "Go to the Key Encryption Keys page →"
+msgstr "Pumunta sa pahina ng Mga key encryption key →"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:267
+msgid "Key Re-encryption Due"
+msgstr "Dapat nang muling i-encrypt ang mga susi"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:269
+msgid ""
+"The data key needs to be re-encrypted after a KMS key rotation. Run 'python "
+"manage.py reencrypt_keys' to move key encryption to the current version; no "
+"data is touched."
+msgstr ""
+"Kailangang muling i-encrypt ang data key matapos ang pag-rotate ng susi sa "
+"KMS. Patakbuhin ang 'python manage.py reencrypt_keys' upang ilipat ang pag-"
+"encrypt ng susi sa kasalukuyang bersyon; walang data na ginagalaw."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:281
+msgid "Wrapped by version"
+msgstr "Nabalot ng bersyon"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:282
+msgid "Last re-encrypted"
+msgstr "Huling muling na-encrypt"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:302
+msgid "Data Re-encryption Due"
+msgstr "Dapat nang muling i-encrypt ang data"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:304
+msgid ""
+"The data key's own material is older than DEK_ROTATION_PERIOD_DAYS. Run "
+"'python manage.py reencrypt_data' to re-encrypt a silo's data with new keys, "
+"a computationally intensive process."
+msgstr ""
+"Mas luma na sa DEK_ROTATION_PERIOD_DAYS ang sariling material ng data key. "
+"Patakbuhin ang 'python manage.py reencrypt_data' upang muling i-encrypt ang "
+"data ng isang silo gamit ang mga bagong susi — isang mabigat na proseso sa "
+"pagkukuwenta."
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:316
+msgid "Key material generated"
+msgstr "Nabuo ang key material"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:336
+msgid "Reconcile Findings"
+msgstr "Mga natuklasan ng reconcile"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:339
+msgid "Newly discovered keys (now tracked)"
+msgstr "Mga bagong natuklasang key (sinusubaybayan na ngayon)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:343
+msgid "Confirmed deleted (gone from the KMS)"
+msgstr "Nakumpirmang nabura (wala na sa KMS)"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:349
+msgid ""
+"Out of sync — still on the provider, should be gone. Their deletion date has "
+"passed, so a provider deletion was canceled in the KMS, or failed. "
+"Investigate on the provider:"
+msgstr ""
+"Hindi magkatugma — nasa provider pa rin gayong dapat wala na. Lumipas na ang "
+"petsa ng pagbura, kaya kinansela sa KMS ang pagbura o nabigo ito. Suriin sa "
+"provider:"
+
+#: .\templates\admin\encryption_suite\reconcile_keys.html:359
+msgid ""
+"Out of sync — gone from the provider, no record of why. An active or "
+"scheduled key vanished from the listing (deleted in the KMS). Record the "
+"deletion on the Key Encryption Keys page to close it:"
+msgstr ""
+"Hindi magkatugma — wala na sa provider, walang talaan kung bakit. May aktibo "
+"o nakaiskedyul na susing nawala sa listahan (binura sa KMS). Itala ang "
+"pagbura sa pahina ng Key Encryption Keys para isara ito:"
+
+#: .\templates\admin\encryption_suite\settings.html:26
+msgid "Setting"
+msgstr "Setting"
+
+#: .\templates\admin\encryption_suite\settings.html:27
+msgid "Value"
+msgstr "Halaga"
+
+#: .\templates\admin\encryption_suite\settings.html:28
+msgid "Source"
+msgstr "Pinagmulan"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "configured"
+msgstr "naka-configure"
+
+#: .\templates\admin\encryption_suite\settings.html:36
+msgid "default"
+msgstr "default"
+
+#: .\templates\admin\encryption_suite\test_console.html:26
+#: .\templates\admin\encryption_suite\test_console.html:77
+msgid "Pass"
+msgstr "Pasado"
+
+#: .\templates\admin\encryption_suite\test_console.html:27
+#: .\templates\admin\encryption_suite\test_console.html:78
+msgid "Fail"
+msgstr "Bigo"
+
+#: .\templates\admin\encryption_suite\test_console.html:28
+#: .\templates\admin\encryption_suite\test_console.html:79
+msgid "Not run"
+msgstr "Hindi pinatakbo"
+
+#: .\templates\admin\encryption_suite\test_console.html:44
+msgid "Tests"
+msgstr "Mga Test"
+
+#: .\templates\admin\encryption_suite\test_console.html:54
+msgid "Run all tests"
+msgstr "Patakbuhin ang lahat ng test"
+
+#: .\templates\admin\encryption_suite\test_console.html:55
+msgid "Clear results"
+msgstr "I-clear ang mga resulta"
+
+#: .\templates\admin\encryption_suite\test_console.html:61
+msgid "Test"
+msgstr "Test"
+
+#: .\templates\admin\encryption_suite\test_console.html:62
+msgid "Engine"
+msgstr "Engine"
+
+#: .\templates\admin\encryption_suite\test_console.html:65
+msgid "Result"
+msgstr "Resulta"
+
+#: .\templates\admin\encryption_suite\test_console.html:66
+msgid "Action"
+msgstr "Aksyon"
+
+#: .\templates\admin\encryption_suite\test_console.html:85
+msgid "Run"
+msgstr "Patakbuhin"
+
+#: .\templates\admin\encryption_suite\test_console.html:95
+msgid "Delete"
+msgstr "Burahin"
+
+#: .\templates\admin\encryption_suite\test_console.html:97
+msgid ""
+"The full field and full file tests create disposable data encryption key "
+"entries. Delete below. A key encryption key this deployment cannot delete is "
+"left in place and must be deleted on the KMS by hand — it keeps incurring "
+"charges until you do."
+msgstr ""
+"Ang buong field at file na pagsubok ay gumagawa ng mga disposable na data "
+"encryption key entry. Burahin ang mga ito sa ibaba. Ang key encryption key "
+"na hindi kayang burahin ng deployment na ito ay maiiwan at kailangang "
+"burahin nang manu-mano sa KMS — patuloy itong sisingilin hangga't hindi mo "
+"ginagawa."
+
+#: .\templates\admin\encryption_suite\test_console.html:107
+msgid ""
+"Delete the test keys? This removes their data encryption key entries and "
+"deletes the key encryption key when this deployment is able to."
+msgstr ""
+"Burahin ang mga test key? Aalisin nito ang kanilang mga data encryption key "
+"entry at buburahin ang key encryption key kapag kaya ito ng deployment na "
+"ito."
+
+#: .\templates\admin\encryption_suite\test_console.html:110
+msgid "Delete test key(s)"
+msgstr "Burahin ang (mga) test key"
+
+#: .\user_context.py:392
+#, python-format
+msgid "Deleted user #%(user_id)s"
+msgstr "Binurang user #%(user_id)s"
+
+#: .\widgets.py:25
+msgid "Encrypted file"
+msgstr "Naka-encrypt na file"

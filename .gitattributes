@@ -1,0 +1,6 @@
+# Store text files with LF line endings and check them out as LF on every
+# platform, overriding per-machine core.autocrlf settings.
+* text=auto eol=lf
+
+# Compiled gettext catalogs: never convert or diff as text.
+*.mo binary

@@ -1,0 +1,371 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }}
+{% include "admin/encryption_suite/_admin_styles.html" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+  &rsaquo; <a href="{% url 'admin:app_list' app_label='encryption_suite' %}">encryption_suite</a>
+  &rsaquo; <a href="{{ changelist_url }}">{% trans "Data Encryption Keys" %}</a>
+  &rsaquo; {% trans "Reconcile Keys" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+  <form method="get" class="module">
+    <div class="submit-row">
+      <label for="es-key-store" class="es-center">{% trans "Key store" %}</label>
+      <select id="es-key-store" name="key_store" onchange="this.form.submit()">
+        {% for choice in key_store_choices %}
+        <option value="{{ choice.key_store }}"{% if choice.key_store == key_store %} selected{% endif %}>{{ choice.label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </form>
+
+  {% if unconfigured_stores %}
+  <p class="help"><img src="{% static 'admin/img/icon-alert.svg' %}" alt="">&nbsp;{% blocktrans trimmed with stores=unconfigured_stores|join:", " %}Not configured: {{ stores }}{% endblocktrans %}</p>
+  {% endif %}
+
+  <div class="module">
+    <h2>{% trans "Summary" %}</h2>
+    <table>
+      {% if total_count %}<tr><th scope="row">{% trans "Silos discovered" %}</th><td>{{ total_count }}</td></tr>{% endif %}
+      {% if missing_key_rows %}<tr><th scope="row">{% trans "Missing keys" %}</th><td>{{ missing_key_rows|length }}</td></tr>{% endif %}
+      {% if orphan_count %}<tr><th scope="row">{% trans "Orphaned data encryption keys" %}</th><td>{{ orphan_count }}</td></tr>{% endif %}
+      {% if kms_orphan_count %}<tr><th scope="row">{% trans "Orphaned key encryption keys" %}</th><td>{{ kms_orphan_count }}</td></tr>{% endif %}
+      {% if superseded_keys %}<tr><th scope="row">{% trans "Key re-encryption due" %}</th><td>{{ superseded_keys|length }}</td></tr>{% endif %}
+      {% if overdue_keys %}<tr><th scope="row">{% trans "Data re-encryption due" %}</th><td>{{ overdue_keys|length }}</td></tr>{% endif %}
+    </table>
+  </div>
+
+  {% if error %}
+  <div class="errornote">
+    <p>{{ error }}</p>
+    <p>
+      {% blocktrans %}
+      Silo enumeration is owned by the configured silo adapter. To list silos
+      here, override <code>iter_silos()</code> on the adapter (and set
+      <code>supports_enumeration = True</code>).
+      {% endblocktrans %}
+    </p>
+  </div>
+  {% endif %}
+
+  {% if rows %}
+  <details class="module">
+    <summary>{% trans "Silos" %}</summary>
+    <p class="help">
+      {% blocktrans trimmed %}
+        A key marked with a check is present and live. A key marked with an x is not
+        found. A key marked with an alert icon exists but will not encrypt or decrypt,
+        because its lifecycle status has moved out of active.
+      {% endblocktrans %}
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Silo UID" %}</th>
+          <th scope="col">{% trans "Type" %}</th>
+          <th scope="col">{% trans "Key set" %}</th>
+          <th scope="col">{% trans "Expected KEK Name" %}</th>
+          <th scope="col" class="es-marker">
+            {% if kek_existence_source == 'live' %}{% trans "KEK (live)" %}
+            {% else %}{% trans "KEK (last known)" %}{% endif %}
+          </th>
+          <th scope="col" class="es-marker">{% trans "Field DEK" %}</th>
+          <th scope="col" class="es-marker">{% trans "File DEK" %}</th>
+          {% if wants_index %}<th scope="col" class="es-marker">{% trans "Index DEK" %}</th>{% endif %}
+          <th scope="col">{% trans "Status" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row.silo_uid }}</td>
+          <td>{{ row.silo_label|default:"—" }}</td>
+          <td>{{ row.key_set }}</td>
+          <td>
+            {{ row.resolved_kek }}
+            {% if row.stored_differs %}
+            <br>
+            <small>{% trans "Stored key differs:" %} {{ row.stored_kek }}</small>
+            {% endif %}
+          </td>
+          <td class="es-marker">
+            {% if not row.kek_known %}<img src="{% static 'admin/img/icon-unknown.svg' %}" alt="{% trans 'unknown' %}">
+            {% else %}{% include "admin/encryption_suite/components/key_marker.html" with marker=row.kek_marker %}{% endif %}
+          </td>
+          <td class="es-marker">
+            {% include "admin/encryption_suite/components/key_marker.html" with marker=row.field_marker %}
+          </td>
+          <td class="es-marker">
+            {% include "admin/encryption_suite/components/key_marker.html" with marker=row.file_marker %}
+          </td>
+          {% if wants_index %}
+          <td class="es-marker">
+            {% include "admin/encryption_suite/components/key_marker.html" with marker=row.index_marker %}
+          </td>
+          {% endif %}
+          <td>
+            {% if row.needs_setup %}
+            <img src="{% static 'admin/img/icon-alert.svg' %}" alt=""> {% trans "Needs setup" %}
+            {% elif row.blocked_status %}
+            <img src="{% static 'admin/img/icon-no.svg' %}" alt=""> {% trans "Key deletion scheduled" %}
+            {% else %}
+            <img src="{% static 'admin/img/icon-yes.svg' %}" alt=""> {% trans "Ready" %}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </details>
+  {% endif %}
+
+  {% if missing_key_rows %}
+  <details class="module">
+    <summary>{% trans "Missing Keys" %}</summary>
+    <p class="help">
+      {% if provisioner_creates_keks %}{% trans "Key encryption keys are created automatically by the configured provisioner." %}{% else %}{% trans "Create each key encryption key listed below on your KMS provider, granting your application encrypt/decrypt permission on it." %}{% endif %}
+      {% if key_auto_provision %}{% trans "Data encryption keys are created automatically the first time each silo encrypts a value." %}{% else %}{% trans "Run python manage.py setup_encryption_keys to create the data encryption keys." %}{% endif %}
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Silo UID" %}</th>
+          <th scope="col">{% trans "Key set" %}</th>
+          <th scope="col">{% trans "Missing DEKs" %}</th>
+          <th scope="col">{% trans "Missing KEK" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in missing_key_rows %}
+        <tr>
+          <td>{{ row.silo_uid }}</td>
+          <td>{{ row.key_set }}</td>
+          <td>{% if row.missing_deks %}{{ row.missing_deks|join:", " }}{% else %}—{% endif %}</td>
+          <td>{% if row.kek_absent %}{{ row.resolved_kek }}{% else %}—{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </details>
+  {% endif %}
+
+  {% if orphan_rows %}
+  <details class="module">
+    <summary>{% trans "Data Encryption Keys Without a Live Silo" %}</summary>
+    <p class="help">
+      {% blocktrans trimmed %}
+      The data encryption keys below support no live silo. Those marked
+      orphaned are the actionable ones: their silo no longer exists. To remove
+      one, select it on the Data Encryption Keys page and choose "Schedule
+      deletion" — this starts a reversible deletion window. Once the window
+      expires, the delete action destroys the data encryption
+      key for good.
+      {% endblocktrans %}
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Silo UID" %}</th>
+          <th scope="col">{% trans "Type" %}</th>
+          <th scope="col">{% trans "Key set" %}</th>
+          <th scope="col">{% trans "Purpose" %}</th>
+          <th scope="col">{% trans "KEK name" %}</th>
+          <th scope="col">{% trans "Status" %}</th>
+          <th scope="col" class="es-marker">{% trans "DEK (live)" %}</th>
+          <th scope="col">{% trans "Undeletable until" %}</th>
+          <th scope="col">{% trans "Test console" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in orphan_rows %}
+        <tr>
+          <td>{{ row.silo_uid }}</td>
+          <td>{{ row.silo_label }}</td>
+          <td>{% if row.no_settings_entry %}{% trans "The settings do not define this key set" as no_entry %}<img src="{% static 'admin/img/icon-alert.svg' %}" alt="{{ no_entry }}" title="{{ no_entry }}">&nbsp;{% endif %}{{ row.key_set }}</td>
+          <td>{{ row.purpose }}</td>
+          <td>{{ row.kek_resource_name }}</td>
+          <td>{{ row.status_label|default:"—" }}</td>
+          <td class="es-marker">
+            {% include "admin/encryption_suite/components/key_marker.html" with marker=row.dek_marker %}
+          </td>
+          <td>{% if row.undeletable_until %}{{ row.undeletable_until|date:"SHORT_DATE_FORMAT" }}{% else %}—{% endif %}</td>
+          <td>{% if row.is_test %}{% trans "Yes" %}{% else %}—{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="help"><a href="{{ changelist_url }}?is_orphaned__exact=1">{% trans "Go to the Data Encryption Keys page →" %}</a></p>
+  </details>
+  {% endif %}
+
+  {# Cleanup instructions can stand alone: they are also raised when KMS-side #}
+  {# reconcile is unavailable, which yields no rows to list. #}
+  {% if orphan_kek_rows or cleanup_instructions %}
+  <details class="module">
+    <summary>{% trans "Key Encryption Keys Without a Live Silo" %}</summary>
+    {% if cleanup_instructions %}
+    {% for step in cleanup_instructions %}<p class="help">{{ step.text }}</p>{% endfor %}
+    {% endif %}
+      {% if orphan_kek_rows %}
+      <p class="help">
+        {% blocktrans trimmed %}
+        The key encryption keys below support no live silo. Those
+        marked orphaned are the actionable ones: their data is already gone and the
+        keys remain on the KMS, costing money. To act on one, select it on the Key
+        Encryption Keys page and choose schedule deletion, restore, or record an
+        action taken in the KMS.
+        {% endblocktrans %}
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{% trans "KEK name" %}</th>
+            <th scope="col">{% trans "Status" %}</th>
+            <th scope="col" class="es-marker">
+              {% if kek_existence_source == 'live' %}{% trans "KEK (live)" %}
+              {% else %}{% trans "KEK (last known)" %}{% endif %}
+            </th>
+            <th scope="col">{% trans "KMS deletion" %}</th>
+            <th scope="col">{% trans "Test console" %}</th>
+            <th scope="col" class="es-marker">{% trans "Orphaned" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in orphan_kek_rows %}
+          <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.last_status|default:"—" }}</td>
+            <td class="es-marker">
+              {% if not row.kek_known %}<img src="{% static 'admin/img/icon-unknown.svg' %}" alt="{% trans 'unknown' %}">
+              {% else %}{% include "admin/encryption_suite/components/key_marker.html" with marker=row.kek_marker %}{% endif %}
+            </td>
+            <td>{% if row.kms_deletion_at %}{{ row.kms_deletion_at|date:"SHORT_DATE_FORMAT" }}{% else %}—{% endif %}</td>
+            <td>{% if row.is_test %}{% trans "Yes" %}{% else %}—{% endif %}</td>
+            <td class="es-marker">
+              {% include "admin/encryption_suite/components/orphan_marker.html" with is_orphaned=row.is_orphan %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p class="help"><a href="{{ kms_changelist_url }}?is_orphaned__exact=1">{% trans "Go to the Key Encryption Keys page →" %}</a></p>
+      {% endif %}
+  </details>
+  {% endif %}
+
+  {% if superseded_keys %}
+  <details class="module">
+    <summary>{% trans "Key Re-encryption Due" %}</summary>
+    <p class="help">
+      {% blocktrans trimmed %}
+      The data key needs to be re-encrypted after a KMS key rotation. Run
+      'python manage.py reencrypt_keys' to move key encryption to the current
+      version; no data is touched.
+      {% endblocktrans %}
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Silo UID" %}</th>
+          <th scope="col">{% trans "Key set" %}</th>
+          <th scope="col">{% trans "Purpose" %}</th>
+          <th scope="col">{% trans "Wrapped by version" %}</th>
+          <th scope="col">{% trans "Last re-encrypted" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in superseded_keys %}
+        <tr>
+          <td>{{ row.silo_ref.uid }}</td>
+          <td>{{ row.key_set }}</td>
+          <td>{{ row.purpose }}</td>
+          <td>{{ row.kek_key_version|default:"—" }}</td>
+          <td>{{ row.last_reencrypted_at|default:"—" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </details>
+  {% endif %}
+
+  {% if overdue_keys %}
+  <details class="module">
+    <summary>{% trans "Data Re-encryption Due" %}</summary>
+    <p class="help">
+      {% blocktrans trimmed %}
+      The data key's own material is older than DEK_ROTATION_PERIOD_DAYS.
+      Run 'python manage.py reencrypt_data' to re-encrypt a silo's data with new
+      keys, a computationally intensive process.
+      {% endblocktrans %}
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{% trans "Silo UID" %}</th>
+          <th scope="col">{% trans "Key set" %}</th>
+          <th scope="col">{% trans "Purpose" %}</th>
+          <th scope="col">{% trans "Key material generated" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in overdue_keys %}
+        <tr>
+          <td>{{ row.silo_ref.uid }}</td>
+          <td>{{ row.key_set }}</td>
+          <td>{{ row.purpose }}</td>
+          <td>{{ row.key_material_last_generated_at|default:"—" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </details>
+  {% endif %}
+
+  {# ---- Drift: what this reconcile pass observed and recorded ---- #}
+  {% if discovered or confirmed_deleted or drift_overdue or drift_missing %}
+  <details class="module">
+    <summary>{% trans "Reconcile Findings" %}</summary>
+    <table>
+      <tr>
+        <th scope="row">{% trans "Newly discovered keys (now tracked)" %}</th>
+        <td>{{ discovered|length }}</td>
+      </tr>
+      <tr>
+        <th scope="row">{% trans "Confirmed deleted (gone from the KMS)" %}</th>
+        <td>{{ confirmed_deleted|length }}</td>
+      </tr>
+    </table>
+    {% if drift_overdue %}
+    <p class="help">
+      {% blocktrans trimmed %}
+      Out of sync — still on the provider, should be gone. Their deletion date has
+      passed, so a provider deletion was canceled in the KMS, or failed.
+      Investigate on the provider:
+      {% endblocktrans %}
+    </p>
+    <ul>{% for name in drift_overdue %}<li><code>{{ name }}</code></li>{% endfor %}</ul>
+    {% endif %}
+    {% if drift_missing %}
+    <p class="help">
+      {% blocktrans trimmed %}
+      Out of sync — gone from the provider, no record of why. An active or
+      scheduled key vanished from the listing (deleted in the KMS). Record the
+      deletion on the Key Encryption Keys page to close it:
+      {% endblocktrans %}
+    </p>
+    <ul>{% for name in drift_missing %}<li><code>{{ name }}</code></li>{% endfor %}</ul>
+    {% endif %}
+  </details>
+  {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+  &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+  &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+  &rsaquo; {% trans "Delete data encryption keys" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="module">
+  {% if total_count %}
+  <p class="errornote">
+    {% blocktrans trimmed count counter=total_count %}
+    You are about to destroy {{ counter }} data encryption key. This cannot be undone.
+    {% plural %}
+    You are about to destroy {{ counter }} data encryption keys. This cannot be undone.
+    {% endblocktrans %}
+  </p>
+  {% else %}
+  <p>{% trans "None of the selected data encryption keys can be deleted yet." %}</p>
+  {% endif %}
+
+  {% if retained_count %}
+  <p class="help">
+    {% blocktrans trimmed count counter=retained_count with reasons=retained_reasons %}
+    {{ counter }} selected key will not be destroyed ({{ reasons }}) and is not listed below.
+    Nothing about it changes, so resolving the cause and deleting again works.
+    {% plural %}
+    {{ counter }} selected keys will not be destroyed ({{ reasons }}) and are not listed
+    below. Nothing about them changes, so resolving the cause and deleting again works.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if unscheduled_count %}
+  <p class="help">
+    {% blocktrans trimmed count counter=unscheduled_count %}
+    {{ counter }} selected key is not scheduled for deletion, so there is nothing to delete
+    and it is not listed below. Schedule it first — the deletion only ever acts on scheduled
+    work whose restore window has closed.
+    {% plural %}
+    {{ counter }} selected keys are not scheduled for deletion, so there is nothing to delete
+    and they are not listed below. Schedule them first — the deletion only ever acts on
+    scheduled work whose restore window has closed.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if unexpired_count %}
+  <p class="help">
+    {% blocktrans trimmed count counter=unexpired_count %}
+    {{ counter }} selected key is scheduled but still inside its restore window, and is not
+    listed below. It will not be touched until the window closes.
+    {% plural %}
+    {{ counter }} selected keys are scheduled but still inside their restore window, and are
+    not listed below. They will not be touched until the window closes.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if total_count %}
+  <ul class="help">
+    <li>
+      {% blocktrans trimmed %}
+      Each key below has its wrapped keyset cleared. Every encrypted field and file
+      belonging to that silo becomes permanently unreadable.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans trimmed %}
+      No provider window stands behind this. Unlike destroying a key encryption key,
+      there is nothing to cancel at the KMS afterwards — the only recovery is a database
+      backup taken while the wrapping key still exists.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans trimmed %}
+      The row survives as a record that the key existed. Its lifecycle history is kept.
+      {% endblocktrans %}
+    </li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">{% trans "Silo UID" %}</th>
+        <th scope="col">{% trans "Purpose" %}</th>
+        <th scope="col">{% trans "KEK name" %}</th>
+        <th scope="col">{% trans "KMS" %}</th>
+        <th scope="col">{% trans "Undeletable until" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td>{{ row.silo_uid }}</td>
+        <td>{{ row.get_purpose_display|default:row.purpose }}</td>
+        <td>{{ row.kek.kek_resource_name }}</td>
+        <td>{{ row.kek.key_store }}</td>
+        <td>{{ row.undeletable_until|date:"SHORT_DATE_FORMAT"|default:"—" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+    {% for pk in selected %}<input type="hidden" name="_selected_action" value="{{ pk }}">{% endfor %}
+    <input type="hidden" name="action" value="{{ action_name }}">
+    <input type="hidden" name="confirmed" value="1">
+    <div class="submit-row">
+      {% if total_count %}
+      <input type="submit" class="default" value="{% trans 'Yes, destroy these keys' %}">
+      {% endif %}
+      <a href="{% url opts|admin_urlname:'changelist' %}" class="button cancel-link">{% trans "No, take me back" %}</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

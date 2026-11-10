@@ -1,0 +1,129 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+  &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+  &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+  &rsaquo; {% trans "Delete key encryption keys" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="module">
+  {% if delete_count %}
+  <p class="errornote">
+    {% blocktrans trimmed count counter=delete_count %}
+    You are about to destroy {{ counter }} key encryption key at the KMS provider.
+    This cannot be undone from here.
+    {% plural %}
+    You are about to destroy {{ counter }} key encryption keys at the KMS provider.
+    This cannot be undone from here.
+    {% endblocktrans %}
+  </p>
+  {% else %}
+  <p>{% trans "None of the selected key encryption keys will be destroyed. Review the decisions below." %}</p>
+  {% endif %}
+
+  {% if in_use_count %}
+  <p class="errornote">
+    {% blocktrans trimmed count counter=in_use_count %}
+    {{ counter }} key still wraps live keysets. Every silo counted below loses its data
+    permanently.
+    {% plural %}
+    {{ counter }} keys still wrap live keysets. Every silo counted below loses its data
+    permanently.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if unscheduled_count %}
+  <p class="help">
+    {% blocktrans trimmed count counter=unscheduled_count %}
+    {{ counter }} selected key is not scheduled for deletion, so there is nothing to delete
+    and it is not listed below. Schedule it first — the deletion only ever acts on scheduled
+    work whose restore window has closed.
+    {% plural %}
+    {{ counter }} selected keys are not scheduled for deletion, so there is nothing to delete
+    and they are not listed below. Schedule them first — the deletion only ever acts on
+    scheduled work whose restore window has closed.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  {% if unexpired_count %}
+  <p class="help">
+    {% blocktrans trimmed count counter=unexpired_count %}
+    {{ counter }} selected key is scheduled but still inside its restore window, and is not
+    listed below. It will not be touched until the window closes.
+    {% plural %}
+    {{ counter }} selected keys are scheduled but still inside their restore window, and are
+    not listed below. They will not be touched until the window closes.
+    {% endblocktrans %}
+  </p>
+  {% endif %}
+
+  <ul class="help">
+    <li>
+      {% blocktrans trimmed %}
+      The outcome column is the decision this deletion will make, taken from a preview run
+      through the same gates. A key that shows retained or skipped is not destroyed, and
+      the reason is recorded against it.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans trimmed %}
+      Destroying a key encryption key cannot be undone from a database backup: what is lost
+      is the key that backup's ciphertext depends on.
+      {% endblocktrans %}
+    </li>
+    <li>
+      {% blocktrans trimmed %}
+      Providers with a recovery window hold the key for their own waiting period after this,
+      recoverable only at the provider. Providers that delete immediately do not.
+      {% endblocktrans %}
+    </li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">{% trans "KEK name" %}</th>
+        <th scope="col">{% trans "KMS" %}</th>
+        <th scope="col">{% trans "Outcome" %}</th>
+        <th scope="col">{% trans "Silos still holding keysets" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row, outcome, reason, in_use in rows %}
+      <tr>
+        <td>{{ row.kek_resource_name }}</td>
+        <td>{{ row.key_store }}</td>
+        <td>
+          {% if outcome == "DELETE" %}{% trans "Will be destroyed" %}
+          {% elif outcome == "RETAIN" %}{% blocktrans trimmed %}Retained — {{ reason }}{% endblocktrans %}
+          {% elif outcome == "SKIP" %}{% trans "Skipped — another provider's key" %}
+          {% elif outcome == "FAIL" %}{% trans "Provider call failed on preview" %}
+          {% else %}{% trans "Not eligible yet" %}{% endif %}
+        </td>
+        <td>{% if in_use %}<strong>{{ in_use }}</strong>{% else %}0{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <form method="post">
+    {% csrf_token %}
+    {% for pk in selected %}<input type="hidden" name="_selected_action" value="{{ pk }}">{% endfor %}
+    <input type="hidden" name="action" value="{{ action_name }}">
+    <input type="hidden" name="confirmed" value="1">
+    <div class="submit-row">
+      {% if delete_count %}
+      <input type="submit" class="default" value="{% trans 'Yes, destroy these keys' %}">
+      {% endif %}
+      <a href="{% url opts|admin_urlname:'changelist' %}" class="button cancel-link">{% trans "No, take me back" %}</a>
+    </div>
+  </form>
+</div>
+{% endblock %}
